@@ -1,0 +1,47 @@
+{
+  "schema_version": "sisc-cost-compare-v1-package-local",
+  "created_unix": 1788872539.476924,
+  "python": "3.13.13 | packaged by Anaconda, Inc. | (main, Apr 14 2026, 06:14:06) [Clang 20.1.8 ]",
+  "platform": "macOS-26.5.2-arm64-arm-64bit-Mach-O",
+  "numpy": "2.5.0",
+  "scipy": "1.18.0",
+  "matplotlib": "3.11.0",
+  "scikit_fem": "11.0.0",
+  "git_commit": "f7bb34926a3fb1af4d7906eac87765ca78688993",
+  "git_dirty": true,
+  "git_status_sha256": "dd9d056ae7bed3417e5c8bf4f17d1d8873ca92cd5f6746fe3dd87a999bc25711",
+  "config_sha256": "d06196721410053a3060cc8bbcca0c0f748925eb9800e35a3b20b132f00482e4",
+  "problem_hashes": {
+    "C1": "54a0c8e776ed61a7799e7cc74a80fc39bfab52aa7318daa0a31fbb23bc4dbe8f",
+    "C2": "235b044d9c1788c1e3ccd228097884ecf1a038fe447d19f6248c43b90ba673ea",
+    "C3": "81c87de48137dedc13f2fa6e3c3295210c7791fc9b74889812acb12af85c3c35",
+    "C4": "fa0a3e14c37bb38157d73088a3589d725f9b3228022a5797a0f25e79b611b0e0",
+    "C5": "4788b09e54970c37054ead04b1ea3a8572bc3879b5309ada573515d303f3876f"
+  },
+  "seeds": [
+    201,
+    202
+  ],
+  "input_sha256": {
+    "data/cga_cases/01_linear_d1_k3_multifreq/history.csv": "93c7446e1632767f5ef3198b19fe41dbf19be6fca6677133894596bbf41918fa",
+    "data/cga_cases/01_linear_d1_k3_multifreq/dyadic.csv": "f536b83a0584e1d7d42d397acc7c35534e0d8b6da5d05b410b4d474bfbb1c838",
+    "data/cga_cases/01_linear_d1_k3_multifreq/diagnostic_model.npz": "7d3cc31f2d7ea5d2adcf0c9021b85ac079cd606dee7743ced80c524afb001d75",
+    "data/cga_cases/01_linear_d1_k3_multifreq/summary.json": "b0a36a74743ebe79b546a0ed4191d40bfe0074c485359a51b77bb2eeb95ee25d",
+    "data/cga_cases/03_cubic_d1_k3_multifreq/history.csv": "dd380d9ef1149208321164b88528fb2f03f156075c332f0d92b5064fffd8508e",
+    "data/cga_cases/03_cubic_d1_k3_multifreq/dyadic.csv": "2cadb706a0282129cfbad9b919faf01739768d7eb011c5d3be4da5f8a1383e9a",
+    "data/cga_cases/03_cubic_d1_k3_multifreq/diagnostic_model.npz": "9c8e7269129290a60ff1d0e83985bb948d7e86374dcd298a9b76e3df7ab2973a",
+    "data/cga_cases/03_cubic_d1_k3_multifreq/summary.json": "61a02fad7967c9c61201009bb30c6e6917d8d3d4c41ff0186aad5b6ef976ef38",
+    "data/cga_cases/06_sinh_d2_k3/history.csv": "62a5eca62a7a87473550c36d89524826da5e26750f70c586438b0bce9be52a62",
+    "data/cga_cases/06_sinh_d2_k3/dyadic.csv": "99f4a41fa3cdb079e0b6b499516514fd684d48486b69885d5824cb14100ba12d",
+    "data/cga_cases/06_sinh_d2_k3/diagnostic_model.npz": "64460daa9402a3267d9bb22f7be9895d441855822b64f92b30cbef8f076ae0dd",
+    "data/cga_cases/06_sinh_d2_k3/summary.json": "aa2fb00cefd8c6cec686d220488e0d1826578d5927b7ff582f9b4cc7cdc3ca60",
+    "data/cga_cases/17_pure_p_p4_d1_k3/history.csv": "f6994e23a0ff86cd66c37daba0e507dbef857680e42db61efae5fecf1f9526df",
+    "data/cga_cases/17_pure_p_p4_d1_k3/dyadic.csv": "f67d6c7a370b48c93a635c88748b9818d10a468333496bf1e2b82559a9a3e9b0",
+    "data/cga_cases/17_pure_p_p4_d1_k3/diagnostic_model.npz": "2a63bd9680c919523b95c66fe31dfabeebed702a44c5950b6cb4828bd832e9e5",
+    "data/cga_cases/17_pure_p_p4_d1_k3/summary.json": "c6546b49a4b5e5318d9eefb063cead6683a11d2c81d96ce5b84ba6d4a1b9136f",
+    "data/cga_cases/08_pure_p_p4_d2_k3/history.csv": "6d81942b302d13300c3647405a00815e6889bf8414f20361cbc7e8f89df0904c",
+    "data/cga_cases/08_pure_p_p4_d2_k3/dyadic.csv": "12145426943d04a06652462a7f6833fe1d885be12f2886c40946a9366c3be3ad",
+    "data/cga_cases/08_pure_p_p4_d2_k3/diagnostic_model.npz": "51ed4466422df5cc559aa111d9e1ec9938038c5f822e52a8cde7d88a649de98e",
+    "data/cga_cases/08_pure_p_p4_d2_k3/summary.json": "cb52fdccf99607fac099daf13aedbb231a9a6870a10b8393b7b74d8031f00bc3"
+  }
+}

@@ -1,0 +1,5 @@
+schema_version,control,source_paths,strict_single_factor,decision,reason
+cga-experiments-v1,p_scan_d2_k3,archive/data/raw/pool_small/14_pure_p_p3_d2_k3;archive/data/raw/pool_small/08_pure_p_p4_d2_k3;archive/data/raw/pool_small/16_pure_p_p5_d2_k3,True,single_factor_control,all non-tested configuration fields match
+cga-experiments-v1,k_scan_d1_p4,archive/data/raw/pool_small/07_pure_p_p4_d1_k1;archive/data/raw/reviewed_case17/17_pure_p_p4_d1_k3,True,single_factor_control,all non-tested configuration fields match
+cga-experiments-v1,dimension_pairs,archive/data/raw/pool_small,False,coverage_only,exact profiles/frequency constructions are not uniform across dimensions
+cga-experiments-v1,case15_platform_cause,archive/data/raw/pool_small/15_pure_p_p5_d1_k1,False,negative_result_only,no same-p same-problem higher-activation control; remove causal wording

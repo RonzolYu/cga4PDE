@@ -1,0 +1,61 @@
+schema_version,run_id,case_id,method,seed,timing_rep,attempted_iteration,accepted_atom_count,phase,wall_time_sec,cpu_time_sec,operation_count,accepted,rollback,failure_reason,rss_bytes_at_end,status
+cost-pilot-v1,C1_linear_d1_seed201_rep1,C1,finite-pool CGA,201,1,1,1,selection,0.000895666002179496,NA,NA,True,False,accepted,104103936,completed
+cost-pilot-v1,C1_linear_d1_seed201_rep1,C1,finite-pool CGA,201,1,1,1,correction,0.0015858749975450337,NA,2,True,False,accepted,104103936,completed
+cost-pilot-v1,C1_linear_d1_seed201_rep1,C1,finite-pool CGA,201,1,2,2,selection,0.00030462500581052154,NA,NA,True,False,accepted,104103936,completed
+cost-pilot-v1,C1_linear_d1_seed201_rep1,C1,finite-pool CGA,201,1,2,2,correction,0.0005423339898698032,NA,2,True,False,accepted,104103936,completed
+cost-pilot-v1,C1_linear_d1_seed201_rep1,C1,finite-pool CGA,201,1,,2,unattributed_remainder,0.040003834004595146,NA,NA,,,existing solver exposes no setup/atom/evaluator phase timers,104103936,completed
+cost-pilot-v1,C1_linear_d1_seed201_rep2,C1,finite-pool CGA,201,2,1,1,selection,0.00046520799514837563,NA,NA,True,False,accepted,104103936,completed
+cost-pilot-v1,C1_linear_d1_seed201_rep2,C1,finite-pool CGA,201,2,1,1,correction,0.0005405420088209212,NA,2,True,False,accepted,104103936,completed
+cost-pilot-v1,C1_linear_d1_seed201_rep2,C1,finite-pool CGA,201,2,2,2,selection,0.00029916698986198753,NA,NA,True,False,accepted,104103936,completed
+cost-pilot-v1,C1_linear_d1_seed201_rep2,C1,finite-pool CGA,201,2,2,2,correction,0.00044062499364372343,NA,2,True,False,accepted,104103936,completed
+cost-pilot-v1,C1_linear_d1_seed201_rep2,C1,finite-pool CGA,201,2,,2,unattributed_remainder,0.03436895801252499,NA,NA,,,existing solver exposes no setup/atom/evaluator phase timers,104103936,completed
+cost-pilot-v1,C1_linear_d1_seed202_rep1,C1,finite-pool CGA,202,1,1,1,selection,0.0004376249999040738,NA,NA,True,False,accepted,104103936,completed
+cost-pilot-v1,C1_linear_d1_seed202_rep1,C1,finite-pool CGA,202,1,1,1,correction,0.00047574999916832894,NA,2,True,False,accepted,104103936,completed
+cost-pilot-v1,C1_linear_d1_seed202_rep1,C1,finite-pool CGA,202,1,2,2,selection,0.00026700001035351306,NA,NA,True,False,accepted,104103936,completed
+cost-pilot-v1,C1_linear_d1_seed202_rep1,C1,finite-pool CGA,202,1,2,2,correction,0.00038345799839589745,NA,2,True,False,accepted,104103936,completed
+cost-pilot-v1,C1_linear_d1_seed202_rep1,C1,finite-pool CGA,202,1,,2,unattributed_remainder,0.03385345899217819,NA,NA,,,existing solver exposes no setup/atom/evaluator phase timers,104103936,completed
+cost-pilot-v1,C1_linear_d1_seed202_rep2,C1,finite-pool CGA,202,2,1,1,selection,0.00047995800559874624,NA,NA,True,False,accepted,104103936,completed
+cost-pilot-v1,C1_linear_d1_seed202_rep2,C1,finite-pool CGA,202,2,1,1,correction,0.0005265000072540715,NA,2,True,False,accepted,104103936,completed
+cost-pilot-v1,C1_linear_d1_seed202_rep2,C1,finite-pool CGA,202,2,2,2,selection,0.000275792001048103,NA,NA,True,False,accepted,104103936,completed
+cost-pilot-v1,C1_linear_d1_seed202_rep2,C1,finite-pool CGA,202,2,2,2,correction,0.00040004200127441436,NA,2,True,False,accepted,104103936,completed
+cost-pilot-v1,C1_linear_d1_seed202_rep2,C1,finite-pool CGA,202,2,,2,unattributed_remainder,0.034397416984824666,NA,NA,,,existing solver exposes no setup/atom/evaluator phase timers,104103936,completed
+cost-pilot-v1,C2_cubic_d1_seed201_rep1,C2,finite-pool CGA,201,1,1,1,selection,0.0005035000067437068,NA,NA,True,False,accepted,104103936,completed
+cost-pilot-v1,C2_cubic_d1_seed201_rep1,C2,finite-pool CGA,201,1,1,1,correction,0.0014458750083576888,NA,6,True,False,accepted,104103936,completed
+cost-pilot-v1,C2_cubic_d1_seed201_rep1,C2,finite-pool CGA,201,1,2,2,selection,0.0002818329958245158,NA,NA,True,False,accepted,104103936,completed
+cost-pilot-v1,C2_cubic_d1_seed201_rep1,C2,finite-pool CGA,201,1,2,2,correction,0.000865459005581215,NA,6,True,False,accepted,104103936,completed
+cost-pilot-v1,C2_cubic_d1_seed201_rep1,C2,finite-pool CGA,201,1,,2,unattributed_remainder,0.03543629098349287,NA,NA,,,existing solver exposes no setup/atom/evaluator phase timers,104103936,completed
+cost-pilot-v1,C2_cubic_d1_seed201_rep2,C2,finite-pool CGA,201,2,1,1,selection,0.000444125005742535,NA,NA,True,False,accepted,104103936,completed
+cost-pilot-v1,C2_cubic_d1_seed201_rep2,C2,finite-pool CGA,201,2,1,1,correction,0.0012045000039506704,NA,6,True,False,accepted,104103936,completed
+cost-pilot-v1,C2_cubic_d1_seed201_rep2,C2,finite-pool CGA,201,2,2,2,selection,0.00032649999775458127,NA,NA,True,False,accepted,104103936,completed
+cost-pilot-v1,C2_cubic_d1_seed201_rep2,C2,finite-pool CGA,201,2,2,2,correction,0.0008230419916799292,NA,6,True,False,accepted,104103936,completed
+cost-pilot-v1,C2_cubic_d1_seed201_rep2,C2,finite-pool CGA,201,2,,2,unattributed_remainder,0.034673708000872286,NA,NA,,,existing solver exposes no setup/atom/evaluator phase timers,104103936,completed
+cost-pilot-v1,C2_cubic_d1_seed202_rep1,C2,finite-pool CGA,202,1,1,1,selection,0.0004648339963750914,NA,NA,True,False,accepted,104103936,completed
+cost-pilot-v1,C2_cubic_d1_seed202_rep1,C2,finite-pool CGA,202,1,1,1,correction,0.0010312920057913288,NA,6,True,False,accepted,104103936,completed
+cost-pilot-v1,C2_cubic_d1_seed202_rep1,C2,finite-pool CGA,202,1,2,2,selection,0.00035016699985135347,NA,NA,True,False,accepted,104103936,completed
+cost-pilot-v1,C2_cubic_d1_seed202_rep1,C2,finite-pool CGA,202,1,2,2,correction,0.0008527089958079159,NA,6,True,False,accepted,104103936,completed
+cost-pilot-v1,C2_cubic_d1_seed202_rep1,C2,finite-pool CGA,202,1,,2,unattributed_remainder,0.03379954000217431,NA,NA,,,existing solver exposes no setup/atom/evaluator phase timers,104103936,completed
+cost-pilot-v1,C2_cubic_d1_seed202_rep2,C2,finite-pool CGA,202,2,1,1,selection,0.0004351660027168691,NA,NA,True,False,accepted,104103936,completed
+cost-pilot-v1,C2_cubic_d1_seed202_rep2,C2,finite-pool CGA,202,2,1,1,correction,0.0010228750034002587,NA,6,True,False,accepted,104103936,completed
+cost-pilot-v1,C2_cubic_d1_seed202_rep2,C2,finite-pool CGA,202,2,2,2,selection,0.00027725000109057873,NA,NA,True,False,accepted,104103936,completed
+cost-pilot-v1,C2_cubic_d1_seed202_rep2,C2,finite-pool CGA,202,2,2,2,correction,0.0008024999988265336,NA,6,True,False,accepted,104103936,completed
+cost-pilot-v1,C2_cubic_d1_seed202_rep2,C2,finite-pool CGA,202,2,,2,unattributed_remainder,0.03367779199396576,NA,NA,,,existing solver exposes no setup/atom/evaluator phase timers,104103936,completed
+cost-pilot-v1,C4_pure_p_d1_seed201_rep1,C4,finite-pool CGA,201,1,1,1,selection,0.000475791995995678,NA,NA,True,False,accepted,104103936,completed
+cost-pilot-v1,C4_pure_p_d1_seed201_rep1,C4,finite-pool CGA,201,1,1,1,correction,0.0012337499938439578,NA,9,True,False,accepted,104103936,completed
+cost-pilot-v1,C4_pure_p_d1_seed201_rep1,C4,finite-pool CGA,201,1,2,2,selection,0.00027070799842476845,NA,NA,True,False,accepted,104103936,completed
+cost-pilot-v1,C4_pure_p_d1_seed201_rep1,C4,finite-pool CGA,201,1,2,2,correction,0.0011166249896632507,NA,10,True,False,accepted,104103936,completed
+cost-pilot-v1,C4_pure_p_d1_seed201_rep1,C4,finite-pool CGA,201,1,,2,unattributed_remainder,0.03405383302207234,NA,NA,,,existing solver exposes no setup/atom/evaluator phase timers,104103936,completed
+cost-pilot-v1,C4_pure_p_d1_seed201_rep2,C4,finite-pool CGA,201,2,1,1,selection,0.0004079589998582378,NA,NA,True,False,accepted,104103936,completed
+cost-pilot-v1,C4_pure_p_d1_seed201_rep2,C4,finite-pool CGA,201,2,1,1,correction,0.0011727079981938004,NA,9,True,False,accepted,104103936,completed
+cost-pilot-v1,C4_pure_p_d1_seed201_rep2,C4,finite-pool CGA,201,2,2,2,selection,0.0002632919931784272,NA,NA,True,False,accepted,104103936,completed
+cost-pilot-v1,C4_pure_p_d1_seed201_rep2,C4,finite-pool CGA,201,2,2,2,correction,0.0010536670015426353,NA,10,True,False,accepted,104103936,completed
+cost-pilot-v1,C4_pure_p_d1_seed201_rep2,C4,finite-pool CGA,201,2,,2,unattributed_remainder,0.0328310410072269,NA,NA,,,existing solver exposes no setup/atom/evaluator phase timers,104103936,completed
+cost-pilot-v1,C4_pure_p_d1_seed202_rep1,C4,finite-pool CGA,202,1,1,1,selection,0.0004400829930091277,NA,NA,True,False,accepted,104120320,completed
+cost-pilot-v1,C4_pure_p_d1_seed202_rep1,C4,finite-pool CGA,202,1,1,1,correction,0.0013299169950187206,NA,9,True,False,accepted,104120320,completed
+cost-pilot-v1,C4_pure_p_d1_seed202_rep1,C4,finite-pool CGA,202,1,2,2,selection,0.0002856250066542998,NA,NA,True,False,accepted,104120320,completed
+cost-pilot-v1,C4_pure_p_d1_seed202_rep1,C4,finite-pool CGA,202,1,2,2,correction,0.0010859169997274876,NA,10,True,False,accepted,104120320,completed
+cost-pilot-v1,C4_pure_p_d1_seed202_rep1,C4,finite-pool CGA,202,1,,2,unattributed_remainder,0.03305866600559036,NA,NA,,,existing solver exposes no setup/atom/evaluator phase timers,104120320,completed
+cost-pilot-v1,C4_pure_p_d1_seed202_rep2,C4,finite-pool CGA,202,2,1,1,selection,0.0004262089933035895,NA,NA,True,False,accepted,104251392,completed
+cost-pilot-v1,C4_pure_p_d1_seed202_rep2,C4,finite-pool CGA,202,2,1,1,correction,0.0012400830019032583,NA,9,True,False,accepted,104251392,completed
+cost-pilot-v1,C4_pure_p_d1_seed202_rep2,C4,finite-pool CGA,202,2,2,2,selection,0.0002553329977672547,NA,NA,True,False,accepted,104251392,completed
+cost-pilot-v1,C4_pure_p_d1_seed202_rep2,C4,finite-pool CGA,202,2,2,2,correction,0.0011683749908115715,NA,10,True,False,accepted,104251392,completed
+cost-pilot-v1,C4_pure_p_d1_seed202_rep2,C4,finite-pool CGA,202,2,,2,unattributed_remainder,0.032635000016214326,NA,NA,,,existing solver exposes no setup/atom/evaluator phase timers,104251392,completed

@@ -1,0 +1,11 @@
+{
+  "schema_version": "cga-artifacts-v1",
+  "artifact": "tex/figures/supplementary/cga_p5_boundary.pdf",
+  "kind": "figure",
+  "input_files_sha256": "data/derived/experiments/cga_metrics_long.csv#c1cd6a722237ca2c9f65c5d18e917cfd492c4862936bbb9e9327dbd90a2ac7c3",
+  "filters": "cases=15;metrics=energy_gap_raw,natural_rel,quasi_rel;full accepted trajectories",
+  "semantic": "dyadic accepted states connected; conditional guide exponent fixed and vertical position set from the last three positive dyadic points; guide exponents=15:energy_gap_raw:2,15:natural_rel:0.4,15:quasi_rel:1",
+  "command": "python code/generate_artifacts.py",
+  "output_sha256": "42bc44ca59b26c4f3b86fb9040330502076c90434b8674748a1ca50de204b9a4",
+  "validation": "source-to-plot checks passed"
+}

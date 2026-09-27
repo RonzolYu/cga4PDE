@@ -1,0 +1,11 @@
+{
+  "python": "3.13.13 | packaged by Anaconda, Inc. | (main, Apr 14 2026, 06:14:06) [Clang 20.1.8 ]",
+  "numpy": "2.5.0",
+  "scipy": "1.18.0",
+  "platform": "macOS-26.5.2-arm64-arm-64bit-Mach-O",
+  "processor": "arm",
+  "blas_threads": "1",
+  "git_commit": "f7bb34926a3fb1af4d7906eac87765ca78688993",
+  "git_dirty": true,
+  "started": "2026-09-07T08:45:27.554449+08:00"
+}

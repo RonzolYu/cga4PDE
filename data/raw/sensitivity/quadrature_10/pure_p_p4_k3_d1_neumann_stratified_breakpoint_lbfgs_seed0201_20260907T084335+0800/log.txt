@@ -1,0 +1,40 @@
+start=2026-09-07T08:43:35.521253+08:00
+freeze_profile=mission3-preregistered-v1
+phase=m3_quad_10
+config_sha256=862ab350a427e191150ae5bc3eed811ac54005b2bf11fbb8ca052d7e215191e9
+problem=pure_p dim=1 boundary=Neumann
+p=4.0 epsilon=None relu_power=3
+target=32 max_attempts=128
+dtype=float64 python=3.13.13 numpy=2.5.0 scipy=1.18.0
+attempt=1 accepted=True atoms=1 energy=-124.4281236456884 reason=accepted
+attempt=2 accepted=True atoms=2 energy=-252.2685563248478 reason=accepted
+attempt=3 accepted=True atoms=3 energy=-328.6063002366111 reason=accepted
+attempt=4 accepted=True atoms=4 energy=-407.46558613933587 reason=accepted
+attempt=5 accepted=True atoms=5 energy=-422.17982207093024 reason=accepted
+attempt=6 accepted=True atoms=6 energy=-438.2097029072051 reason=accepted
+attempt=7 accepted=True atoms=7 energy=-438.2326147715346 reason=accepted
+attempt=8 accepted=True atoms=8 energy=-438.317837837621 reason=accepted
+attempt=9 accepted=True atoms=9 energy=-438.32634791694727 reason=accepted
+attempt=10 accepted=True atoms=10 energy=-438.32701137950687 reason=accepted
+attempt=11 accepted=True atoms=11 energy=-438.3319438419196 reason=accepted
+attempt=12 accepted=True atoms=12 energy=-438.33826757422014 reason=accepted
+attempt=13 accepted=True atoms=13 energy=-438.3398152426437 reason=accepted
+attempt=14 accepted=True atoms=14 energy=-438.3398513588927 reason=accepted
+attempt=15 accepted=True atoms=15 energy=-438.33988963355296 reason=accepted
+attempt=16 accepted=True atoms=16 energy=-438.33990155265224 reason=accepted
+attempt=17 accepted=True atoms=17 energy=-438.3405967758188 reason=accepted
+attempt=18 accepted=True atoms=18 energy=-438.34062729109183 reason=accepted
+attempt=19 accepted=True atoms=19 energy=-438.34086615893784 reason=accepted
+attempt=20 accepted=True atoms=20 energy=-438.34086867906774 reason=accepted
+attempt=21 accepted=True atoms=21 energy=-438.3408752930843 reason=accepted
+attempt=22 accepted=True atoms=22 energy=-438.3408758047133 reason=accepted
+attempt=23 accepted=True atoms=23 energy=-438.34087867732023 reason=accepted
+attempt=24 accepted=True atoms=24 energy=-438.34088053565586 reason=accepted
+attempt=25 accepted=True atoms=25 energy=-438.3408827059844 reason=accepted
+attempt=26 accepted=True atoms=26 energy=-438.3408827596502 reason=accepted
+attempt=27 accepted=True atoms=27 energy=-438.3408976560495 reason=accepted
+attempt=28 accepted=True atoms=28 energy=-438.34090537628515 reason=accepted
+attempt=29 accepted=True atoms=29 energy=-438.34090625707205 reason=accepted
+attempt=30 accepted=True atoms=30 energy=-438.3409063575609 reason=accepted
+attempt=31 accepted=True atoms=31 energy=-438.340906614292 reason=accepted
+attempt=32 accepted=True atoms=32 energy=-438.3409066430271 reason=accepted

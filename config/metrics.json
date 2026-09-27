@@ -1,0 +1,22 @@
+{
+  "schema_version": "cga-metric-registry-v1",
+  "required_provenance_fields": ["evaluation_rule", "evaluator_hash", "source_hash", "is_raw", "is_interpolated"],
+  "metrics": [
+    {"canonical": "energy_gap_signed", "formula": "E_Q(u)-E_Q(u_exact)", "denominator": null, "models": ["all"], "archived_cga": "energy_gap_raw"},
+    {"canonical": "l2_rel", "formula": "||u-u_exact||_L2,Q / ||u_exact||_L2,Q", "denominator": "||u_exact||_L2,Q", "models": ["all"], "archived_cga": "l2_rel"},
+    {"canonical": "h1_rel", "formula": "||u-u_exact||_H1,Q / ||u_exact||_H1,Q", "denominator": "||u_exact||_H1,Q", "models": ["linear", "cubic", "sinh"], "archived_cga": "natural_rel"},
+    {"canonical": "w1p_semi_rel", "formula": "||grad(u-u_exact)||_Lp,Q / ||grad(u_exact)||_Lp,Q", "denominator": "||grad(u_exact)||_Lp,Q", "models": ["pure_p", "regularized_p"], "archived_cga": "natural_rel"},
+    {"canonical": "w1p_full_rel", "formula": "full W1p error / full exact W1p norm", "denominator": "full exact W1p norm", "models": ["reaction_p", "pure_p", "regularized_p"], "archived_cga": "w1p_full_rel; natural_rel for reaction_p"},
+    {"canonical": "v_rel", "formula": "||V(grad u)-V(grad u_exact)||_L2,Q / ||V(grad u_exact)||_L2,Q", "denominator": "exact V norm", "models": ["pure_p"], "archived_cga": "quasi_rel"},
+    {"canonical": "v_eps_rel", "formula": "||V_eps(grad u)-V_eps(grad u_exact)||_L2,Q / ||V_eps(grad u_exact)||_L2,Q", "denominator": "exact V_eps norm", "models": ["regularized_p"], "archived_cga": "quasi_rel"},
+    {"canonical": "v_reaction_rel", "formula": "combined gradient/value V distance / combined exact V norm", "denominator": "combined exact V norm", "models": ["reaction_p"], "archived_cga": "quasi_rel"}
+  ],
+  "baseline_migration": {
+    "C1-C3:natural_error": "h1_rel",
+    "C4-C5:natural_error": "w1p_semi_rel",
+    "C4-C5:v_error": "v_rel",
+    "l2_error": "l2_rel",
+    "energy_gap": "energy_gap_signed"
+  },
+  "negative_energy_policy": "retain signed value; never silently take absolute value"
+}

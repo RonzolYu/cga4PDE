@@ -1,0 +1,28 @@
+{
+  "schema_version": "cost-pilot-v1",
+  "created_utc": "2026-09-08T06:31:43.057313+00:00",
+  "python": "3.13.13 | packaged by Anaconda, Inc. | (main, Apr 14 2026, 06:14:06) [Clang 20.1.8 ]",
+  "python_executable": "python",
+  "numpy": "2.5.0",
+  "scipy": "1.18.0",
+  "platform": "macOS-26.5.2-arm64-arm-64bit-Mach-O",
+  "processor": "arm",
+  "cpu_count": 10,
+  "threads": {
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "VECLIB_MAXIMUM_THREADS": "1",
+    "NUMEXPR_NUM_THREADS": "1"
+  },
+  "git_sha": "f7bb34926a3fb1af4d7906eac87765ca78688993",
+  "timer": "time.perf_counter_ns",
+  "phase_scope": "outer wall time plus existing history fields elapsed_selection_s and elapsed_projection_s",
+  "unmeasured_phases": [
+    "setup",
+    "pool generation",
+    "quadrature construction",
+    "serialization and I/O",
+    "independent evaluator internals"
+  ]
+}

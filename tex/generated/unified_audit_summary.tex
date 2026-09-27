@@ -1,0 +1,34 @@
+\begin{table}[!htbp]
+\centering
+\small
+\caption{Unified re-evaluation boundaries and fixed denominators for the archived comparison states.}
+\label{tab:unified-audit-boundary}
+\begin{tabularx}{\textwidth}{@{}p{0.42\textwidth}X@{}}
+\toprule
+Audit item & Count or convention \\
+\midrule
+Retained states in the common audit & 617 total: 612 newly generated; 5 archived terminal \\
+Native solver acceptance & (617/617); this records the native acceptance rule only \\
+Independent coefficient-count check & (617/617) \\
+Signed energy/metric audit & (611/617); six states remain excluded from the corresponding strict energy summary \\
+Common H1-dual residual, threshold 2e-6 & (394/617); this is reported separately from native acceptance \\
+Independent two-dimensional Bregman-energy audit & (137/138); this tests energy-integration stability and is not an optimization certificate \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\begin{table}[!htbp]
+\centering
+\scriptsize
+\caption{Prescribed random-feature denominators at widths where states are missing or further audit filtering is active.  A missing state remains in the denominator.}
+\label{tab:rfm-fixed-denominators}
+\begin{tabularx}{0.98\textwidth}{@{}lrrrr>{\raggedright\arraybackslash}X@{}}
+\toprule
+Case/width & Plan & Eval. & Missing & Energy & Strict H1 residual \\
+\midrule
+C3, (N=256) & 10 & 7 & 3 & (7/10) & (0/10) \\
+C5, (N=128) & 10 & 9 & 1 & (9/10) & (0/10) \\
+C5, (N=256) & 10 & 8 & 2 & (7/10) & (0/10) \\
+\bottomrule
+\end{tabularx}
+\end{table}

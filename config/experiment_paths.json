@@ -1,0 +1,15 @@
+{
+  "schema_version": "2026-09-14",
+  "package_root": ".",
+  "authoritative_index": "manifest/experiment_index_v2.csv",
+  "figure_table_map": "manifest/figure_table_map.csv",
+  "baseline_inputs": "data/raw/cga_cases",
+  "sensitivity_inputs": "data/raw/sensitivity",
+  "continuation_inputs": "data/raw/revision_20260914",
+  "derived_results": "data/derived/experiments",
+  "manuscript_source": "tex/main.tex",
+  "generated_tables": "tex/generated",
+  "figures": "result/figures",
+  "reproduction_entrypoint": "code/reproduce.py",
+  "numeric_audit_entrypoint": "code/audit_numeric_values.py"
+}

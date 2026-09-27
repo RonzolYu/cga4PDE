@@ -1,0 +1,85 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "name": "experiment data validation",
+      "passed": true,
+      "source": "data/derived/experiments/experiment_validation.json"
+    },
+    {
+      "name": "RFM raw row count",
+      "passed": true,
+      "source": "data/derived/experiments/rfm_multiseed_raw.csv"
+    },
+    {
+      "name": "RFM prescribed seed set",
+      "passed": true,
+      "source": "data/derived/experiments/experiment_validation.json"
+    },
+    {
+      "name": "RFM count conservation",
+      "passed": true,
+      "source": "data/derived/experiments/rfm_multiseed_summary.csv"
+    },
+    {
+      "name": "C5 endpoint is success-conditioned",
+      "passed": true,
+      "source": "data/derived/experiments/rfm_multiseed_summary.csv"
+    },
+    {
+      "name": "ID17 low-frequency profile",
+      "passed": true,
+      "source": "config/problems.json"
+    },
+    {
+      "name": "finite-window diagnostic validation",
+      "passed": true,
+      "source": "data/derived/window_diagnostics/window_certificate_validation.json"
+    },
+    {
+      "name": "finite-window claim scope",
+      "passed": true,
+      "source": "data/derived/window_diagnostics/window_certificate_validation.json"
+    },
+    {
+      "name": "finite-window transfer rows",
+      "passed": true,
+      "source": "data/derived/window_diagnostics/transfer_budget.csv"
+    },
+    {
+      "name": "artifact validation",
+      "passed": true,
+      "source": "data/derived/baselines/artifact_validation.json"
+    },
+    {
+      "name": "figure count metadata",
+      "passed": true,
+      "source": "data/derived/baselines/artifact_validation.json"
+    },
+    {
+      "name": "common-grid interpolation brackets",
+      "passed": true,
+      "source": "data/derived/baselines/baseline_common_grid.csv"
+    },
+    {
+      "name": "baseline plot scope",
+      "passed": true,
+      "source": "data/derived/baselines/artifact_validation.json"
+    },
+    {
+      "name": "aggregate ranking uses complete endpoints",
+      "passed": true,
+      "source": "data/derived/baselines/artifact_validation.json"
+    },
+    {
+      "name": "quadrature sensitivity rows",
+      "passed": true,
+      "source": "data/derived/experiments/quadrature_sensitivity.csv"
+    },
+    {
+      "name": "paper source contains no internal-process language",
+      "passed": true,
+      "source": "main.tex, supplement.tex, sections/*.tex, generated/*.tex"
+    }
+  ]
+}

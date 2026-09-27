@@ -1,0 +1,20 @@
+{
+  "schema_version": "window-certificate-v1",
+  "case": "one-dimensional p=4 ReLU^3 low-frequency Neumann problem",
+  "pure_phase": "base_pure",
+  "regularized_phase": "epsilon_01",
+  "accepted_window": [8, 32],
+  "window_rule": "all consecutive accepted states from 8 through 32; endpoints fixed before diagnostics",
+  "reference_norm": "zero-mean H1 seminorm evaluated by breakpoint-aware SG16",
+  "frozen_state": "manufactured exact minimizer",
+  "master_audit_dictionary": "union of all 512 candidate atoms and the first 128 independently sampled reference atoms",
+  "audit_quadrature_orders": [12, 16],
+  "active_resolve_order": 16,
+  "active_resolve_projection_rtol": 1e-10,
+  "active_resolve_projection_atol": 1e-13,
+  "proposed_frozen_weakness_t0": 0.1,
+  "rank_relative_threshold": 1e-10,
+  "continuous_dictionary_coverage": "not certified",
+  "source_entropy_certificate": "not certified",
+  "maximum_claim_level": "finite-set selection/stability diagnostic; no continuous asymptotic certificate"
+}

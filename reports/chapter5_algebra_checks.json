@@ -1,0 +1,62 @@
+{
+  "status": "PASS",
+  "scope": "algebra and finite-dimensional sanity checks only",
+  "seed": 20260913,
+  "atol": 2e-11,
+  "rtol": 2e-10,
+  "chapter_sha256": "3654e49a64bc0e87df0d793eaa5098f54ad139943bb3f0c4d6c6fea22bdc0447",
+  "checks": [
+    {
+      "name": "quartic_exact_polynomial",
+      "passed": true
+    },
+    {
+      "name": "fractional_exponent_identity",
+      "passed": true
+    },
+    {
+      "name": "power_recurrence_1600_steps",
+      "passed": true,
+      "max_excess": 0.0
+    },
+    {
+      "name": "zero_entry_and_termination",
+      "passed": true
+    },
+    {
+      "name": "reject_old_reciprocal_coefficient",
+      "passed": true,
+      "true_first_error": 0.9,
+      "invalid_bound": 0.027777777777777776
+    },
+    {
+      "name": "clipped_descent_grid",
+      "passed": true,
+      "max_grid_gap": 6.428571425187712e-09
+    },
+    {
+      "name": "pythagoras_600_independent_extensions",
+      "passed": true,
+      "max_absolute_defect": 1.7541523789077473e-13
+    },
+    {
+      "name": "weighted_approximate_source_600_extensions",
+      "passed": true,
+      "max_excess": 0.0,
+      "remainder_crossings": 96
+    },
+    {
+      "name": "zero_score_source_floor_B_zero_W_zero",
+      "passed": true,
+      "B": 0,
+      "sigma": 1,
+      "W": 0,
+      "residual": 1
+    },
+    {
+      "name": "quartic_50_nonminimizing_states",
+      "passed": true,
+      "max_scaled_defect": 1.875355694043487e-15
+    }
+  ]
+}

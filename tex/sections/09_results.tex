@@ -1,0 +1,177 @@
+\section{Equal-DOF baseline comparisons}
+\label{sec:results}
+
+\subsection{Protocol and scope}
+
+Five cases use a common evaluator: the one-dimensional linear problem, the one-dimensional cubic
+problem, the two-dimensional sinh problem, the one-dimensional pure \(p=4\) problem, and the
+two-dimensional pure \(p=4\) problem. The comparison variable is the number of independent global
+coefficients: accepted atoms for CGA, ridge features held fixed for RFM, and independent
+finite-element coefficients after the constant mode is removed where required. Equal degrees of
+freedom (DOF) do not imply equal runtime, memory, score evaluations, or nonlinear solver work, and
+no cross-method timing conclusion is drawn from runs performed in different environments.
+
+FEM uses continuous Lagrange elements on uniform one-dimensional meshes or structured triangular
+two-dimensional meshes.  P1 and P3 provide low- and high-order mesh-based references in the main
+figures. P2 results are retained in the supplementary material. P3 is the most accurate among the tested uniform-mesh FEM variants
+at each largest common coefficient count reported below. The linear and cubic FEM curves are close
+at high resolution, which is consistent with the common manufactured profile and an \(H^1\) error
+dominated by the finite-element approximation.
+
+For each case, the RFM uses a nested family of normalized \(\relu^3\) ridges and fits the outer
+coefficients. Ten random-feature realizations are prescribed for each problem. Curves show the median and
+interquartile range over available converged realizations at each width, and the machine-readable record gives
+the prescribed count together with solver status. All ten
+realizations reach the displayed ranges for the linear, cubic, sinh, and one-dimensional pure
+\(p=4\) problems. In the two-dimensional pure \(p=4\) problem, seven realizations are available at
+\(N=128\) and four are available at \(N=256\); consequently its statistical curve ends at 256 and its terminal band is based
+on four available realizations.  No distributional statement is made at \(N=512\).
+
+The CGA and RFM comparison curves join the computed powers of two listed in the protocol and the
+terminal accepted state needed to define the comparison cap, while FEM uses its own mesh degrees of
+freedom. The figures contain no common-grid interpolants, theoretical reference lines, or
+convergence-order-versus-DOF curves. The reported panel range ends at the terminal CGA width fixed
+by the stopping rule, so that endpoint is determined by the stopping rule and the available method
+states rather than by the plotted error values. Each method is shown only over the states it
+actually reached. The equal-DOF tables use linear interpolation of log(error) against log(DOF)
+between adjacent computed values when an exact coefficient count is unavailable; no extrapolation
+is used.
+
+\begin{table}[!htbp]
+\centering
+\small
+\caption{Training and evaluation parameters for the equal-DOF comparison.}
+\label{tab:protocol}
+\begin{tabularx}{\textwidth}{@{}p{0.26\textwidth}X@{}}
+\toprule
+Component & Setting \\
+\midrule
+RFM & Nested \(\relu^3\) prefixes; the discrete homogeneous normalization defined in \Cref{sec:numerics}; centered for pure \(p\); ten prespecified random seeds, with prescribed and available-realization counts reported. \\
+FEM & Continuous P1/P2/P3; structured meshes; assembly order 10, increased to 80 for the one-dimensional multifrequency cases; relative/absolute Newton tolerances \(10^{-11}\)/\(10^{-12}\). \\
+Training quadrature & One dimension: 256 cells, order 6; two dimensions: \(63\times63\) cells, tensor-product order 3. \\
+Evaluation quadrature & One dimension: 2048 cells, order 8; two dimensions: \(64\times64\) cell partition, order 3. \\
+Independent refinement & One dimension: 3072 cells, order 8; two dimensions: \(80\times80\) cell partition, order 3. \\
+Common DOFs & \(8,16,32,64,128,256\), with 512 used only when every method required by the comparison is bracketed by computed states. \\
+\bottomrule
+\end{tabularx}
+\end{table}
+\FloatBarrier
+
+\subsection{Unified evaluator, state boundary, and fixed denominators}
+
+The comparison states are re-evaluated after training by a frozen evaluator that is separate from
+the quadrature used to construct the features or fit their coefficients.  The main evaluation rule
+uses the quadrature listed in \Cref{tab:protocol}; an independent refinement is used for the audit
+columns.  Thus, a native solver status is not silently promoted to an independent accuracy
+certificate, and a state is not removed merely because its audit metric is unavailable.  The
+retained-state boundary and the denominator conventions are summarized in
+\Cref{tab:unified-audit-boundary,tab:rfm-fixed-denominators}.
+
+The common audit retains 617 stored states, comprising 612 newly generated states and five archived
+terminal states.  All 617 satisfy their native acceptance rule and the independent coefficient-count
+check.  The stricter signed energy/metric audit admits 611 states, while the common \(H^1\)-dual
+residual threshold admits 394; these are different filters and are reported with their own
+denominators.  The independent two-dimensional Bregman calculation is an energy-integration check
+on 138 states, not a replacement for the residual or optimizer checks.
+
+For random-feature comparisons, the prescribed denominator is ten seeds at every configured width.
+The displayed median and interquartile range are computed only from evaluated states that pass the
+metric-specific checks, whereas missing rank-budget states remain failures in the \(10\)-seed
+denominator.  In particular, the three C3 states missing at \(N=256\), the one C5 state missing at
+\(N=128\), and the two C5 states missing at \(N=256\) are not dropped before forming success counts.
+All other displayed RFM widths have \(10/10\) evaluated states; their strict residual counts can
+still be smaller because residual qualification is a separate filter.
+
+\input{generated/unified_audit_summary}
+\FloatBarrier
+
+\subsection{Relative Sobolev errors}
+
+For the linear, cubic, and sinh problems,
+\Cref{fig:baseline-sobolev-1d,fig:baseline-sobolev-rest} report the relative \(H^1\) error. For the
+two pure \(p=4\) problems, the corresponding panels report the relative
+\(W^{1,4}\) error. These are Sobolev errors; the natural \(V\)-distance is reported separately below.
+
+\begin{figure}[!htbp]
+\centering
+\begin{subfigure}[t]{0.49\textwidth}
+\includegraphics[width=\linewidth]{C1_relative_h1_error.pdf}
+\caption{Linear, \(d=1\).}
+\end{subfigure}\hfill
+\begin{subfigure}[t]{0.49\textwidth}
+\includegraphics[width=\linewidth]{C2_relative_h1_error.pdf}
+\caption{Cubic, \(d=1\).}
+\end{subfigure}
+\caption{Relative \(H^1\) error versus effective degrees of freedom for the one-dimensional
+multifrequency problems. RFM curves show medians and interquartile bands over successful realizations
+from ten prespecified runs. All markers are computed states.}
+\label{fig:baseline-sobolev-1d}
+\end{figure}
+
+\begin{figure}[!htbp]
+\centering
+\begin{subfigure}[t]{0.32\textwidth}
+\includegraphics[width=\linewidth]{C3_relative_h1_error.pdf}
+\caption{Sinh, \(d=2\): relative \(H^1\) error.}
+\end{subfigure}\hfill
+\begin{subfigure}[t]{0.32\textwidth}
+\includegraphics[width=\linewidth]{C4_relative_w1p_error.pdf}
+\caption{Pure \(p=4\), \(d=1\): relative \(W^{1,4}\) error.}
+\end{subfigure}\hfill
+\begin{subfigure}[t]{0.32\textwidth}
+\includegraphics[width=\linewidth]{C5_relative_w1p_error.pdf}
+\caption{Pure \(p=4\), \(d=2\): relative \(W^{1,4}\) error.}
+\end{subfigure}
+\caption{Relative Sobolev errors for the two-dimensional sinh problem and the pure \(p=4\) problems.
+The two-dimensional pure \(p=4\) RFM band is formed from the available realizations; its statistics at \(N=128\) and 256 use
+seven and four available realizations, respectively.}
+\label{fig:baseline-sobolev-rest}
+\end{figure}
+\FloatBarrier
+
+At the largest common endpoint supported by the configured RFM widths and bracketing FEM states,
+CGA has the smallest relative Sobolev error in the linear, cubic, sinh, and one-dimensional pure
+\(p=4\) problems, for which all ten prescribed RFM solves succeeded.
+The RFM-median/CGA ratios are 1.49, 1.52, 1.77, and 5.76, and the P3/CGA ratios are 4.24, 4.35, 5.64,
+and 1.88. In the two-dimensional pure \(p=4\) problem the successful-run RFM median and the P3 value
+are also above the CGA value, by factors
+5.01 and 16.12, respectively, but the RFM statistic is based on only four of ten prescribed solves.
+These are endpoint comparisons at equal coefficient count. The curves cross at smaller widths in
+some cases, so the data do not support uniform dominance at every DOF.
+
+\input{generated/baseline_terminal}
+\FloatBarrier
+
+\subsection{Natural \texorpdfstring{\(V\)}{V}-distance for the \texorpdfstring{\(p\)}{p}-models}
+
+\Cref{fig:baseline-v} repeats the two pure \(p=4\) comparisons with the relative \(V\)-distance defined in
+\Cref{sec:numerics}.  Keeping this geometry separate from the \(W^{1,4}\) error is important because the
+two quantities need not have the same terminal behavior.  The figure uses the same computed-state and
+RFM uncertainty conventions as the Sobolev panels.
+
+\begin{figure}[!htbp]
+\centering
+\begin{subfigure}[t]{0.49\textwidth}
+\includegraphics[width=\linewidth]{C4_v_distance.pdf}
+\caption{Pure \(p=4,d=1\).}
+\end{subfigure}\hfill
+\begin{subfigure}[t]{0.49\textwidth}
+\includegraphics[width=\linewidth]{C5_v_distance.pdf}
+\caption{Pure \(p=4,d=2\).}
+\end{subfigure}
+\caption{Relative \(V\)-distance versus effective degrees of freedom.  No theoretical reference line
+or common-grid interpolation is drawn.}
+\label{fig:baseline-v}
+\end{figure}
+\FloatBarrier
+
+\subsection{Interpretation limits}
+
+The equal-DOF results compare finite-pool CGA with the specified FEM and RFM implementations.  They do
+not establish a runtime ordering, do not compare CGA with every randomized or greedy dictionary method,
+and do not turn endpoint ratios into asymptotic complexity estimates. The two-dimensional pure
+\(p=4\) RFM summaries use
+the four available realizations at the terminal width and are not used as a complete ten-run statistical
+comparison. Supplementary energy-gap comparisons are more sensitive to quadrature because they
+subtract two separately integrated energies. The accompanying data specify the prescribed and
+converged realization counts, interpolation brackets, and computed coefficient counts.

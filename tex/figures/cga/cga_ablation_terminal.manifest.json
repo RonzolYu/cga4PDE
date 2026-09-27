@@ -1,0 +1,11 @@
+{
+  "schema_version": "cga-artifacts-v1",
+  "artifact": "tex/figures/cga/cga_ablation_terminal.pdf",
+  "kind": "figure",
+  "input_files_sha256": "data/derived/experiments/ablation_long.csv#b1d1cea764247a4da292413e54a497b39de976a52a03cd14243079153f61dd78",
+  "filters": "terminal accepted step N=32 for each run",
+  "semantic": "single-factor terminal comparison; categorical x axes",
+  "command": "python code/generate_artifacts.py",
+  "output_sha256": "ab7e572cae097040358cfa453341e5f36aea587ebe66051358d2d3dd509bcc9b",
+  "validation": "source-to-plot checks passed"
+}

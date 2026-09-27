@@ -1,0 +1,10 @@
+{
+  "schema_version": "2026-09-14",
+  "scope": "revision continuation and finite-window numerical audit",
+  "prefix_state_absolute": 2e-12,
+  "prefix_state_relative": 5e-7,
+  "quartic_identity_absolute": 1e-11,
+  "projection_drop_identity_absolute": 1e-10,
+  "quadrature_crosscheck_relative": 1e-8,
+  "protocol_sha256": "77a43ae6de7b5e2a2addc5d21162a72c214ca49a920fa175bead2f7041152469"
+}

@@ -1,0 +1,11 @@
+{
+  "schema_version": "cga-artifacts-v1",
+  "artifact": "tex/figures/cga/cga_epsilon_scan.pdf",
+  "kind": "figure",
+  "input_files_sha256": "data/derived/experiments/epsilon_scan_long.csv#b23db71821b7a6a5728cb9f1ab54cf58065951936e4d2c21fa41951e652ef08f",
+  "filters": "p=4,d=1,k=3;dyadic steps=1:32",
+  "semantic": "pure and three regularization scales; dyadic accepted states connected; no fitted rate",
+  "command": "python code/generate_artifacts.py",
+  "output_sha256": "746395e0a9490f76eb940d839ef687602f3bc276d935d2a7be5d4224f77ad19f",
+  "validation": "source-to-plot checks passed"
+}

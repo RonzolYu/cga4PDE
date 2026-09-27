@@ -1,0 +1,24 @@
+{
+  "candidate": {
+    "kind": "candidate",
+    "size": 924,
+    "seed": 201,
+    "sampler": "stratified_breakpoint",
+    "relu_power": 3,
+    "hash": "9d65cc98ab4649dbfc6b4159f2988a75644bdb27cc7846d9bd8f023c811711da",
+    "available": 924,
+    "scale_min": 9.372641861573826e-07,
+    "scale_max": 1.9330209025868053
+  },
+  "reference": {
+    "kind": "reference",
+    "size": 924,
+    "seed": 1210,
+    "sampler": "stratified_breakpoint",
+    "relu_power": 3,
+    "hash": "bd59f857df318c89450bf536ea6bec819e8f18cfd2288650dd5a58d9e59ada3c",
+    "available": 924,
+    "scale_min": 7.026273982837319e-07,
+    "scale_max": 1.9330209025868053
+  }
+}

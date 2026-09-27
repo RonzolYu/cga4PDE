@@ -1,0 +1,38 @@
+{
+  "schema_version": "cga-window-diagnostics-v1",
+  "config_path": "reproducibility/configs/window_diagnostics.json",
+  "window": [8, 32],
+  "case_summaries": {
+    "pure": {
+      "run": "data/raw/sensitivity/base_pure/pure_p_p4_k3_d1_neumann_stratified_breakpoint_lbfgs_seed0201_20260907T084318+0800",
+      "source_history_sha256": "3da8885406067e143bc145fdad5d1cf191fbf7fe7f8161fb14e7abbe3f235f94",
+      "config_sha256": "722987bad6031a42f983ab7757406af49aadb4740adabfeb7e772eac213e8eee",
+      "master_mu": 2.797048218643385e-05,
+      "master_lambda": 118.24767250980915,
+      "atom_norm_min": 0.000562648635574001,
+      "atom_norm_max": 5.688874685553637,
+      "minimum_active_stability_margin": 0.12406289137586536,
+      "selection_steps_passed": 0,
+      "selection_steps_total": 24
+    },
+    "regularized-0.1": {
+      "run": "data/raw/sensitivity/epsilon_01/regularized_p_p4_k3_d1_neumann_stratified_breakpoint_lbfgs_seed0201_20260907T084318+0800",
+      "source_history_sha256": "327ec1f128a50a5d77ead82df41f105b5ecc6f7e24779e867fd8f93e72f56f42",
+      "config_sha256": "a833aa8251d4985c781cb0cd787c7c1ebca8706c7acf628746c9085baf64f232",
+      "master_mu": 0.010027970482183377,
+      "master_lambda": 118.25767250253448,
+      "atom_norm_min": 0.010645187111008196,
+      "atom_norm_max": 5.689415027653309,
+      "minimum_active_stability_margin": 0.13406180477245033,
+      "selection_steps_passed": 0,
+      "selection_steps_total": 24
+    }
+  },
+  "state_rows": 64,
+  "window_rows": 50,
+  "selection_rows": 48,
+  "continuous_certificate": false,
+  "finite_rate_certificate": false,
+  "maximum_supported_statement": "finite-set selection and stability diagnostic; no continuous asymptotic certificate",
+  "passed": true
+}

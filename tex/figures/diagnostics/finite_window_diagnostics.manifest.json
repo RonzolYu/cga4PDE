@@ -1,0 +1,11 @@
+{
+  "schema_version": "cga-artifacts-v1",
+  "artifact": "tex/figures/diagnostics/finite_window_diagnostics.pdf",
+  "kind": "figure",
+  "input_files_sha256": "data/derived/window_diagnostics/selection_ratios.csv#5281597aec9b0b069e2235305694f150cd1033204344b534c1e3af1805849448;data/derived/window_diagnostics/hessian_spectra.csv#56b56bf99466ca4d32e5ed4b164eafbfae4a8f630d2a1fdf86ddd1a46000139f;data/derived/window_diagnostics/frozen_projection.csv#afba8e28a701df9da657030bdbf2f87c15ef9bbfbf17164172f98c6fdc390c61;data/derived/window_diagnostics/transfer_budget.csv#c2e2f1ab6529887df9a265b4ff74f892212c255fcdf6eb11cc11a9c938af43f4",
+  "filters": "cases=pure,regularized-0.1;steps=8:32",
+  "semantic": "finite-set diagnostics; the recorded margins do not establish a certificate",
+  "command": "python code/generate_artifacts.py",
+  "output_sha256": "89e0093104882700ff484d9dea027e6f1bea63be1f570848071e6338ce36f664",
+  "validation": "source-to-plot checks passed"
+}

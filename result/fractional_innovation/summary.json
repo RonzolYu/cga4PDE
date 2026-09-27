@@ -1,0 +1,62 @@
+{
+  "inputs_sha256": {
+    "result/section85/base_pure_finite_q16.csv": "62327e9d70bd5bb20b8f354ace846c92ed5ca42c4999e74e3953325887a41ce1",
+    "result/section85/base_pure_finite_q20.csv": "860ee49073bbd09c5b2ca08ebc61061f54a4a530d363e30c0e50bfedf7db9d8d",
+    "result/section85/epsilon_01_finite_q16.csv": "942b33820ba4c8cb5db0e819a3152e5f7bc929b4fd6d67588bfe6f0ba258bff8",
+    "result/section85/epsilon_01_finite_q20.csv": "59e8efb376d0f07a5954e39821789cdf8cda5f0566c2b3979b91ef2aba356a56"
+  },
+  "models": {
+    "base_pure": {
+      "states": 25,
+      "transitions": 24,
+      "alpha_benchmark": 6,
+      "c_min": 0.01690437718993362,
+      "c_min_N": 25,
+      "nu_fit_gamma_vs_r2": 0.5865928721315449,
+      "fit_intercept": -0.42325606468912547,
+      "alpha_from_fit": 5.774147313654645,
+      "q_max": 0.047331500401972496,
+      "rho_max": 0.020055414215550273,
+      "B": 43.61017430129175,
+      "sigma": 0.0017262775370706623,
+      "W_terminal": 19124.04203646013,
+      "r2_terminal": 3.9687705010536016e-06,
+      "source_projection_bound": 0.042803910428224755,
+      "fractional_projection_bound": 0.03774160864552093,
+      "fractional_projection_bound_ratio": 9509.64754336426,
+      "energy_gap_terminal": 1.9850678249612833e-06,
+      "source_energy_bound": 0.022310274706837947,
+      "fractional_energy_bound": 0.019671699345588604,
+      "max_c_relative_quadrature_difference": 1.929708536476841e-12,
+      "max_projection_drop_defect": 8.240803872627822e-14,
+      "max_energy_identity_defect": 5.0306980803327406e-17,
+      "evidence": "Floating-point evaluation of saved states; no interval enclosure."
+    },
+    "epsilon_01": {
+      "states": 25,
+      "transitions": 24,
+      "alpha_benchmark": 6,
+      "c_min": 0.01091242924764701,
+      "c_min_N": 25,
+      "nu_fit_gamma_vs_r2": 0.5898008712182663,
+      "fit_intercept": -0.44531766298046893,
+      "alpha_from_fit": 5.567874712314546,
+      "q_max": 0.04715465753700469,
+      "rho_max": 0.019970836244417374,
+      "B": 43.61859255055343,
+      "sigma": 0.0017276638851371645,
+      "W_terminal": 29129.876909967417,
+      "r2_terminal": 6.025348290510983e-06,
+      "source_projection_bound": 0.04057285850455078,
+      "fractional_projection_bound": 0.041099188197904035,
+      "fractional_projection_bound_ratio": 6821.047716466295,
+      "energy_gap_terminal": 3.013276837888088e-06,
+      "source_energy_bound": 0.021143612987171358,
+      "fractional_energy_bound": 0.021417897613645716,
+      "max_c_relative_quadrature_difference": 5.589985309410691e-12,
+      "max_projection_drop_defect": 1.4626095473646572e-12,
+      "max_energy_identity_defect": 8.673617379884035e-17,
+      "evidence": "Floating-point evaluation of saved states; no interval enclosure."
+    }
+  }
+}

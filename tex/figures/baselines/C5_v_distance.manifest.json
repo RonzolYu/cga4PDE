@@ -1,0 +1,11 @@
+{
+  "schema_version": "cga-artifacts-v1",
+  "artifact": "tex/figures/baselines/C5_v_distance.pdf",
+  "kind": "figure",
+  "input_files_sha256": "data/derived/baselines/baseline_actual_points.csv#19cfeac56b8296430c5c3c15012f8817cc2f75ac89f0e20a38fda0cf9b279825",
+  "filters": "case=C5;metric=v_distance;actual points only;configured dof cap=512",
+  "semantic": "no theory line and no order plot; RFM median/IQR uses ten seeds",
+  "command": "python code/generate_artifacts.py",
+  "output_sha256": "b58d93e09287393c8b80b24cc95cb3b6c4064beaaac09e527a7eeac5e1469542",
+  "validation": "source-to-plot checks passed"
+}

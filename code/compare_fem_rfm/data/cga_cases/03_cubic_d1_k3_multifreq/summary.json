@@ -1,0 +1,132 @@
+{
+  "run_dir": ".\\reexp_small\\cubic_p4_k3_d1_neumann_stratified_breakpoint_lbfgs_seed0201_20260823T105419+0800",
+  "phase": "reexp_small",
+  "model": "cubic",
+  "p": 4.0,
+  "epsilon": null,
+  "relu_power": 3,
+  "dim": 1,
+  "seed": 201,
+  "target_accepted": 256,
+  "target_reached": true,
+  "trusted_target_reached": true,
+  "audit_passed": true,
+  "formal_complete": true,
+  "formal_status": "trusted_complete",
+  "stop_reason": "target_reached_with_coverage_warning",
+  "attempted_iteration": 300,
+  "nominal_selected_count": 300,
+  "accepted_atom_count": 256,
+  "effective_rank": 256,
+  "trusted_atom_count": 256,
+  "first_quadrature_warning": null,
+  "quadrature_warning_streak": 0,
+  "coverage_warning": true,
+  "had_coverage_warning": true,
+  "train_energy": -24.523458546673623,
+  "validation_energy": -24.523458546673346,
+  "exact_validation_energy": -24.523458907668903,
+  "compatibility_residual": -2.6645352591003757e-14,
+  "elapsed_seconds": 2152.4405926000036,
+  "metrics": {
+    "energy_gap_raw": 3.609955570027523e-07,
+    "energy_gap_status": "ok",
+    "l2_abs": 1.1288912614507942e-06,
+    "l2_rel": 1.5580179595394763e-06,
+    "natural_abs": 0.0008497001181253771,
+    "natural_rel": 0.00012152710531189445,
+    "w1p_full_abs": null,
+    "w1p_full_rel": null,
+    "quasi_abs": null,
+    "quasi_rel": null
+  },
+  "terminal_metrics": {
+    "energy_gap_raw": 3.609955570027523e-07,
+    "energy_gap_status": "ok",
+    "l2_abs": 1.1288912614507942e-06,
+    "l2_rel": 1.5580179595394763e-06,
+    "natural_abs": 0.0008497001181253771,
+    "natural_rel": 0.00012152710531189445,
+    "w1p_full_abs": null,
+    "w1p_full_rel": null,
+    "quasi_abs": null,
+    "quasi_rel": null
+  },
+  "quadrature_audit": {
+    "rules": {
+      "train": {
+        "numerical_energy": -24.52345854667328,
+        "exact_energy": -24.523458907668907,
+        "metrics": {
+          "energy_gap_raw": 3.609956280570259e-07,
+          "energy_gap_status": "ok",
+          "l2_abs": 1.1288912614602856e-06,
+          "l2_rel": 1.558017959552576e-06,
+          "natural_abs": 0.000849700118125709,
+          "natural_rel": 0.0001215271053119419,
+          "w1p_full_abs": null,
+          "w1p_full_rel": null,
+          "quasi_abs": null,
+          "quasi_rel": null
+        }
+      },
+      "valid": {
+        "numerical_energy": -24.523458546673346,
+        "exact_energy": -24.523458907668903,
+        "metrics": {
+          "energy_gap_raw": 3.609955570027523e-07,
+          "energy_gap_status": "ok",
+          "l2_abs": 1.1288912614507942e-06,
+          "l2_rel": 1.5580179595394763e-06,
+          "natural_abs": 0.0008497001181253771,
+          "natural_rel": 0.00012152710531189445,
+          "w1p_full_abs": null,
+          "w1p_full_rel": null,
+          "quasi_abs": null,
+          "quasi_rel": null
+        }
+      },
+      "audit": {
+        "numerical_energy": -24.52345854667331,
+        "exact_energy": -24.523458907668903,
+        "metrics": {
+          "energy_gap_raw": 3.609955925298891e-07,
+          "energy_gap_status": "ok",
+          "l2_abs": 1.1288912614842111e-06,
+          "l2_rel": 1.558017959585596e-06,
+          "natural_abs": 0.0008497001181253309,
+          "natural_rel": 0.00012152710531188782,
+          "w1p_full_abs": null,
+          "w1p_full_rel": null,
+          "quasi_abs": null,
+          "quasi_rel": null
+        }
+      }
+    },
+    "metric_checks": {
+      "energy_gap_raw": {
+        "valid": 3.609955570027523e-07,
+        "audit": 3.609955925298891e-07,
+        "difference": 3.552713678800501e-14,
+        "limit": 7.319911850597782e-09,
+        "passed": true
+      },
+      "natural_rel": {
+        "valid": 0.00012152710531189445,
+        "audit": 0.00012152710531188782,
+        "difference": 6.627185779317646e-18,
+        "limit": 2.430543106237889e-06,
+        "passed": true
+      },
+      "quasi_rel": null
+    },
+    "validation_audit_relative_gaps": {
+      "energy_gap_raw": 9.841432284263552e-08,
+      "natural_rel": 5.4532573307899e-14,
+      "quasi_rel": null
+    },
+    "passed": true,
+    "passed_2pct": true
+  },
+  "finished": "2026-08-23T11:30:06.303787+08:00"
+}

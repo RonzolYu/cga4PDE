@@ -1,0 +1,120 @@
+\documentclass[11pt,fontset=mac]{ctexart}
+\usepackage[a4paper,margin=2.1cm]{geometry}
+\usepackage{amsmath,amssymb,booktabs,graphicx,longtable,hyperref,xcolor}
+\hypersetup{colorlinks=true,linkcolor=blue!50!black,urlcolor=blue!50!black}
+\title{FEM / RFM / CGA 五算例等自由度公平对比实验}
+\author{自动化可复现实验流水线}
+\date{2026年9月}
+\begin{document}
+\maketitle
+\begin{abstract}
+本文在统一 DOF 口径下比较连续 Lagrange FEM P1/P2/P3、冻结随机 ReLU$^3$ 特征 RFM 与冻结 pool-small 原子轨迹 CGA。五个制造解算例覆盖线性、半线性和退化 $p$-growth 模型。RFM 使用登记种子 201, 202，表中报告成功运行的中位数和四分位区间。FEM、RFM 与 CGA 终点由共同评价器重算；无系数快照的 CGA 中间点保留归档评价值。
+\end{abstract}
+
+\section{实验设置与公平协议}
+定义 CGA 的 DOF 为接受原子数，RFM 的 DOF 为冻结特征数，FEM 的 DOF 为 $\dim V_h$；纯 $p$ 模型施加一个零均值约束，故减一。二维 FEM 使用固定结构化三角网格族，不做自适应加密。RFM 在每个种子内严格使用最大池的嵌套前缀。CGA 的选择顺序保持冻结；由于归档没有中间前缀的系数快照，中间 dyadic 点沿用带来源标记的归档评价值，冻结终点诊断模型由共同评价器重算。公共 dyadic 表仅作 log--log 内插，禁止外推；因此 C4 的 CGA 表截止 $N=128$，图中保留其 $N=141$ 终点。
+
+评价积分为一维复合 Gauss 规则和二维确定性复合 Gauss 规则；RFM 的训练积分与最终评价相互独立。理论线的斜率由预注册公式给出：CGA 自然/V 误差为 $3$（1D）或 $7/4$（2D），FEM P$r$ 为 $r/d$，RFM guide 为 $1/2$；能量参考斜率取相应自然误差斜率的两倍。这些是有限窗口参考线，不是由数据回归得到的定理。
+
+\section{逐算例结果}
+
+\subsection{C1: 线性反应--扩散，$d=1$，多频制造解}
+在所有方法共同覆盖的最大合法 checkpoint $N=16$，自然误差最小的方法为 FEM P3。
+此处 RFM median（登记种子 201, 202）与 CGA 的误差比值为 0.99，FEM P3 与 CGA 的比值为 0.97。
+
+\subsubsection*{相对自然误差}
+\begin{center}\includegraphics[width=0.78\textwidth]{../figures/C1_natural_error.pdf}\end{center}
+\begin{center}\small\input{../tables/C1_natural_error.tex}\end{center}
+
+\subsubsection*{能量差}
+\begin{center}\includegraphics[width=0.78\textwidth]{../figures/C1_energy_gap.pdf}\end{center}
+\begin{center}\small\input{../tables/C1_energy_gap.tex}\end{center}
+
+\subsubsection*{自然误差局部阶}
+\begin{center}\includegraphics[width=0.78\textwidth]{../figures/C1_orders.pdf}\end{center}
+
+\subsection{C2: 三次半线性问题，$d=1$，多频制造解}
+在所有方法共同覆盖的最大合法 checkpoint $N=16$，自然误差最小的方法为 FEM P3。
+此处 RFM median（登记种子 201, 202）与 CGA 的误差比值为 0.87，FEM P3 与 CGA 的比值为 0.85。
+
+\subsubsection*{相对自然误差}
+\begin{center}\includegraphics[width=0.78\textwidth]{../figures/C2_natural_error.pdf}\end{center}
+\begin{center}\small\input{../tables/C2_natural_error.tex}\end{center}
+
+\subsubsection*{能量差}
+\begin{center}\includegraphics[width=0.78\textwidth]{../figures/C2_energy_gap.pdf}\end{center}
+\begin{center}\small\input{../tables/C2_energy_gap.tex}\end{center}
+
+\subsubsection*{自然误差局部阶}
+\begin{center}\includegraphics[width=0.78\textwidth]{../figures/C2_orders.pdf}\end{center}
+
+\subsection{C3: 双曲正弦半线性问题，$d=2$}
+在所有方法共同覆盖的最大合法 checkpoint $N=16$，自然误差最小的方法为 CGA。
+此处 RFM median（登记种子 201, 202）与 CGA 的误差比值为 1.49，FEM P3 与 CGA 的比值为 1.43。
+
+\subsubsection*{相对自然误差}
+\begin{center}\includegraphics[width=0.78\textwidth]{../figures/C3_natural_error.pdf}\end{center}
+\begin{center}\small\input{../tables/C3_natural_error.tex}\end{center}
+
+\subsubsection*{能量差}
+\begin{center}\includegraphics[width=0.78\textwidth]{../figures/C3_energy_gap.pdf}\end{center}
+\begin{center}\small\input{../tables/C3_energy_gap.tex}\end{center}
+
+\subsubsection*{自然误差局部阶}
+\begin{center}\includegraphics[width=0.78\textwidth]{../figures/C3_orders.pdf}\end{center}
+
+\subsection{C4: 纯 $p$-Laplacian，$p=4,d=1$}
+在所有方法共同覆盖的最大合法 checkpoint $N=16$，自然误差最小的方法为 RFM median。
+此处 RFM median（登记种子 201, 202）与 CGA 的误差比值为 0.88，FEM P3 与 CGA 的比值为 4.20。
+
+\subsubsection*{相对自然误差}
+\begin{center}\includegraphics[width=0.78\textwidth]{../figures/C4_natural_error.pdf}\end{center}
+\begin{center}\small\input{../tables/C4_natural_error.tex}\end{center}
+
+\subsubsection*{能量差}
+\begin{center}\includegraphics[width=0.78\textwidth]{../figures/C4_energy_gap.pdf}\end{center}
+\begin{center}\small\input{../tables/C4_energy_gap.tex}\end{center}
+
+\subsubsection*{相对 V-map 误差}
+\begin{center}\includegraphics[width=0.78\textwidth]{../figures/C4_v_error.pdf}\end{center}
+\begin{center}\small\input{../tables/C4_v_error.tex}\end{center}
+
+\subsubsection*{自然误差局部阶}
+\begin{center}\includegraphics[width=0.78\textwidth]{../figures/C4_orders.pdf}\end{center}
+
+\subsection{C5: 纯 $p$-Laplacian，$p=4,d=2$}
+在所有方法共同覆盖的最大合法 checkpoint $N=16$，自然误差最小的方法为 CGA。
+此处 RFM median（登记种子 201, 202）与 CGA 的误差比值为 2.20，FEM P3 与 CGA 的比值为 2.67。
+
+\subsubsection*{相对自然误差}
+\begin{center}\includegraphics[width=0.78\textwidth]{../figures/C5_natural_error.pdf}\end{center}
+\begin{center}\small\input{../tables/C5_natural_error.tex}\end{center}
+
+\subsubsection*{能量差}
+\begin{center}\includegraphics[width=0.78\textwidth]{../figures/C5_energy_gap.pdf}\end{center}
+\begin{center}\small\input{../tables/C5_energy_gap.tex}\end{center}
+
+\subsubsection*{相对 V-map 误差}
+\begin{center}\includegraphics[width=0.78\textwidth]{../figures/C5_v_error.pdf}\end{center}
+\begin{center}\small\input{../tables/C5_v_error.tex}\end{center}
+
+\subsubsection*{自然误差局部阶}
+\begin{center}\includegraphics[width=0.78\textwidth]{../figures/C5_orders.pdf}\end{center}
+
+
+\section{跨算例解释}
+在共同最大 DOF 上，五个算例的 RFM/CGA 自然误差比分别为
+C1: 0.99, C2: 0.87, C3: 1.49, C4: 0.88, C5: 2.20。
+高阶 FEM 的结论不能预先写死：FEM P3/CGA 比分别为
+C1: 0.97, C2: 0.85, C3: 1.43, C4: 4.20, C5: 2.67。
+完整局部阶、有效下降阶、窗口拟合阶和平台起点见 \texttt{artifacts/tables/order\_summary.csv}。
+
+\section{数值审计与局限}
+Problem hash 跨方法一致：True；除明确标注的 CGA 中间归档点外，终点共同评价器一致：True；RFM 登记种子 201, 202 完整：True；C4 CGA 冻结终点为 141：True。未通过求解器残差门槛的记录数为 0。末端加密审计的最大相对变化为：自然误差 1.176e-01，V-map 1.939e-02，能量差 3.516e+00。接近积分误差底的能量差应谨慎解释。
+
+二维神经特征训练为控制内存使用固定的确定性复合 Gauss 规则，最终评价使用另一套更密的确定性复合 Gauss 规则。CGA 的浅灰细线来自只读归档历史，仅用于显示实际接受轨迹；dyadic marker 中的中间点同样是归档评价值，冻结终点才由共同评价器重算，具体来源记录在 CSV 中。本文结论限于预注册有限 DOF 窗口，不能替代连续字典渐近分析。
+
+\appendix
+\section{复现信息}
+配置位于 \texttt{configs/experiment.json}，环境和输入 SHA-256 位于 \texttt{artifacts/manifest.json}，机器验收位于 \texttt{artifacts/validation.json}。原始数据、公共网格数据、图和表均由同一流水线生成。
+\end{document}

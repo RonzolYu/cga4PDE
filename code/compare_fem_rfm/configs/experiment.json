@@ -1,0 +1,50 @@
+{
+  "schema_version": "sisc-cost-compare-v1-package-local",
+  "cga_source_root": "data/cga_cases",
+  "c4_frozen_root": "data/cga_cases/17_pure_p_p4_d1_k3",
+  "cga_snapshot": "data/cga_snapshot/dyadic_summary.csv",
+  "rfm": {
+    "seeds": [201, 202],
+    "widths_1d": [8, 16],
+    "widths_2d": [8, 16],
+    "crossing_fraction": 0.9,
+    "sobol_fraction": 0.75,
+    "anchor_padding": 0.05,
+    "nested_prefix": true,
+    "normalize_natural_metric": true
+  },
+  "fem": {
+    "degrees": [1, 2, 3],
+    "elements_1d": {"1": [4, 8, 16], "2": [2, 4, 8, 16], "3": [1, 2, 4, 8]},
+    "elements_2d": {"1": [1, 2, 3, 4], "2": [1, 2, 3], "3": [1, 2, 3]},
+    "assembly_order": 8,
+    "assembly_order_1d_multifrequency": 20,
+    "newton_rtol": 1e-9,
+    "newton_atol": 1e-11,
+    "newton_maxiter": 40
+  },
+  "quadrature": {
+    "train_1d_cells": 64,
+    "train_1d_order": 5,
+    "train_2d_sobol_power": 10,
+    "train_2d_cells": 16,
+    "train_2d_order": 3,
+    "evaluation_1d_cells": 256,
+    "evaluation_1d_order": 6,
+    "evaluation_2d_cells": 24,
+    "evaluation_2d_order": 3,
+    "audit_1d_cells": 384,
+    "audit_1d_order": 6,
+    "audit_2d_cells": 28,
+    "audit_2d_order": 3
+  },
+  "solver": {
+    "lbfgs_maxiter": 200,
+    "lbfgs_gtol": 1e-8,
+    "lbfgs_ftol": 1e-12,
+    "newtoncg_maxiter": 60,
+    "rank_rcond": 1e-12
+  },
+  "common_dofs_1d": [8, 16],
+  "common_dofs_2d": [8, 16]
+}

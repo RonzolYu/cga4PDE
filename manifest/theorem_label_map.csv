@@ -1,0 +1,6 @@
+old_label,new_label,status,consumer
+eq:fractional-rate,eq:fractional-rate,retained,sections/05d_fractional_innovation.tex
+eq:fractional-energy-bound,eq:fractional-energy-bound,retained,sections/05d_fractional_innovation.tex
+tab:merged-trajectory-conditions,tab:merged-trajectory-conditions,retained,sections/06e_merged_window_experiment.tex
+tab:fractional-p4,tab:fractional-p4,retained,sections/06e_merged_window_experiment.tex
+tab:baseline-terminal,tab:baseline-terminal,retained,sections/09_results.tex

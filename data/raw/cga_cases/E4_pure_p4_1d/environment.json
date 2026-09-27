@@ -1,0 +1,11 @@
+{
+  "python": "3.14.6 | packaged by Anaconda, Inc. | (main, Jul  9 2026, 14:29:05) [MSC v.1942 64 bit (AMD64)]",
+  "numpy": "2.4.6",
+  "scipy": "1.18.0",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "processor": "AMD64 Family 25 Model 97 Stepping 2, AuthenticAMD",
+  "blas_threads": "unspecified",
+  "git_commit": "unavailable",
+  "git_dirty": null,
+  "started": "2026-08-25T12:06:26.607378+08:00"
+}

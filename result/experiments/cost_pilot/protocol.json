@@ -1,0 +1,24 @@
+{
+  "schema_version": "cost-pilot-v1",
+  "profile": "smoke",
+  "cases": [
+    "C1",
+    "C2",
+    "C4"
+  ],
+  "seeds": [
+    201,
+    202
+  ],
+  "timing_repetitions": 2,
+  "target_accepted": 2,
+  "method": "finite-pool CGA",
+  "phase_scope": "outer wall time plus existing history fields elapsed_selection_s and elapsed_projection_s",
+  "not_instrumented": [
+    "setup",
+    "pool generation",
+    "quadrature construction",
+    "serialization and I/O",
+    "independent evaluator internals"
+  ]
+}

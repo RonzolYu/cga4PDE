@@ -1,0 +1,302 @@
+\section{Variational setting, dictionaries, and algorithms}
+\label{sec:setting}
+
+Let \(X\) be a real reflexive Banach space. The abstract descent results apply to a proper convex
+functional \(\E:X\to(-\infty,+\infty]\), with effective domain
+\(\operatorname{dom}\E=\{v\in X:\E(v)<+\infty\}\).
+Differentiability is assumed on an open neighborhood of the relevant iterates in the specified
+energy space, on which \(\E\) is finite and continuously Fr\'echet differentiable. For an energy
+with a restricted effective domain, the additional topology and the neighborhood are stated
+explicitly. When an argument invokes a Hessian, its stated neighborhood is in addition contained in
+the twice differentiable part of the effective domain. Suppose that \(\E\) has a unique minimizer
+\(u^*\) in the admissible space. The duality pairing between \(X^*\) and \(X\) is denoted by
+\(\ip{r}{v}\), and the energy defect is
+\[
+  \delta(u)=\E(u)-\E(u^*), \qquad \delta_m=\delta(G_m).
+\]
+The examples in \Cref{sec:models} satisfy this setting after the Neumann nullspace has been
+removed where necessary.
+
+\subsection{Ridge dictionaries and admissibility}
+
+For an integer activation order \(k\geq1\), a raw ridge atom has the form
+\[
+  \varphi_{w,b}(x)=\relu(w\cdot x+b)^k,
+  \qquad (w,b)\in\R^d\times\R.
+\]
+An admissible dictionary consists of nonzero ridge functions satisfying the constraints of \(X\),
+after the corresponding linear projection. We use a symmetric normalized dictionary
+\(\D_X\subset X\):
+\[
+g\in\D_X\Longrightarrow-g\in\D_X,\qquad \norm g_X=1\quad(g\in\D_X).
+\]
+When density is needed, we also require \(\overline{\spn\D_X}^{\,X}=X\).
+We abbreviate \(\D_X\) to \(\D\) unless a different normalization is specified.
+
+For pure-gradient Neumann energies the admissible space is
+\[
+  X_{p,\circ}=\left\{v\in W^{1,p}(\Omega):\int_\Omega v\dd x=0\right\}.
+\]
+Every ridge is first projected by \(P_\circ v=v-\abs{\Omega}^{-1}\int_\Omega v\dd x\), and only then normalized.
+This order matters: an almost constant ridge may have a very small projected norm, and its
+renormalization can destroy uniform derivative bounds. The analytical dictionary excludes zero projected atoms; any positive lower bound required
+for a normalization argument is stated separately. Numerical rank thresholds are described in
+\Cref{sec:numerics}.
+
+\begin{definition}[Atomic hull and atomic norm]
+\label{def:atomic}
+For a symmetric normalized dictionary \(\D\subset X\), define
+\[
+ K_1(\D)=\overline{\left\{\sum_{j=1}^Jc_jg_j:
+ J<\infty,\ g_j\in\D,\ \sum_{j=1}^J\abs{c_j}\leq1\right\}}^{\,X},
+\]
+and
+\[
+ \norm{v}_{\mathcal A(\D)}=
+ \inf\{B>0:v/B\in K_1(\D)\}.
+\]
+\end{definition}
+
+For a bounded set \(K\subset X\), its \(n\)-th dyadic entropy number is
+\[
+ \varepsilon_n(K;X)=\inf\left\{h>0:\exists x_1,\ldots,x_{2^{n-1}}\in X,
+ K\subset\bigcup_{j=1}^{2^{n-1}}(x_j+hB_X)\right\},\qquad n\geq1,
+\]
+where \(B_X=\{x\in X:\norm x_X\leq1\}\). Thus the covering balls may have centers in \(X\).
+This \(2^{n-1}\)-ball convention is used throughout the manuscript; a \(2^n\)-ball
+convention is the same sequence with an index shift and changes only constants in polynomial
+entropy bounds. We write \(A\lesssim B\) when \(A\leq CB\) with a constant independent of the iteration index; a
+subscript on \(\lesssim\) lists the permitted parameter dependence, and \(A\simeq B\) denotes the two
+corresponding inequalities.
+
+\begin{assumption}[Atomic source]
+\label{ass:atomic}
+There is a finite \(B>0\), with \(B\geq\norm{u^*}_{\mathcal A(\D)}\), such that
+\(u^*/B\in K_1(\D)\).
+\end{assumption}
+
+This is a property of the target relative to the \emph{theoretically normalized} dictionary. It is not
+interchangeable with the coefficient \(\ell^1\)-norm produced by a discretely normalized algorithm. In one
+space dimension, \Cref{prop:1dsource} gives a sufficient condition for finite atomic norm.
+
+\begin{proposition}[A one-dimensional \(\relu^k\) source class]
+\label{prop:1dsource}
+Let \(I=(0,1)\), \(k\geq1\), \(1\leq p<\infty\), and \(X=W^{1,p}(I)\). Suppose that the continuous
+dictionary contains the normalized nonzero truncated powers \((x-t)_+^k/\|(\cdot-t)_+^k\|_X\),
+\(0\leq t<1\), together with normalized fully active ridge functions spanning \(\mathbb P_k\). If
+\(v\in W^{k+1,1}(I)\), then \(v\) belongs to the atomic space and
+\[
+\norm v_{\mathcal A(\D)}\leq C_{k,p}\left(
+ \sum_{j=0}^k\abs{v^{(j)}(0)}+\norm{v^{(k+1)}}_{L^1(I)}\right),
+\]
+where \(C_{k,p}\) also accounts for the fixed exponent \(p\), the interval, and the normalization
+of the raw atoms. It is a continuous-dictionary source constant and is not the coefficient
+\(\ell^1\)-norm returned by a discretely normalized numerical solve.
+\end{proposition}
+
+The proof, given in \Cref{app:source}, uses the integral remainder formula. Multivariate source and
+entropy inputs are instead supplied by shallow-network variation-space and width theorems
+\citep{SiegelXuVariation2023,SiegelXuSharp2024,MaoSiegelXu2026}; their domain and norm hypotheses
+must be checked separately for each application.
+
+\begin{lemma}[Projection and renormalization]
+\label{lem:projection}
+Let \(P:X\to X_0\) be bounded and linear. If a subdictionary \(\D_0\subset\D\) satisfies
+\[
+ 0<c_0\leq\norm{Pg}_{X_0}\leq C_0<\infty\qquad(g\in\D_0),
+\]
+and \(\widetilde\D_0=\{Pg/\norm{Pg}_{X_0}:g\in\D_0\}\), then
+\[
+ P K_1(\D_0)\subset C_0K_1(\widetilde\D_0).
+\]
+The same computation also shows that a bounded linear map increases every entropy radius by at most
+\(\norm P\), while the inverse normalization loses at most the factor \(c_0^{-1}\):
+\[
+ K_1(\widetilde\D_0)\subset c_0^{-1}P K_1(\D_0).
+\]
+\end{lemma}
+
+\begin{proof}
+For an absolute convex combination, write
+\(Pg=\norm{Pg}_{X_0}\widetilde g\) term by term and bound the new coefficient sum by \(C_0\).
+Pass to the closure for the first claim. Applying \(P\) to an \(h\)-cover gives a
+\(\norm P h\)-cover. Conversely,
+\(Pg/\norm{Pg}_{X_0}=c_0^{-1}P[(c_0/\norm{Pg}_{X_0})g]\), and the coefficient
+\(c_0/\norm{Pg}_{X_0}\) is at most one. Taking absolute convex combinations and closures proves the
+reverse inclusion. This statement concerns convex hulls; it does not assert that pointwise
+renormalization is Lipschitz near null projected atoms. The image of \(K_1(\D_0)\) is closed because
+this bounded closed convex subset of the reflexive space \(X\) is weakly compact, and its image
+under \(P\) is weakly compact in \(X_0\).
+\end{proof}
+
+\begin{corollary}[Transfer of source and entropy inputs]
+\label{cor:projected-source-entropy}
+In the setting of \Cref{lem:projection}, suppose \(u^*=Pu^\dagger\),
+\(u^\dagger/B\in K_1(\D_0)\), and
+\[
+ \varepsilon_n(K_1(\D_0);X)\leq C_{\rm ent}n^{-\beta}.
+\]
+Then
+\[
+ \frac{u^*}{BC_0}\in K_1(\widetilde\D_0),
+ \qquad
+ \varepsilon_n(K_1(\widetilde\D_0);X_0)
+ \leq c_0^{-1}\norm P\,C_{\rm ent}n^{-\beta}.
+\]
+Thus a ReLU source/convex-hull entropy theorem on an extended parameter domain passes to the projected,
+renormalized feasible dictionary whenever the nondegeneracy bounds in \Cref{lem:projection} hold.
+\end{corollary}
+
+\begin{proof}
+The first assertion follows from
+\(PK_1(\D_0)\subset C_0K_1(\widetilde\D_0)\). For the second, use
+\(K_1(\widetilde\D_0)\subset c_0^{-1}PK_1(\D_0)\) and map an entropy cover through \(P\).
+\end{proof}
+
+\subsection{Dictionary residuals}
+
+For \(r\in X^*\), introduce the dictionary dual seminorm
+\[
+  \norm r_{\D^*}=\sup_{g\in\D_X}\abs{\ip r g}.
+\]
+This quantity measures the derivative in the available dictionary directions. It is a seminorm;
+if the dictionary has dense linear span, its vanishing implies that the derivative is zero.
+
+\subsection{Ideal and finite-pool Chebyshev greedy algorithms}
+
+The ideal CGA combines weak selection with exact minimization over the enlarged space.
+
+\begin{algorithm}[Continuous weak Chebyshev greedy algorithm]
+\label{alg:continuous}
+Assume \(\E(0)<\infty\), choose weakness numbers \(t_m\in(0,1]\), and set
+\(G_0=0\), \(\Phi_0=\{0\}\). Given
+\(G_m\) and \(\Phi_m=\spn\{g_1,\ldots,g_m\}\):
+\begin{enumerate}[label=\textup{(\roman*)}]
+  \item if \(\norm{\E'(G_m)}_{\D^*}=0\), stop; otherwise choose \(g_{m+1}\in\D_X\) with descent sign such that
+  \[
+  -\ip{\E'(G_m)}{g_{m+1}}
+  \geq t_m\norm{\E'(G_m)}_{\D^*};
+  \]
+  \item set \(\Phi_{m+1}=\spn(\Phi_m,g_{m+1})\) and compute
+  \[
+    G_{m+1}=\argmin_{v\in\Phi_{m+1}}\E(v).
+  \]
+\end{enumerate}
+\end{algorithm}
+
+For a general continuous dictionary the supremum need not be attained. Thus \(t_m<1\) is understood as
+approximate-supremum selection. The endpoint \(t_m=1\) is used only when attainment has been proved,
+for example on a compact nondegenerate parameter set with continuous score. The finite-pool method
+stops, with a recorded reason, if the unused pool is empty, every remaining score is below the
+stationarity threshold, every candidate fails the rank or acceptance test, or the attempt budget is
+reached. In an unconstrained active-space solve, changing an atom's sign leaves the span unchanged;
+the descent sign required by the proof is therefore not a further quantity that the implementation
+has to resolve.
+
+Exact reoptimization yields the variational orthogonality
+\begin{equation}
+ \ip{\E'(G_m)}v=0\qquad(v\in\Phi_m).
+ \label{eq:orthogonality}
+\end{equation}
+The second algorithm describes the computed object. It uses a finite pool \(\Ppool_m\), an evaluated
+score \(\widetilde s_m\), and a correction computed to a finite tolerance.
+
+\begin{algorithm}[Finite-pool inexact CGA]
+\label{alg:finite}
+Set \(\widehat G_0=0\), \(\widehat\Phi_0=\{0\}\). At step \(m\), form a finite admissible pool
+\(\Ppool_m\subset\D\). Let
+\[
+ s_m(g)=\abs{\ip{\E'(\widehat G_m)}g},
+ \qquad \widetilde s_m(g)\geq0.
+\]
+Choose \(t_m^{\rm pool}\in(0,1]\) and \(\widehat g_{m+1}\in\Ppool_m\) satisfying
+\[
+ \widetilde s_m(\widehat g_{m+1})
+ \geq t_m^{\rm pool}\max_{g\in\Ppool_m}\widetilde s_m(g),
+\]
+give it the true descent sign, and define
+\(\widehat\Phi_{m+1}=\spn(\widehat\Phi_m,\widehat g_{m+1})\). Compute a coefficient vector whose state
+obeys
+\[
+ \E(\widehat G_{m+1})
+ \leq\inf_{v\in\widehat\Phi_{m+1}}\E(v)+\varepsilon_m^{\rm opt},
+ \qquad \varepsilon_m^{\rm opt}\geq0.
+\]
+\end{algorithm}
+
+\subsection{Finite-pool error quantities}
+\label{sec:controlled-selection}
+
+The continuous dictionary supremum, the exact finite-pool maximum, and the numerically evaluated
+maximum are distinct. We quantify score error and pool coverage by
+The next inequality is an analysis condition imposed only on the steps declared to have positive coverage; a finite pool does not automatically supply a uniform positive lower bound.
+\begin{align}
+ \sup_{g\in\Ppool_m}\abs{\widetilde s_m(g)-s_m(g)}&\leq\xi_m,
+ \label{eq:score-error}\\
+ \max_{g\in\Ppool_m}s_m(g)&\geq
+ \tau_m\sup_{g\in\D}s_m(g),\qquad0<\tau_m\leq1.
+ \label{eq:pool-coverage}
+\end{align}
+
+\begin{lemma}[True score selected from an evaluated pool]
+\label{lem:true-score}
+Under \cref{eq:score-error,eq:pool-coverage},
+\begin{equation}
+ s_m(\widehat g_{m+1})\geq
+ t_m^{\rm pool}\tau_m\norm{\E'(\widehat G_m)}_{\D^*}
+ -(1+t_m^{\rm pool})\xi_m.
+\label{eq:true-score-lower}
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+Insert the score error before and after the finite-pool maximization:
+\begin{align*}
+s_m(\widehat g_{m+1})
+&\geq\widetilde s_m(\widehat g_{m+1})-\xi_m\\
+&\geq t_m^{\rm pool}\max_{g\in\Ppool_m}\widetilde s_m(g)-\xi_m\\
+&\geq t_m^{\rm pool}\max_{g\in\Ppool_m}s_m(g)
+ -(1+t_m^{\rm pool})\xi_m,
+\end{align*}
+and use \cref{eq:pool-coverage}.
+\end{proof}
+
+If the implemented correction minimizes a training functional \(\E_h\), a single terminal comparison
+between \(\E_h\) and \(\E\) is not a uniform error bound. The appropriate deterministic statement is
+the following.
+
+Let \(G_{m+1}^{\sharp}\) denote an exact minimizer of \(\E\) over
+\(\widehat\Phi_{m+1}\). For an energy level \(\Lambda_m^E\) chosen so that both
+\(G_{m+1}^{\sharp}\) and the computed state \(\widehat G_{m+1}\) are included, define the relevant sublevel
+set and its active-space restriction by
+\begin{equation}
+ \mathcal L_m=\{v\in X:\E(v)\leq\Lambda_m^E\},
+ \qquad \mathcal L_m^{\rm act}=\widehat\Phi_{m+1}\cap\mathcal L_m.
+ \label{eq:active-sublevel}
+\end{equation}
+Thus \(\mathcal L_m^{\rm act}\) is the part of the current finite-dimensional trial space on which the
+training and analysis energies must be compared; in particular,
+\(\inf_{v\in\mathcal L_m^{\rm act}}\E(v)=\E(G_{m+1}^{\sharp})\).
+
+\begin{lemma}[Training-to-analysis energy transfer]
+\label{lem:energy-transfer}
+Suppose on the active-space sublevel set \(\mathcal L_m^{\rm act}\) in
+\cref{eq:active-sublevel} that
+\[
+ \sup_{v\in\mathcal L_m^{\rm act}}
+ \abs{\E_h(v)-\E(v)}\leq\zeta_m^E.
+\]
+If the computed state satisfies
+\[
+ \E_h(\widehat G_{m+1})\leq
+ \inf_{v\in\mathcal L_m^{\rm act}}\E_h(v)+\varepsilon_m^{\rm opt,h},
+\]
+then \Cref{alg:finite} holds with
+\(\varepsilon_m^{\rm opt}\leq\varepsilon_m^{\rm opt,h}+2\zeta_m^E\).
+\end{lemma}
+
+\begin{proof}
+Apply the uniform energy difference once at \(\widehat G_{m+1}\) and once at
+\(G_{m+1}^{\sharp}\). Both states belong to \(\mathcal L_m^{\rm act}\), and the latter minimizes the analysis
+energy over the full active space.
+\end{proof}

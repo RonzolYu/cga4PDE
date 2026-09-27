@@ -1,0 +1,11 @@
+{
+  "schema_version": "cga-artifacts-v1",
+  "artifact": "tex/figures/diagnostics/finite_trajectory_bounds.pdf",
+  "kind": "figure",
+  "input_files_sha256": "data/derived/section85/base_pure_finite_q20.csv#860ee49073bbd09c5b2ca08ebc61061f54a4a530d363e30c0e50bfedf7db9d8d;data/derived/section85/epsilon_01_finite_q20.csv#59e8efb376d0f07a5954e39821789cdf8cda5f0566c2b3979b91ef2aba356a56",
+  "filters": "N=8:32;quadrature order 20;entry-only source approximation",
+  "semantic": "ordinary floating-point computations with independent quadrature cross-check; not an interval enclosure",
+  "command": "python code/generate_artifacts.py",
+  "output_sha256": "c852b8bc365b44bce3585f4f281065df548ebf76ac9f311c604f1177104dcb4b",
+  "validation": "source-to-plot checks passed"
+}

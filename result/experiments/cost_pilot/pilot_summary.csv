@@ -1,0 +1,4 @@
+schema_version,case_id,method,width,n_success,n_total,success_rate,median_wall_time_sec,q1_wall_time_sec,q3_wall_time_sec,total_known_phase_time_sec,pilot_scope
+cost-pilot-v1,C1,finite-pool CGA,2,4,4,1.0,0.036097104500000005,0.03591410475,0.0379189585,0.00832016700587701,CGA smoke runner only; no cross-method claim
+cost-pilot-v1,C2,finite-pool CGA,2,4,4,1.0,0.036985208500000005,0.03642780225,0.03773714575,0.011131627019494772,CGA smoke runner only; no cross-method claim
+cost-pilot-v1,C4,finite-pool CGA,2,4,4,1.0,0.0359644375,0.03572775025,0.036437832999999996,0.012226042948896065,CGA smoke runner only; no cross-method claim

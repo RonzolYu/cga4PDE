@@ -1,0 +1,41 @@
+{
+  "schema_version": "cga-algorithm-v1",
+  "ideal_cga": {
+    "dictionary": "normalized and symmetric subset of the energy space",
+    "selection": "abs(<E'(u[n-1]),g[n]>) >= t[n] sup_{g in D} abs(<E'(u[n-1]),g>)",
+    "correction": "u[n] in argmin_{v in span(g[1],...,g[n]) intersect dom(E)} E(v)",
+    "oracle": "continuous-dictionary mathematical supremum"
+  },
+  "finite_pool_cga": {
+    "candidate_pool": "fixed for a run",
+    "reference_pool": "fixed, independent seed offset 1009, diagnostic only",
+    "selection_score": "abs(discrete_first_variation)/discrete_atom_norm",
+    "normalization": {
+      "semilinear": "discrete H1",
+      "pure_or_regularized_p": "discrete gradient Lp seminorm after zero-mean projection",
+      "reaction_p": "discrete full W1p norm"
+    },
+    "active_solve": {
+      "linear": ["exact-linear"],
+      "nonlinear": ["L-BFGS-B", "Newton-CG if required", "trust-krylov if required"]
+    },
+    "acceptance": [
+      "finite coefficients and energies",
+      "projected residual tolerance",
+      "strict training-energy decrease beyond roundoff floor",
+      "zero-mean constraint when applicable"
+    ],
+    "stopping": [
+      "target_reached",
+      "max_attempts",
+      "pool_exhausted",
+      "fixed_pool_stationary",
+      "rank_saturation"
+    ]
+  },
+  "pool_sizes": {
+    "1d": {"candidate": 2048, "reference": 4096, "candidate_batch": 256, "reference_batch": 256},
+    "2d": {"candidate": 4096, "reference": 8192, "candidate_batch": 128, "reference_batch": 128}
+  },
+  "reproduction_seed": 201
+}

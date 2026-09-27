@@ -1,0 +1,4 @@
+run_label,attempt_index,candidate_pool_index,method_chain,projected_residual_abs,projected_residual_rel,projected_residual_target,residual_passed,energy_decrease,final_train_energy,objective_gradient_calls,hvp_calls,replay_result,historical_acceptance_reason,validation_level
+rtol=0.0001,9,398,L-BFGS-B,0.023558919505358707,1.9136088941116202e-05,0.12311251049283578,True,1781.0568239441952,-438.3263422976163,,,accepted,projected_residual,fixed-space replay with the installed solver; not a historical rerun
+rtol=1e-06,9,398,L-BFGS-B,0.0001998560101471042,1.623360691360101e-07,0.0012311251059183576,True,1781.0568295630026,-438.3263479164237,,,accepted,projected_residual,fixed-space replay with the installed solver; not a historical rerun
+rtol=1e-08,9,398,L-BFGS-B,2.379654713639645e-06,1.932910558100797e-09,1.2311252049183577e-05,True,1781.0568295635262,-438.32634791694727,,,accepted,projected_residual,fixed-space replay with the installed solver; not a historical rerun

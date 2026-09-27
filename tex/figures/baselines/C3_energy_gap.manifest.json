@@ -1,0 +1,11 @@
+{
+  "schema_version": "cga-artifacts-v1",
+  "artifact": "tex/figures/baselines/C3_energy_gap.pdf",
+  "kind": "figure",
+  "input_files_sha256": "data/derived/baselines/baseline_actual_points.csv#19cfeac56b8296430c5c3c15012f8817cc2f75ac89f0e20a38fda0cf9b279825",
+  "filters": "case=C3;metric=energy_gap;actual points only;configured dof cap=512",
+  "semantic": "no theory line and no order plot; RFM median/IQR uses ten seeds",
+  "command": "python code/generate_artifacts.py",
+  "output_sha256": "03009afa154e72785bb930a7597326246141fca7248f761b065bbb5ca29c053e",
+  "validation": "source-to-plot checks passed"
+}
