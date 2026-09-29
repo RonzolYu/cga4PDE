@@ -1,18 +1,12 @@
 # S1. Experiment index
 
-The authoritative machine-readable index is `manifest/experiment_index_v2.csv`; the legacy
-`manifest/experiment_index.csv` is retained with the same rows for compatibility. Each row has
-the fields `case_id`, `run_id`, `model`, `dim`, `p`, `relu_power`, `epsilon`, `seed`,
-`target_accepted`, `config_path`, and `status`. Every `config_path` is relative to the repository
-root and resolves inside `data/raw/`. `manifest/figure_table_map.csv` maps manuscript figures
-and tables to their producing records.
+The supplementary index is `manifest/experiment_index_v2.csv` (the legacy
+`experiment_index.csv` is retained for compatibility). Each row has a stable case ID,
+source-data path, entry point, dimension, polynomial degree, activation, regularization,
+seed, accepted-count target, and output directory. `manifest/figure_table_map.csv` maps
+every manuscript figure and table to its producing case or frozen result.
 
-Run the index check from the repository root:
-
-```bash
-python code/build_experiment_index.py
-```
-
-The current index contains 20 rows and should finish with `PASS`. The complete code, raw inputs,
-saved states, results, and supplementary figures are distributed in this repository; no sibling
-workspace or external Material directory is required for path resolution.
+The repository manifest and the associated numerical records are available at
+<https://github.com/RonzolYu/cga4PDE>. The index-building and validation commands are
+specified in S4 and are run from the repository root. The reported index contains 20
+rows; a successful build terminates with `PASS`.

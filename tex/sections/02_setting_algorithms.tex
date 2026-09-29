@@ -37,11 +37,12 @@ For pure-gradient Neumann energies the admissible space is
 \[
   X_{p,\circ}=\left\{v\in W^{1,p}(\Omega):\int_\Omega v\dd x=0\right\}.
 \]
-Every ridge is first projected by \(P_\circ v=v-\abs{\Omega}^{-1}\int_\Omega v\dd x\), and only then normalized.
-This order matters: an almost constant ridge may have a very small projected norm, and its
-renormalization can destroy uniform derivative bounds. The analytical dictionary excludes zero projected atoms; any positive lower bound required
-for a normalization argument is stated separately. Numerical rank thresholds are described in
-\Cref{sec:numerics}.
+Each ridge is projected onto $X_{p,\circ}$ before the normalized dictionary is formed.
+Since an almost constant ridge may have arbitrarily small projected norm, normalization
+can amplify its derivatives. Hence uniform derivative bounds for the normalized
+dictionary require a positive lower bound on the projected norms. Zero projected
+atoms are excluded from the analytical dictionary; the corresponding nondegeneracy
+assumption is stated whenever it is needed.
 
 \begin{definition}[Atomic hull and atomic norm]
 \label{def:atomic}
@@ -62,11 +63,10 @@ For a bounded set \(K\subset X\), its \(n\)-th dyadic entropy number is
  \varepsilon_n(K;X)=\inf\left\{h>0:\exists x_1,\ldots,x_{2^{n-1}}\in X,
  K\subset\bigcup_{j=1}^{2^{n-1}}(x_j+hB_X)\right\},\qquad n\geq1,
 \]
-where \(B_X=\{x\in X:\norm x_X\leq1\}\). Thus the covering balls may have centers in \(X\).
-This \(2^{n-1}\)-ball convention is used throughout the manuscript; a \(2^n\)-ball
-convention is the same sequence with an index shift and changes only constants in polynomial
-entropy bounds. We write \(A\lesssim B\) when \(A\leq CB\) with a constant independent of the iteration index; a
-subscript on \(\lesssim\) lists the permitted parameter dependence, and \(A\simeq B\) denotes the two
+where $B_X=\{x\in X:\norm x_X\leq1\}$. Thus the covering balls may have centers in $X$.
+This $2^{n-1}$-ball convention is used throughout the manuscript. We write
+$A\lesssim B$ when $A\leq CB$ with a constant independent of the iteration index; a
+subscript on $\lesssim$ lists the permitted parameter dependence, and $A\simeq B$ denotes the two
 corresponding inequalities.
 
 \begin{assumption}[Atomic source]
@@ -227,9 +227,10 @@ obeys
 \subsection{Finite-pool error quantities}
 \label{sec:controlled-selection}
 
-The continuous dictionary supremum, the exact finite-pool maximum, and the numerically evaluated
-maximum are distinct. We quantify score error and pool coverage by
-The next inequality is an analysis condition imposed only on the steps declared to have positive coverage; a finite pool does not automatically supply a uniform positive lower bound.
+The continuous-dictionary supremum, the exact maximum over the finite pool, and the
+numerically evaluated maximum are distinct quantities. We impose the following
+score-error and pool-coverage conditions on any step for which a positive coverage
+bound is used; finiteness of the pool alone does not imply a uniform positive lower bound.
 \begin{align}
  \sup_{g\in\Ppool_m}\abs{\widetilde s_m(g)-s_m(g)}&\leq\xi_m,
  \label{eq:score-error}\\
@@ -261,8 +262,8 @@ s_m(\widehat g_{m+1})
 and use \cref{eq:pool-coverage}.
 \end{proof}
 
-If the implemented correction minimizes a training functional \(\E_h\), a single terminal comparison
-between \(\E_h\) and \(\E\) is not a uniform error bound. The appropriate deterministic statement is
+If the implemented correction minimizes a discrete training objective $\E_h$, a single terminal comparison
+between $\E_h$ and the analysis energy $\E$ is not a uniform error bound. The appropriate deterministic statement is
 the following.
 
 Let \(G_{m+1}^{\sharp}\) denote an exact minimizer of \(\E\) over
@@ -278,7 +279,7 @@ Thus \(\mathcal L_m^{\rm act}\) is the part of the current finite-dimensional tr
 training and analysis energies must be compared; in particular,
 \(\inf_{v\in\mathcal L_m^{\rm act}}\E(v)=\E(G_{m+1}^{\sharp})\).
 
-\begin{lemma}[Training-to-analysis energy transfer]
+\begin{lemma}[Transfer from the discrete energy to the analysis energy]
 \label{lem:energy-transfer}
 Suppose on the active-space sublevel set \(\mathcal L_m^{\rm act}\) in
 \cref{eq:active-sublevel} that

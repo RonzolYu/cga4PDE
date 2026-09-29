@@ -15,35 +15,34 @@ density; a general convex density with \(p\)-growth need not satisfy the same eq
 
 The sharper estimates in \Cref{sec:c5} require additional assumptions. Residual
 comparison relates the dictionary seminorm to the full dual norm. Local Hessian transfer
-requires coercivity, a dictionary norm bridge, relative score resolution, and source and entropy
+requires coercivity, a dictionary norm comparison, relative score resolution, and source and entropy
 bounds after restart. The finite-trajectory estimates use the projections onto the computed
 spaces, together with either an approximate source representation or a
 fractional lower bound on the normalized innovations. The quartic energy decomposition relates
 both projection estimates to nonlinear energy errors.
 
-The concrete semilinear family in \Cref{sec:c5-hessian} makes the nonlinear interface explicit.  Its
-$C_{\rm emb}$, $L_\lambda$, $C_\lambda$, and $B_\lambda$ constants give a computable candidate
-margin $\Delta_\lambda$ with the required $C_\lambda^2$ factor.  The Route-A closure certificate
-then requires the same projected, unrenormalized restarted dictionary to satisfy a quantitative entropy
-bound and requires every declared state to remain in the Hessian ball.  These checks are now isolated
-as falsifiable obligations; the manuscript does not call them an unconditional theorem before they
-are verified.
+The concrete semilinear family in \Cref{sec:c5-hessian} makes the nonlinear
+comparison explicit. Its $C_{\rm emb}$, $L_\lambda$, $C_\lambda$, and $B_\lambda$
+constants give a computable lower bound $\Delta_\lambda$ with a $C_\lambda^2$
+factor. The conditional rate also requires a quantitative entropy bound for the same
+projected, unrenormalized restarted dictionary and invariance of the Hessian ball.
+These conditions remain to be verified uniformly before an unconditional rate follows.
 
 The one-dimensional pure and regularized quartic calculations evaluate these quantities at
-every accepted state on \(N=8\)--32 and continue the same prefixes through \(N=64\) with the
+every retained state on \(N=8\)--32 and continue the same prefixes through \(N=64\) with the
 constants held fixed. Active-space Hessian spectra are positive, but the
-sufficient selection margins are negative throughout this window. The continuous
+sufficient selection lower bounds are negative throughout this index range. The continuous
 Hessian-transfer hypotheses are therefore unverified. The direct projection and energy
 identities agree to floating-point accuracy under two quadrature rules. Both the source and
 fractional-innovation bounds cover the computed errors, although the terminal bounds remain
 several thousand times larger. With the prescribed exponent \(\alpha=6\), the latter yield
-finite-window comparison powers \(6\), \(3\), and \(3/2\) for energy, natural distance, and
+finite-range comparison powers \(6\), \(3\), and \(3/2\) for energy, natural distance, and
 \(W^{1,4}\) error. The fitted innovation powers are descriptive: positivity on a finite
 trajectory neither determines a unique decay exponent nor gives constants uniform over
 increasing widths. In the continuation, the normalized-innovation sufficient condition holds
 on most transitions: 27 of 32 for the pure model and 28 of 32 for the regularized model.
 The few exceptions preclude a uniform application of the frozen-constant bound across the
-extended window, so the continuation remains a stepwise diagnostic.
+extended index range, so the continuation remains stepwise numerical evidence.
 
 At the largest common coefficient count, CGA has the smallest relative Sobolev error in the
 four comparisons after filtering to the reported converged RFM realizations. The same ordering holds in the
@@ -51,8 +50,8 @@ two-dimensional pure \(p=4\) example, where only four of ten prescribed RFM real
 width. These comparisons concern the specified implementations and coefficient counts;
 they establish neither an ordering at every width nor a runtime advantage.
 
-The remaining work is therefore specific: close the three Route-A gates for a declared nonzero $\lambda$ range,
-or switch to the error-decomposition controller described in the revision plan.  More examples alone
-would not close these gates.  Reliable numerical enclosures and comparisons with a common
-computational-work measure would provide additional evidence beyond the finite-window comparisons
+Further work should either establish the three sufficient conditions for a specified nonzero $\lambda$ range,
+or provide an independently supported error-decomposition tolerance rule. More examples alone
+would not resolve these gaps. Reliable numerical enclosures and comparisons with a common
+computational-work measure would provide additional evidence beyond the finite-range comparisons
 reported here.

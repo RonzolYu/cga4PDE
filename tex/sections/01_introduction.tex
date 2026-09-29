@@ -37,24 +37,19 @@ examined by \citet{BernaFalco2025}. Variation spaces and sharp entropy estimates
 networks provide the source and width information used in the conditional estimates
 \citep{SiegelXuVariation2023,SiegelXuSharp2024,MaoSiegelXu2026}.
 
-The substantive increment of this manuscript is concentrated on one concrete family rather than a general nonlinear rate.  In \Cref{sec:c5-hessian}, the one-dimensional semilinear family $\mathcal E_\lambda$ with $\lambda>0$ is used to expose the exact Hessian bridge, source-budget rescaling, relative-score margin, and the quantitative entropy object that must be checked after restart.  The resulting Route-A certificate is stated with explicit closure gates; until its invariant-ball, positive-margin, and same-dictionary entropy checks are supplied, the corresponding rate remains a finite-window conditional statement.
+The main contribution is a framework for analysing a nonlinear convergence rate on a
+concrete semilinear problem family. Section~\ref{sec:c5-hessian} identifies the
+Hessian comparison, invariant-neighbourhood, and same-dictionary entropy conditions
+under which the conditional rate follows. The numerical results provide finite-range
+evidence for the quantities entering these conditions; they do not by themselves
+establish an unconditional asymptotic rate.
 
-The contribution boundary is summarized here to keep the comparison with the closest results explicit:
-\begin{table}[!htbp]
-\centering
-\small
-\caption{What is inherited from prior greedy analysis and what is added here.}
-\label{tab:contribution-boundary}
-\begin{tabularx}{\textwidth}{@{}p{0.28\textwidth}p{0.34\textwidth}X@{}}
-\toprule
-Prior mechanism & Addition in this manuscript & Location of the check \\
-\midrule
-Hilbert OGA with exact selection & A local Hessian bridge for one explicit semilinear family, with a declared relative-score margin and an invariant-ball gate. & \Cref{sec:c5-hessian} \\
-Inexact weak-greedy descent & Separate pool coverage, score quadrature, radial stationarity, and correction errors, plus a representative margin decomposition. & \Cref{sec:descent,sec:finite-trajectory-numerics} \\
-Entropy-based weak OGA & The same projected, unrenormalized restarted dictionary and a single \(2^{n-1}\)-ball convention, with the remaining entropy certificate stated explicitly. & \Cref{sec:setting,sec:c5-hessian} \\
-\bottomrule
-\end{tabularx}
-\end{table}
+The contribution has three parts. For the concrete semilinear family, we derive a
+local Hessian comparison and state the relative-score, invariant-neighbourhood, and
+entropy assumptions needed for the transfer argument. For the inexact method, we
+separate pool coverage, score quadrature, radial stationarity, and correction errors.
+The entropy statement uses the same projected, unrenormalized restarted dictionary
+and one fixed convention for dyadic entropy numbers.
 
 The convex Chebyshev algorithms of \citet{TemlyakovCGA2013,TemlyakovGreedy2014} and the inexact
 weak-greedy framework of \citet{DereventsovTemlyakov2022} are closest to the present setting. The
@@ -88,12 +83,12 @@ active-space stationarity, and coefficient optimization.
 
 Two conditional refinements use additional residual or Hessian information. The residual-comparison
 estimate combines power-type convexity with a lower bound for the dictionary dual seminorm in terms
-of the full dual norm. A local Hessian transfer uses coercivity, a dictionary norm bridge, and a
+of the full dual norm. A local Hessian transfer uses coercivity, a dictionary norm comparison, and a
 relative score condition to obtain a weak-OGA estimate in a frozen Hilbert metric. Neither set of
 assumptions implies the other, and both are stated as conditional estimates.
 
 The finite trajectory produced by the algorithm can also be analyzed without requiring uniform
-Hessian coercivity. For a fixed finite symmetric dictionary and a fixed entry index \(m_0\), an
+Hessian coercivity. For a fixed finite symmetric dictionary and a fixed starting index \(m_0\), an
 explicit approximation of the source with coefficient budget \(B\) and remainder \(\sigma\) gives a
 projection estimate
 \[
@@ -112,8 +107,8 @@ normalized innovation \(\gamma_m=\theta_m S_m/\ell_m\). If
 \(\gamma_m^2\geq c_0r_m^{2+2/\alpha}\), inversion of the exact projection recurrence bounds
 \(r_{m_0+j}^2\) by
 \(\big(r_{m_0}^{-2/\alpha}+c_0j/\alpha\big)^{-\alpha}\). The same quartic comparison
-then gives the corresponding energy and metric bounds. Each condition is evaluated from the accepted
-projection drops; on a finite window, positivity alone does not single out a unique exponent.
+then gives the corresponding energy and metric bounds. Each condition is evaluated from the retained
+projection drops; on a finite index range, positivity alone does not single out a unique exponent.
 
 The numerical study evaluates the estimates together with the conditions on which they rest. Eight
 representative cases cover linear reaction--diffusion, cubic and hyperbolic-sine semilinear
@@ -126,20 +121,18 @@ not attribute an unproved convergence theorem to the compared methods and does n
 wall-clock efficiency. P1 and P3 elements provide low- and high-order mesh-based references, and P2
 results are retained in the supplementary material.
 
-For the finite-trajectory estimates we use the one-dimensional pure and regularized \(p=4\)
-trajectories. The calibration window is \(N=8\)--32; the continuation window is the same saved
-prefixes from \(N=33\) through \(N=64\), with the calibration constants held fixed. The
-approximate source is constructed once at entry from the fixed candidate and auxiliary reference
-dictionary. The projection and energy identities, the source data, and the relative comparison
-quantities are evaluated at every state of the calibration window, with an independent quadrature
-cross-check. The source remainder is small relative to the entry residual but is not negligible at
-the terminal scale. This fixed remainder limits the resolution of the source upper bound; it is not
-a lower bound on the actual algorithmic error. The accumulated-innovation term therefore remains a
-conservative upper bound. The fractional-innovation condition provides a second explicit estimate
-on the calibration states. The continuation is reported separately through its stepwise
-sufficient-condition pass counts and does not recalibrate \(q\) or \(\rho\). Neither calculation
-verifies the continuous-dictionary coverage and entropy assumptions of the Hessian-transfer result,
-so the measured orders and the fitted innovation powers are reported as finite-window observations.
+For the finite-trajectory estimates we use the one-dimensional pure and regularized $p=4$
+trajectories. The calibration range is $N=8$--$32$, and the subsequent range uses the same stored
+prefixes from $N=33$ to $64$ with the calibration constants fixed in advance. The reported
+fractions record the number of steps satisfying the stated sufficient condition on each finite
+range. They provide numerical evidence on the displayed trajectory; they do not verify continuous-
+dictionary coverage or an entropy estimate uniformly over increasing ranges. The approximate
+source is constructed once at the starting index from the fixed candidate and auxiliary reference
+dictionary. The source remainder is small relative to the starting residual but is not negligible
+at the terminal scale; it therefore limits the resolution of the source upper bound without giving
+a lower bound on the actual algorithmic error. Neither calculation verifies the continuous-
+dictionary coverage and entropy assumptions of the Hessian-transfer result, so the measured orders
+and fitted innovation powers are reported as finite-range observations.
 
 The remainder is organized as follows. \Cref{sec:setting} defines the variational setting,
 dictionaries, and algorithms. \Cref{sec:descent} proves the basic descent estimates, and

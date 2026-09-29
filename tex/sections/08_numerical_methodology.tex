@@ -1,7 +1,7 @@
-\section{CGA numerical experiments and finite-window diagnostics}
+\section{CGA numerical experiments and finite-range estimates}
 \label{sec:numerics}
 
-\subsection{Protocol, representative problems, and error quantities}
+\subsection{Numerical setup, representative problems, and error quantities}
 
 All problems are posed on \(\Omega=(0,1)^d\), with \(d=1\) or \(2\), and use manufactured
 profiles. The main suite uses smooth profiles; the final row is explicitly a low-order activation
@@ -27,19 +27,20 @@ theoretically normalized continuous dictionary in \Cref{sec:setting} and from th
 \(V\)-distance used to evaluate an approximation. Consequently, a discrete coefficient norm or
 training-quadrature normalization is not by itself an entropy or source bound in the analytical norm.
 
-The coefficient solver is monitored in the stable coordinates supplied by the active feature basis.
-If an implementation reports a Euclidean coefficient gradient instead, the active-space Gram matrix
-is required to convert it into the dual norm on the active span; if the gradient is evaluated with
-the training quadrature, a derivative quadrature term must also be included. A dimensionless
-optimizer residual is therefore not by itself a value of either \(\eta_m^{\rm stat}\) or
-\(\varepsilon_m^{\rm opt}\) in \Cref{thm:inexact}. The run records give the projected residual, the
-common target, the optimizer status, and the energy decrease separately.
+For coefficient optimization, residuals are evaluated in the stable coordinates supplied
+by the active feature basis. If a Euclidean coefficient gradient is used, the active
+Gram matrix is required to convert it to the dual norm on the active span; when the
+gradient is evaluated with the training quadrature, the corresponding quadrature error
+must also be included. Thus, an optimizer residual is not by itself a value of
+$\eta_m^{\rm stat}$ or $\varepsilon_m^{\rm opt}$ in \Cref{thm:inexact}. The
+supplementary numerical data report the projected residual, the common target, the
+optimization status, and the energy decrease as separate quantities.
 
-At outer attempt \(a\), the available atom with largest derivative score is tested, and all active outer
-coefficients are reoptimized if the innovation test succeeds. An accepted step \(m\) is one that passes
+At each trial, the available atom with largest derivative score is tested, and all active outer
+coefficients are reoptimized when the innovation test succeeds. A retained step \(m\) is one that passes
 the rank, finite-value, stationarity, energy-decrease, and feasibility tests. Its active rank is
-\(N_m\), while \(M\) denotes the last accepted step reported for a run; rejected attempts increase
-\(a\) but not \(m\) or \(N_m\). In the present runs accepted atoms are linearly independent, so the
+\(N_m\), while \(M\) denotes the last retained step reported for a run; other trials increase
+the trial counter but not \(m\) or \(N_m\). In the present runs retained atoms are linearly independent, so the
 plotting abscissa \(N=N_m=m\). The maximum attempted count specified by the configuration and all stopping reasons are
 recorded in the configuration and run summaries. The eight cases in \Cref{tab:cases} include a
 quadratic calibration, two semilinear energies, three \(p=4\) diffusion structures, a
@@ -48,11 +49,11 @@ one-dimensional pure \(p=4\) problem, and a low-regularity \(p=5\) case.
 \begin{table}[!htbp]
 \centering
 \small
-\caption{Representative CGA experiments and terminal accepted widths.}
+\caption{Representative CGA experiments and terminal retained widths.}
 \label{tab:cases}
 \begin{tabular}{@{}lcccr@{}}
 \toprule
-Energy & \(d\) & \(p\) & \(k\) & Accepted/target \\
+Energy & \(d\) & \(p\) & \(k\) & Retained/target \\
 \midrule
 linear reaction--diffusion, multifrequency & 1 & 2 & 3 & 256/256 \\
 cubic semilinear, multifrequency & 1 & -- & 3 & 256/256 \\
@@ -67,21 +68,22 @@ pure \(p\)-Laplacian & 1 & 5 & 1 & 256/256 \\
 \end{table}
 
 For the main eight-case suite, the one-dimensional target width is 256 and the
-two-dimensional target width is 512. The separate quartic diagnostic runs use
+two-dimensional target width is 512. The separate quartic auxiliary numerical tests use
 \(N=8\)--32 for calibration and continue through \(N=64\). The
-one-dimensional pure \(p=4\) case reaches 141 accepted atoms within 768 attempted selections and
+one-dimensional pure \(p=4\) case reaches 141 retained atoms within 768 attempted selections and
 therefore has \(N=128\) as its last dyadic
-state. The CGA curves show the accepted states over the reported range. Markers identify the
+state. The CGA curves show the retained states over the reported range. Markers identify the
 powers of two used for local-order tables and are the only states joined by the display curves; the
-complete accepted-state record is retained in the machine-readable supplement.
+complete retained-state record is retained in the supplementary numerical data.
 
-The quartic finite-trajectory calculation uses two distinct windows. Constants and source
-quantities are calibrated only on the 25 accepted states $N=8,\ldots,32$; the subsequent
-states $N=33,\ldots,64$ are a continuation of the same saved prefixes and are not used to
-re-estimate those constants. Consequently, a pass count on $32<N\leq64$ is a diagnostic of
-whether the calibration remains usable immediately beyond its fitting window, whereas the
-$8\leq N\leq32$ quantities are the only ones entering the stated finite-window envelope. The two
-sets of transitions are reported separately below.
+The quartic finite-trajectory calculation uses two finite index ranges. The constants
+and source quantities are calibrated only on the 25 retained states
+$N=8,\ldots,32$; the subsequent states $N=33,\ldots,64$ extend the same previously
+computed iterates and are not used to re-estimate those constants. Consequently, the
+number of transitions satisfying the normalized-innovation condition on
+$32<N\le64$ measures whether the calibration remains informative immediately beyond
+its calibration range, whereas only the $8\le N\le32$ quantities enter the stated
+finite-range envelope. The two transition sets are reported separately below.
 
 For the linear and semilinear cases we report the energy gap and
 \[
@@ -100,7 +102,7 @@ The dyadic local order is
 \]
 These three quantities are kept separate in every figure, table, and subsequent comparison.
 
-\subsection{Conditional finite-window guides}
+\subsection{Conditional reference rates on finite index ranges}
 
 For \(\relu^k\) atoms, the Hilbert-space approximation exponent associated with the smooth-ridge
 entropy estimate is
@@ -115,19 +117,19 @@ standard \(p\)-structure energy, the corresponding comparison power for the \(W^
 The vertical position is chosen once from the last up to three positive dyadic states by
 setting \(\log C=\operatorname{median}_i(\log e_i+s\log N_i)\), where \(e_i>0\)
 are those terminal values and \(s\) is the prescribed exponent. This minimizes the
-sum of absolute log deviations for the guide \(CN^{-s}\). The segment starts at \(N=8\) in one dimension and at
-\(N=16\) in two dimensions and extends to the largest accepted width shown in the same panel. The
-display interval is not a claim that the continuous coverage, source, and transfer assumptions have
+sum of absolute log deviations for the reference segment \(CN^{-s}\). The segment starts at \(N=8\) in one dimension and at
+\(N=16\) in two dimensions and extends to the largest retained width shown in the same panel. The
+displayed index range is not a claim that the continuous coverage, source, and transfer assumptions have
 been verified on that interval.
 
 \begin{table}[!htbp]
 \centering
 \small
-\caption{Exponents used only for the conditional guide segments in the CGA figures.}
+\caption{Exponents used only for the conditional reference segments in the CGA figures.}
 \label{tab:window-orders}
 \begin{tabular}{@{}ccccc@{}}
 \toprule
-\((k,d,p)\) & \(\beta_H\) & Energy guide & \(H^1/V\) guide & \(W^{1,p}\) guide \\
+\((k,d,p)\) & \(\beta_H\) & Energy rate & \(H^1/V\) rate & \(W^{1,p}\) rate \\
 \midrule
 \((1,1,5)\) & \(1\) & \(2\) & \(1\) & \(2/5\) \\
 \((3,1,4)\) & \(3\) & \(6\) & \(3\) & \(3/2\) \\
@@ -141,7 +143,7 @@ been verified on that interval.
 
 \subsection{Linear and cubic calibration}
 
-\Cref{fig:cga-linear-cubic} shows the accepted dyadic states for the linear and cubic multifrequency
+\Cref{fig:cga-linear-cubic} shows the retained dyadic states for the linear and cubic multifrequency
 problems.  Both curves decrease rapidly after about 32 atoms.  Between \(N=128\) and 256, the
 linear energy and \(H^1\) orders are 6.083 and 3.042, whereas the cubic orders are 6.896 and 3.448; the
 corresponding terminal relative \(H^1\) errors are \(1.247\times10^{-4}\) and
@@ -151,9 +153,9 @@ asymptotic exponent.
 \begin{figure}[!htbp]
 \centering
 \includegraphics[width=0.96\textwidth]{cga_linear_cubic.pdf}
-\caption{CGA values at accepted powers of two for the linear and cubic problems. Each dashed segment
-is the corresponding metric-specific conditional guide of
-\Cref{tab:window-orders}, restricted to the declared display window.}
+\caption{CGA values at retained powers of two for the linear and cubic problems. Each dashed segment
+is the corresponding metric-specific conditional reference rate of
+\Cref{tab:window-orders}, restricted to the displayed index range.}
 \label{fig:cga-linear-cubic}
 \end{figure}
 
@@ -165,7 +167,7 @@ local order decreases from 1.793 on \(128\to256\) to 1.034 on \(256\to512\). The
 therefore exhibits slower decay than the preceding interval.
 \FloatBarrier
 
-\subsection{Pure and regularized \texorpdfstring{\(p=4\)}{p=4} behavior}
+\subsection{Numerical results for the pure and regularized \texorpdfstring{\(p=4\)}{p=4} models}
 
 \Cref{fig:cga-p4-representative} presents the one- and two-dimensional pure \(p=4\) cases using energy,
 relative \(W^{1,4}\) error, and relative \(V\)-distance. The one-dimensional case reaches relative errors
@@ -178,7 +180,7 @@ Sobolev-error behavior is nonmonotone even though the \(V\)-distance decreases.
 \begin{figure}[!htbp]
 \centering
 \includegraphics[width=0.98\textwidth]{cga_p4_representative.pdf}
-\caption{CGA values at accepted powers of two for the representative one- and two-dimensional pure \(p=4\) problems. The
+\caption{CGA values at retained powers of two for the representative one- and two-dimensional pure \(p=4\) problems. The
 three columns show energy gap, relative \(W^{1,4}\) error, and relative \(V\)-distance. Dashed segments
 use the metric-specific conditional exponents in \Cref{tab:window-orders}.}
 \label{fig:cga-p4-representative}
@@ -187,18 +189,18 @@ use the metric-specific conditional exponents in \Cref{tab:window-orders}.}
 \input{generated/ch8_p4_tables}
 
 To examine the transition from uniformly elliptic regularizations to the pure model on one common
-finite window, \Cref{fig:cga-epsilon-scan} compares \(\varepsilon=0,10^{-2},10^{-1},1\) for
+finite index range, \Cref{fig:cga-epsilon-scan} compares \(\varepsilon=0,10^{-2},10^{-1},1\) for
 \(p=4,d=1,k=3\).  At \(N=32\), the four relative \(W^{1,4}\) errors lie between
 \(3.209\times10^{-4}\) and \(3.261\times10^{-4}\), while the relative \(V\)-distances lie between
 \(9.518\times10^{-5}\) and \(1.198\times10^{-4}\).  The spread of these values indicates weak
-dependence on the regularization over this parameter range and window, and it does not establish
+dependence on the regularization over this parameter range, and it does not establish
 coercivity of the unregularized Hessian on the full energy space.
 
 \begin{figure}[!htbp]
 \centering
 \includegraphics[width=0.98\textwidth]{cga_epsilon_scan.pdf}
 \caption{Pure and regularized \(p=4,d=1,k=3\) CGA trajectories for four values of \(\varepsilon\).
-Only dyadic accepted states are connected. All runs use the same target width and evaluator.}
+Only dyadic retained states are connected. All runs use the same target width and evaluator.}
 \label{fig:cga-epsilon-scan}
 \end{figure}
 

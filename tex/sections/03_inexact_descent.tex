@@ -48,6 +48,16 @@ There is \(L>0\) such that, on the trajectory sublevel set, for every \(g\in\D\)
 \end{equation}
 \end{assumption}
 
+For $a\geq0$, define the maximal decrease supplied by the directional quadratic
+bound by
+\[
+ H_L(a):=\max_{0\leq\lambda\leq1}
+       \left(\lambda a-\frac L2\lambda^2\right)
+ =\begin{cases}a^2/(2L),&0\leq a\leq L,\\
+                 a-L/2,&a>L.
+   \end{cases}
+\]
+
 The assumption is directional; it does not require a globally Lipschitz derivative on the full Banach
 space. For the standard \(p\)-energies, bounded \(W^{1,p}\) sublevels and an \(X\)-normalized dictionary
 already give the needed estimate by H\"older's inequality; an \(L^\infty\) atom bound is only a
@@ -88,6 +98,20 @@ finitely often because the energy is bounded below. After this finite prefix, ta
 essential because \Cref{ass:directional} is stated only on unit dictionary segments.
 \end{proof}
 
+The standard $p$-energy setting used below is
+\[
+ \E_p(u)=\int_\Omega \frac1p|\nabla u|^p\,dx-\ell(u),\qquad
+ \E_{p,\varepsilon}(u)=\int_\Omega
+ \frac{(\varepsilon^2+|\nabla u|^2)^{p/2}-\varepsilon^p}{p}\,dx-\ell(u),
+\]
+with the zero-mean space in the pure and regularized Neumann cases. With a reaction
+term we use
+\[
+ \E_{p,R}(u)=\int_\Omega\frac{|\nabla u|^p+|u|^p}{p}\,dx-\ell(u)
+\]
+on $W^{1,p}(\Omega)$. The complete assumptions and spaces are specified in
+Section~\ref{sec:pgeometry}.
+
 \subsection{Inexact selection and correction}
 
 Write \(\widehat\delta_m=\E(\widehat G_m)-\E(u^*)\). In place of exact orthogonality, suppose that
@@ -119,8 +143,7 @@ Assume \Cref{ass:atomic,ass:directional}, \cref{eq:score-error,eq:pool-coverage}
 Here \([x]_+=\max\{x,0\}\).
 Then
 \begin{equation}
- \widehat\delta_{m+1}\leq\widehat\delta_m
- -\frac12\min\{a_m,a_m^2/L\}+\varepsilon_m^{\rm opt}.
+ \widehat\delta_{m+1}\leq\widehat\delta_m-H_L(a_m)+\varepsilon_m^{\rm opt}.
  \label{eq:inexact-descent}
 \end{equation}
 If, for a fixed absorption constant \(\vartheta\in(0,1)\),
@@ -165,7 +188,15 @@ does not identify which defect dominates from a plotted error curve alone.
 \end{remark}
 
 The optimization error can be related to a KKT residual only after a norm and a strong-convexity
-constant have been fixed.
+constant have been fixed. We say that $\E|_\Phi$ is $\mu_\Phi$-strongly convex in the norm
+$\norm\cdot_\Phi$ if, for all $u,v\in\Phi$,
+\[
+ \E(v)\geq \E(u)+\langle\E'(u),v-u\rangle
+       +\frac{\mu_\Phi}{2}\norm{v-u}_\Phi^2 .
+\]
+Here $\mu_\Phi$ is a constant on the finite-dimensional active space $\Phi$; it
+cannot be extrapolated to a strong-convexity constant on the full space without an
+additional argument.
 
 \begin{lemma}[KKT residual to correction error]
 \label{lem:kkt}

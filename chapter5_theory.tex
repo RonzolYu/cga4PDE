@@ -1,4 +1,4 @@
-% Standalone source: compile the synchronized root copy chapter5_theory.tex.
+% Standalone source: compile this file directly when a Chapter 5-only PDF is needed.
 % Embedded: define \CGAChapterFiveEmbedded before \input{sections/05_theory}.
 % In embedded mode the host provides theorem environments and bibliography.
 \ifdefined\CGAChapterFiveEmbedded
@@ -30,6 +30,16 @@
 \providecommand{\cdd}{\,\mathrm d}
 \providecommand{\cR}{\mathbb R}
 
+\ifdefined\CGAChapterFiveStandalone
+  \newcommand{\CGAHLDreference}{Section~3}
+  \newcommand{\CGAEnergyMetricReference}{the energy--distance theorem and metric corollary in Section~4}
+  \newcommand{\CGAEnergyTheoremReference}{the energy--distance theorem in Section~4}
+\else
+  \newcommand{\CGAHLDreference}{Section~\ref{sec:descent}}
+  \newcommand{\CGAEnergyMetricReference}{Theorem~\ref{thm:energy-v} and Corollary~\ref{cor:metric-rates}}
+  \newcommand{\CGAEnergyTheoremReference}{Theorem~\ref{thm:energy-v}}
+\fi
+
 \section{Conditional convergence and finite-trajectory projection bounds}
 \label{sec:c5}
 
@@ -42,10 +52,10 @@ quartic energies the connection can also be expressed by an exact identity.
 
 Throughout, $m$ counts accepted independent directions. A rejected attempt or
 a direction already in the active span does not increment this index.
-The entry index is $m_0$ and $j=m-m_0$. We use $\widehat G_m$ for a computed
+The starting index is $m_0$ and $j=m-m_0$. We use $\widehat G_m$ for a computed
 state, $G_m^\sharp$ for an exact active-space energy minimizer, and $z_m$
 for a frozen orthogonal projection. These states need not coincide.
-All derivatives below act on the declared feasible linear space, so that
+All derivatives below act on the specified feasible linear space, so that
 $\cE'(u^*)=0$ there. Affine constraints are reduced to this setting by a
 fixed feasible lift.
 
@@ -96,15 +106,14 @@ own comparison with that energy.
 
 \begin{proposition}[Descent with a resolved score]
 \label{prop:c5-descent}
-Let $a_m\geq0$ be any certified lower bound for $s_m(g_{m+1})$.
+Let $a_m\geq0$ be any valid lower bound for $s_m(g_{m+1})$.
 Under \eqref{eq:c5-directional}--\eqref{eq:c5-correction},
 \begin{equation}
  \widehat\delta_{m+1}\leq\widehat\delta_m-H_L(a_m)
-                       +\varepsilon_m^{\rm opt},\qquad
- H_L(a)=
- \begin{cases}a^2/(2L),&0\leq a\leq L,\\a-L/2,&a>L.\end{cases}
+                       +\varepsilon_m^{\rm opt}.
  \label{eq:c5-descent}
 \end{equation}
+Here $H_L$ is the directional-decrease function defined in \CGAHLDreference.
 In particular, \eqref{eq:c5-oracle} gives the valid lower bound
 \begin{equation}
  a_m=\left[t_m^{\rm pool}\tau_m S_m^X
@@ -236,77 +245,27 @@ atomic energy baseline $m^{-1}$ exactly when $\chi<1/p$.
 \subsection{Energy and the natural distance}
 \label{sec:c5-natural}
 
-The metric conversion used in this section is stated here explicitly.
-Let $\Omega$ be a bounded, connected Lipschitz domain and $p\geq2$.
-For pure or regularized diffusion set
+For the standard pure, regularized, and reaction $p$-energies, the energy--distance
+equivalence and the $W^{1,p}$ conversion are established in
+\CGAEnergyMetricReference. Therefore, if the
+conditional energy estimate in Theorem~\ref{thm:c5-visible} is
+$\widehat\delta_m=O(m^{-\alpha})$, then
 \[
- X=\{u\in W^{1,p}(\Omega):\textstyle\int_\Omega u=0\},\quad
- F_\epsilon(\xi)=\frac{(\epsilon^2+|\xi|^2)^{p/2}}p,\quad \epsilon\geq0,
+ d_{V,\bullet}(\widehat G_m,u^*)=O(m^{-\alpha/2}),\qquad
+ \|\widehat G_m-u^*\|_{W^{1,p}}=O(m^{-\alpha/p}),
 \]
-and $\cE_\epsilon(u)=\int_\Omega F_\epsilon(\nabla u)\cdd x-\ell(u)$,
-where $\ell\in X^*$ and $u^*$ satisfies its weak equation.
-For a reaction energy add $\int_\Omega |u|^p/p$ and use
-$X=W^{1,p}(\Omega)$. The reaction coefficient is fixed to one here.
-Define
-\[
- V_\epsilon(\xi)=(\epsilon^2+|\xi|^2)^{(p-2)/4}\xi,\quad
- d_{V,\epsilon}(u,u^*)^2=
- \int_\Omega|V_\epsilon(\nabla u)-V_\epsilon(\nabla u^*)|^2\cdd x .
-\]
-In the reaction case add
-$\int_\Omega|V_0(u)-V_0(u^*)|^2$ to this squared distance.
-
-\begin{proposition}[Metric conversion for standard $p$-energies]
-\label{prop:c5-natural}
-For these energies there are positive constants depending on $p$ such that
-\begin{equation}
- c_p d_{V,\epsilon}(u,u^*)^2
- \leq\cE_\epsilon(u)-\cE_\epsilon(u^*)
- \leq C_p d_{V,\epsilon}(u,u^*)^2 .
- \label{eq:c5-natural}
-\end{equation}
-The gap also controls $\cnorm{u-u^*}_{W^{1,p}}^p$, with a domain
-constant in the zero-mean case. Consequently an energy upper bound
-$A_j$ gives $d_{V,\epsilon}\leq C A_j^{1/2}$ and
-$\cnorm{u-u^*}_{W^{1,p}}\leq C A_j^{1/p}$.
-No further equivalence with a frozen Hessian metric is needed at this step.
-\end{proposition}
-\begin{proof}
-The Hessian of $F_\epsilon$ has eigenvalues between
-$(\epsilon^2+|\xi|^2)^{(p-2)/2}$ and
-$(p-1)(\epsilon^2+|\xi|^2)^{(p-2)/2}$.
-Integration along the segment from $\eta$ to $\xi$ gives
-\[
- F_\epsilon(\xi)-F_\epsilon(\eta)-DF_\epsilon(\eta)\cdot(\xi-\eta)
- \asymp_p(\epsilon+|\xi|+|\eta|)^{p-2}|\xi-\eta|^2 .
-\]
-The lower estimate follows by integrating on a fixed-length subinterval
-where the affine segment has size comparable to its larger endpoint;
-the upper estimate follows from the triangle inequality.
-The same segment argument applied to $DV_\epsilon$, and its positive
-radial and tangential eigenvalues, gives
-\[
- |V_\epsilon(\xi)-V_\epsilon(\eta)|^2
- \asymp_p(\epsilon+|\xi|+|\eta|)^{p-2}|\xi-\eta|^2 .
-\]
-For the lower bound, pair $V_\epsilon(\xi)-V_\epsilon(\eta)$ with
-$\xi-\eta$ before applying Cauchy--Schwarz.
-These statements include $p=2$ and zero vectors by continuity.
-The weak equation cancels the linear term in the integrated Bregman
-increment. The weight dominates $|\xi-\eta|^{p-2}$; Poincare's inequality,
-or the scalar reaction term, gives the full Sobolev estimate.
-\end{proof}
+under the corresponding zero-mean or reaction assumptions. An upper energy bound
+gives an upper metric bound; it is not an equality with a fitted slope.
 
 Thus \eqref{eq:c5-visible-rate} has natural-distance exponent
 $p(1-2\chi)/(2(p-2))$ and Sobolev exponent $(1-2\chi)/(p-2)$ for the
-pure and reaction energies. An upper bound does not imply equality
-with a measured slope. The scalar comparison in Theorem~\ref{thm:c5-visible}
+pure, regularized, and reaction energies. The scalar comparison in Theorem~\ref{thm:c5-visible}
 does not automatically extend to other energy densities.
 
 \subsection{Local Hessian transfer and the same-dictionary requirement}
 \label{sec:c5-hessian}
 
-A direct nonlinear predecessor of the transfer argument is available.
+Previous theoretical work provides substantial support for the transfer argument.
 Xu--Xu \cite[Theorem~3.1, equations~(17)--(19)]{XuXu2025}
 analyze exact active-space minimization of a convex, $L$-smooth
 functional in a Sobolev Hilbert space. In their notation, the continuous
@@ -333,11 +292,11 @@ Relative to Dereventsov--Temlyakov, the finite-pool proposition below
 separates coverage, score-quadrature, radial-stationarity, and
 coefficient-correction errors. Relative to Xu--Xu, the transfer theorem
 retains their exact active-space and entropy mechanism and adds only a
-conditional local Hessian interface. Relative to Li--Siegel, the entropy
+conditional local Hessian transfer. Relative to Li--Siegel, the entropy
 lemma specializes the volume argument to weak selection and unrenormalized
-projected atoms. These comparisons identify the implementation-level
-bookkeeping supplied here; they do not by themselves establish a new
-nonlinear rate.
+projected atoms. These comparisons identify the decomposition of the selection,
+quadrature, stationarity, and correction terms used in the present transfer argument;
+they do not by themselves establish a new nonlinear rate.
 
 Let $H$ be a real Hilbert space on which $\cE$ is twice Fr\'echet
 differentiable in an open convex neighborhood of $u^*$.
@@ -379,7 +338,7 @@ $L_*R_*\cnorm d_*^2+(L_*/2)\cnorm{z_\Phi-u^*}_*^2\cnorm d_*$.
 Absorb the first term. All segments remain in the ball by convexity.
 \end{proof}
 
-Assume $\cD_X\subset H$ and the algorithmic dictionary satisfies the uniform bridge
+Assume $\cD_X\subset H$ and the algorithmic dictionary satisfies the uniform norm comparison
 \begin{equation}
  0<c_*\leq\cnorm g_*\leq C_*<\infty\quad(g\in\cD_X),\qquad
  \cD_*=\{g/\cnorm g_*:g\in\cD_X\}.
@@ -399,7 +358,7 @@ At an exact active-space state set
 \]
 The preceding lemma yields
 $\eta_m^H\leq C_T\cnorm{z_m-u^*}_*^2$, with a constant uniform on the
-declared ball and dictionary. This absolute bound alone need not be
+specified ball and dictionary. This absolute bound alone need not be
 small compared with $S_m^*$.
 
 \begin{proposition}[Selection under a relative score condition]
@@ -468,7 +427,7 @@ Let $h\downarrow0$ and substitute. No projected atom was rescaled.
 \end{proof}
 
 The argument is the volume/entropy argument of Li--Siegel, specialized here
-for bookkeeping to weak selection and to atoms bounded by one. It corresponds
+to weak selection and to atoms bounded by one. It corresponds
 to Theorem~4.2 and equation~(4.4) of \cite{LiSiegelEntropy2024}, with the
 projection recurrence in equations~(4.5)--(4.9); the numbering is that of the
 cited version of the reference. The specialization records the innovation
@@ -480,7 +439,7 @@ in $j$ by Stirling's formula.
 \label{thm:c5-hessian}
 Assume \eqref{eq:c5-hessian} and \eqref{eq:c5-bridge}.
 For every state in $m_0\leq m\leq m_0+J$, suppose that the exact nonlinear
-state and frozen projection lie in the declared ball.
+state and frozen projection lie in the specified ball.
 For each selection step $m_0\leq m<m_0+J$, assume nonlinear selection
 has strength at least $t$, and \eqref{eq:c5-relative} holds with
 the same $t_0>0$. On the unrenormalized restarted dictionary assume
@@ -502,12 +461,12 @@ on $L_*,R_*,B_*,C_{\rm ent},t_0$. The \(j+1\) index in
 Lemma~\ref{lem:c5-entropy} is the harmless consequence of the global
 \(2^{n-1}\)-ball convention; the entropy assumption is stated through
 \(J+1\) for this reason. For a finite $J$ the conclusion is restricted to
-that window.
+that finite range.
 \end{theorem}
 \begin{proof}
 Proposition~\ref{prop:c5-transfer} gives weak frozen selection.
-The residual is orthogonal to the entry space, so its scores against
-$d$ and $Q_0d$ agree. The post-entry spaces therefore form weak OGA
+The residual is orthogonal to the starting space, so its scores against
+$d$ and $Q_0d$ agree. The spaces after the starting index therefore form weak OGA
 on $H_0$ with dictionary $\cD_{\rm rst}$. Apply
 Lemma~\ref{lem:c5-entropy}. Lemma~\ref{lem:c5-projection} gives
 $\cnorm{G_{m_0+j}^\sharp-u^*}_*
@@ -545,7 +504,7 @@ Neumann load unless the corresponding boundary-flux compatibility has also
 been checked.
 Its bilinear form is
 $\int(v'w'+(1+3\lambda(u^*)^2)vw)$, which is coercive in $H^1$.
-The bridge \eqref{eq:c5-bridge} follows, the dictionary is compact,
+The norm comparison \eqref{eq:c5-bridge} follows, the dictionary is compact,
 and $u^*\in C_*B_{\rm src}\cK_1(\cD_*)$.
 Its closed absolutely convex hull is compact: finite nets for the
 dictionary approximate that hull by bounded finite-dimensional convex hulls.
@@ -565,13 +524,13 @@ standard squared $H^1$ norm one may use the explicit bound
 $C_{\rm emb}\leq\sqrt2$) and
 $M_* = \|u^*\|_{L^\infty}$, and use the $H^1$-normalized atoms above.
 Since $a_*$ dominates the standard $H^1$ inner product, the quartic
-Hessian satisfies, on the declared $R_*$-ball,
+Hessian satisfies, on the specified $R_*$-ball,
 \begin{equation}
  L_\lambda:=3\lambda C_{\rm emb}
        (C_{\rm emb}R_*+2M_*),\qquad L_\lambda R_*\leq\tfrac12,
  \label{eq:c5-family-hessian-constant}
 \end{equation}
-and the bridge and source constants can be chosen as
+and the norm-comparison and source constants can be chosen as
 \begin{equation}
  c_*=1,\qquad C_\lambda=\sqrt{1+3\lambda M_*^2},\qquad
  B_\lambda=C_\lambda B_{\rm src}.
@@ -587,40 +546,37 @@ Put
 \end{equation}
 The projection estimates then give
 $\eta_m^H\leq C_\lambda C_{T,\lambda}r_m^2$.  Consequently the
-following explicit margin is sufficient for the relative-score condition:
+following explicit bound is sufficient for the relative-score condition:
 \begin{equation}
  \Delta_\lambda:=(tc_*-t_0C_\lambda)
  -(1+t)C_\lambda^2C_{T,\lambda}B_{\rm src}>0.
  \label{eq:c5-small-lambda-score}
 \end{equation}
-This is a check on declared constants, not a replacement for the invariant
+This is a check on specified constants, not a replacement for the invariant
 ball or entropy arguments.  For fixed $R_*$, $M_*$, $B_{\rm src}$, $t$, and
 $t_0$, the left-hand nonlinear term tends to zero as $\lambda\downarrow0$;
-continuity therefore gives a positive, declared $\lambda_0$ whenever
-$t_0<tc_*$, provided the constants are held fixed.  The manuscript may
-claim the interval $0<\lambda\leq\lambda_0$ only after displaying a range
-on which both \eqref{eq:c5-family-hessian-constant} and
-\eqref{eq:c5-small-lambda-score} hold; $\lambda_0$ is part of the
-reproducibility record rather than an implicit ``sufficiently small''
-qualification.
+continuity therefore gives a positive, specified $\lambda_0$ whenever
+$t_0<tc_*$, provided the constants are held fixed. The admissible interval
+$0<\lambda\leq\lambda_0$ must satisfy both
+\eqref{eq:c5-family-hessian-constant} and \eqref{eq:c5-small-lambda-score}
+throughout the interval, with the values of $R_*$, $M_*$, $B_{\rm src}$,
+$t$, and $t_0$ specified.
 
-\paragraph{Route-A closure certificate for the concrete family.}
-The following statement isolates the one substantive closure needed for a
-nonlinear claim.  It is deliberately written as a certificate: compactness
-of the parameter interval alone does not supply any of its quantitative
-parts.  Fix $m_0$, $Q_0=I-P_{m_0}$, and the unrenormalized restarted
+\paragraph{Sufficient conditions for the concrete semilinear family.}
+The following statement isolates the sufficient conditions needed for a
+nonlinear claim. Compactness of the parameter interval alone does not supply any of
+their quantitative parts. Fix $m_0$, $Q_0=I-P_{m_0}$, and the unrenormalized restarted
 dictionary $\cD_{\rm rst}=Q_0\cD_*\setminus\{0\}$, where
-$\cD_*={g_t/\|g_t\|_*:t\in[a,b]}$ with both signs included.  A
-Route-A certificate on a window $0\leq j\leq J$ consists of:
+$\cD_*={g_t/\|g_t\|_*:t\in[a,b]}$ with both signs included.  The sufficient conditions on a finite range $0\leq j\leq J$ are:
 \begin{enumerate}[label=(A\arabic*)]
-  \item an entry radius and a declared $R_*$ for which every exact active
-  minimizer, frozen projection, and corrected state in the window stays in
-  $B_*(u^*,R_*)$; for a declared $r_{\rm ent}>0$ this includes
+  \item an initial radius and a specified $R_*$ for which every exact active
+  minimizer, frozen projection, and corrected state in the stated finite range stays in
+  $B_*(u^*,R_*)$; for a specified $r_{\rm ent}>0$ this includes
   $r_{m_0}\leq r_{\rm ent}$ and
   $L_\lambda R_*\leq\tfrac12$;
   \item a uniform selection strength $t$ and $t_0<tc_*/C_\lambda$ for
-  which the displayed margin $\Delta_\lambda$ is positive at every
-  declared step (or an explicitly stated finite-prefix exception);
+  which the displayed bound $\Delta_\lambda$ is positive at every
+  stated step (or an explicitly stated finite-prefix exception);
   \item a quantitative entropy estimate for this same projected,
   unrenormalized object, with the ball-counting convention fixed above,
   \begin{equation}
@@ -631,19 +587,17 @@ Route-A certificate on a window $0\leq j\leq J$ consists of:
   \end{equation}
   and $Q_0u^*\in B_\lambda\cK_1(\cD_{\rm rst})$; and
   \item correction, quadrature, and radial errors absorbed in the
-  finite-pool score bound, with no unknown true-solution quantity used as
-  a numerical controller.
+  finite-pool score bound, with tolerances prescribed from the available finite-pool quantities.
 \end{enumerate}
-The first intended proof target is $\beta_A=1$ for $k\geq2$, obtained by
-combining a direct parameter-metric estimate for $t\mapsto g_t$ with a
-covering argument for the absolutely convex hull.  Until that proof is
-written, only the value of $\beta_A$ actually established may be used.
-The same warning applies if the estimate is proved only for a fixed $J$:
-the resulting conclusion is a finite-window statement.
+For $k\geq2$, one possible target is $\beta_A=1$, which would follow from a direct
+parameter-metric estimate for $t\mapsto g_t$ together with a covering argument for the
+absolutely convex hull. Until such an estimate is proved for the same projected dictionary,
+only an exponent established by that argument may be used. If the estimate is available only
+for a fixed $J$, the resulting conclusion is restricted to that finite range.
 
 \begin{corollary}[Concrete-family conditional rate]
 \label{cor:c5-concrete-family}
-Assume the Route-A certificate holds for some $\lambda\in(0,\lambda_0]$
+Assume the sufficient conditions above hold for some $\lambda\in(0,\lambda_0]$
 and $0<\beta_A$, and use exact active-space minimization in the statement
 of the rate.  Then the restarted CGA trajectory satisfies, for
 $1\leq j\leq J$,
@@ -655,20 +609,20 @@ $1\leq j\leq J$,
    \leq C_{\rm nl}j^{-2\beta_A}.
  \label{eq:c5-concrete-family-rate}
 \end{equation}
-The constants are those of Theorem~\ref{thm:c5-hessian}; if the certificate
-is available only through $J$, \eqref{eq:c5-concrete-family-rate} is not an
-asymptotic assertion.  The corollary becomes a substantive nonlinear result
-only when the margin, invariant-ball, and entropy certificates are supplied
-with reproducible constants.
+The constants are those of Theorem~\ref{thm:c5-hessian}; if the conditions
+are established only through $J$, \eqref{eq:c5-concrete-family-rate} is not an
+asymptotic assertion. An unconditional rate requires the relative-score,
+invariant-neighbourhood, and entropy conditions to hold uniformly along the trajectory,
+with constants independent of $J$.
 \end{corollary}
 
-\begin{remark}[What is and is not closed here]
-The family construction and the explicit Hessian/bridge formulas above are
-analytical reductions.  They do not certify a positive $\Delta_\lambda$ for
-a numerical instance, do not prove the entropy estimate
-\eqref{eq:c5-family-entropy-certificate}, and do not prove invariance of a
-trajectory.  Those are the three required closure checks before the abstract
-conditional theorem is presented as the paper's principal contribution.
+\begin{remark}[Scope of the conditional family result]
+The family construction and the explicit Hessian and norm-comparison formulas reduce
+the abstract hypotheses to quantities that can in principle be estimated. They do not
+by themselves establish a positive relative-score bound, the entropy estimate in
+\eqref{eq:c5-family-entropy-certificate}, or invariance of a computed trajectory.
+These remain assumptions to be verified before the conditional theorem can be stated
+as an unconditional rate result.
 \end{remark}
 
 \paragraph{Scope of the function-space assumptions.}
@@ -687,14 +641,14 @@ Without a separate functional-analytic argument we use that model only
 in the finite-dimensional trajectory setting. Degenerate pure $p$-energies
 likewise need not satisfy full-space Hessian coercivity.
 
-\subsection{Finite validation scores and restricted stationarity}
+\subsection{Finite-reference scores and restricted stationarity}
 \label{sec:c5-validation}
 
-On a declared finite-dimensional space $Y_M$ with a positive frozen inner
+On a specified finite-dimensional space $Y_M$ with a positive frozen inner
 product, assume $u^*\in Y_M$ and $\widehat\Phi_m\subset Y_M$.
 In this setting let $z_m$ be the frozen projection of $u^*$ onto
 $\widehat\Phi_m$. Let the fixed reference set $\mathcal A_M\subset Y_M$
-contain all pools in a window.
+contain all pools on the stated finite range.
 Assume $0<c_M\leq\kappa_g:=\cnorm g_*\leq C_M<\infty$.
 Set
 \[
@@ -714,15 +668,14 @@ Proposition~\ref{prop:c5-transfer} gives
              -(1+t_m^{\rm pool})\Delta_m}{C_M}.
  \label{eq:c5-finite-margin}
 \end{equation}
-Thus a nonnegative margin
+Thus the following nonnegative lower bound
 $(t_m^{\rm pool}c_M\tau_m^{\rm val}-t_0C_M)S_m^{\rm val}
  -(1+t_m^{\rm pool})\Delta_m$ suffices for weakness $t_0$
 relative to this finite reference set.
-A negative lower bound is inconclusive; it is not an algorithmic failure.
+A negative value of this lower bound yields no conclusion about the actual selected score.
 A continuous conclusion additionally requires
 $S_m^{\rm val}\geq(1-\zeta_M)S_m^*$ with $0\leq\zeta_M<1$.
-Comparing two quadrature rules supplies a sensitivity measurement,
-not automatically a certified bound for $\Delta_m$.
+Comparing two quadrature rules supplies a comparison of quadrature sensitivity, not an established bound for $\Delta_m$.
 
 The active-space KKT residual in a reference norm $\cnorm\cdot_{0,M}$ is
 \begin{equation}
@@ -744,14 +697,14 @@ A bound $C_{\rm score}$ on
 $\cnorm{\cE''(u)g|_{\widehat\Phi_m}}_{\widehat\Phi_m^*}$ over the
 relevant segments and pool gives an additional score error at most
 $C_{\rm score}k_m/\mu_{\rm act}$.
-All norms and spaces must be declared before using such estimates.
+All norms and spaces must be specified before using such estimates.
 In particular,
 \[
  \inf_{0\ne v\in\widehat\Phi_m}\frac{a_*(v,v)}{\cnorm v_{0,M}^2}
  \ \geq\
  \inf_{0\ne v\in Y_M}\frac{a_*(v,v)}{\cnorm v_{0,M}^2}.
 \]
-A positive active-space minimum does not certify a lower bound on $Y_M$
+A positive active-space minimum does not establish a lower bound on $Y_M$
 or on an infinite-dimensional space.
 
 \subsection{An approximate-source estimate for the computed trajectory}
@@ -765,7 +718,7 @@ $\cD_{\rm fin}$ of frozen-unit vectors. For $m_0\leq m<m_0+J$ assume
  \quad d_{m+1}\in\cD_{\rm fin},\quad d_{m+1}\notin\widehat\Phi_m .
  \label{eq:c5-spaces}
 \end{equation}
-The dictionary must contain every accepted direction in this window.
+The dictionary must contain every accepted direction in this finite range.
 Here $P_m$ denotes the frozen orthogonal projection onto $\widehat\Phi_m$.
 Set
 \[
@@ -816,7 +769,7 @@ For $w_m=(I-P_m)d_{m+1}$, Pythagoras gives
  =\frac{|a_*(e_m,d_{m+1})|^2}{\ell_m^2}.
  \label{eq:c5-drop}
 \end{equation}
-The residual is orthogonal to both the entry and current spaces.
+The residual is orthogonal to both the starting and current spaces.
 Consequently
 \[
  r_m^2=a_*(e_m,Q_0u^*)\leq B_{\rm entry}S_m^{\rm fin}+\sigma r_m,
@@ -864,12 +817,11 @@ already use an approximate source \(h\) through an inequality of the form
  \leq \|h\|_{\mathcal A}\,|\langle r,g\rangle|,
 \]
 which leads to the same innovation-weighted projection recursion. The
-present theorem specializes that mechanism to the restarted, unrenormalized
+present theorem specializes this mechanism to the restarted, unrenormalized
 projected dictionary and retains the observed
-\(\underline\theta_m^2/\ell_m^2\) weights generated by a nonlinear
-selection rule. It should therefore be read as an implementation-level
-extension and diagnostic, rather than as a new general approximate-source
-principle.
+\(\underline\theta_m^2/\ell_m^2\) weights generated by the nonlinear selection rule. It
+should therefore be read as a specialization to the computed sequence of approximation
+spaces, rather than as a new general approximate-source principle.
 
 \subsection{An exact quartic energy connection}
 \label{sec:c5-quartic}
@@ -908,7 +860,7 @@ For every such state, with no exact-minimization requirement,
  \label{eq:c5-quartic}
 \end{equation}
 If $D_m\leq q_{\rm corr}r_m$ and
-$|R_m|\leq\rho(r_m^2+D_m^2)$ throughout a window, where
+$|R_m|\leq\rho(r_m^2+D_m^2)$ throughout a finite range, where
 $q_{\rm corr}\geq0$ and $0\leq\rho<1/2$, then
 \begin{equation}
  (\tfrac12-\rho)r_m^2\leq\widehat\delta_m
@@ -935,8 +887,8 @@ state in \eqref{eq:c5-quartic}. Adding a further optimization-error term
 to that identity would count the same effect twice.
 Quadrature error appears instead as a separately reported numerical defect.
 The constants $q_{\rm corr}$ and $\rho$ computed using $u^*$ are
-manufactured-solution diagnostics; the identity alone does not provide
-solution-independent estimates of them. A small $\sigma$ at entry need
+quantities evaluated using the manufactured solution; the identity alone does not provide
+solution-independent estimates of them. A small $\sigma$ at the starting index need
 not be small relative to a terminal projection error.
 
 \subsection{Projection bounds under a power-type decrease condition}
@@ -953,7 +905,7 @@ otherwise $\gamma_m=0$ by its direct definition.
 The word fractional in the following condition refers only to the power
 imposed on the residual, not to a fractional differential operator.
 
-\begin{theorem}[Explicit power-type window bound]
+\begin{theorem}[Explicit power-type finite-range bound]
 \label{thm:c5-power}
 Let $\alpha>0$, $c_0>0$, and assume, at every step with $r_m>0$
 in $m_0\leq m<m_0+J$,
@@ -977,7 +929,7 @@ Proposition~\ref{prop:c5-quartic} also hold, then
 \end{equation}
 Natural-distance and Sobolev bounds are obtained by taking respectively
 the one-half and one-quarter powers, with the constants of
-Proposition~\ref{prop:c5-natural}.
+\CGAEnergyTheoremReference.
 \end{theorem}
 \begin{proof}
 For $x_{m+1}>0$, convexity gives
@@ -989,7 +941,7 @@ For $x_{m+1}>0$, convexity gives
 Summation proves \eqref{eq:c5-power}. If a residual reaches zero,
 nestedness gives the remaining cases. Substitute the projection bound
 into \eqref{eq:c5-quartic-comparison}, then apply
-Proposition~\ref{prop:c5-natural}.
+\CGAEnergyTheoremReference.
 \end{proof}
 
 A sufficient factorization on positive-error steps is
@@ -1013,15 +965,15 @@ $\alpha>0$ admits
 \]
 Using this value on the same sequence constructs an a posteriori
 envelope. It neither identifies a unique exponent nor independently
-guarantees a rate for CGA. Evaluating a fresh window with the constants
+guarantees a rate for CGA. Evaluating a fresh finite range with the constants
 fixed in advance supplies additional numerical evidence, but it still
 does not prove an asymptotic theorem.
 If any positive-error step has zero drop, no positive $c_0$ satisfies
-\eqref{eq:c5-power-condition} on that whole window.
+\eqref{eq:c5-power-condition} on that whole finite range.
 For a fixed finite dictionary whose span does not contain the target,
 the positive best-approximation floor also prevents an indefinitely
 valid positive $c_0$. Explicit bounds, their constants, and their
-window lengths are therefore more informative than unqualified
+finite-range lengths are therefore more informative than unqualified
 high-order notation.
 
 \ifdefined\CGAChapterFiveEmbedded

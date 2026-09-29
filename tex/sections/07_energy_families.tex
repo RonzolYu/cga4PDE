@@ -120,7 +120,7 @@ directions, gives \(\mu_M>0\). No constant uniform in \(M\) or \(\eps\downarrow0
 \small
 \caption{Hessian structure and the conclusion available for each experimental energy.}
 \label{tab:model-classification}
-\begin{tabularx}{\textwidth}{@{}p{0.16\textwidth}p{0.31\textwidth}X@{}}
+\begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash}p{0.16\textwidth}>{\raggedright\arraybackslash}p{0.31\textwidth}>{\raggedright\arraybackslash}X@{}}
 \toprule
 Model & Frozen Hessian & Scope of the conclusion \\
 \midrule
@@ -128,7 +128,7 @@ Linear & Constant \(H^1\) inner product & CGA and energy-inner-product OGA coinc
 Cubic & Gradient form plus \(3(u^*)^2\) & Locally stable for \(d\leq2\) and coercive when \(u^*\not\equiv0\); transfer still needs relative score resolution. \\
 Sinh & Gradient form plus \(\cosh(u^*)\) & Coercive; Hessian Lipschitz is stated on an \(L^\infty\)-bounded neighborhood, and the numerical use is finite-dimensional. \\
 Regularized \(p\) & Uniformly elliptic for fixed \(\eps>0\) & Continuous transfer needs bounded-gradient stability; finite-dimensional transfer has explicit \(M\)-dependent constants. \\
-Pure \(p\), \(p>2\) & Weight can vanish at \(\nabla u^*=0\) & Use global \(p\)-geometry or the explicit finite-window proposition. \\
+Pure \(p\), \(p>2\) & Weight can vanish at \(\nabla u^*=0\) & Use global \(p\)-geometry or the explicit finite-range estimate. \\
 Reaction \(p\), \(p>2\) & Gradient and scalar weights can both vanish & The reaction restores full-space energy coercivity, not uniform frozen-Hessian coercivity. \\
 \bottomrule
 \end{tabularx}

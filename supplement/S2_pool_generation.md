@@ -1,77 +1,100 @@
-# S2a. 候选池、参考池与源系数的构造
+# S2a. Candidate pools, reference pools, and source coefficients
 
-本说明对应 `base_pure` 和 `epsilon_01` 两个一维四次模型。所有路径均相对于本仓库根目录；
-完整输入在 `data/raw/`，脚本在 `code/`，结果在 `result/` 和 `data/derived/`。
-生成器为 `code/cga_refactor/src/cga_refactor/dictionary.py`；分析入口为
-`code/section85_analysis.py`。本说明区分求解时的归一化与第五章的冻结 Hessian 归一化。
+This supplement corresponds to the `base_pure` and `epsilon_01` one-dimensional
+quartic models. All paths below are relative to the companion repository
+<https://github.com/RonzolYu/cga4PDE> and are resolved from its root. The construction
+distinguishes solver normalization from the frozen-Hessian normalization used in Section 5.
 
-## 1. 池的生成与排序
+## 1. Pool construction and ordering
 
-制造解为 $u^*(x)=\cos(2\pi x)$，$k=3$，$\varepsilon=0$ 或 $0.1$。
-配置请求候选数 512、参考数 1024，seed 分别为 201 和 1210（201+1009）。
-一维生成器采用分层断点：交叉原子数为 round(0.9 size)，分别为 461 和 922；
-每层均匀扰动一个断点，方向依次交替 +1、-1，并置 $b=-wt$。
-其余原子使用断点 -0.05 或 1.05 的两种全区间有效锚点。
-生成器按对应 seed 随机置换数组，再以参数量化键（尺度 $10^{-12}$）去重，保留首次出现者。
-因此去重后是 461+2=463 个候选和 922+2=924 个参考原子。
-数组次序保留置换后的首次出现顺序；不按分数或误差重排。
-`original_indices` 保存去重前下标，当前代码已逐元素重建并匹配归档参数及下标。
+The manufactured solution is $u^*(x)=\cos(2\pi x)$, with $k=3$ and
+$\varepsilon=0$ or $0.1$. The configuration requests 512 candidate atoms and 1024
+reference atoms, with seeds 201 and 1210 (201+1009), respectively. The one-dimensional
+generator uses stratified breakpoints: the crossover count is `round(0.9 size)`, with
+alternating $+1$ and $-1$ perturbations and $b=-wt$. The remaining atoms use breakpoints
+$-0.05$ or $1.05$ as the two full-interval anchors.
 
-求解时纯/正则化 p 模型的 `scales` 为梯度的 $L^p$ 范数，零均值修正存于 `centers`。
-可用性条件是有限尺度且大于 $10^{-14}+10^{-12}\max(1,\max\mathrm{scales})$。
-`candidate_consumed` 存在 checkpoint 中，包含接受和拒绝的已尝试候选；它不等于接受集合。
+The generator randomly permutes each array using its corresponding seed, then removes
+duplicates by the parameter-quantization key at scale $10^{-12}$, retaining the first
+occurrence. The resulting arrays contain 461+2=463 candidates and 922+2=924 reference
+atoms. The permuted first-occurrence order is retained; atoms are not reordered by score or
+error. `original_indices` stores the pre-deduplication indices and is reconstructed and
+matched elementwise against the archived parameters.
 
-## 2. 冻结投影字典
+For pure and regularized $p$ models, solver `scales` are gradient $L^p$ norms and the
+zero-mean correction is stored in `centers`. An atom is usable when its scale is finite and
+larger than $10^{-14}+10^{-12}\max(1,\max\mathrm{scales})$. `candidate_consumed` in a
+checkpoint contains both accepted and rejected candidates; it is not the accepted set.
 
-分析脚本按归档数组顺序取所有有限且 `scales>1e-12` 的候选（463 个），以及
-前 128 个满足同一条件的参考原子。这里的“参考独立”指单独 seed 生成，不能理解为
-线性无关。实际计算矩阵有 591 列；对称字典用这些方向及其负方向表示，绝对值评分
-和有符号源系数使得无需显式复制负列。不同池之间可能有相同方向，按原始索引保留。
+## 2. Frozen projection dictionary
 
-定义 $a_*(v,w)=\int_0^1(\varepsilon^2+3|(u^*)'|^2)v'w'\,dx$。
-每个方向在此内积重新归一化为单位向量。投影 $Q_0d=(I-P_8)d$ 之后不再次归一化。
-`result/section85/*_source_q20.npz` 保存 `norms`、`candidate_indices`、
-`reference_indices` 和 `coefficients`，列序为候选在前、参考在后。
-已验证两个模型 N=1..64 的全部接受方向均在这 463 个候选中，故满足第五章所需的
-“固定字典包含窗口内每个接受方向”条件。参考原子只参与证书，不参与求解器的选取。
+The analysis uses all finite candidates with `scales>1e-12` (463 atoms) and the first 128
+reference atoms satisfying the same condition, in archived-array order. “Reference
+independent” means generated with a separate seed; it does not mean linearly independent.
+The numerical matrix has 591 columns. The symmetric dictionary is represented by these
+directions and their negatives through absolute scores and signed source coefficients, so
+negative columns need not be copied explicitly. Directions shared by different pools are
+retained with their original indices.
 
-## 3. 源系数和逐步量
+Define
+\[
+ a_*(v,w)=\int_0^1(\varepsilon^2+3|(u^*)'|^2)v'w'\,dx.
+\]
+Each direction is normalized to unit length in this inner product. After projection
+$Q_0d=(I-P_8)d$, the remainder is not renormalized. The files
+`result/section85/*_source_q20.npz` store `norms`, `candidate_indices`,
+`reference_indices`, and `coefficients`, with candidate columns preceding reference columns.
+The accepted directions for both models and $N=1,\ldots,64$ occur in the 463-candidate
+pool, which is the fixed-dictionary condition used in the Section 5 estimates. Reference
+atoms enter the estimates only; they are not selected by the solver.
 
-在 N=8 构造 $F_0=(I-P_8)F$、$e_8=(I-P_8)u^*$。
-按惩罚参数 $10^{-2},10^{-4},10^{-6}$ 顺序热启动坐标下降，每档最多 2500 次 sweep，
-最大坐标变化小于 $10^{-10}$ 时停止；固定选用最后一档，而非根据窗口尾部误差选档。
-归档中各档均达到 2500 次上限，因此不宣称得到精确 LASSO 最优解。
-理论只需要显式系数向量 $a$：$B=\sum_i|a_i|$，$\sigma=\|e_8-F_0a\|_*$。
-q20 源向量及其哈希在续算协议中固定，N=33..64 不重新拟合源或下降常数。
+## 3. Source coefficients and stepwise quantities
 
-每个状态用完整经济型 QR 构造 $P_N$，令 $e_N=(I-P_N)u^*$、$r_N^2=\|e_N\|_*^2$。
-$S_N=\max_i|a_*(e_N,d_i)|$，
-$\theta_N=|a_*(e_N,d_{N+1})|/S_N$，
-$\ell_N=\|(I-P_N)d_{N+1}\|_*$，
-$W_j=\sum_{N=8}^{8+j-1}\theta_N^2/\ell_N^2$。
-零评分及零余项的理论分支见 `chapter5_theory.tex`。
+At $N=8$, construct $F_0=(I-P_8)F$ and $e_8=(I-P_8)u^*$. Warm-start coordinate descent
+with penalties $10^{-2},10^{-4},10^{-6}$ in that order, using at most 2500 sweeps per
+penalty and stopping when the maximum coordinate change is below $10^{-10}$. The final
+penalty is fixed in advance rather than selected from the terminal error. Every archived
+stage reaches the 2500-sweep limit, so no exact LASSO optimum is claimed.
 
-## 4. 断点求积与四次恒等式
+The theory uses the explicit coefficient vector $a$: $B=\sum_i|a_i|$ and
+$\sigma=\|e_8-F_0a\|_*$. The $q20$ source vector and its hash are fixed by the continuation
+protocol; no source or decrease constant is re-estimated for $N=33,\ldots,64$.
 
-分段节点为两个完整池位于 (0,1) 的所有断点与 0.5 的并集，端点为 0、1；
-排序去重后在每段分别使用 16 阶和 20 阶 Gauss 求积。分析不对活跃空间截秩；
-若 QR 的最小奇异值不超过最大奇异值的 $10^{-13}$，脚本报错。
-`active_condition` 是加权活跃矩阵的奇异值条件数，不是其 Gram 矩阵条件数；
-后者在精确算术中为前者平方。
+For each state, form $P_N$ with a complete economic QR, set $e_N=(I-P_N)u^*$ and
+$r_N^2=\|e_N\|_*^2$. Define
+\[
+S_N=\max_i|a_*(e_N,d_i)|,\qquad
+\theta_N=|a_*(e_N,d_{N+1})|/S_N,\qquad
+\ell_N=\|(I-P_N)d_{N+1}\|_*,
+\]
+and $W_j=\sum_{N=8}^{8+j-1}\theta_N^2/\ell_N^2$. Zero-score and zero-remainder
+branches are stated in `tex/sections/05_theory.tex`.
 
-令 $h=\widehat G_N'-(u^*)'$、$D_N^2=\|\widehat G_N-P_Nu^*\|_*^2$。
-四次余项 $R_N=\int[(u^*)'h^3+h^4/4]$ 满足
-$\delta_N=(r_N^2+D_N^2)/2+R_N$。这里 $\delta_N$ 是能量差，不能标成 $r_N^2$。
-$q_N=\sqrt{D_N^2/r_N^2}$、$\rho_N=|R_N|/(r_N^2+D_N^2)$
-依赖制造解；它们是诊断量，不是未知真解条件下的自动停止准则。已经固定状态后不另加优化误差。
+## 4. Breakpoint quadrature and quartic identity
 
-## 5. 文件定位与复核
+The quadrature breakpoints are the union of all pool breakpoints lying in $(0,1)$ and
+$0.5$, together with the endpoints 0 and 1. On each segment use Gauss quadrature of order
+16 and 20. The analysis keeps the full active rank; if the smallest QR singular value is
+below $10^{-13}$ times the largest, the computation stops with an error.
 
-- 原始池和 N<=32 状态：`config/revision_protocol.json` 中各 `runs.*.parent`。
-- 源系数及标量：`result/section85/*_source_q20.npz`、`*_sources_q20.json`。
-- 本轮源复算：`data/derived/section85/`，不覆盖协议冻结的 `result/section85/` 输入。
-- 续算状态：`data/raw/revision_20260914/{base_pure,epsilon_01}/states/`。
-- 完整性验收：`python code/verify_revision_prefix.py`（从本仓库根目录运行，需要 NumPy、SciPy）。
-- 验收结果：`result/revision_20260914/prefix_verification.json`。
+Let $h=\widehat G_N'-(u^*)'$ and $D_N^2=\|\widehat G_N-P_Nu^*\|_*^2$. The quartic remainder
+$R_N=\int[(u^*)'h^3+h^4/4]$ satisfies
+$\delta_N=(r_N^2+D_N^2)/2+R_N$. Here $\delta_N$ is the energy gap, not $r_N^2$.
+The quantities $q_N=\sqrt{D_N^2/r_N^2}$ and
+$\rho_N=|R_N|/(r_N^2+D_N^2)$ depend on the manufactured solution; they are numerical
+quantities, not automatic stopping rules. Once a state is fixed, no additional optimization
+error is added.
 
-所有通过结果是浮点重建和文件完整性证据，不提供连续字典认证或渐近收敛保证。
+## 5. File locations and verification
+
+- Original pools and $N\le32$ states: the `runs.*.parent` entries in
+  `config/revision_protocol.json`.
+- Source coefficients and scalars: `result/section85/*_source_q20.npz` and
+  `*_sources_q20.json`.
+- Recomputed source data: `data/derived/section85/`.
+- Continuation states: `data/raw/revision_20260914/{base_pure,epsilon_01}/states/`.
+- Integrity verification: `python code/verify_revision_prefix.py` from the repository root.
+- Verification output: `result/revision_20260914/prefix_verification.json`.
+
+All successful checks are floating-point reconstruction and file-integrity evidence. They do
+not provide continuous-dictionary certification or an asymptotic convergence guarantee.
