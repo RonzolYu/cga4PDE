@@ -1,0 +1,89 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "name": "missing_targets_rebuilt",
+      "passed": true,
+      "exit_code": 0,
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "name": "diagnostics_recomputed",
+      "passed": true,
+      "exit_code": 0,
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "name": "output_root_honored_source_unchanged",
+      "passed": true
+    },
+    {
+      "name": "missing_input_fails",
+      "passed": true,
+      "exit_code": 1,
+      "status": "FAIL",
+      "error": "ValueError: generate_artifacts.py failed; see reports/reproduction_logs/artifacts_01_generate_artifacts.log"
+    },
+    {
+      "name": "false_validation_fails",
+      "passed": true,
+      "exit_code": 1,
+      "status": "FAIL",
+      "error": "ValueError: input validation failed: data/derived/window_diagnostics/window_certificate_validation.json"
+    },
+    {
+      "name": "string_validation_fails",
+      "passed": true,
+      "exit_code": 1,
+      "status": "FAIL",
+      "error": "ValueError: input validation failed: data/derived/window_diagnostics/window_certificate_validation.json"
+    },
+    {
+      "name": "missing_checkpoint_fails",
+      "passed": true,
+      "exit_code": 1,
+      "status": "FAIL",
+      "error": "ValueError: verify_continuation_prefix.py failed; see reports/reproduction_logs/diagnostics_00_verify_continuation_prefix.log"
+    },
+    {
+      "name": "missing_config_fails",
+      "passed": true,
+      "exit_code": 1,
+      "status": "FAIL",
+      "error": "FileNotFoundError: [Errno 2] No such file or directory: '/private/var/folders/rg/5svsy0c13ds8g_sj_sx47d4c0000gn/T/cga_reproduction_c4px0um0/package/config/absent.json'"
+    },
+    {
+      "name": "invalid_config_fails",
+      "passed": true,
+      "exit_code": 1,
+      "status": "FAIL",
+      "error": "ValueError: unsupported reproduction config"
+    }
+  ],
+  "artifacts": {
+    "tables": 1,
+    "figure_files": 9,
+    "paths": [
+      "tex/figures/baselines/C1_relative_h1_error.pdf",
+      "tex/figures/baselines/C2_relative_h1_error.pdf",
+      "tex/figures/baselines/C3_relative_h1_error.pdf",
+      "tex/figures/baselines/C4_relative_w1p_error.pdf",
+      "tex/figures/baselines/C4_v_distance.pdf",
+      "tex/figures/baselines/C5_relative_w1p_error.pdf",
+      "tex/figures/baselines/C5_v_distance.pdf",
+      "tex/figures/cga/cga_linear_cubic.pdf",
+      "tex/figures/cga/cga_p4_representative.pdf",
+      "tex/generated/baseline_terminal.tex"
+    ]
+  },
+  "rfm": {
+    "rows": 313,
+    "successes": 304,
+    "failures": 9,
+    "groups": 32,
+    "quantile_method": "numpy.quantile(method=linear); successful rows only; incomplete groups retained"
+  },
+  "code_sha256": "5c68bc2c52d3ea6ce7338d0831556af314218a2dc5e1bde745d462a695e6daec"
+}

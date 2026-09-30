@@ -1,0 +1,10 @@
+{
+  "repository_url": "https://github.com/RonzolYu/cga4PDE",
+  "status": "public_repository",
+  "source_ref": "main",
+  "license": "unspecified",
+  "package_root": ".",
+  "paper_entrypoint": "main.tex",
+  "reproduction_entrypoint": "scripts/reproduce.py",
+  "integrity_manifest": "manifest/SHA256SUMS"
+}

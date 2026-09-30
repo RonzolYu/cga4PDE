@@ -1,0 +1,56 @@
+\section{Discussion and conclusion}
+\label{sec:discussion}
+
+The atomic source condition and directional smoothness yield an \(O(m^{-1})\) energy bound
+for the ideal continuous-dictionary CGA. For finite-pool CGA, continuous-dictionary coverage
+enters multiplicatively, whereas score evaluation, radial stationarity, and coefficient
+optimization introduce distinct additive errors. The one-step inequality specifies the relative
+accuracy conditions under which the same energy order is retained.
+
+For standard pure, regularized, and reaction \(p\)-energies with \(p\geq2\), the energy gap
+is equivalent to the squared natural distance and controls the \(p\)-th power of the Sobolev
+error. An energy exponent \(\alpha\) therefore gives natural-distance and Sobolev exponents
+\(\alpha/2\) and \(\alpha/p\). This conclusion uses the pointwise structure of the energy
+density; a general convex density with \(p\)-growth need not satisfy the same equivalence.
+
+The sharper estimates in \Cref{sec:c5} require additional assumptions. Residual
+comparison relates the dictionary seminorm to the full dual norm. Local Hessian transfer
+requires coercivity, a dictionary norm comparison, relative score resolution, and source and entropy
+bounds after restart. The finite-trajectory estimates use the projections onto the computed
+spaces, together with either an approximate source representation or a
+fractional lower bound on the normalized innovations. The quartic energy decomposition relates
+both projection estimates to nonlinear energy errors.
+
+The concrete semilinear family in \Cref{sec:c5-hessian} makes the nonlinear
+comparison explicit. Its $C_{\rm emb}$, $L_\lambda$, $C_\lambda$, and $B_\lambda$
+constants give a computable lower bound $\Delta_\lambda$ with a $C_\lambda^2$
+factor. The conditional rate also requires a quantitative entropy bound for the same
+projected, unrenormalized restarted dictionary and invariance of the Hessian ball.
+These conditions remain to be verified uniformly before an unconditional rate follows.
+
+The one-dimensional pure and regularized quartic calculations evaluate these quantities at
+every retained state on \(N=8\)--32 and continue the same prefixes through \(N=64\) with the
+constants held fixed. Active-space Hessian spectra are positive, but the
+sufficient selection lower bounds are negative throughout this index range. The continuous
+Hessian-transfer hypotheses are therefore unverified. The direct projection and energy
+identities agree to floating-point accuracy under two quadrature rules. Both the source and
+fractional-innovation bounds cover the computed errors, although the terminal bounds remain
+several thousand times larger. With the prescribed exponent \(\alpha=6\), the latter yield
+finite-range comparison powers \(6\), \(3\), and \(3/2\) for energy, natural distance, and
+\(W^{1,4}\) error. The fitted innovation powers are descriptive: positivity on a finite
+trajectory neither determines a unique decay exponent nor gives constants uniform over
+increasing widths. In the continuation, the normalized-innovation sufficient condition holds
+on most transitions: 27 of 32 for the pure model and 28 of 32 for the regularized model.
+The few exceptions preclude a uniform application of the frozen-constant bound across the
+extended index range, so the continuation remains stepwise numerical evidence.
+
+At the largest common coefficient count, CGA has the smallest relative Sobolev error in the
+four comparisons after filtering to the reported converged RFM realizations. The same ordering holds in the
+two-dimensional pure \(p=4\) example, where only four of ten prescribed RFM realizations reach the terminal
+width. These comparisons concern the specified methods and coefficient counts;
+they establish neither an ordering at every width nor a runtime advantage.
+
+Further work should establish the three sufficient conditions for a specified nonzero $\lambda$ range
+or develop an independently supported error-decomposition tolerance rule. Reliable numerical
+enclosures and comparisons with a common computational-work measure would extend the finite-range
+evidence reported here.

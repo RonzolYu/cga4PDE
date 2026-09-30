@@ -1,0 +1,192 @@
+\section{Atomic descent and finite-pool inexactness}
+\label{sec:descent}
+
+This section converts the distinctions of \Cref{sec:setting} into energy inequalities. The standard
+atomic residual estimate is derived first, since its orthogonality hypothesis is weakened in the
+finite-tolerance algorithm.
+
+\begin{lemma}[Atomic residual bound]
+\label{lem:atomic-residual}
+Under \Cref{ass:atomic} and the exact orthogonality \cref{eq:orthogonality},
+\begin{equation}
+  \norm{\E'(G_m)}_{\D^*}\geq \frac{\delta_m}{B}.
+\label{eq:atomic-residual}
+\end{equation}
+\end{lemma}
+
+\begin{proof}[Proof sketch]
+Convexity gives the atomic residual estimate, the unit-step quadratic bound gives the reciprocal recurrence, and strong convexity on the active space gives the KKT estimate.
+\end{proof}
+
+\begin{definition}[\(p\)-growth density]
+\label{def:p-growth}
+Let \(p\geq2\), write \(z=(s,\xi)\in\R\times\R^d\), and omit the scalar component \(s\) for a
+pure-gradient energy. A twice differentiable convex density \(\Psi(x,z)\) has \(p\)-growth on the
+relevant range if, for almost every \(x\),
+\begin{align*}
+ c_0\abs z^p-c_1&\leq \Psi(x,z)\leq c_2(1+\abs z^p),\\
+ \norm{D_z^2\Psi(x,z)}&\leq c_3(1+\abs z)^{p-2},
+\end{align*}
+with positive constants independent of \(x\) and \(z\) in that range. The first line controls bounded
+energy sublevels, whereas the Hessian bound is the part used in the directional estimate below.
+\end{definition}
+
+\begin{assumption}[Directional quadratic upper bound]
+\label[assumption]{ass:directional}
+There is \(L>0\) such that, on the trajectory sublevel set, for every \(g\in\D\) and
+\(\abs\lambda\leq1\),
+\begin{equation}
+ \E(u+\lambda g)\leq\E(u)+\lambda\ip{\E'(u)}g+\frac L2\lambda^2.
+\label{eq:directional-smoothness}
+\end{equation}
+\end{assumption}
+
+For $a\geq0$, define the maximal decrease supplied by the directional quadratic
+bound by
+\[
+ H_L(a):=\max_{0\leq\lambda\leq1}
+       \left(\lambda a-\frac L2\lambda^2\right)
+ =\begin{cases}a^2/(2L),&0\leq a\leq L,\\
+                 a-L/2,&a>L.
+   \end{cases}
+\]
+
+The assumption is directional; it does not require a globally Lipschitz derivative on the full Banach
+space. For the standard \(p\)-energies, bounded \(W^{1,p}\) sublevels and an \(X\)-normalized dictionary
+already give the needed estimate by H\"older's inequality; an \(L^\infty\) atom bound is only a
+convenient stronger condition for more general densities. Indeed, for
+\(F(\lambda)=\E(u+\lambda g)\), the diffusion part of \(F''\) is controlled by
+\[
+ C_p\int_\Omega(\abs{\nabla u}+\abs\lambda\abs{\nabla g}+\eps)^{p-2}
+ \abs{\nabla g}^2\dd x,
+\]
+and H\"older's inequality gives
+\(F''(\lambda)\leq C_p(\norm{\nabla u}_{L^p}+\norm{\nabla g}_{L^p}+\eps|\Omega|^{1/p})^{p-2}
+\norm{\nabla g}_{L^p}^2\) for \(\abs\lambda\leq1\). A reaction term is handled similarly. Removing
+almost-null projected atoms remains important for the numerical parameterization and for uniform
+source/entropy constants, but it is not necessary for this abstract \(L^p\) estimate once the atoms are
+already normalized in the energy space.
+
+\begin{theorem}[Generic energy baseline]
+\label{thm:generic}
+Suppose \Cref{ass:atomic,ass:directional} hold and \(t_m\geq t>0\). Then the exact continuous CGA
+satisfies
+\begin{equation}
+  \delta_m\leq \frac{C(B,L,t,\delta_0)}{m+1}.
+\label{eq:generic-rate}
+\end{equation}
+\end{theorem}
+
+\begin{proof}[Proof sketch]
+Convexity gives the atomic residual estimate, the unit-step quadratic bound gives the reciprocal recurrence, and strong convexity on the active space gives the KKT estimate.
+\end{proof}
+
+The standard $p$-energy setting used below is
+\[
+ \E_p(u)=\int_\Omega \frac1p|\nabla u|^p\,dx-\ell(u),\qquad
+ \E_{p,\varepsilon}(u)=\int_\Omega
+ \frac{(\varepsilon^2+|\nabla u|^2)^{p/2}-\varepsilon^p}{p}\,dx-\ell(u),
+\]
+with the zero-mean space in the pure and regularized Neumann cases. With a reaction
+term we use
+\[
+ \E_{p,R}(u)=\int_\Omega\frac{|\nabla u|^p+|u|^p}{p}\,dx-\ell(u)
+\]
+on $W^{1,p}(\Omega)$. The complete assumptions and spaces are specified in
+Section~\ref{sec:pgeometry}.
+
+\subsection{Inexact selection and correction}
+
+Write \(\widehat\delta_m=\E(\widehat G_m)-\E(u^*)\). In place of exact orthogonality, suppose that
+\begin{equation}
+  \abs{\ip{\E'(\widehat G_m)}{\widehat G_m}}\leq\eta_m^{\rm stat}.
+  \label{eq:orthogonality-defect}
+\end{equation}
+The decomposition contains one multiplicative resolution factor and three additive error
+contributions: \(t_m^{\rm pool}\tau_m\) records weak selection and continuous-dictionary coverage,
+\(\xi_m\) records score evaluation, \(\eta_m^{\rm stat}\) is the radial active-space stationarity
+defect of \cref{eq:orthogonality-defect} alone, and \(\varepsilon_m^{\rm opt}\) records the energy
+accuracy of the correction. The full active-space dual Karush--Kuhn--Tucker (KKT) residual is
+denoted separately by \(r_m^{\mathrm{KKT}}\) below. In the terminology of the greedy-with-errors
+framework of \cite[Section~3]{DereventsovTemlyakov2022}, \(t_m^{\rm pool}\tau_m\) is the effective
+weakness parameter and \(\varepsilon_m^{\rm opt}\) is an energy-evaluation/correction error. The
+quantities \(\xi_m\) and \(\eta_m^{\rm stat}\) separate the finite-score and biorthogonality
+contributions that the abstract framework combines into a single stepwise inexactness allowance.
+
+\begin{theorem}[Finite-pool one-step descent]
+\label{thm:inexact}
+Assume \Cref{ass:atomic,ass:directional}, \cref{eq:score-error,eq:pool-coverage}, and
+\cref{eq:orthogonality-defect} on the numerical trajectory. Define
+\[
+ a_m=\left[
+ t_m^{\rm pool}\tau_m\frac{\widehat\delta_m-\eta_m^{\rm stat}}{B}
+ -(1+t_m^{\rm pool})\xi_m
+ \right]_+.
+\]
+Here \([x]_+=\max\{x,0\}\).
+Then
+\begin{equation}
+ \widehat\delta_{m+1}\leq\widehat\delta_m-H_L(a_m)+\varepsilon_m^{\rm opt}.
+ \label{eq:inexact-descent}
+\end{equation}
+If, for a fixed absorption constant \(\vartheta\in(0,1)\),
+\begin{equation}
+ \eta_m^{\rm stat}+\frac{B(1+t_m^{\rm pool})}{t_m^{\rm pool}\tau_m}\xi_m
+ \leq\vartheta\widehat\delta_m,
+ \label{eq:relative-defect}
+\end{equation}
+the effective weakness \(\inf_{m\ge m_0} t_m^{\rm pool}\tau_m\) is positive, and there
+exist a finite index \(m_0\) and \(0\leq\zeta<1\) such that
+\[
+  \varepsilon_m^{\rm opt}\leq\zeta\,H_L(a_m),\qquad m\ge m_0,
+\]
+then \(\widehat\delta_m=O((m-m_0+1)^{-1})\) for the tail. The finite prefix
+\(m<m_0\) is not included in this rate statement.
+\end{theorem}
+
+\begin{proof}[Proof sketch]
+Convexity gives the atomic residual estimate, the unit-step quadratic bound gives the reciprocal recurrence, and strong convexity on the active space gives the KKT estimate.
+\end{proof}
+
+\begin{remark}[Error saturation]
+\Cref{eq:inexact-descent} shows how error saturation arises. A pool whose
+\(\tau_m\) decreases, a score error \(\xi_m\) comparable with the best resolvable score, or a correction
+error \(\varepsilon_m^{\rm opt}\) comparable with the predicted decrease can each stop the recursion. The equation
+does not identify which defect dominates from a plotted error curve alone.
+\end{remark}
+
+The optimization error can be related to a KKT residual only after a norm and a strong-convexity
+constant have been fixed. We say that $\E|_\Phi$ is $\mu_\Phi$-strongly convex in the norm
+$\norm\cdot_\Phi$ if, for all $u,v\in\Phi$,
+\[
+ \E(v)\geq \E(u)+\langle\E'(u),v-u\rangle
+       +\frac{\mu_\Phi}{2}\norm{v-u}_\Phi^2 .
+\]
+Here $\mu_\Phi$ is a constant on the finite-dimensional active space $\Phi$; it
+cannot be extrapolated to a strong-convexity constant on the full space without an
+additional argument.
+
+\begin{lemma}[KKT residual to correction error]
+\label{lem:kkt}
+Let \(\Phi\) be finite dimensional and let \(\E|_\Phi\) be \(\mu_\Phi\)-strongly convex in a norm
+\(\norm\cdot_\Phi\). If \(G_\Phi^{\sharp}\) is the exact minimizer and
+\[
+ r^{\mathrm{KKT}}=\norm{\E'(\widehat G)|_\Phi}_{\Phi^*},
+\]
+then
+\begin{equation}
+ 0\leq\E(\widehat G)-\E(G_\Phi^{\sharp})
+ \leq\frac{(r^{\mathrm{KKT}})^2}{2\mu_\Phi}.
+\label{eq:kkt-energy}
+\end{equation}
+The same residual also satisfies
+\begin{equation}
+ \abs{\ip{\E'(\widehat G)}{\widehat G}}
+ \leq r^{\mathrm{KKT}}\norm{\widehat G}_\Phi.
+\label{eq:kkt-orth}
+\end{equation}
+\end{lemma}
+
+\begin{proof}[Proof sketch]
+Convexity gives the atomic residual estimate, the unit-step quadratic bound gives the reciprocal recurrence, and strong convexity on the active space gives the KKT estimate.
+\end{proof}

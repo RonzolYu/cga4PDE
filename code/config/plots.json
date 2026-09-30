@@ -1,0 +1,33 @@
+{
+  "schema_version": "cga-plots-v1",
+  "command": "python scripts/generate_artifacts.py",
+  "cga_cases": {
+    "01": {"title": "Linear reaction--diffusion, d=1", "dim": 1, "k": 3, "guide_window": [8, 32]},
+    "03": {"title": "Cubic semilinear problem, d=1", "dim": 1, "k": 3, "guide_window": [8, 32]},
+    "06": {"title": "Hyperbolic-sine problem, d=2", "dim": 2, "k": 3, "guide_window": [16, 64]},
+    "17": {"title": "Pure p=4 problem, d=1, k=3", "dim": 1, "k": 3, "p": 4, "guide_window": [8, 32]},
+    "08": {"title": "Pure p=4 problem, d=2, k=3", "dim": 2, "k": 3, "p": 4, "guide_window": [16, 64]},
+    "10": {"title": "Regularized p=4 problem, d=2, k=3", "dim": 2, "k": 3, "p": 4, "guide_window": [16, 64]},
+    "12": {"title": "Reaction p=4 problem, d=2, k=3", "dim": 2, "k": 3, "p": 4, "guide_window": [16, 64]},
+    "15": {"title": "Pure p=5 problem, d=1, k=1", "dim": 1, "k": 1, "p": 5, "guide_window": [8, 32]}
+  },
+  "baseline_case_map": {"C1": "01", "C2": "03", "C3": "06", "C4": "17", "C5": "08"},
+  "baseline_caps": {"C1": 256, "C2": 256, "C3": 512, "C4": 141, "C5": 512},
+  "baseline_statistical_endpoints": {"C1": 256, "C2": 256, "C3": 256, "C4": 128, "C5": 256},
+  "common_dofs": {
+    "C1": [8, 16, 32, 64, 128, 256],
+    "C2": [8, 16, 32, 64, 128, 256],
+    "C3": [8, 16, 32, 64, 128, 256, 512],
+    "C4": [8, 16, 32, 64, 128],
+    "C5": [8, 16, 32, 64, 128, 256]
+  },
+  "rfm_required_seed_count": 10,
+  "rfm_minimum_success_for_aggregate_ranking": 10,
+  "cga_dyadic_marker": true,
+  "cga_dyadic_connector": true,
+  "baseline_theory_lines": false,
+  "baseline_order_plots": false,
+  "conditional_guide_text": "conditional finite-window guide",
+  "guide_window_rule": "the first entry is 8 in 1D and 16 in 2D; the segment then extends to the largest accepted width shown, while the exponent remains fixed by the stated conditional theory",
+  "baseline_range_rule": "casewise reported range ending at the CGA stopping width recorded by the prescribed stopping rule; every plotted method contributes actual computed states only"
+}

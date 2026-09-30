@@ -1,0 +1,33 @@
+\section{Proof of the one-dimensional source estimate}
+\label{app:source}
+
+We give the details of \Cref{prop:1dsource} because it provides a concrete source class without
+appealing to a multivariate variation-space theorem. The Sobolev representative of
+\(v\in W^{k+1,1}(0,1)\) satisfies the integral remainder identity
+\begin{equation}
+ v(x)=\sum_{j=0}^k\frac{v^{(j)}(0)}{j!}x^j
+ +\frac1{k!}\int_0^1 v^{(k+1)}(t)(x-t)_+^k\dd t.
+ \label{eq:integral-remainder}
+\end{equation}
+By hypothesis, the polynomial part is a finite linear combination of fully active ridges. The
+coefficients are bounded by a constant times \(\sum_{j=0}^k\abs{v^{(j)}(0)}\), where the constant
+accounts for the conditioning of the fixed basis of \(\mathbb P_k\), the space of polynomials of
+degree at most \(k\). It also depends on the chosen Sobolev norm and on the fixed exponent \(p\);
+rescaling the interval would change it.
+
+For the second term, the map
+\[
+ [0,1]\ni t\longmapsto (\cdot-t)_+^k\in W^{1,p}(0,1)
+\]
+is continuous for \(k\geq1\). Indeed, both the function and its first weak derivative depend
+continuously on the translation parameter in the corresponding \(L^p\) spaces. Hence the integral in
+\cref{eq:integral-remainder} is a Bochner integral. Approximate
+\(v^{(k+1)}(t)\dd t/k!\) by signed simple measures. The associated finite sums of truncated powers
+converge in \(W^{1,p}\), and their total coefficient variation is bounded by
+\(\norm{v^{(k+1)}}_{L^1}/k!\). Passing to the atomic closure and including the upper normalization factor
+proves \Cref{prop:1dsource}.
+
+The argument also shows why \(k\geq1\) is used when the ambient space is \(W^{1,p}\): a discontinuous
+step activation does not have the required translation continuity in that norm. It shows in addition
+why the multivariate case is not obtained by replacing \(t\) with a hyperplane parameter, since the
+representation and the variation measure then have a different geometry.

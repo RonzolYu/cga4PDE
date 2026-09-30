@@ -1,0 +1,31 @@
+\subsection{Finite-trajectory checks for the quartic models}
+\label{sec:finite-trajectory-numerics}
+\label{sec:fractional-innovation-p4}
+
+We evaluate the projection and quartic estimates of \Cref{sec:c5} on the
+one-dimensional pure and regularized $p=4$, $k=3$ trajectories with
+$u^*(x)=\cos(2\pi x)$ and $\varepsilon=0$ or $0.1$. The constants are
+calibrated on the retained states $N=8,\ldots,32$ and then held fixed on the
+continuation to $N=64$. The calibration and continuation ranges are kept
+separate, so the latter is only a finite-range check.
+
+On the calibration range, the quartic identity and the projection-drop
+identity agree with the computed values to floating-point accuracy under two
+quadrature orders. The source and quartic comparison bounds cover the
+computed energy errors in both models, although their terminal constants are
+conservative. For the prescribed benchmark $\alpha=6$, the resulting
+finite-range comparison powers are
+\begin{align*}
+ \widehat\delta_{8+j}&=O(j^{-6}),&
+ d_{V,\bullet}(\widehat G_{8+j},u^*)&=O(j^{-3}),\\
+ \|\widehat G_{8+j}-u^*\|_{W^{1,4}}&=O(j^{-3/2}),&
+ 1&\le j\le24.
+\end{align*}
+These are conditional envelopes on the calibrated range and do not assert an
+asymptotic rate. The normalized-innovation condition remains satisfied for
+27 of 32 continuation transitions in the pure model and 28 of 32 in the
+regularized model; the exceptions prevent extending the same fixed-constant
+bound to the whole continuation.
+
+The detailed per-state source quantities, Hessian margins, quadrature checks,
+and continuation records are supplied in the supplementary numerical files.

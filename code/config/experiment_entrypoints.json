@@ -1,0 +1,14 @@
+{
+  "schema_version": "2026-09-14",
+  "commands": {
+    "index_audit": "python scripts/build_experiment_index.py",
+    "numeric_audit": "python scripts/audit_numeric_values.py",
+    "artifact_check": "python scripts/reproduce.py --mode artifacts --package-root .",
+    "diagnostic_check": "python scripts/reproduce.py --mode diagnostics --package-root .",
+    "reproduction_acceptance": "python scripts/check_reproduction.py",
+    "fractional_analysis": "python scripts/analyze_fractional_innovation.py",
+    "continuation_analysis": "python scripts/continuation_experiments.py analyze"
+  },
+  "working_directory": ".",
+  "path_policy": "all paths are relative to the package root"
+}

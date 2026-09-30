@@ -1,0 +1,154 @@
+\section{Natural geometry for variational energies}
+\label{sec:pgeometry}
+
+Let \(\Omega\subset\R^d\) be bounded, connected, and Lipschitz.
+We consider diffusion and reaction equations with natural Neumann boundary conditions.
+The regularization parameter \(\eps\geq0\) is fixed; the regularized model uses \(\eps>0\).
+The linear and semilinear equations are
+\[
+-\Delta u+u=f,\qquad -\Delta u+u^3=f,\qquad -\Delta u+\sinh u=f.
+\]
+The standard \(p\)-structure models are
+\[
+-\operatorname{div}A_p(\nabla u)=f,\quad
+-\operatorname{div}A_{p,\eps}(\nabla u)=f,\quad
+-\operatorname{div}A_p(\nabla u)+|u|^{p-2}u=f,
+\]
+where \(A_p(\xi)=|\xi|^{p-2}\xi\), \(A_p(0)=0\), and
+\(A_{p,\eps}(\xi)=(\eps^2+|\xi|^2)^{(p-2)/2}\xi\).
+The boundary flux is zero. For the pure and regularized Neumann problems, the load annihilates constants and the zero-mean representative is used.
+The equations are understood weakly when the load is not a regular function.
+
+\input{sections/07_energy_families}
+
+\subsection{Standard \texorpdfstring{\(p\)}{p}-structure and natural distance}
+
+For standard \(p\)-structure energies, we relate the CGA energy error to the natural distance
+associated with the diffusion operator. The argument uses the pointwise structure of the density in
+addition to its growth. The pointwise inequalities are standard; the step taken here is to integrate
+them into an energy-to-metric estimate for the three energy families below, together with the
+matching \(W^{1,p}\) conversion. Let \(\Omega\subset\R^d\) be bounded, connected, and Lipschitz, and
+let \(p\geq2\). On the zero-mean space \(X_{p,\circ}\), define the pure and regularized energies
+\begin{align}
+ \E_p(u)&=\int_\Omega\frac1p\abs{\nabla u}^p\dd x-\ip fu,
+ \label{eq:pure-energy}\\
+ \E_{p,\eps}(u)&=\int_\Omega
+ \frac{(\eps^2+\abs{\nabla u}^2)^{p/2}-\eps^p}{p}\dd x-\ip fu,
+ \qquad\eps>0.
+ \label{eq:reg-energy}
+\end{align}
+On \(W^{1,p}(\Omega)\), define the reaction energy
+\begin{equation}
+ \E_{p,R}(u)=\int_\Omega\left(\frac1p\abs{\nabla u}^p+
+ \frac1p\abs u^p\right)\dd x-\ip fu.
+ \label{eq:reaction-energy}
+\end{equation}
+
+For a differentiable convex functional \(F\), its Bregman divergence is
+\begin{equation}
+ D_F(u,v)=F(u)-F(v)-\ip{F'(v)}{u-v}\geq0.
+ \label{eq:bregman-definition}
+\end{equation}
+It measures the part of the energy increment not accounted for by the tangent functional at \(v\). In
+general \(D_F(u,v)\neq D_F(v,u)\), so it is not a metric. The same notation is used pointwise for a
+convex density: \(D_\phi(a,b)=\phi(a)-\phi(b)-\nabla\phi(b)\cdot(a-b)\).
+
+For scalar arguments set \(V(s)=\abs{s}^{(p-2)/2}s\), and for vector arguments set
+\[
+ V(\xi)=\abs\xi^{(p-2)/2}\xi,
+ \qquad
+ V_\eps(\xi)=(\eps^2+\abs\xi^2)^{(p-2)/4}\xi.
+\]
+The corresponding natural distances are
+\begin{align*}
+ d_V(u,v)^2&=\norm{V(\nabla u)-V(\nabla v)}_{L^2}^2,\\
+ d_{V,\eps}(u,v)^2&=\norm{V_\eps(\nabla u)-V_\eps(\nabla v)}_{L^2}^2,\\
+d_{V,R}(u,v)^2&=d_V(u,v)^2+
+ \norm{V(u)-V(v)}_{L^2}^2.
+\end{align*}
+We use \(\E_\bullet\) and \(d_{V,\bullet}\) only as paired abbreviations for one of
+\((\E_p,d_V)\), \((\E_{p,\eps},d_{V,\eps})\), or \((\E_{p,R},d_{V,R})\). The scalar map applies to
+the reaction term and the vector map to gradients. The map \(V\) turns the weighted quadratic
+structure of a \(p\)-operator into an \(L^2\)-type distance
+\citep{BarrettLiu1993,DieningKreuzer2008,LeePark2025}.
+
+Throughout this section, \(A\lesssim_p B\) means \(A\leq C(p)B\), and \(A\simeq_p B\) means that
+both inequalities hold with positive constants depending only on \(p\); a further subscript lists
+any additional permitted dependence.
+
+\begin{lemma}[Pointwise \(p\)-structure]
+\label{lem:pstructure}
+For \(p\geq2\), constants depending only on \(p\) satisfy, for every
+\(a,b\in\R^d\),
+\begin{align}
+ &\frac{\abs a^p}{p}-\frac{\abs b^p}{p}
+ -\abs b^{p-2}b\cdot(a-b)
+ \simeq_p(\abs a+\abs b)^{p-2}\abs{a-b}^2
+ \simeq_p\abs{V(a)-V(b)}^2,
+ \label{eq:pstructure}\\
+ &\abs{a-b}^p\lesssim_p\abs{V(a)-V(b)}^2.
+ \label{eq:pcontrol}
+\end{align}
+The analogous statements hold for the regularized density and \(V_\eps\), with \(\eps>0\) fixed.
+\end{lemma}
+
+\begin{proof}[Proof sketch]
+These are the standard monotonicity and radial-growth inequalities for $\xi\mapsto|\xi|^{p-2}\xi$; the regularized statements follow from the same calculation with $\eps^2+|\xi|^2$.
+\end{proof}
+
+\begin{theorem}[Energy--natural-distance equivalence]
+\label{thm:energy-v}
+For each of the three energy--space pairs
+\[
+ (\E_p,X_{p,\circ}),\qquad(\E_{p,\eps},X_{p,\circ}),\qquad
+ (\E_{p,R},W^{1,p}(\Omega)),
+\]
+let \(u^*\) be the minimizer. Then, for every admissible \(u\), respectively,
+\begin{align}
+ \E_p(u)-\E_p(u^*)&\simeq_p d_V(u,u^*)^2,
+ \label{eq:pure-equiv}\\
+ \E_{p,\eps}(u)-\E_{p,\eps}(u^*)&\simeq_{p,\eps}d_{V,\eps}(u,u^*)^2,
+ \label{eq:reg-equiv}\\
+ \E_{p,R}(u)-\E_{p,R}(u^*)&\simeq_p d_{V,R}(u,u^*)^2.
+ \label{eq:reaction-equiv}
+\end{align}
+In the corresponding spaces,
+\begin{equation}
+ \norm{u-u^*}_{W^{1,p}}^p
+ \lesssim_{p,\Omega,\eps}d_{V,\bullet}(u,u^*)^2,
+ \label{eq:w1p-control}
+\end{equation}
+where the constants in the pure and reaction cases are independent of \(\eps\).
+\end{theorem}
+
+\begin{proof}[Proof sketch]
+Integrate the pointwise Bregman equivalences for the gradient and reaction terms.  The weak optimality of $u^*$ cancels the load term, and Poincare's inequality controls the zero-mean representative in the pure and regularized cases.
+\end{proof}
+
+\begin{corollary}[Metric exponents]
+\label{cor:metric-rates}
+Fix any one of the three energy--space--distance triples in \Cref{thm:energy-v}. If a sequence
+\(G_m\) in that feasible space satisfies
+ \begin{equation}
+ \E_\bullet(G_m)-\E_\bullet(u^*)=O(m^{-\alpha})
+ \label{eq:assumed-energy-rate}
+ \end{equation}
+for some \(\alpha>0\), then
+ \begin{equation}
+ d_{V,\bullet}(G_m,u^*)=O(m^{-\alpha/2}),
+ \qquad
+ \norm{G_m-u^*}_{W^{1,p}}=O(m^{-\alpha/p}).
+\label{eq:metric-rates}
+ \end{equation}
+\end{corollary}
+
+\begin{proof}[Proof sketch]
+Apply the two-sided energy--distance equivalence and the $W^{1,p}$ control in \Cref{thm:energy-v} to the assumed energy bound, then take the corresponding square or $p$-th root.
+\end{proof}
+
+\begin{remark}[Scope]
+The corollary is restricted to the three standard \(p\)-Laplacian-type energies just defined. Linear,
+cubic, and hyperbolic-sine energies have their own quadratic or local-Hessian geometry and are not
+instances of this statement merely because they are convex. Conversely, an unspecified energy with
+\(p\)-growth need not satisfy the Bregman--\(V\) equivalence in \Cref{lem:pstructure}.
+\end{remark}

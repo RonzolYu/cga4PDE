@@ -1,0 +1,81 @@
+{
+  "mode": "diagnostics",
+  "status": "PASS",
+  "commands": [
+    {
+      "command": [
+        "python",
+        "scripts/verify_continuation_prefix.py"
+      ],
+      "exit_code": 0,
+      "log": "reports/reproduction_logs/diagnostics_00_verify_continuation_prefix.log"
+    },
+    {
+      "command": [
+        "python",
+        "scripts/section85_analysis.py"
+      ],
+      "exit_code": 0,
+      "log": "reports/reproduction_logs/diagnostics_01_section85_analysis.log"
+    },
+    {
+      "command": [
+        "python",
+        "scripts/continuation_experiments.py",
+        "analyze"
+      ],
+      "exit_code": 0,
+      "log": "reports/reproduction_logs/diagnostics_02_continuation_experiments.log"
+    },
+    {
+      "command": [
+        "python",
+        "scripts/audit_numeric_values.py"
+      ],
+      "exit_code": 0,
+      "log": "reports/reproduction_logs/diagnostics_03_audit_numeric_values.log"
+    }
+  ],
+  "output_root": "/private/var/folders/rg/5svsy0c13ds8g_sj_sx47d4c0000gn/T/cga_reproduction_c4px0um0/diagnostics_recomputed",
+  "config_sha256": "b61d59ea328e9e1dd37ba8a2596842da0e657bd60a78be64560565ab26d6b08b",
+  "rfm": {
+    "rows": 313,
+    "successes": 304,
+    "failures": 9,
+    "groups": 32,
+    "quantile_method": "numpy.quantile(method=linear); successful rows only; incomplete groups retained"
+  },
+  "prefix_recomputation": {
+    "state_rule_pairs": 100,
+    "maximum_quartic_defect": 8.673617379884035e-17
+  },
+  "outputs": {
+    "data/derived/experiments/rfm_multiseed_summary.csv": "46ad4f6245adbc603947aea38e285ec08ffdf545b206776a073873633b628c00",
+    "data/derived/section85/base_pure_finite_q16.csv": "62327e9d70bd5bb20b8f354ace846c92ed5ca42c4999e74e3953325887a41ce1",
+    "data/derived/section85/base_pure_finite_q20.csv": "860ee49073bbd09c5b2ca08ebc61061f54a4a530d363e30c0e50bfedf7db9d8d",
+    "data/derived/section85/base_pure_source_q16.npz": "f9efcc61d0707dda256c3bff593c553295c12313bd6e152eb4c8370166c61822",
+    "data/derived/section85/base_pure_source_q20.npz": "34406cf3086301260fbf7d892117ff8888deb4ef50810a935fb1f6127c28f1ec",
+    "data/derived/section85/base_pure_sources_q16.json": "c594540fd2df4ae2c82d23e922eced77198953729f5cbf48b7108b75e600296b",
+    "data/derived/section85/base_pure_sources_q20.json": "70a74f46a97e802a05b98fac0cda26648cdb79e3aad85be15932196b8aa8d6b3",
+    "data/derived/section85/common_quadrature_states.csv": "0f7624331d265f8b7829977721e6f624df170b33af34933feb852c3538e54070",
+    "data/derived/section85/common_quadrature_terminal.csv": "ccdd0f3de5ac4adc422e3e2d0bc9e096657011ae8b9cf416eb25cb4e3ae3fa04",
+    "data/derived/section85/epsilon_01_finite_q16.csv": "942b33820ba4c8cb5db0e819a3152e5f7bc929b4fd6d67588bfe6f0ba258bff8",
+    "data/derived/section85/epsilon_01_finite_q20.csv": "59e8efb376d0f07a5954e39821789cdf8cda5f0566c2b3979b91ef2aba356a56",
+    "data/derived/section85/epsilon_01_source_q16.npz": "37c86237b19a18f6a4ed6b5efb25464f8cbf438a48cac2da4a423ed4efa18b5b",
+    "data/derived/section85/epsilon_01_source_q20.npz": "982a951165e62fec5a4495035809379043763565ae05f93ef16a5f4c04eae953",
+    "data/derived/section85/epsilon_01_sources_q16.json": "7df1b00a1bab0a249a7b4e79fa1cfc947e6c4ad227058c51153bc70bcfcb14c6",
+    "data/derived/section85/epsilon_01_sources_q20.json": "14c80f711666796af13ef2c4012630aa20c123a852432feb5e86c64c5cb5551f",
+    "data/derived/section85/finite_trajectory_summary.csv": "ecdbb93a2abb844df6a9b3e90a70ff526fd712b1435ab37271f4c840f70806cb",
+    "data/derived/section85/source_quadrature_crosscheck.csv": "9fe4a6eb455d7f99933449fe6b110099cc1261369d68b58605e984ed73fda48f",
+    "result/continuation_20260914/base_pure_states_q16.csv": "e1fd0e3cd55197dcc8d1482663e28a5f3314f3bbc665810ba8e6fe84b598ff9c",
+    "result/continuation_20260914/base_pure_states_q20.csv": "a8235e49d7209adebbc1e4fb259921fb5b4dfbef4817b55f136df2a17fa74348",
+    "result/continuation_20260914/continuation_summary.csv": "9f48ffc7ee8f671d0e7d6cda33977de68d6caaa9841013c9fa502483b5075b82",
+    "result/continuation_20260914/epsilon_01_states_q16.csv": "80a104907bd6fd0f57f5437bc588d03050f71a358a5fb301a6716c9c20caf659",
+    "result/continuation_20260914/epsilon_01_states_q20.csv": "56ef49a34347a3f8b4bf089f2f49b0979c260f1b8c97e80dce77b0fce3e6882d",
+    "result/continuation_20260914/prefix_verification.json": "73d72eb35a66ae6cc2788d9921f4aa65ec2e2fe2c622c89dbc7ad971df6da36a",
+    "result/continuation_20260914/validation.json": "d28e2a07d57d3bae34c7e1722b0341b02a3aabd097ad28aed8b32095a0863413",
+    "result/review_checks/numeric_checks.json": "071e711ed006f71146d5ce216a9a011c67ba7fe1500ce3f49547baca67e197d1",
+    "result/review_checks/rfm_failures.csv": "106c680b2437c660ef24bf80d06f9e0d1a7cb2346e1a87aeab084a3f260d5c0c",
+    "result/review_checks/rfm_seed_counts.csv": "09c38555c757282d2fee7884005a2e4c0fd74b5dd6020821e5fed65b30853ecd"
+  }
+}

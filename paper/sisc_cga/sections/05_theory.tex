@@ -1,0 +1,465 @@
+% Condensed main-text theory for the SISC-length manuscript.
+% The full derivations are retained in supplement/S4_theory_details.tex.
+\ifdefined\CGAChapterFiveEmbedded
+\else
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=25mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools,booktabs,microtype,enumitem}
+\usepackage[hidelinks]{hyperref}
+\def\CGAChapterFiveStandalone{1}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{assumption}[theorem]{Assumption}
+\theoremstyle{remark}\newtheorem{remark}[theorem]{Remark}
+\begin{document}\setcounter{section}{4}
+\fi
+\providecommand{\cE}{\mathcal E}
+\providecommand{\cD}{\mathcal D}
+\providecommand{\cP}{\mathcal P}
+\providecommand{\cK}{\mathcal K}
+\providecommand{\cnorm}[1]{\left\lVert#1\right\rVert}
+\providecommand{\cabs}[1]{\left|#1\right|}
+\providecommand{\cinner}[2]{\left\langle#1,#2\right\rangle}
+\providecommand{\cR}{\mathbb R}
+\providecommand{\cdd}{\,\mathrm d}
+\ifdefined\CGAChapterFiveStandalone
+  \newcommand{\CGAHLDreference}{Section~3}
+  \newcommand{\CGAEnergyMetricReference}{the energy--distance theorem and metric corollary in Section~4}
+  \newcommand{\CGAEnergyTheoremReference}{the energy--distance theorem in Section~4}
+\else
+  \newcommand{\CGAHLDreference}{Section~\ref{sec:c5-descent}}
+  \newcommand{\CGAEnergyMetricReference}{Theorem~\ref{thm:energy-v} and Corollary~\ref{cor:metric-rates}}
+  \newcommand{\CGAEnergyTheoremReference}{Theorem~\ref{thm:energy-v}}
+\fi
+
+\section{Conditional convergence and finite-trajectory projection bounds}
+\label{sec:c5}
+
+The analysis separates finite-pool descent from approximation in a frozen
+Hilbert metric.  Pool coverage, score evaluation, radial stationarity, and
+coefficient correction enter the first part; nested-space projection and local
+Hessian information enter the second.  The connection is conditional, and the
+quartic models additionally admit an exact energy identity.
+
+Throughout, $m$ counts accepted independent directions, $m_0$ is a starting
+index, $\widehat G_m$ is a computed state, $G_m^\sharp$ an exact active-space
+minimizer, and $z_m$ a frozen orthogonal projection.  All derivatives act on
+the specified feasible linear space.
+
+\subsection{Finite-pool descent and residual comparison}
+\label{sec:c5-descent}
+\label{sec:descent}
+
+Let $X$ be a real Banach space, $\cE:X\to\cR$ convex and differentiable, and
+$u^*$ a minimizer.  For a symmetric unit dictionary $\cD_X$, set
+\[
+ \widehat\delta_m=\cE(\widehat G_m)-\cE(u^*),\qquad
+ S_m^X=\sup_{g\in\cD_X}|\cinner{\cE'(\widehat G_m)}g|.
+\]
+For a finite pool $\cP_m\subset\cD_X$ and $0<t_m^{\rm pool}\le1$, write
+\[
+ |\widetilde s_m(g)-s_m(g)|\le\xi_m,\qquad
+ \widetilde s_m(g_{m+1})\ge t_m^{\rm pool}\max_{g\in\cP_m}\widetilde s_m(g),
+\]
+where $s_m(g)=|\cinner{\cE'(\widehat G_m)}g|$.  Its continuous coverage is
+$\tau_m=\max_{\cP_m}s_m/S_m^X$ when $S_m^X>0$, and we set $\tau_m=1$
+when $S_m^X=0$.
+\begin{assumption}[Directional quadratic upper bound]
+\label[assumption]{ass:directional}
+For some $L>0$, every $m$, every $g\in\cD_X$, and $|\lambda|\leq1$,
+\begin{equation}
+ \cE(\widehat G_m+\lambda g)\leq\cE(\widehat G_m)+\lambda\cinner{\cE'(\widehat G_m)}g+\tfrac L2\lambda^2,
+\label{eq:c5-directional}
+\end{equation}
+\end{assumption}
+Assume that the expanded active space contains the signed step used below and that
+the inexact active correction satisfies
+\[
+ \cE(\widehat G_{m+1})\leq
+ \inf_{v\in\widehat\Phi_{m+1}}\cE(v)+\varepsilon_m^{\rm opt},
+ \qquad \varepsilon_m^{\rm opt}\geq0.
+\]
+Define
+$H_L(a)=\max_{0\le\lambda\le1}(\lambda a-L\lambda^2/2)$.
+
+\begin{proposition}[Finite-pool descent]
+\label{prop:c5-descent}
+\label{thm:inexact}
+Under these conditions,
+\begin{equation}
+ \widehat\delta_{m+1}\leq\widehat\delta_m-H_L(a_m)+\varepsilon_m^{\rm opt},\qquad
+ a_m=\left[t_m^{\rm pool}\tau_m S_m^X-(1+t_m^{\rm pool})\xi_m\right]_+ .
+ \label{eq:c5-descent}
+\end{equation}
+\end{proposition}
+\begin{proof}
+The score error is inserted before and after the finite-pool maximization.  Testing the enlarged active space with a signed step of length $\min\{1,a_m/L\}$ gives the displayed decrease, and the correction error is added once.
+\end{proof}
+
+If $B_{\rm src}>0$, $u^*/B_{\rm src}$ belongs to the closed absolutely convex hull of $\cD_X$, and the
+radial defect satisfies $|\cinner{\cE'(\widehat G_m)}{\widehat G_m}|\leq\eta_m^{\rm rad}$, convexity gives
+\begin{equation}
+ \widehat\delta_m\leq\eta_m^{\rm rad}+B_{\rm src}S_m^X.
+ \label{eq:c5-atomic}
+\end{equation}
+Thus radial stationarity is distinct from score error and correction error.
+
+\begin{lemma}[Nonautonomous scalar recurrence]
+\label{lem:c5-recurrence}
+If $x_m\ge0$ and $x_{m+1}\le x_m-b_mx_m^q$ with $q>1$ and $b_m\ge0$, then, for
+$x_0>0$,
+\begin{equation}
+ x_n\le\left[x_0^{1-q}+(q-1)\sum_{m=0}^{n-1}b_m\right]^{-1/(q-1)}.
+ \label{eq:c5-recurrence}
+\end{equation}
+If $x_0=0$, the sequence vanishes.
+\end{lemma}
+\begin{proof}
+Apply convexity to $x\mapsto x^{1-q}$ while the sequence is positive and sum the resulting increments; once a term vanishes, nonnegativity gives the remaining cases.
+\end{proof}
+
+The atomic baseline follows by assuming, for $m\ge m_0$,
+\[
+ t_m^{\rm pool}\tau_m\ge\underline t>0,\qquad
+ \eta_m^{\rm rad}+
+ \frac{B_{\rm src}(1+t_m^{\rm pool})}{t_m^{\rm pool}\tau_m}\xi_m
+ \le\vartheta\widehat\delta_m,
+ \qquad\varepsilon_m^{\rm opt}\le\zeta H_L(a_m),
+\]
+with $0\le\vartheta,\zeta<1$. Equation~\eqref{eq:c5-atomic} gives
+$a_m\ge\underline t(1-\vartheta)\widehat\delta_m/B_{\rm src}$.
+Descent is monotone and $H_L(a)\ge a^2/(2\max\{L,A\})$ for $0\le a\le A$;
+applying this to the displayed lower bound for $a_m$ gives
+$\widehat\delta_{m+1}\le\widehat\delta_m-c\widehat\delta_m^2$ with $c>0$.
+Lemma~\ref{lem:c5-recurrence} yields
+$\widehat\delta_m=O((m-m_0+1)^{-1})$ on the tail. The ideal continuous method
+is the case $\tau_m=1$ and $\xi_m=\eta_m^{\rm rad}=\varepsilon_m^{\rm opt}=0$,
+with selection weakness bounded below.
+
+\begin{theorem}[Conditional residual-comparison rate]
+\label{thm:c5-visible}
+Let $p>2$, $c_U>0$, and $\kappa_0>0$. Suppose
+$\widehat\delta_m\ge c_U\|\widehat G_m-u^*\|_X^p$ and
+$S_m^X\ge\kappa_0(m+1)^{-\chi}\|\cE'(\widehat G_m)\|_{X^*}$ with
+$0\le\chi<1/2$.  Assume, uniformly in $m$, that
+\[
+ t_m^{\rm pool}\tau_m\ge\underline t>0,\qquad
+ (1+t_m^{\rm pool})\xi_m\leq\vartheta t_m^{\rm pool}\tau_m S_m^X,
+ \quad 0\leq\vartheta<1,
+\]
+and that the correction error satisfies
+$\varepsilon_m^{\rm opt}\leq\zeta H_L(a_m)$ with $0\leq\zeta<1$.
+Together with the directional bound above, these conditions give
+\begin{equation}
+ \widehat\delta_m=O\big((m+1)^{-p(1-2\chi)/(p-2)}\big).
+ \label{eq:c5-visible-rate}
+\end{equation}
+\end{theorem}
+\begin{proof}
+Convexity and the lower bound on $\widehat\delta_m$ give
+$\|\cE'(\widehat G_m)\|_{X^*}\geq c_U^{1/p}\widehat\delta_m^{(p-1)/p}$.
+The pool and error assumptions therefore give a selected score bounded below by
+a fixed multiple of $(m+1)^{-\chi}\widehat\delta_m^{(p-1)/p}$.
+Descent and absorption give monotonicity. The lower score bound is therefore
+bounded above by a fixed $A$, so the same quadratic lower bound for $H_L$
+gives Lemma~\ref{lem:c5-recurrence} with $q=2(p-1)/p$ and
+$b_m\asymp(m+1)^{-2\chi}$. The sum grows as $m^{1-2\chi}$.
+\end{proof}
+
+\subsection{Energy and natural distance}
+\label{sec:c5-natural}
+
+For the standard pure, regularized, and reaction $p$-energies, \CGAEnergyMetricReference gives
+energy--distance equivalence and the $W^{1,p}$ conversion.  Hence an energy estimate
+$\widehat\delta_m=O(m^{-\alpha})$ implies
+\[
+ d_{V,\bullet}(\widehat G_m,u^*)=O(m^{-\alpha/2}),\qquad
+ \|\widehat G_m-u^*\|_{W^{1,p}}=O(m^{-\alpha/p}).
+\]
+The statement is restricted to the three specified energy densities.
+
+\subsection{Local Hessian transfer and the same-dictionary requirement}
+\label{sec:c5-hessian}
+
+The local transfer result is the main conditional refinement. Let $H$ be a
+Hilbert space on which $\cE$ is twice Fr\'echet differentiable in an open
+convex neighborhood of its minimizer $u^*$. Let $A_*=\cE''(u^*)$ be bounded,
+symmetric, and coercive, and set
+$a_*(v,w)=\langle A_*v,w\rangle$, $\|v\|_*^2=a_*(v,v)$.
+Assume the closed ball $\|u-u^*\|_*\le R_*$ lies in this neighborhood and
+\begin{equation}
+ |\langle[\cE''(u)-A_*]v,w\rangle|
+ \le L_*\|u-u^*\|_*\|v\|_*\|w\|_*,\qquad L_*R_*\le\tfrac12 .
+ \label{eq:c5-hessian}
+\end{equation}
+For a finite-dimensional space $\Phi$, let $z_\Phi$ be the frozen $A_*$-projection and
+$G_\Phi^\sharp$ the exact energy minimizer, both inside this ball.
+
+\begin{lemma}[Taylor and projection estimates]
+\label{lem:c5-projection}
+Under \eqref{eq:c5-hessian}, for $u$ in this ball,
+\begin{align}
+ \left|\cE(u)-\cE(u^*)-\tfrac12\|u-u^*\|_*^2\right|&\le\tfrac{L_*}{6}\|u-u^*\|_*^3,\\
+ \|\cE'(u)-A_*(u-u^*)\|_{*'}&\le\tfrac{L_*}{2}\|u-u^*\|_*^2,\\
+ \|G_\Phi^\sharp-z_\Phi\|_*&\le L_*\|z_\Phi-u^*\|_*^2.
+ \label{eq:c5-proj}
+\end{align}
+\end{lemma}
+\begin{proof}
+Taylor's formula gives the first two inequalities.  The third follows by testing the active-space first-order condition with $G_\Phi^\sharp-z_\Phi$ and absorbing the term $L_*R_*\|G_\Phi^\sharp-z_\Phi\|_*^2$.
+\end{proof}
+
+Assume the algorithmic dictionary $\cD_X\subset H$ satisfies
+\begin{equation}
+ 0<c_*\le\|g\|_*\le C_*<\infty\quad(g\in\cD_X),
+\qquad \cD_* = \left\{g/\|g\|_*:g\in\cD_X\right\}.
+ \label{eq:c5-bridge}
+\end{equation}
+Let $\Phi_{m+1}=\Phi_m+\operatorname{span}\{g_{m+1}\}$, where
+$g_{m+1}\in\cD_X\setminus\Phi_m$, and let $P_m$ be the $a_*$-orthogonal
+projection onto $\Phi_m$. Set $z_m=P_mu^*$ and define
+$S_m^*=\sup_{d\in\cD_*}|\langle A_*(z_m-u^*),d\rangle|$.  At the exact
+active-space minimizer $G_m^\sharp$ define the score defect
+\[
+ \eta_m^H=\sup_{g\in\cD_X}
+ \left|\langle\cE'(G_m^\sharp),g\rangle-a_*(z_m-u^*,g)\right|.
+\]
+Lemma~\ref{lem:c5-projection} yields
+$\eta_m^H\le C_{T}\|z_m-u^*\|_*^2$ on the stated ball, with $C_T$ uniform
+over the specified dictionary.
+
+\begin{proposition}[Relative score transfer]
+\label{prop:c5-transfer}
+If nonlinear selection at $G_m^\sharp$ over $\cD_X$ has strength
+$t\in(0,1]$ and $0<t_0<tc_*/C_*$, then
+\begin{equation}
+ (1+t)\eta_m^H\le (tc_*-t_0C_*)S_m^*
+ \label{eq:c5-relative}
+\end{equation}
+implies that the selected direction satisfies
+\[
+ \left|a_*(z_m-u^*,g_{m+1}/\|g_{m+1}\|_*)\right|\ge t_0S_m^*.
+\]
+\end{proposition}
+\begin{proof}
+The selected unnormalized frozen score is bounded below by
+$t c_*S_m^*-(1+t)\eta_m^H$; division by the selected frozen norm costs at most
+$C_*$.  This proves the claim.
+\end{proof}
+
+For a concrete semilinear family, take $H=H^1(0,1)$ and
+\[
+ \cE_\lambda(u)=\int_0^1\left(\tfrac12|u'|^2+\tfrac12u^2+\tfrac\lambda4u^4\right)\cdd x-\ell(u),
+ \qquad \lambda\ge0,
+\]
+For $k\ge2$ and $0<a<b<1$, use the dictionary
+$\cD_X=\{\pm g_t:t\in[a,b]\}$, where
+$g_t=(x-t)_+^k/\|(\cdot-t)_+^k\|_{H^1}$.
+Choose a finite signed measure $\mu$ with total variation at most $B_{\rm src}>0$,
+set $u^*=\int_a^b g_t\,\mathrm d\mu(t)$, and define the variational load by
+$\ell(v)=\int_0^1(u^{*\prime}v'+u^*v+\lambda(u^*)^3v)\,\mathrm dx$.
+This construction makes $u^*$ the unique minimizer; it does not impose
+homogeneous Neumann data. The parameter restriction makes the dictionary compact.
+Let $C_{\rm emb}$ satisfy $\|v\|_\infty\le C_{\rm emb}\|v\|_{H^1}$
+and put $M_*=\|u^*\|_\infty$. Directly bounding
+$3\lambda(u^2-(u^*)^2)vw$ gives
+\[
+ L_\lambda=3\lambda C_{\rm emb}(C_{\rm emb}R_*+2M_*),\qquad
+ c_*=1,\quad C_\lambda=(1+3\lambda M_*^2)^{1/2},\quad
+ B_\lambda=C_\lambda B_{\rm src}.
+\]
+Thus $u^*\in B_\lambda\cK_1(\cD_*)$. With
+$C_{T,\lambda}=L_\lambda[1+\tfrac12(1+L_\lambda R_*)^2]$,
+the projection lemma gives $\eta_m^H\le C_\lambda C_{T,\lambda}r_m^2$,
+where $r_m=\|u^*-z_m\|_*$. Orthogonality and the source representation give
+$S_m^*\ge r_m^2/B_\lambda$. Hence a sufficient relative-score condition is
+\begin{equation}
+\Delta_\lambda=(tc_*-t_0C_\lambda)
+ -(1+t)C_\lambda^2C_{T,\lambda}B_{\rm src}>0,
+ \label{eq:c5-small-lambda-score}
+\end{equation}
+with $L_\lambda R_*\le1/2$. Invariance of the ball and a quantitative
+entropy bound remain additional requirements.
+
+To make the entropy-to-rate step explicit, fix a restart index $m_0$ and set
+$Q_0=I-P_{m_0}$, $H_0=Q_0H$, $f_0=Q_0u^*$, and
+$\cD_{\rm rst}=Q_0\cD_*\setminus\{0\}$.  The projected atoms are not renormalized.
+Suppose $K=\cK_1(\cD_{\rm rst})$ is compact and $f_0\in B_*K$, $B_*>0$.
+For weak OGA of strength $t_0$ in $H_0$, let $d_i\in\cD_{\rm rst}$ be
+the selected atoms and $\Pi_j$ the orthogonal projection onto their first $j$
+spans, with $\Pi_0=0$. The bounded-atom entropy argument of
+\cite[Theorem~4.2]{LiSiegelEntropy2024} gives
+\begin{equation}
+ \|f_0-\Pi_jf_0\|_*
+ \leq \frac{B_*}{t_0}\frac{(j!V_j)^{1/j}}{\sqrt j}
+ \varepsilon_{j+1}(K;H_0),
+ \qquad V_j=\frac{\pi^{j/2}}{\Gamma(j/2+1)}.
+ \label{eq:c5-entropy}
+\end{equation}
+Indeed, writing $y_i=\|f_0-\Pi_if_0\|_*^2$ and
+$\ell_i^{\rm rst}=\|(I-\Pi_{i-1})d_i\|_*$, the source and weak selection give
+\[
+ y_i\le y_{i-1}-\frac{t_0^2y_{i-1}^2}{B_*^2(\ell_i^{\rm rst})^2},
+ \qquad
+ y_j\le\frac{B_*^2}{t_0^2j}
+       \left(\prod_{i=1}^j\ell_i^{\rm rst}\right)^{2/j}.
+\]
+The second bound follows by reciprocation and the arithmetic--geometric mean
+inequality while the errors are positive. The cross-polytope generated by
+$\{\pm d_1,\ldots,\pm d_j\}$ lies in $\Pi_jK$ and has volume
+$(2^j/j!)\prod_i\ell_i^{\rm rst}$.
+A cover of $K$ by $2^j$ balls yields
+$\prod_i\ell_i^{\rm rst}\le j!V_j\varepsilon_{j+1}(K;H_0)^j$,
+by taking the infimum over covering radii. This proves \eqref{eq:c5-entropy};
+zero errors persist. Stirling's formula bounds $(j!V_j)^{1/j}/\sqrt j$
+uniformly.
+
+\begin{theorem}[Conditional Hessian transfer after restart]
+\label{thm:c5-hessian}
+Assume \eqref{eq:c5-hessian}, \eqref{eq:c5-bridge}, and exact active-space
+minimization. At each step $m_0\le m<m_0+J$, suppose nonlinear selection has
+strength at least $t$ and \eqref{eq:c5-relative} holds with the same $t_0>0$.
+Assume the exact minimizers and frozen projections remain in the Hessian ball
+for $m_0\le m\le m_0+J$, $K$ is compact, and
+\[
+ f_0\in B_*\cK_1(\cD_{\rm rst}),\qquad
+ \varepsilon_j(\cK_1(\cD_{\rm rst});H_0)\le C_{\rm ent}j^{-\beta},
+ \quad 1\le j\le J+1,
+\]
+with $B_*,C_{\rm ent}>0$, $\beta>0$. Then, for $1\le j\le J$,
+\begin{align}
+ \|z_{m_0+j}-u^*\|_*&\le C B_*C_{\rm ent}t_0^{-1}j^{-\beta},\\
+ \cE(G_{m_0+j}^\sharp)-\cE(u^*)&\le C_{\rm nl}j^{-2\beta}.
+ \label{eq:c5-hessian-rate}
+\end{align}
+Here $C$ is absolute and $C_{\rm nl}$ depends on
+$L_*,R_*,B_*,C_{\rm ent},t_0$. An asymptotic claim requires the same
+constants and hypotheses for all $J$.
+\end{theorem}
+\begin{proof}
+The relative score proposition gives weak frozen selection after projection by
+$Q_0$, so the restarted spaces form weak OGA on $H_0$.  Apply
+\eqref{eq:c5-entropy}.  The projection lemma gives
+$\|G_{m_0+j}^\sharp-u^*\|_*\le(1+L_*R_*)\|z_{m_0+j}-u^*\|_*$;
+the Taylor estimate then yields the energy bound.
+\end{proof}
+
+For the concrete semilinear family, a conditional nonlinear rate therefore requires
+the invariant-ball condition, the positive margin $\Delta_\lambda$, and the
+projected-dictionary entropy estimate simultaneously.  The finite-pool numerical
+trajectory does not verify these conditions uniformly.
+
+\subsection{Approximate-source and quartic consequences}
+\label{sec:c5-source}
+
+Let $Y$ be a finite-dimensional real Hilbert space containing $u^*$, the
+active spaces in the finite range.  Let $a_*(\cdot,\cdot)$ be its frozen inner
+product, let $P_m$ be the corresponding orthogonal projection onto
+$\widehat\Phi_m$.  Assume
+$\widehat\Phi_{m+1}=\widehat\Phi_m+\operatorname{span}\{d_{m+1}\}$ with
+$d_{m+1}\notin\widehat\Phi_m$, and set
+\[
+ z_m=P_mu^*,\qquad e_m=u^*-z_m,\qquad r_m=\|e_m\|_*.
+\]
+Let $\cD_{\rm fin}\subset Y$ be a finite symmetric dictionary containing every accepted direction in this range.
+For the selected direction $d_{m+1}$ define its innovation norm
+$\ell_m=\|(I-P_m)d_{m+1}\|_*>0$ and
+$S_m^{\rm fin}=\max_{d\in\cD_{\rm fin}}|a_*(e_m,d)|$.
+Set $\theta_m=|a_*(e_m,d_{m+1})|/S_m^{\rm fin}$ when
+$S_m^{\rm fin}>0$, and $\theta_m=0$ otherwise.  Assume that the restarted
+residual has the explicit approximate atomic representation
+\[
+ Q_0u^*=\sum_{d\in\cD_{\rm fin}}a_dQ_0d+\rho_0,
+ \qquad \sum_d|a_d|\leq B_{\rm entry},\qquad \|\rho_0\|_*\leq\sigma,
+ \quad Q_0=I-P_{m_0}.
+\]
+For any $0\leq\underline\theta_m\leq\theta_m$, define
+$W_j=\sum_{m=m_0}^{m_0+j-1}\underline\theta_m^2/\ell_m^2$.
+
+\begin{theorem}[Weighted finite-trajectory source bound]
+\label{thm:c5-source}
+For $x_0=(r_{m_0}^2-\sigma^2)_+>0$ and $B_{\rm entry}>0$,
+\begin{equation}
+ (r_{m_0+j}^2-\sigma^2)_+
+ \leq\left(x_0^{-1}+\frac{W_j}{4B_{\rm entry}^2}\right)^{-1},
+ \qquad 0\le j\le J.
+ \label{eq:c5-source-initial}
+\end{equation}
+If $x_0=0$ or $B_{\rm entry}=0$, monotonicity gives $r_m\leq\sigma$ on the range;
+for $W_j=0$ the estimate is interpreted through projection monotonicity.
+\end{theorem}
+\begin{proof}
+While $x_m=(r_m^2-\sigma^2)_+>0$, Pythagoras gives
+$r_m^2-r_{m+1}^2=|a_*(e_m,d_{m+1})|^2/\ell_m^2$.
+The approximate source first gives
+$S_m^{\rm fin}\ge (r_m^2-\sigma^2)_+/(2B_{\rm entry})$.
+Since $|a_*(e_m,d_{m+1})|\ge\underline\theta_m S_m^{\rm fin}$,
+Pythagoras yields the scalar recurrence
+$x_{m+1}\le x_m-\underline\theta_m^2x_m^2/(4B_{\rm entry}^2\ell_m^2)$,
+$x_m=(r_m^2-\sigma^2)_+$. Applying the reciprocal inequality proves the bound
+until the first index at which $x_m=0$; after that index monotonicity gives the
+stated positive-part estimate.
+\end{proof}
+
+For the one-dimensional pure or regularized quartic energy, let
+\[
+ X=\{u\in W^{1,4}(0,1):\textstyle\int_0^1u=0\},\qquad
+ \cE_\epsilon(u)=\int_0^1
+ \left(\tfrac{\epsilon^2}{2}|u'|^2+\tfrac14|u'|^4\right)\cdd x-\ell(u),
+\]
+and assume $u^*\in X$ solves its weak equation.  Let $Y\subset X$ contain
+these finite-dimensional spaces and define
+\[
+ a_*(v,w)=\int_0^1(\epsilon^2+3|(u^*)'|^2)v'w'\cdd x.
+\]
+For $\epsilon>0$ this is positive definite on $Y$; for $\epsilon=0$ assume
+it is positive definite on all of $Y$.  In this paragraph
+$\widehat\delta_m=\cE_\epsilon(\widehat G_m)-\cE_\epsilon(u^*)$.  Then
+\begin{equation}
+ \widehat\delta_m=\tfrac12(r_m^2+D_m^2)+R_m,
+ \qquad
+ R_m=\int_0^1\left((u^*)'v_m^3+\tfrac14v_m^4\right)\cdd x,
+ \label{eq:c5-quartic}
+\end{equation}
+where $D_m=\|\widehat G_m-z_m\|_*$ and $v_m=\widehat G_m'-(u^*)'$.  Thus
+\begin{proposition}[Quartic energy comparison]
+\label{prop:c5-quartic}
+If $q_{\rm corr}\ge0$, $\rho\ge0$, $D_m\le q_{\rm corr}r_m$, and
+$|R_m|\le\rho(r_m^2+D_m^2)$ with $\rho<1/2$, then
+\begin{equation}
+ (\tfrac12-\rho)r_m^2\le\widehat\delta_m\le
+ (\tfrac12+\rho)(1+q_{\rm corr}^2)r_m^2.
+ \label{eq:c5-quartic-comparison}
+\end{equation}
+\end{proposition}
+\begin{proof}
+Expand the quartic density about $(u^*)'$, cancel the linear term with the weak equation, and use orthogonality of the frozen projection to obtain \eqref{eq:c5-quartic}; the comparison follows immediately.
+\end{proof}
+
+\begin{theorem}[Power-type finite-range bound]
+\label{thm:c5-power}
+Define the normalized frozen innovation decrease
+\[
+ \gamma_m=\frac{|a_*(e_m,d_{m+1})|}{\ell_m},\qquad
+ r_{m+1}^2=r_m^2-\gamma_m^2.
+\]
+Let $\alpha>0$, $c_0>0$, and suppose $r_{m_0}>0$.  If
+$\gamma_m^2\ge c_0r_m^{2+2/\alpha}$ on
+$m_0\le m<m_0+J$, then
+\begin{equation}
+ r_{m_0+j}^2\le\left(r_{m_0}^{-2/\alpha}+\frac{c_0j}{\alpha}\right)^{-\alpha},
+ \qquad 0\le j\le J.
+ \label{eq:c5-power}
+\end{equation}
+For the quartic models, \Cref{prop:c5-quartic} converts this into the corresponding energy, natural-distance, and Sobolev bounds on the same finite range.
+\end{theorem}
+\begin{proof}
+Apply convexity to $x^{-1/\alpha}$ with $x_m=r_m^2$ and sum the increments; the quartic comparison then gives the energy and metric statements.
+\end{proof}
+
+\ifdefined\CGAChapterFiveEmbedded
+\else
+\end{document}
+\fi

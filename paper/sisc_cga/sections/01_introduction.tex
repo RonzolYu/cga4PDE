@@ -1,0 +1,140 @@
+\section{Introduction}
+\label{sec:introduction}
+
+Variational formulations turn a broad class of elliptic boundary-value problems into convex energy
+minimization. Classical finite elements approximate the admissible space by locally supported
+polynomials, and the relation between polynomial degree, mesh scale, and degrees of freedom is well
+understood \citep{BrennerScott2008}. Neural and ridge-function methods instead construct global
+nonlinear trial spaces, so that the approximation problem concerns the selection and
+reoptimization of atoms rather than the design of a mesh. The deep Ritz method illustrates the
+reach of variational neural solvers \citep{EYu2018}. The present work analyzes a deterministic
+greedy selection rule for such nonlinear elliptic energies.
+
+Orthogonal greedy approximation (OGA) has a sharp Hilbert-space theory. Under suitable source and
+entropy conditions it produces optimal approximation rates
+\citep{SiegelXuOGA2022,LiSiegelEntropy2024}. Chebyshev-type greedy methods extend the basic descent
+argument to convex energies in Banach spaces \citep{TemlyakovCGA2013,TemlyakovGreedy2014}, and
+biorthogonal or inexact variants show how selection and correction errors enter the energy recursion
+\citep{DereventsovTemlyakov2022}. These results supply the approximation theory on which the analysis
+below relies. Applying them to a nonlinear partial differential equation (PDE) whose atoms are drawn
+from a finite candidate pool also requires accounting for numerical quadrature, finite dictionary
+approximation, and inexact coefficient minimization. The three effects are distinct: quadrature
+perturbs the evaluated score, a finite pool replaces the continuous supremum by a maximum over the
+pool, and an active-space solver returns only an approximate minimizer.
+
+The dictionary used below consists of shallow \(\relu^k\) ridge functions. Here
+\(\relu^k(s)=[s]_+^k\), with \([s]_+=\max\{s,0\}\), and the domain is a bounded subset of
+\(\R^d\). Greedy neural training has been used successfully for PDEs
+\citep{SiegelHongJinHaoXu2023}. A pool that is drawn once and then held fixed during the greedy
+solve provides a way to formulate weak selection, by which we mean selection of an atom whose score is a
+prescribed fraction of the best score available in the full dictionary:
+\cite[Theorem~3.1]{XuXu2025} prove a convex-energy bound under Hilbert smoothness and
+source/entropy assumptions, while their Theorems~5.1 and 5.2 quantify dictionary sizes that
+realize weak selection. Their analysis assumes exact coefficient minimization over the active
+span. The finite-pool inequality below separates the correction error from the score and coverage
+errors. The universality of such constructions for nonlinear convex variational problems is
+examined by \cite{BernaFalco2025}. Variation spaces and sharp entropy estimates for shallow
+networks provide the source and width information used in the conditional estimates
+\citep{SiegelXuVariation2023,SiegelXuSharp2024,MaoSiegelXu2026}.
+
+The analysis has three parts. First, a one-step descent estimate separates pool
+coverage, score quadrature, radial stationarity, and coefficient-correction errors.
+Second, projection bounds for the computed nested spaces retain the source remainder
+and the observed orthogonal increments; an exact quartic expansion connects these
+bounds to nonlinear energy errors. Third, Section~\ref{sec:c5-hessian} gives a local
+Hessian comparison for a concrete semilinear family and identifies the relative-score,
+invariant-neighbourhood, and entropy assumptions needed for a conditional convergence
+rate. The entropy estimate concerns the same projected, unrenormalized restarted
+dictionary throughout. The numerical results evaluate the finite-trajectory bounds
+and selected transfer quantities; they do not establish an unconditional asymptotic rate.
+
+The convex Chebyshev algorithms of \cite{TemlyakovCGA2013,TemlyakovGreedy2014} and the inexact
+weak-greedy framework of \cite{DereventsovTemlyakov2022} are closest to the present setting. The
+former supplies the generic descent argument, and the latter shows how approximate selection and
+correction enter an energy recurrence. The Hilbert OGA results of
+\cite{SiegelXuOGA2022,LiSiegelEntropy2024} apply after a local transfer to a fixed Hessian metric;
+they do not by themselves control a nonlinear PDE score or selection from a finite pool.
+\cite{XuXu2025} quantify deterministic and randomized finite dictionaries under weak selection, but
+they use exact active-space minimization and do not analyze a degenerate \(p\)-energy. The present
+work examines the additional conditions needed for nonlinear scores, finite pools, and inexact
+active-space minimization.
+
+For \(p\)-growth energies the metric that matches the energy is not the ambient Sobolev norm. The
+nonlinear map
+\[
+  V(\xi)=|\xi|^{(p-2)/2}\xi
+\]
+defines the natural distance, as in the finite-element analysis of the \(p\)-Laplacian
+\citep{BarrettLiu1993,DieningKreuzer2008,LeePark2025}. A squared \(V\)-distance has the scale of an
+energy gap, so an energy bound of order \(m^{-\alpha}\) gives a \(V\)-distance bound of order
+\(m^{-\alpha/2}\) and, for \(p\geq2\), a \(W^{1,p}\)-error bound of order \(m^{-\alpha/p}\). This
+conversion has the same form for every \(p\), although the energy exponent may depend on \(p\). We
+prove the equivalence for the standard pure, regularized, and reaction \(p\)-energies and apply the
+corresponding conversion to each of them.
+
+The atomic source condition of \Cref{ass:atomic} and the directional smoothness estimate of
+\Cref{ass:directional} apply to convex energies and yield an \(O(m^{-1})\) energy bound for the ideal
+continuous CGA. The same arguments produce an explicit one-step inequality for finite-pool CGA, in
+which four contributions appear separately: continuous-dictionary coverage, score quadrature, radial
+active-space stationarity, and coefficient optimization.
+
+Two conditional refinements use additional residual or Hessian information. The residual-comparison
+estimate combines power-type convexity with a lower bound for the dictionary dual seminorm in terms
+of the full dual norm. A local Hessian transfer uses coercivity, a dictionary norm comparison, and a
+relative score condition to obtain a weak-OGA estimate in a frozen Hilbert metric. Neither set of
+assumptions implies the other, and both are stated as conditional estimates.
+
+The finite trajectory produced by the algorithm can also be analyzed without requiring uniform
+Hessian coercivity. For a fixed finite symmetric dictionary and a fixed starting index \(m_0\), an
+explicit approximation of the source with coefficient budget \(B\) and remainder \(\sigma\) gives a
+projection estimate
+\[
+ r_{m_0+j}^2\le \sigma^2+\frac{4B^2}{\mathcal W_j},
+ \qquad
+ \mathcal W_j=\sum_{m=m_0}^{m_0+j-1}\frac{\underline\theta_m^2}{\ell_m^2}.
+\]
+Here \(r_m\) is the norm of the projection error at state \(m\), \(\ell_m\) is the innovation norm of
+the selected candidate, and \(0\leq\underline\theta_m\leq\theta_m\) records the selected direction
+against the best score available in the frozen dictionary. For the one-dimensional \(p=4\) energies,
+whose density is quartic in the gradient, an exact expansion connects this projection error to the
+energy gap. The estimate applies to the active spaces actually generated and carries a source
+remainder; it does not assume that the target lies in the finite dictionary. The stronger
+initial-value form of the bound is stated and evaluated numerically. A second estimate uses the
+normalized innovation \(\gamma_m=\theta_m S_m/\ell_m\). If
+\(\gamma_m^2\geq c_0r_m^{2+2/\alpha}\), inversion of the exact projection recurrence bounds
+\(r_{m_0+j}^2\) by
+\(\big(r_{m_0}^{-2/\alpha}+c_0j/\alpha\big)^{-\alpha}\). The same quartic comparison
+then gives the corresponding energy and metric bounds. Each condition is evaluated from the retained
+projection drops; on a finite index range, positivity alone does not single out a unique exponent.
+
+The numerical study evaluates the estimates together with the conditions on which they rest. Eight
+representative cases cover linear reaction--diffusion, cubic and hyperbolic-sine semilinear
+energies, and pure, regularized, and reaction \(p\)-energies. Five of them compare finite-pool CGA, a
+random-feature model (RFM), and finite elements (FEM) at equal numbers of independent coefficients.
+Random features are used in their fixed-feature sense \citep{RahimiRecht2007}; conditioning of
+linearized neural trial spaces is discussed by \cite{ChenChiEYang2022} and
+\cite{MaoXuXu2026}. The comparison concerns coefficient counts and uses a common evaluator. It does
+not attribute an unproved convergence theorem to the compared methods and does not compare
+wall-clock efficiency. P1 and P3 elements provide low- and high-order mesh-based references, and P2
+results are retained in the supplementary material.
+
+For the finite-trajectory estimates we use the one-dimensional pure and regularized $p=4$
+trajectories. The calibration range is $N=8$--$32$, and the subsequent range uses the same stored
+prefixes from $N=33$ to $64$ with the calibration constants fixed in advance. The reported
+fractions record the number of steps satisfying the stated sufficient condition on each finite
+range. They provide numerical evidence on the displayed trajectory; they do not verify continuous-
+dictionary coverage or an entropy estimate uniformly over increasing ranges. The approximate
+source is constructed once at the starting index from the fixed candidate and auxiliary reference
+dictionary. The source remainder is small relative to the starting residual but is not negligible
+at the terminal scale; it therefore limits the resolution of the source upper bound without giving
+a lower bound on the actual algorithmic error. Neither calculation verifies the continuous-
+dictionary coverage and entropy assumptions of the Hessian-transfer result, so the measured orders
+and fitted innovation powers are reported as finite-range observations.
+
+The remainder is organized as follows. \Cref{sec:setting} defines the variational setting,
+dictionaries, and algorithms. \Cref{sec:c5-descent} proves the basic descent estimates, and
+\Cref{sec:pgeometry} develops the energy families and natural-distance conversion for \(p\geq2\).
+\Cref{sec:c5} combines residual comparison, Hessian transfer, finite-trajectory
+bounds, and fractional innovation. \Cref{sec:numerics} tests these estimates on the computed
+trajectories; \Cref{sec:results} presents equal-DOF comparisons, and \Cref{sec:discussion}
+summarizes the conclusions and their scope.

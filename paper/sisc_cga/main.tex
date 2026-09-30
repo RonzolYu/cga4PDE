@@ -1,0 +1,99 @@
+% SIAM Journal on Scientific Computing manuscript package.
+% Compile this file from the sisc_cga directory.
+\documentclass[review,hidelinks,onefignum,onetabnum,nohypdvips]{siamart251216}
+
+% Packages used by the manuscript in addition to the SIAM class.
+\usepackage{amsfonts,amssymb}
+\usepackage{mathtools}
+\usepackage{bm}
+\usepackage{booktabs,longtable,array,multirow,tabularx}
+% Preserve the SIAM class formatting for main figure and table captions.
+\usepackage[caption=false,font=footnotesize]{subfig}
+\usepackage[section]{placeins}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{microtype}
+\usepackage[numbers]{natbib}
+
+\hypersetup{
+  pdftitle={Chebyshev Greedy Algorithm for Nonlinear PDEs},
+  pdfauthor={Ye Lin, Jiabin Yu, Youngju Lee, Jiwei Jia},
+  pdfkeywords={Chebyshev greedy algorithm, nonlinear elliptic equation, p-Laplacian, natural distance}
+}
+
+\graphicspath{{figures/}{figures/cga/}{figures/baselines/}{figures/baselines_controlled/}{figures/diagnostics/}{figures/supplementary/}}
+
+\setlist[itemize]{leftmargin=1.7em,itemsep=0.2em,topsep=0.35em}
+\setlist[enumerate]{leftmargin=1.9em,itemsep=0.2em,topsep=0.35em}
+\setlength{\tabcolsep}{5pt}
+\emergencystretch=2em
+
+% SIAM theorem environments already provide theorem, lemma, proposition,
+% corollary, and definition. Add the manuscript-specific environments.
+\newsiamthm{assumption}{Assumption}
+\newsiamremark{remark}{Remark}
+\crefname{assumption}{Assumption}{Assumptions}
+\Crefname{assumption}{Assumption}{Assumptions}
+\crefname{algorithm}{algorithm}{algorithms}
+\Crefname{algorithm}{Algorithm}{Algorithms}
+
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\D}{\mathcal{D}}
+\newcommand{\Ppool}{\mathcal{P}}
+\newcommand{\Aaudit}{\mathcal{A}}
+\newcommand{\E}{\mathcal{E}}
+\newcommand{\ip}[2]{\left\langle #1,#2\right\rangle}
+\newcommand{\norm}[1]{\left\lVert #1\right\rVert}
+\newcommand{\abs}[1]{\left\lvert #1\right\rvert}
+\newcommand{\dd}{\,\mathrm{d}}
+\newcommand{\spn}{\operatorname{span}}
+\newcommand{\argmin}{\operatorname*{arg\,min}}
+\newcommand{\eps}{\varepsilon}
+\newcommand{\relu}{\operatorname{ReLU}}
+
+\headers{Chebyshev Greedy Algorithm for Nonlinear PDEs}{Y. Lin, J. Yu, Y. Lee, and J. Jia}
+
+\title{Chebyshev Greedy Algorithm for Nonlinear PDEs}
+
+\author{Ye Lin\thanks{\raggedright School of Mathematics, Jilin University, Changchun, Jilin 130012, China (\email{linye21@mails.jlu.edu.cn}, \email{yujb25@mails.jlu.edu.cn}).}
+\and Jiabin Yu\footnotemark[1]
+\and Youngju Lee\thanks{\raggedright Department of Mathematics, Texas State University, 601 University Drive, San Marcos, Texas 78666, United States (\email{yjlee@txstate.edu}).}
+\and Jiwei Jia\thanks{\raggedright Corresponding author. School of Mathematics, Jilin University, Changchun, Jilin 130012, China, and AI for Science and Engineering Center, Shenzhen Loop Area Institute, Shenzhen, Guangdong 518048, China (\email{jiajiwei@jlu.edu.cn}).}}
+
+\begin{document}
+
+\maketitle
+
+\input{sections/00_frontmatter}
+
+\begin{keywords}
+Chebyshev greedy algorithm; nonlinear partial differential equation; shallow neural network;
+$p$-Laplacian; natural distance; finite dictionary; orthogonal greedy approximation
+\end{keywords}
+
+\begin{MSCcodes}
+65N35, 65N12, 65N15, 68T07
+\end{MSCcodes}
+
+\input{sections/01_introduction}
+\input{sections/02_setting_algorithms}
+\input{sections/04_natural_geometry}
+\def\CGAChapterFiveEmbedded{1}\input{sections/05_theory}
+\input{sections/08_numerical_methodology}
+\input{sections/09_results}
+\input{sections/10_discussion}
+\input{sections/11_code_data_availability}
+
+% The source-class proof is supplied in
+% supplement/S4_background_details/A_source_proof_full.tex to keep the main
+% manuscript within the SISC length policy.
+
+\bibliographystyle{siamplain}
+% DOI metadata remains in the BibTeX source; suppressing printed URLs keeps the
+% reference list within the SISC page limit without changing citation identity.
+\begingroup
+\renewcommand{\url}[1]{}
+\bibliography{References/references}
+\endgroup
+
+\end{document}
