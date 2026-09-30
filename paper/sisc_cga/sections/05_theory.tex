@@ -84,6 +84,15 @@ the inexact active correction satisfies
 Define
 $H_L(a)=\max_{0\le\lambda\le1}(\lambda a-L\lambda^2/2)$.
 
+The radial active-space stationarity defect is denoted by
+\begin{equation}
+ \abs{\cinner{\cE'(\widehat G_m)}{\widehat G_m}}
+ \leq \eta_m^{\rm stat}.
+ \label{eq:c5-orthogonality-defect}
+\end{equation}
+This is the radial component of the active-space stationarity residual; the
+full active-space dual KKT residual is a separate quantity.
+
 \begin{proposition}[Finite-pool descent]
 \label{prop:c5-descent}
 \label{thm:inexact}
@@ -99,9 +108,9 @@ The score error is inserted before and after the finite-pool maximization.  Test
 \end{proof}
 
 If $B_{\rm src}>0$, $u^*/B_{\rm src}$ belongs to the closed absolutely convex hull of $\cD_X$, and the
-radial defect satisfies $|\cinner{\cE'(\widehat G_m)}{\widehat G_m}|\leq\eta_m^{\rm rad}$, convexity gives
+radial defect satisfies \eqref{eq:c5-orthogonality-defect}, convexity gives
 \begin{equation}
- \widehat\delta_m\leq\eta_m^{\rm rad}+B_{\rm src}S_m^X.
+ \widehat\delta_m\leq\eta_m^{\rm stat}+B_{\rm src}S_m^X.
  \label{eq:c5-atomic}
 \end{equation}
 Thus radial stationarity is distinct from score error and correction error.
@@ -123,7 +132,7 @@ Apply convexity to $x\mapsto x^{1-q}$ while the sequence is positive and sum the
 The atomic baseline follows by assuming, for $m\ge m_0$,
 \[
  t_m^{\rm pool}\tau_m\ge\underline t>0,\qquad
- \eta_m^{\rm rad}+
+ \eta_m^{\rm stat}+
  \frac{B_{\rm src}(1+t_m^{\rm pool})}{t_m^{\rm pool}\tau_m}\xi_m
  \le\vartheta\widehat\delta_m,
  \qquad\varepsilon_m^{\rm opt}\le\zeta H_L(a_m),
@@ -135,7 +144,7 @@ applying this to the displayed lower bound for $a_m$ gives
 $\widehat\delta_{m+1}\le\widehat\delta_m-c\widehat\delta_m^2$ with $c>0$.
 Lemma~\ref{lem:c5-recurrence} yields
 $\widehat\delta_m=O((m-m_0+1)^{-1})$ on the tail. The ideal continuous method
-is the case $\tau_m=1$ and $\xi_m=\eta_m^{\rm rad}=\varepsilon_m^{\rm opt}=0$,
+is the case $\tau_m=1$ and $\xi_m=\eta_m^{\rm stat}=\varepsilon_m^{\rm opt}=0$,
 with selection weakness bounded below.
 
 \begin{theorem}[Conditional residual-comparison rate]

@@ -12,10 +12,62 @@ import tomllib
 
 
 MODELS = ("linear", "cubic", "sinh", "pure_p", "regularized_p", "reaction_p")
-FREEZE_PROFILE = "neumann-cga-v1"
-SCHEMA_VERSION = "cga-refactor-1"
+# The archived paper cases were produced by the fix124a rerun.  Keep the
+# constructor defaults on that same protocol so a newly materialized config
+# has the same provenance fields as the frozen records.
+FREEZE_PROFILE = "neumann-cga-v1-fix124a"
+SCHEMA_VERSION = "cga-refactor-2"
+DEFAULT_NUMERICAL_P = 4.0
 EXACT_PROFILES = ("low_frequency", "multifrequency")
 QUADRATURE_LEVELS = ("Q0", "Q1", "Q2")
+
+
+# Public case IDs are kept separate from the generic model/dimension grid.
+# In particular, the paper's E4 and E8 cases differ only in the p and ReLU
+# settings, so relying on the old dimension-only defaults silently selected
+# the wrong frozen run for one of them.
+FROZEN_CASES: dict[str, dict[str, object]] = {
+    "E1_linear_1d": {
+        "model": "linear", "dim": 1, "p": DEFAULT_NUMERICAL_P,
+        "relu_power": 3, "epsilon": None,
+        "exact_profile": "multifrequency",
+    },
+    "E2_cubic_1d": {
+        "model": "cubic", "dim": 1, "p": DEFAULT_NUMERICAL_P,
+        "relu_power": 3, "epsilon": None,
+        "exact_profile": "multifrequency",
+    },
+    "E3_sinh_2d": {
+        "model": "sinh", "dim": 2, "p": DEFAULT_NUMERICAL_P,
+        "relu_power": 3, "epsilon": None,
+        "exact_profile": "low_frequency",
+    },
+    "E4_pure_p4_1d": {
+        "model": "pure_p", "dim": 1, "p": 4.0,
+        "relu_power": 3, "epsilon": None,
+        "exact_profile": "low_frequency",
+    },
+    "E5_pure_p4_2d": {
+        "model": "pure_p", "dim": 2, "p": 4.0,
+        "relu_power": 3, "epsilon": None,
+        "exact_profile": "low_frequency",
+    },
+    "E6_regularized_p4_2d": {
+        "model": "regularized_p", "dim": 2, "p": 4.0,
+        "relu_power": 3, "epsilon": 0.1,
+        "exact_profile": "low_frequency",
+    },
+    "E7_reaction_p4_2d": {
+        "model": "reaction_p", "dim": 2, "p": 4.0,
+        "relu_power": 3, "epsilon": None,
+        "exact_profile": "low_frequency",
+    },
+    "E8_pure_p5_1d": {
+        "model": "pure_p", "dim": 1, "p": 5.0,
+        "relu_power": 1, "epsilon": None,
+        "exact_profile": "low_frequency",
+    },
+}
 
 
 @dataclass(frozen=True)
@@ -150,26 +202,62 @@ def config_hash(cfg: RunConfig) -> str:
     return sha256(payload).hexdigest()
 
 
-def load_config(path: str | Path) -> RunConfig:
-    with Path(path).open("rb") as stream:
-        raw = tomllib.load(stream)
-    pool = PoolConfig(**raw.pop("pool", {}))
-    quadrature = QuadratureConfig(**raw.pop("quadrature", {}))
-    solver = SolverConfig(**raw.pop("solver", {}))
-    cfg = RunConfig(pool=pool, quadrature=quadrature, solver=solver, **raw)
+def effective_p(model: str, p: object) -> float:
+    """Return the numerical p used by the solver for one serialized config.
+
+    Linear, cubic, and sinh cases have no p-dependent operator.  Their public
+    metadata therefore records ``null``; the implementation still carries a
+    numeric placeholder so shared code paths can construct a ``Problem``.
+    """
+    if p is None:
+        if model in {"linear", "cubic", "sinh"}:
+            return DEFAULT_NUMERICAL_P
+        raise ValueError(f"p is required for model {model!r}")
+    value = float(p)
+    if not math.isfinite(value):
+        raise ValueError("p must be finite")
+    return value
+
+
+def config_from_dict(raw: dict[str, Any]) -> RunConfig:
+    """Build a validated config from a JSON/TOML-shaped dictionary.
+
+    Archived case JSON files include a provenance hash and may use ``null``
+    for p on models whose operator does not depend on p.  Neither field is a
+    constructor argument, so normalize them in this single entry point.
+    """
+    payload = dict(raw)
+    payload.pop("config_sha256", None)
+    payload["p"] = effective_p(str(payload["model"]), payload.get("p"))
+    payload["pool"] = PoolConfig(**payload.get("pool", {}))
+    payload["quadrature"] = QuadratureConfig(**payload.get("quadrature", {}))
+    payload["solver"] = SolverConfig(**payload.get("solver", {}))
+    cfg = RunConfig(**payload)
     validate_config(cfg)
     return cfg
 
 
+def load_config(path: str | Path) -> RunConfig:
+    with Path(path).open("rb") as stream:
+        raw = tomllib.load(stream)
+    return config_from_dict(raw)
+
+
 def config_for(model: str, dim: int, *, profile: str = "report", seed: int = 201,
                output_root: str = "cga_refactor/results",
-               quadrature_level: str = "Q0") -> RunConfig:
+               quadrature_level: str = "Q0", p: float | None = None,
+               epsilon: float | None = None, relu_power: int | None = None,
+               exact_profile: str | None = None, phase: str | None = None,
+               freeze_profile: str | None = None,
+               schema_version: str | None = None) -> RunConfig:
     """Construct either the exact frozen budget or a documented report budget."""
     if profile not in {"report", "formal", "smoke"}:
         raise ValueError("profile must be report, formal, or smoke")
     p_family = model in {"pure_p", "regularized_p", "reaction_p"}
-    epsilon = 0.1 if model == "regularized_p" else None
-    relu_power = 1 if model == "pure_p" and dim == 1 else 3
+    p_value = DEFAULT_NUMERICAL_P if p is None else float(p)
+    epsilon_value = 0.1 if model == "regularized_p" and epsilon is None else epsilon
+    relu_value = (1 if model == "pure_p" and dim == 1 else 3
+                  ) if relu_power is None else int(relu_power)
     if profile == "formal":
         pool = PoolConfig(
             candidate_size=2048 if dim == 1 else 4096,
@@ -212,12 +300,39 @@ def config_for(model: str, dim: int, *, profile: str = "report", seed: int = 201
         projection_atol=1e-11 if model == "linear" else 1e-9,
         projection_rtol=1e-10 if model == "linear" else (1e-6 if p_family else 1e-7),
     )
-    exact_profile = ("multifrequency"
-                     if dim == 1 and not p_family and profile == "formal"
-                     else "low_frequency")
-    cfg = RunConfig(model=model, dim=dim, seed=seed, epsilon=epsilon,
-                    relu_power=relu_power, target_accepted=target, phase=profile,
-                    exact_profile=exact_profile, quadrature_level=quadrature_level,
-                    output_root=output_root, pool=pool, quadrature=quad, solver=solver)
+    exact_profile_value = ("multifrequency"
+                           if dim == 1 and not p_family and profile == "formal"
+                           else "low_frequency") if exact_profile is None else exact_profile
+    cfg = RunConfig(model=model, dim=dim, seed=seed, p=p_value,
+                    epsilon=epsilon_value, relu_power=relu_value,
+                    target_accepted=target, phase=profile if phase is None else phase,
+                    exact_profile=exact_profile_value,
+                    quadrature_level=quadrature_level, output_root=output_root,
+                    pool=pool, quadrature=quad, solver=solver,
+                    freeze_profile=FREEZE_PROFILE if freeze_profile is None else freeze_profile,
+                    schema_version=SCHEMA_VERSION if schema_version is None else schema_version)
     validate_config(cfg)
     return cfg
+
+
+def frozen_case_config(case_id: str, *, seed: int = 201,
+                       output_root: str = "cga_refactor/results",
+                       quadrature_level: str = "Q2") -> RunConfig:
+    """Construct one of the paper's frozen E1--E8 cases by public ID.
+
+    This registry keeps the paper-specific p/ReLU choices explicit.  The
+    generic model/dimension constructor remains available for campaigns and
+    sensitivity studies.
+    """
+    try:
+        spec = FROZEN_CASES[case_id]
+    except KeyError as exc:
+        raise ValueError(f"unknown frozen case {case_id!r}") from exc
+    return config_for(
+        str(spec["model"]), int(spec["dim"]), profile="formal", seed=seed,
+        output_root=output_root, quadrature_level=quadrature_level,
+        p=float(spec["p"]), epsilon=spec["epsilon"],
+        relu_power=int(spec["relu_power"]),
+        exact_profile=str(spec["exact_profile"]), phase="formal_fix124a",
+        freeze_profile=FREEZE_PROFILE, schema_version=SCHEMA_VERSION,
+    )

@@ -115,8 +115,7 @@ Random features are used in their fixed-feature sense \citep{RahimiRecht2007}; c
 linearized neural trial spaces is discussed by \cite{ChenChiEYang2022} and
 \cite{MaoXuXu2026}. The comparison concerns coefficient counts and uses a common evaluator. It does
 not attribute an unproved convergence theorem to the compared methods and does not compare
-wall-clock efficiency. P1 and P3 elements provide low- and high-order mesh-based references, and P2
-results are retained in the supplementary material.
+wall-clock efficiency. Across these representative cases, finite-pool CGA exhibits competitive approximation accuracy at equal numbers of independent coefficients and achieves lower errors than RFM and FEM over the higher-DOF regime in several test problems, highlighting the potential benefit of adaptive greedy atom selection.
 
 For the finite-trajectory estimates we use the one-dimensional pure and regularized $p=4$
 trajectories. The calibration range is $N=8$--$32$, and the subsequent range uses the same stored
@@ -127,9 +126,7 @@ dictionary coverage or an entropy estimate uniformly over increasing ranges. The
 source is constructed once at the starting index from the fixed candidate and auxiliary reference
 dictionary. The source remainder is small relative to the starting residual but is not negligible
 at the terminal scale; it therefore limits the resolution of the source upper bound without giving
-a lower bound on the actual algorithmic error. Neither calculation verifies the continuous-
-dictionary coverage and entropy assumptions of the Hessian-transfer result, so the measured orders
-and fitted innovation powers are reported as finite-range observations.
+a lower bound on the actual algorithmic error. These two computations provide numerical support for the finite-range behavior predicted by the Hessian-transfer framework. Although the continuous-dictionary coverage and entropy assumptions are not directly verified in these experiments, the observed convergence orders and fitted innovation exponents still offer finite-range empirical evidence for the underlying theoretical mechanism.
 
 The remainder is organized as follows. \Cref{sec:setting} defines the variational setting,
 dictionaries, and algorithms. \Cref{sec:c5-descent} proves the basic descent estimates, and

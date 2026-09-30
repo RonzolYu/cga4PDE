@@ -13,6 +13,12 @@ from pathlib import Path
 import numpy as np
 
 ROOT = Path(__file__).resolve().parents[1]
+FULL_THEORY = ROOT / "chapter5_theory.tex"
+LOADED_THEORY_CANDIDATES = (
+    ROOT / "tex" / "sections" / "05_theory.tex",
+    ROOT.parent / "paper" / "sisc_cga" / "sections" / "05_theory.tex",
+)
+LOADED_THEORY = next((path for path in LOADED_THEORY_CANDIDATES if path.is_file()), None)
 ATOL, RTOL = 2e-11, 2e-10
 SEED = 20260913
 
@@ -153,7 +159,10 @@ def main():
     report = {
         "status": status, "scope": "algebra and finite-dimensional sanity checks only",
         "seed": SEED, "atol": ATOL, "rtol": RTOL,
-        "chapter_sha256": hashlib.sha256((ROOT / "chapter5_theory.tex").read_bytes()).hexdigest(),
+        "chapter_sha256": hashlib.sha256(FULL_THEORY.read_bytes()).hexdigest(),
+        "loaded_main_theory": None if LOADED_THEORY is None else str(LOADED_THEORY),
+        "loaded_main_theory_sha256": (None if LOADED_THEORY is None else
+                                       hashlib.sha256(LOADED_THEORY.read_bytes()).hexdigest()),
         "checks": results,
     }
     args.output.parent.mkdir(parents=True, exist_ok=True)

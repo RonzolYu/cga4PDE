@@ -11,20 +11,35 @@ from pathlib import Path
 _BASE = Path(__file__).resolve().parents[2]
 if (_BASE / "manuscript" / "main.tex").exists():
     ROOT = _BASE
+elif (_BASE / "tex" / "main.tex").exists():
+    ROOT = _BASE
 elif (_BASE.parent / "main.tex").exists():
     ROOT = _BASE.parent
 else:
     raise RuntimeError("cannot locate manuscript root")
-MANUSCRIPT = ROOT / "manuscript" if (ROOT / "manuscript" / "main.tex").exists() else ROOT
+if (ROOT / "manuscript" / "main.tex").exists():
+    MANUSCRIPT = ROOT / "manuscript"
+elif (ROOT / "tex" / "main.tex").exists():
+    MANUSCRIPT = ROOT / "tex"
+else:
+    MANUSCRIPT = ROOT
 MAIN = MANUSCRIPT / "main.tex"
 REPORT = ROOT / "reports" / "cross_reference_check.md"
 
 INPUT_RE = re.compile(r"\\(?:input|include)\{([^}]+)\}")
-LABEL_RE = re.compile(r"\\label\{([^}]+)\}")
+LABEL_RE = re.compile(r"\\label(?:\[[^\]]*\])?\{([^}]+)\}")
 REF_RE = re.compile(r"\\(?:ref|eqref|cref|Cref|autoref)\{([^}]+)\}")
 CITE_RE = re.compile(r"\\(?:cite|citep|citet|Cite|parencite|textcite)\{([^}]+)\}")
 GRAPHIC_RE = re.compile(r"\\includegraphics(?:\[[^\]]*\])?\{([^}]+)\}")
 BIB_ENTRY_RE = re.compile(r"@\w+\s*\{\s*([^,\s]+)")
+
+
+def display_path(path: Path) -> str:
+    """Render paths through the package's manuscript symlink without failing."""
+    try:
+        return str(path.relative_to(ROOT))
+    except ValueError:
+        return str(path.relative_to(ROOT.parent))
 
 
 def resolve_input(name: str) -> Path:
@@ -112,14 +127,14 @@ def main() -> None:
         "",
     ]
     for name, entries in sorted(duplicate_labels.items()):
-        locations = ", ".join(f"{path.relative_to(ROOT)}:{line}" for path, line in entries)
+        locations = ", ".join(f"{display_path(path)}:{line}" for path, line in entries)
         report.append(f"- duplicate label `{name}`: {locations}")
     for path, line, key in undefined_refs:
-        report.append(f"- undefined reference `{key}` at {path.relative_to(ROOT)}:{line}")
+        report.append(f"- undefined reference `{key}` at {display_path(path)}:{line}")
     for path, line, key in undefined_cites:
-        report.append(f"- undefined citation `{key}` at {path.relative_to(ROOT)}:{line}")
+        report.append(f"- undefined citation `{key}` at {display_path(path)}:{line}")
     for path, line, name in missing_graphics:
-        report.append(f"- missing graphic `{name}` at {path.relative_to(ROOT)}:{line}")
+        report.append(f"- missing graphic `{name}` at {display_path(path)}:{line}")
     if len(report) == 12:
         report.append("- No static dependency problems found.")
 
@@ -131,11 +146,11 @@ def main() -> None:
         "references": len(references),
         "citations": len(citations),
         "graphics": len(graphics),
-        "duplicate_labels": {key: [f"{p.relative_to(ROOT)}:{n}" for p, n in value]
+        "duplicate_labels": {key: [f"{display_path(p)}:{n}" for p, n in value]
                              for key, value in duplicate_labels.items()},
-        "undefined_references": [f"{p.relative_to(ROOT)}:{n}:{key}" for p, n, key in undefined_refs],
-        "undefined_citations": [f"{p.relative_to(ROOT)}:{n}:{key}" for p, n, key in undefined_cites],
-        "missing_graphics": [f"{p.relative_to(ROOT)}:{n}:{name}" for p, n, name in missing_graphics],
+        "undefined_references": [f"{display_path(p)}:{n}:{key}" for p, n, key in undefined_refs],
+        "undefined_citations": [f"{display_path(p)}:{n}:{key}" for p, n, key in undefined_cites],
+        "missing_graphics": [f"{display_path(p)}:{n}:{name}" for p, n, name in missing_graphics],
         "passed": not (duplicate_labels or undefined_refs or undefined_cites or missing_graphics),
     }
     (ROOT / "data" / "derived" / "cross_reference_status.json").parent.mkdir(parents=True, exist_ok=True)

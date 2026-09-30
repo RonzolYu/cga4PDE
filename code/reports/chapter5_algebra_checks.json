@@ -4,7 +4,9 @@
   "seed": 20260913,
   "atol": 2e-11,
   "rtol": 2e-10,
-  "chapter_sha256": "3654e49a64bc0e87df0d793eaa5098f54ad139943bb3f0c4d6c6fea22bdc0447",
+  "chapter_sha256": "79513eb563e7c61ecf372a9cf4f8edca50bcbd31d206a9a99252dfda5978984e",
+  "loaded_main_theory": "/Users/yujiabin/Code/OGA/CGA_0930_\u7edf\u4e00\u4fee\u6539\u5305/git/code/tex/sections/05_theory.tex",
+  "loaded_main_theory_sha256": "2cc9ec29f852d307dab5a571903304c8bb8123162315e850a20907b22764726f",
   "checks": [
     {
       "name": "quartic_exact_polynomial",

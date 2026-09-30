@@ -9,7 +9,7 @@
   "derived_results": "data/derived/experiments",
   "manuscript_source": "tex/main.tex",
   "generated_tables": "tex/generated",
-  "figures": "result/figures",
+  "figures": "tex/figures",
   "reproduction_entrypoint": "scripts/reproduce.py",
   "numeric_audit_entrypoint": "scripts/audit_numeric_values.py"
 }

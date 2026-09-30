@@ -1,7 +1,7 @@
 case_id,run_id,model,dim,p,relu_power,epsilon,seed,target_accepted,config_path,status
-E1_linear_1d,E1_linear_1d,linear,1,4.0,3,,201,256,data/raw/cga_cases/E1_linear_1d/config.json,extracted_baseline
-E2_cubic_1d,E2_cubic_1d,cubic,1,4.0,3,,201,256,data/raw/cga_cases/E2_cubic_1d/config.json,extracted_baseline
-E3_sinh_2d,E3_sinh_2d,sinh,2,4.0,3,,201,512,data/raw/cga_cases/E3_sinh_2d/config.json,extracted_baseline
+E1_linear_1d,E1_linear_1d,linear,1,,3,,201,256,data/raw/cga_cases/E1_linear_1d/config.json,extracted_baseline
+E2_cubic_1d,E2_cubic_1d,cubic,1,,3,,201,256,data/raw/cga_cases/E2_cubic_1d/config.json,extracted_baseline
+E3_sinh_2d,E3_sinh_2d,sinh,2,,3,,201,512,data/raw/cga_cases/E3_sinh_2d/config.json,extracted_baseline
 E4_pure_p4_1d,E4_pure_p4_1d,pure_p,1,4.0,3,,201,256,data/raw/cga_cases/E4_pure_p4_1d/config.json,extracted_baseline
 E5_pure_p4_2d,E5_pure_p4_2d,pure_p,2,4.0,3,,201,512,data/raw/cga_cases/E5_pure_p4_2d/config.json,extracted_baseline
 E6_regularized_p4_2d,E6_regularized_p4_2d,regularized_p,2,4.0,3,0.1,201,512,data/raw/cga_cases/E6_regularized_p4_2d/config.json,extracted_baseline

@@ -8,7 +8,7 @@ import time
 import numpy as np
 
 from .config import (PoolConfig, QuadratureConfig, RunConfig, SolverConfig,
-                     validate_config)
+                     config_from_dict, validate_config)
 from .dictionary import (Pool, build_pool, calibrate_pool, evaluate_atoms,
                          load_pool)
 from .metrics import compute_metrics
@@ -493,12 +493,7 @@ def resume_cga(run_dir: str | Path) -> dict[str, object]:
         if saved_summary.get("target_reached"):
             return saved_summary
     raw = json.loads((run_dir / "config.json").read_text(encoding="utf-8"))
-    raw.pop("config_sha256", None)
-    raw["pool"] = PoolConfig(**raw["pool"])
-    raw["quadrature"] = QuadratureConfig(**raw["quadrature"])
-    raw["solver"] = SolverConfig(**raw["solver"])
-    cfg = RunConfig(**raw)
-    validate_config(cfg)
+    cfg = config_from_dict(raw)
     problem = make_problem(cfg.model, cfg.dim, cfg.p, cfg.epsilon, cfg.exact_profile)
     candidate = load_pool(run_dir / "candidate_pool.npz")
     reference = load_pool(run_dir / "reference_pool.npz")

@@ -104,6 +104,15 @@ correction satisfies
 This assumption concerns the true energy. A numerical objective needs its
 own comparison with that energy.
 
+The radial active-space stationarity defect is denoted by
+\begin{equation}
+ \abs{\cinner{\cE'(\widehat G_m)}{\widehat G_m}}
+ \leq \eta_m^{\rm stat}.
+ \label{eq:c5-orthogonality-defect}
+\end{equation}
+This is the radial component of the active-space stationarity residual; the
+full active-space dual KKT residual is a separate quantity.
+
 \begin{proposition}[Descent with a resolved score]
 \label{prop:c5-descent}
 Let $a_m\geq0$ be any valid lower bound for $s_m(g_{m+1})$.
@@ -136,16 +145,16 @@ bound $S_m^X$. Write $\cK_1(\cD)$ for the closed absolutely convex hull
 of a bounded dictionary. If
 $u^*\in B_{\rm src}\cK_1(\cD_X)$ with $B_{\rm src}>0$ and
 $|\langle\cE'(\widehat G_m),\widehat G_m\rangle|
-\leq\eta_m^{\rm rad}$, convexity implies
+\leq\eta_m^{\rm stat}$, convexity implies
 \begin{equation}
- \widehat\delta_m\leq\eta_m^{\rm rad}+B_{\rm src}S_m^X .
+ \widehat\delta_m\leq\eta_m^{\rm stat}+B_{\rm src}S_m^X .
  \label{eq:c5-atomic}
 \end{equation}
 Consequently one may instead use
 \[
  a_m=\left[
  t_m^{\rm pool}\tau_m
-       \frac{\widehat\delta_m-\eta_m^{\rm rad}}{B_{\rm src}}
+       \frac{\widehat\delta_m-\eta_m^{\rm stat}}{B_{\rm src}}
  -(1+t_m^{\rm pool})\xi_m\right]_+ .
 \]
 This is a source-dependent estimate, and it is not an additional error
@@ -155,7 +164,7 @@ Lemma~6.3]{DereventsovTemlyakov2022}, energy correction and radial
 biorthogonality are separate errors. Their power-smoothness rate assumes
 uniform positive continuous weakness and prescribed decay of those errors.
 Here they correspond to $\varepsilon_m^{\rm opt}$ and
-$\eta_m^{\rm rad}$, with the latter at the preceding state in
+$\eta_m^{\rm stat}$, with the latter at the preceding state in
 \eqref{eq:c5-atomic}. Pool coverage and score quadrature determine a further
 effective weakness through \eqref{eq:c5-score-lower}. Accuracy of the
 computed correction alone does not ensure continuous weakness.

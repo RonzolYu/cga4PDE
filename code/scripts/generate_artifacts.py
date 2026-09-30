@@ -822,7 +822,7 @@ def make_finite_trajectory_tables() -> list[Path]:
     ]
     step_lines = [
         r"\begin{table}[!htbp]", r"\centering\scriptsize",
-        r"\caption{Representative values of the finite-trajectory estimate at quadrature order 20. The columns display computed quantities and the upper bounds from \Cref{thm:finite-trajectory}.}",
+        r"\caption{Representative values of the finite-trajectory estimate at quadrature order 20. The columns display computed quantities and the upper bounds from \Cref{thm:c5-source}.}",
         r"\label{tab:finite-trajectory-values}",
         r"\begin{tabular}{@{}lrrrrrr@{}}", r"\toprule",
         r"Model & $N$ & $r_N^2$ & $U_N$ (C.3, monotone) & $U_N$ (used) & Energy gap & Used bound/gap \\ \midrule",

@@ -3,21 +3,16 @@ tab:merged-trajectory-conditions,"base_pure,epsilon_01",N=8..32,tex/generated/me
 tab:fractional-p4,"base_pure,epsilon_01",N=8..32,tex/generated/fractional_innovation_summary.tex
 tab:continuation-window,"base_pure,epsilon_01",N=32..64 continuation,tex/generated/continuation_summary.tex
 tab:cases,"E1_linear_1d,E2_cubic_1d,E3_sinh_2d,E4_pure_p4_1d,E5_pure_p4_2d,E6_regularized_p4_2d,E7_reaction_p4_2d,E8_pure_p5_1d",all cases,tex/sections/08_numerical_methodology.tex
-tab:window-orders,"base_pure,epsilon_01",finite display range,tex/sections/08_numerical_methodology.tex
-tab:protocol,"E1_linear_1d,E2_cubic_1d,E3_sinh_2d,E4_pure_p4_1d,E5_pure_p4_2d,E6_regularized_p4_2d,E7_reaction_p4_2d,E8_pure_p5_1d",comparison numerical setup,tex/sections/09_results.tex
-tab:model-classification,"E1_linear_1d,E2_cubic_1d,E3_sinh_2d,E4_pure_p4_1d,E5_pure_p4_2d,E6_regularized_p4_2d,E7_reaction_p4_2d,E8_pure_p5_1d",energy families,tex/sections/07_energy_families.tex
+tab:model-classification,"E1_linear_1d,E2_cubic_1d,E3_sinh_2d,E4_pure_p4_1d,E5_pure_p4_2d,E6_regularized_p4_2d,E7_reaction_p4_2d,E8_pure_p5_1d",energy families,tex/supplement/S4_background_details/07_energy_families_full.tex
 tab:baseline-terminal,"E1_linear_1d,E2_cubic_1d,E3_sinh_2d,E4_pure_p4_1d,E5_pure_p4_2d",terminal baseline,tex/generated/baseline_terminal.tex
 tab:dyadic-01,"E1_linear_1d",retained dyadic states,tex/generated/ch8_semilinear_tables.tex
 tab:dyadic-03,"E2_cubic_1d",retained dyadic states,tex/generated/ch8_semilinear_tables.tex
-tab:dyadic-08,"E4_pure_p4_1d",retained dyadic states,tex/generated/ch8_p4_tables.tex
-tab:dyadic-17,"E5_pure_p4_2d",retained dyadic states,tex/generated/ch8_p4_tables.tex
+tab:dyadic-08,"E5_pure_p4_2d",retained dyadic states,tex/generated/ch8_p4_tables.tex
+tab:dyadic-17,"E4_pure_p4_1d",retained dyadic states,tex/generated/ch8_p4_tables.tex
 fig:cga-linear-cubic,"E1_linear_1d,E2_cubic_1d",full retained trajectories,tex/figures/cga/cga_linear_cubic.pdf
 fig:cga-p4-representative,"E4_pure_p4_1d,E5_pure_p4_2d",full retained trajectories,tex/figures/cga/cga_p4_representative.pdf
 fig:cga-epsilon-scan,"base_pure,epsilon_001,epsilon_01,epsilon_1",finite sensitivity scan,tex/figures/cga/cga_epsilon_scan.pdf
 fig:baseline-sobolev-1d,"E1_linear_1d,E2_cubic_1d,E4_pure_p4_1d",equal DOF,tex/sections/09_results.tex
 fig:baseline-sobolev-rest,"E3_sinh_2d,E5_pure_p4_2d,E6_regularized_p4_2d,E7_reaction_p4_2d",equal DOF,tex/sections/09_results.tex
 fig:baseline-v,"E4_pure_p4_1d,E5_pure_p4_2d","natural distance",tex/sections/09_results.tex
-tab:continuation-window,"base_pure,epsilon_01",N=32..64 continuation,tex/generated/continuation_summary.tex
 tab:transfer-margin-example,"base_pure,epsilon_01",representative calibration transition,tex/generated/transfer_margin_example.tex
-tab:unified-audit-boundary,"unified audit",617-state boundary,tex/generated/unified_audit_summary.tex
-tab:rfm-fixed-denominators,"unified audit",fixed 10-seed denominators,tex/generated/unified_audit_summary.tex

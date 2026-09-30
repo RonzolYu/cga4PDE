@@ -9,8 +9,8 @@ target_accepted = 256
 phase = "formal"
 dtype = "float64"
 output_root = "cga_refactor/results"
-freeze_profile = "neumann-cga-v1"
-schema_version = "cga-refactor-1"
+freeze_profile = "neumann-cga-v1-fix124a"
+schema_version = "cga-refactor-2"
 
 [pool]
 candidate_size = 2048

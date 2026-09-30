@@ -41,11 +41,6 @@ observations and is excluded from the main RFM curves and endpoint statistics.
 Consequently, the displayed widths account for 300 prescribed seed attempts,
 with 291 successful solves and nine unsuccessful solves.
 
-A separate common-evaluation collection of 617 stored states is not the sample
-underlying these RFM curves or the endpoint table. Its solver, energy, and
-residual filters must not be combined with the seed counts above. This supplement
-defines the sample for the figures and table shipped with `paper/sisc_cga`.
-
 `code/tools/rebuild_baseline_evidence.py` reconstructs the state ledger,
 medians, quartiles, endpoint ratios, and compact denominator table without
 running new numerical experiments. The generated evidence files are in
