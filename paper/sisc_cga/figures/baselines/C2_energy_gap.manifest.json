@@ -6,6 +6,6 @@
   "filters": "case=C2;metric=energy_gap;actual points only;configured dof cap=256",
   "semantic": "no theory line and no order plot; RFM median/IQR uses ten seeds",
   "command": "python scripts/generate_artifacts.py",
-  "output_sha256": "ed0fdb058eaf6d876df75017b022e4bdc4c7a39f24cc6ed8dd95e71b14dbf10d",
+  "output_sha256": "55321a58bbd01c740d97b52f69c266e6d9a9b7d4a93a7cfb6d5a6c337bcbe493",
   "validation": "source-to-plot checks passed"
 }

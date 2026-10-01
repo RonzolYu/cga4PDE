@@ -6,6 +6,6 @@
   "filters": "case=C5;metric=v_distance;actual points only;configured dof cap=512",
   "semantic": "no theory line and no order plot; RFM median/IQR uses ten seeds",
   "command": "python scripts/generate_artifacts.py",
-  "output_sha256": "72d57ecb742b11c089dbc13c7c9a1ffa2dd2faf70ab42b52447a7df8327546af",
+  "output_sha256": "c8824e92eb4e568617f2bc54e6698d89dd26a569875840a2fd3f47d403d92b7e",
   "validation": "source-to-plot checks passed"
 }

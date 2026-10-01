@@ -3,14 +3,13 @@
 
 \subsection{Comparison setup and scope}
 
-\begin{revision}
 Five cases use a common evaluator: linear and cubic in one dimension, sinh
 in two dimensions, and pure \(p=4\) in one and two dimensions. Counts are
 retained CGA/RFM coefficients and independent FEM coefficients after removing
 the constant mode where required; equal counts imply neither equal numerical
 rank nor equal computational work.
 
-The revised \texttt{review\_replay\_20261001} batch refits coefficients on fixed
+The \texttt{review\_replay\_20261001} batch refits coefficients on fixed
 archived CGA greedy prefixes, separately from the original training trajectories
 in \Cref{sec:numerics}. FEM uses uniform one-dimensional or structured triangular
 meshes with P1/P3 references and supplementary P2 states. RFM uses nested
@@ -18,23 +17,19 @@ normalized \(\relu^3\) ridges and ten prespecified seeds, 201--210, per width.
 The archive has 320 RFM, 32 CGA-prefix, and 114 FEM states, including failures.
 Sampling, fitting, quadrature, and audit settings are frozen in the protocol
 specified in S4. Historical baseline statistics are retained separately.
-\end{revision}
 
-\begin{revision}
 Figures join computed dyadic states and terminal CGA prefixes; FEM uses its
 mesh counts. Display caps are the archived CGA terminal widths.
 Table endpoints are fixed at \(256,256,256,128,256\) for C1--C5.
 FEM tables interpolate log(error) against log(DOF) between metric-valid states,
 without extrapolation; P3 meshes do not bracket 512 in two dimensions.
-These count-based choices precede inspection of the new errors. Figures
+These count-based choices precede inspection of the reported errors. Figures
 contain neither common-grid interpolants nor theoretical reference lines.
-\end{revision}
 
 \subsection{Evaluation and statistical samples}
 
-\begin{revision}
 Every method uses the same evaluator and metric-specific rule: a successful
-solve, finite nonnegative metric, and successive permitted evaluation-quadrature
+solve, a finite nonnegative metric, and successive permitted evaluation-quadrature
 relative difference at most one percent. Signed negative energy gaps remain
 raw and do not enter energy summaries; an energy exclusion does not itself
 exclude a stable Sobolev or \(V\) observation. Quadrature agreement is a
@@ -44,80 +39,71 @@ RFM medians and interquartile ranges use each metric's valid observations.
 The denominator remains ten; \emph{Valid} in \Cref{tab:baseline-terminal}
 counts its Sobolev sample. Incomplete samples are conditional comparisons.
 S3 supplies solve/audit reasons, sample counts, and model hashes.
-\end{revision}
 
 \subsection{Relative Sobolev errors}
 
-\begin{revision}
 C1--C3 report relative \(H^1\) errors. C4--C5 report the relative componentwise
 gradient \(L^4\) seminorm \(e_{\nabla,4}\) from \Cref{sec:numerics}, rather than
 the relative full \(W^{1,4}\) norm. The natural \(V\)-distance is separate.
-\end{revision}
 
 \begin{figure}[!htbp]
 \centering
 \subfloat[Linear, \(d=1\).]{\includegraphics[width=0.49\textwidth]{C1_relative_h1_error.pdf}}\hfill
 \subfloat[Cubic, \(d=1\).]{\includegraphics[width=0.49\textwidth]{C2_relative_h1_error.pdf}}
-\caption{\revtext{Relative \(H^1\) error versus coefficient count for the
-new one-dimensional comparison batch. RFM bands show metric-valid medians and
+\caption{Relative \(H^1\) error versus coefficient count for the
+one-dimensional comparison batch. RFM bands show metric-valid medians and
 interquartile ranges from ten prescribed seeds. Markers are computed states;
-CGA coefficients are refitted on fixed greedy prefixes.}}
+CGA coefficients are refitted on fixed greedy prefixes.}
 \label{fig:baseline-sobolev-1d}
 \end{figure}
 
 \begin{figure}[!htbp]
 \centering
-\subfloat[\colorbox{yellow!25}{Sinh, \(d=2\): \(H^1\).}]{\includegraphics[width=0.32\textwidth]{C3_relative_h1_error.pdf}}\hfill
-\subfloat[\colorbox{yellow!25}{Pure \(p=4,d=1\): \(e_{\nabla,4}\).}]{\includegraphics[width=0.32\textwidth]{C4_relative_w1p_error.pdf}}\hfill
-\subfloat[\colorbox{yellow!25}{Pure \(p=4,d=2\): \(e_{\nabla,4}\).}]{\includegraphics[width=0.32\textwidth]{C5_relative_w1p_error.pdf}}
-\caption{\revtext{Relative \(H^1\) error for sinh and relative gradient
+\subfloat[Sinh, \(d=2\): \(H^1\).]{\includegraphics[width=0.32\textwidth]{C3_relative_h1_error.pdf}}\hfill
+\subfloat[Pure \(p=4,d=1\): \(e_{\nabla,4}\).]{\includegraphics[width=0.32\textwidth]{C4_relative_w1p_error.pdf}}\hfill
+\subfloat[Pure \(p=4,d=2\): \(e_{\nabla,4}\).]{\includegraphics[width=0.32\textwidth]{C5_relative_w1p_error.pdf}}
+\caption{Relative \(H^1\) error for sinh and relative gradient
 \(L^4\) seminorm for the pure \(p=4\) problems. RFM bands use observations
 passing that metric's solve and quadrature checks. The prescribed denominator
-is ten; endpoint valid counts appear in \Cref{tab:baseline-terminal}.}}
+is ten; endpoint valid counts appear in \Cref{tab:baseline-terminal}.}
 \label{fig:baseline-sobolev-rest}
 \end{figure}
 \FloatBarrier
 
-\begin{revision}
-\Cref{tab:baseline-terminal} reports revised endpoint values and ratios.
+\Cref{tab:baseline-terminal} reports endpoint values and ratios.
 A ratio above one favors CGA at that count; a ratio below one favors the
 comparison method. Rankings depend on the problem, count, evaluation policy,
 and valid sample. These data establish neither uniform dominance at every
 DOF nor a ranking over excluded realizations.
-For the one-dimensional pure \(p=4\) case at \(N=128\), the revised
+For the one-dimensional pure \(p=4\) case at \(N=128\), the
 P3/CGA ratio is about 0.88 and the RFM-median/CGA ratio is about 2.30.
 Thus the interpolated P3 reference has a slightly smaller error than CGA
 at this endpoint, while CGA is more accurate than the specified RFM median.
-\end{revision}
 \input{generated/baseline_terminal}
 \FloatBarrier
 
 \subsection{Natural \texorpdfstring{\(V\)}{V}-distance for the \texorpdfstring{\(p\)}{p}-models}
 
-\begin{revision}
 \Cref{fig:baseline-v} uses the relative \(V\)-distance from \Cref{sec:numerics}.
 It is separate from the gradient seminorm: the metrics need not have the
 same terminal behavior or valid sample. Computed-state display and
 metric-specific RFM uncertainty conventions are otherwise the same.
-\end{revision}
 
 \begin{figure}[!htbp]
 \centering
 \subfloat[Pure \(p=4,d=1\).]{\includegraphics[width=0.49\textwidth]{C4_v_distance.pdf}}\hfill
 \subfloat[Pure \(p=4,d=2\).]{\includegraphics[width=0.49\textwidth]{C5_v_distance.pdf}}
-\caption{\revtext{Relative \(V\)-distance versus coefficient count for the
-new batch, with metric-valid RFM medians and interquartile bands. No
-theoretical reference line or common-grid interpolation is drawn.}}
+\caption{Relative \(V\)-distance versus coefficient count for the
+comparison batch, with metric-valid RFM medians and interquartile bands. No
+theoretical reference line or common-grid interpolation is drawn.}
 \label{fig:baseline-v}
 \end{figure}
 \FloatBarrier
 
 \subsection{Interpretation limits}
 
-\begin{revision}
 These comparisons cover the specified archived fits, without establishing
 runtime ordering, asymptotic complexity, or rankings over excluded realizations.
 Energy gaps may remain unresolved while another metric is stable. S3--S4 give
 solve statuses, audit exclusions, interpolation brackets, and coefficient
-models supporting the revised figures and tables.
-\end{revision}
+models supporting the figures and tables.

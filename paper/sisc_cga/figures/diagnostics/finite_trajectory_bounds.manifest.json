@@ -6,6 +6,6 @@
   "filters": "N=8:32;quadrature order 20;entry-only source approximation",
   "semantic": "ordinary floating-point computations with independent quadrature cross-check; not an interval enclosure",
   "command": "python scripts/generate_artifacts.py",
-  "output_sha256": "4264b8324a78e95fd1592981a34233fb4e48cf0f6080c41d0bacfba63c4521dd",
+  "output_sha256": "aaea54e42773218f780c2353f3ed80ac427f9d494f371fb8e8306107b355ab07",
   "validation": "source-to-plot checks passed"
 }

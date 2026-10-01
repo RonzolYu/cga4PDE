@@ -6,6 +6,6 @@
   "filters": "p=4,d=1,k=3;dyadic steps=1:32",
   "semantic": "pure and three regularization scales; dyadic accepted states connected; no fitted rate",
   "command": "python scripts/generate_artifacts.py",
-  "output_sha256": "5e1a688ce542e8f9ad63d4c4b906ae674c47f39214c7bdab02983f6b739b58ab",
+  "output_sha256": "929992aecdf4190a95acdc59b5a65cc19eaef7f9d76318984556d14669fcf8e9",
   "validation": "source-to-plot checks passed"
 }

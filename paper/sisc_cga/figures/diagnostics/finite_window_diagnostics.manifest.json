@@ -6,6 +6,6 @@
   "filters": "cases=pure,regularized-0.1;steps=8:32",
   "semantic": "finite-set diagnostics; the recorded margins do not establish a certificate",
   "command": "python scripts/generate_artifacts.py",
-  "output_sha256": "28f98a5f575435e6604111682a72548a1251a97908db93d4468641c86064ddb0",
+  "output_sha256": "2520454d6c681b600945757c58b011f70c4debe31580ada181abc5e37432a56e",
   "validation": "source-to-plot checks passed"
 }
