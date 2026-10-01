@@ -1,0 +1,7 @@
+{
+  "scripts/compare_fem_rfm/src/compare_fem_rfm/metrics.py": "dfab7b855a346542791b210f0cd35747a11912755aa080dec9e7fcb27cc5e6d0",
+  "scripts/compare_fem_rfm/src/compare_fem_rfm/fem.py": "c0a388a9d4b4fb59c8a7399bb0ee359b70f60100fe1315df5ab6dc74188e795f",
+  "scripts/compare_fem_rfm/src/compare_fem_rfm/features.py": "594b620111995f7f692674d23f2bc6d4ffe6240c7963c6e325f1c218db81af90",
+  "scripts/compare_fem_rfm/src/compare_fem_rfm/experiment.py": "c4d4a994380c9caef8730c3080d70e9bb699718fb0617b3dab6536d741eee37c",
+  "scripts/compare_fem_rfm/src/compare_fem_rfm/quality.py": "9f7a16adecf0c603940b1bd9293ffa7a865dd164deb6ebe77b41111bfc74c213"
+}

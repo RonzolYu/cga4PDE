@@ -12,6 +12,10 @@ import hashlib
 import json
 import math
 from pathlib import Path
+import sys
+
+sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'scripts/compare_fem_rfm/src'))
+from compare_fem_rfm.quality import metric_valid, invalid_reason
 
 METRICS = ('energy_gap', 'natural_error', 'v_error')
 METRIC_MAP = {'energy_gap': 'energy_gap', 'natural_error': 'relative_sobolev', 'v_error': 'v_distance'}
@@ -21,7 +25,7 @@ def read(path):
 def write(path, rows):
     path.parent.mkdir(parents=True, exist_ok=True)
     with path.open('w', newline='', encoding='utf-8') as f:
-        w=csv.DictWriter(f, fieldnames=list(rows[0])); w.writeheader(); w.writerows(rows)
+        w=csv.DictWriter(f, fieldnames=list(rows[0]),lineterminator='\n'); w.writeheader(); w.writerows(rows)
 def digest(path): return hashlib.sha256(path.read_bytes()).hexdigest()
 def num(v):
     try: x=float(v)
@@ -53,10 +57,12 @@ def pdf_paths(path, rgb=(215/255,48/255,39/255)):
         elif op==b'm': points=[tuple(float(a) for a in args)]
         elif op==b'l': points.append(tuple(float(a) for a in args))
         elif op in {b'S',b's',b'f',b'f*',b'B',b'B*',b'n'}:
-            if len(points)>3:
+            if len(points)>1:
                 if op in {b'S',b's'} and is_red(color): stroke.append(points[:])
                 if op in {b'f',b'f*'} and is_red(fill): bands.append(points[:])
             points=[]
+    if not stroke:
+        raise AssertionError(f'No curve with RGB {rgb} in {path}')
     return max(stroke,key=len), max(bands,key=len) if bands else []
 
 def main():
@@ -86,15 +92,17 @@ def main():
             for m in METRICS:
                 applicable=(m!='v_error' or case in {'C4','C5'})
                 value=num(r[m]); valid=applicable and value is not None and value>=0
-                participates=valid and r['solver_success']=='True'
+                participates=applicable and metric_valid(r, m)
                 displayed=participates and (case,n,METRIC_MAP[m]) in actual_keys and n<=int(cfg['baseline_caps'][case])
                 row[m]=r[m]; row[m+'_applicable']=applicable; row[m+'_finite_nonnegative']=valid if applicable else 'not applicable'
                 row[m+'_included_in_summary']=participates; row[m+'_included_in_main_figure']=displayed
+                row[m+'_invalid_reason']=invalid_reason(r,m)
             ledger.append(row)
         sr={'case_id':case,'N':n,'prescribed_seeds':10,'observed_seeds':observed,'successes':len(succeeded),'failures':observed-len(succeeded),'ten_seed_group':observed==10}
         for m in METRICS:
-            values=[num(r[m]) for r in succeeded if num(r[m]) is not None and num(r[m])>=0]
+            values=[num(r[m]) for r in group if metric_valid(r,m)]
             sr[m+'_sample_count']=len(values)
+            assert len(values)==int(old[key][m+'_sample_count'])
             for p,suffix in [(.25,'q1'),(.5,'median'),(.75,'q3')]:
                 value=quantile(values,p) if values else ''
                 sr[m+'_'+suffix]=value
@@ -109,8 +117,8 @@ def main():
         for suffix in ['median','q1','q3']: check_same(t['rfm_'+suffix],s['natural_error_'+suffix],case+' endpoint '+suffix)
         ratio=float(t['rfm_median'])/float(t['cga']); femratio=float(t['fem_p3'])/float(t['cga'])
         check_same(t['rfm_over_cga'],ratio,case+' RFM/CGA'); check_same(t['fem_p3_over_cga'],femratio,case+' FEM/CGA')
-        assert int(t['rfm_success_count'])==s['successes']
-        verification.append({'case_id':case,'N':n,'RFM_n':s['successes'],'median':s['natural_error_median'],'q1':s['natural_error_q1'],'q3':s['natural_error_q3'],'RFM_CGA':ratio,'FEM_P3_CGA':femratio})
+        assert int(t['rfm_success_count'])==s['natural_error_sample_count']
+        verification.append({'case_id':case,'N':n,'RFM_n':s['natural_error_sample_count'],'median':s['natural_error_median'],'q1':s['natural_error_q1'],'q3':s['natural_error_q3'],'RFM_CGA':ratio,'FEM_P3_CGA':femratio})
     write(review/'baseline_endpoint_verification.csv',verification)
     # The manuscript PDFs are vector figures. Check the RFM median and IQR paths
     # against the current CSV values after the plot's log-affine coordinate map.
@@ -141,20 +149,28 @@ def main():
                         matched.append(max(abs(x-nearest[0]),abs(y-nearest[1])))
                     else:
                         # Matplotlib replaces off-page path endpoints by a page-edge intersection.
-                        assert x<0 or x>376,(str(path),method,'unmatched interior vertex',x,y)
+                        from pypdf import PdfReader
+                        page_width=float(PdfReader(path).pages[0].mediabox.width)
+                        assert x<0 or x>page_width,(str(path),method,'unmatched interior vertex',x,y)
                 assert len(matched)>=sum(int(r['dof'])>=8 for r in values),(str(path),method,'missing visible point')
                 e=max(matched)
                 assert e<1e-4,(str(path),method,e)
                 all_errors.append(e)
             figure_checks.append({'figure':str(path.relative_to(target)),'other_methods_max_error_pdf_points':max(all_errors),'rfm_points':len(data),'median_max_error_pdf_points':error,'IQR_max_error_pdf_points':band_error,'sha256':digest(path)})
     write(review/'baseline_figure_verification.csv',figure_checks)
-    lines=[r'\begin{table}[!htbp]',r'\centering\small',r'\caption{RFM sample counts at the two widths with unsuccessful coefficient solves. Each width has ten prescribed seeds. Median and interquartile range (IQR) use the successful solves; unsuccessful attempts remain in the denominator.}',r'\label{tab:rfm-fixed-denominators}',r'\begin{tabular}{@{}lrrrr@{}}',r'\toprule',r'Case and width & Prescribed & Successful & Unsuccessful & IQR sample \\',r'\midrule']
-    for n in [128,256]:
-        s=next(r for r in stats if r['case_id']=='C5' and r['N']==n)
-        lines.append(f'C5, $N={n}$ & 10 & {s["successes"]} & {s["failures"]} & {s["natural_error_sample_count"]} '+r'\\')
-    lines += [r'\bottomrule',r'\end{tabular}',r'\end{table}']
+    lines=[r'\begin{table}[!htbp]',r'\centering\small',r'\caption{\revtext{RFM counts at the common endpoints. Each width has ten prescribed seeds. The Sobolev median/IQR sample additionally passes the metric-specific signed-value and one-percent quadrature checks.}}',r'\label{tab:rfm-fixed-denominators}',r'\begin{revision}',r'\begin{tabular}{@{}lrrrr@{}}',r'\toprule',r'Case and width & Prescribed & Solved & Failed & Valid sample \\',r'\midrule']
+    for t in terminal:
+        case,n=t['case_id'],int(t['dof'])
+        s=next(r for r in stats if r['case_id']==case and r['N']==n)
+        lines.append(f'{case}, $N={n}$ & 10 & {s["successes"]} & {s["failures"]} & {s["natural_error_sample_count"]} '+r'\\')
+    lines += [r'\bottomrule',r'\end{tabular}',r'\end{revision}',r'\end{table}']
     (target/'generated/rfm_fixed_denominators.tex').write_text('\n'.join(lines)+'\n')
-    evidence={'status':'PASS','raw_rows':len(raw),'raw_successes':sum(r['solver_success']=='True' for r in raw),'raw_failures':sum(r['solver_success']!='True' for r in raw),'summary_groups':len(stats),'figures_checked':len(figure_checks),'source_sha256':{str(v.relative_to(root)):digest(v) for v in paths.values()},'validity_meaning':'finite nonnegative recorded metric and recorded solver_success; no independent residual filter is inferred'}
+    archived=raw+read(root/'data/derived/experiments/cga_baseline_raw.csv')+read(root/'data/derived/experiments/fem_baseline_raw.csv')
+    for row in archived:
+        model=(root/row['model_path']).resolve()
+        assert model.is_relative_to(root) and model.is_file(), row['model_path']
+        assert digest(model)==row['model_sha256'], row['model_path']
+    evidence={'status':'PASS','raw_rows':len(raw),'raw_successes':sum(r['solver_success']=='True' for r in raw),'raw_failures':sum(r['solver_success']!='True' for r in raw),'summary_groups':len(stats),'figures_checked':len(figure_checks),'archived_models_checked':len(archived),'source_sha256':{str(v.relative_to(root)):digest(v) for v in paths.values()},'validity_meaning':'successful solve, finite nonnegative signed metric, and successive quadrature relative difference <= 0.01; same rule for every method'}
     (review/'baseline_evidence_verification.json').write_text(json.dumps(evidence,indent=2)+'\n')
     print(json.dumps(evidence,indent=2))
 

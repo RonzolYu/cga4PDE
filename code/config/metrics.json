@@ -5,7 +5,7 @@
     {"canonical": "energy_gap_signed", "formula": "E_Q(u)-E_Q(u_exact)", "denominator": null, "models": ["all"], "archived_cga": "energy_gap_raw"},
     {"canonical": "l2_rel", "formula": "||u-u_exact||_L2,Q / ||u_exact||_L2,Q", "denominator": "||u_exact||_L2,Q", "models": ["all"], "archived_cga": "l2_rel"},
     {"canonical": "h1_rel", "formula": "||u-u_exact||_H1,Q / ||u_exact||_H1,Q", "denominator": "||u_exact||_H1,Q", "models": ["linear", "cubic", "sinh"], "archived_cga": "natural_rel"},
-    {"canonical": "w1p_semi_rel", "formula": "||grad(u-u_exact)||_Lp,Q / ||grad(u_exact)||_Lp,Q", "denominator": "||grad(u_exact)||_Lp,Q", "models": ["pure_p", "regularized_p"], "archived_cga": "natural_rel"},
+    {"canonical": "w1p_semi_rel", "formula": "(Q(sum_i abs(partial_i(u-u_exact))^p)/Q(sum_i abs(partial_i(u_exact))^p))^(1/p)", "denominator": "componentwise gradient Lp seminorm of u_exact", "models": ["pure_p", "regularized_p"], "archived_cga": "natural_rel"},
     {"canonical": "w1p_full_rel", "formula": "full W1p error / full exact W1p norm", "denominator": "full exact W1p norm", "models": ["reaction_p", "pure_p", "regularized_p"], "archived_cga": "w1p_full_rel; natural_rel for reaction_p"},
     {"canonical": "v_rel", "formula": "||V(grad u)-V(grad u_exact)||_L2,Q / ||V(grad u_exact)||_L2,Q", "denominator": "exact V norm", "models": ["pure_p"], "archived_cga": "quasi_rel"},
     {"canonical": "v_eps_rel", "formula": "||V_eps(grad u)-V_eps(grad u_exact)||_L2,Q / ||V_eps(grad u_exact)||_L2,Q", "denominator": "exact V_eps norm", "models": ["regularized_p"], "archived_cga": "quasi_rel"},
@@ -18,5 +18,6 @@
     "l2_error": "l2_rel",
     "energy_gap": "energy_gap_signed"
   },
-  "negative_energy_policy": "retain signed value; never silently take absolute value"
+  "negative_energy_policy": "retain signed value; never silently take absolute value",
+  "comparison_validity": "Successful solve, finite nonnegative metric, and metric-specific successive-quadrature relative delta <= 0.01; apply to CGA, FEM and RFM alike. Missing audits fail validity."
 }

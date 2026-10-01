@@ -12,6 +12,7 @@
 \usepackage[section]{placeins}
 \usepackage{enumitem}
 \usepackage{xcolor}
+\usepackage{mdframed}
 \usepackage{microtype}
 \usepackage[numbers]{natbib}
 
@@ -50,6 +51,24 @@
 \newcommand{\argmin}{\operatorname*{arg\,min}}
 \newcommand{\eps}{\varepsilon}
 \newcommand{\relu}{\operatorname{ReLU}}
+
+% Yellow marks identify the 2026-10-01 consistency revision.  Define
+% \CGAHideRevisionMarks suppresses textual marks; revised figure backgrounds
+% are controlled by the artifact generator.
+\ifdefined\CGAHideRevisionMarks
+  \newenvironment{revision}{}{}
+\else
+  \newmdenv[backgroundcolor=yellow!25,linecolor=yellow!25,linewidth=0pt,
+    innertopmargin=0pt,innerbottommargin=0pt,innerleftmargin=0pt,
+    innerrightmargin=0pt,skipabove=0pt,skipbelow=0pt]{revision}
+\fi
+\makeatletter
+\newcommand{\revtext}[1]{\ifdefined\CGAHideRevisionMarks #1\else
+  \begingroup\dimen@=\linewidth
+  \ifx\@captype\@figtxt\advance\dimen@ by -48pt\fi
+  \advance\dimen@ by -2\fboxsep
+  \colorbox{yellow!25}{\parbox[t]{\dimen@}{#1}}\endgroup\fi}
+\makeatother
 
 \headers{Chebyshev Greedy Algorithm for Nonlinear PDEs}{Y. Lin, J. Yu, Y. Lee, and J. Jia}
 

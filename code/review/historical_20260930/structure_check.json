@@ -1,0 +1,31 @@
+{
+  "package": "paper/sisc_cga_s",
+  "main": "main.tex",
+  "page_count": 26,
+  "loaded_sources": [
+    "main.tex",
+    "sections/11_code_data_availability.tex",
+    "sections/10_discussion.tex",
+    "sections/09_results.tex",
+    "generated/baseline_terminal.tex",
+    "sections/08_numerical_methodology.tex",
+    "sections/06e_merged_window_experiment.tex",
+    "sections/05_theory.tex",
+    "sections/04_natural_geometry.tex",
+    "sections/07_energy_families.tex",
+    "sections/02_setting_algorithms.tex",
+    "sections/01_introduction.tex",
+    "sections/00_frontmatter.tex"
+  ],
+  "missing_input_files": [],
+  "missing_figures": [],
+  "duplicate_labels": {},
+  "undefined_labels": [],
+  "undefined_citations": [],
+  "label_count": 87,
+  "referenced_label_count": 61,
+  "citation_count": 30,
+  "bibliography_key_count": 23,
+  "historical_snapshot": true,
+  "scope": "pre-2026-10-01 package; superseded by current revision checks"
+}

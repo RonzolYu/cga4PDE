@@ -1,16 +1,53 @@
 {
-  "schema_version": "cga-experiment-validation-v1",
-  "primary_cases": ["01", "03", "06", "17", "08", "10", "12", "15"],
+  "schema_version": "cga-experiment-validation-v2",
+  "primary_cases": [
+    "01",
+    "03",
+    "06",
+    "17",
+    "08",
+    "10",
+    "12",
+    "15"
+  ],
   "sensitivity_parameters": {
-    "epsilon": [0.0, 0.01, 0.1, 1.0],
-    "candidate_pool": [256, 512, 1024],
-    "training_quadrature_order": [4, 6, 10],
-    "projection_rtol": [0.0001, 1e-06, 1e-08]
+    "epsilon": [
+      0.0,
+      0.01,
+      0.1,
+      1.0
+    ],
+    "candidate_pool": [
+      256,
+      512,
+      1024
+    ],
+    "training_quadrature_order": [
+      4,
+      6,
+      10
+    ],
+    "projection_rtol": [
+      0.0001,
+      1e-06,
+      1e-08
+    ]
   },
   "rfm": {
-    "rows": 313,
-    "seeds": [201, 202, 203, 204, 205, 206, 207, 208, 209, 210],
-    "failures": 9
+    "rows": 320,
+    "seeds": [
+      201,
+      202,
+      203,
+      204,
+      205,
+      206,
+      207,
+      208,
+      209,
+      210
+    ],
+    "failures": 10
   },
   "quadrature": {
     "row_count": 120,
@@ -27,8 +64,37 @@
     "reason": "The manuscript compares approximation error at reported degrees of freedom and does not make a cross-implementation efficiency claim."
   },
   "tests_expected": {
-    "cga_refactor": 77,
-    "compare_fem_rfm": 6
+    "cga_refactor": 102,
+    "compare_fem_rfm": 15
   },
-  "passed": true
+  "passed": true,
+  "comparison_batch": "review_replay_20261001",
+  "comparison_archive": {
+    "rfm": 320,
+    "cga": 32,
+    "fem": 114
+  },
+  "comparison_metric_valid_counts": {
+    "rfm": {
+      "energy_gap": 299,
+      "natural_error": 306,
+      "v_error": 119
+    },
+    "cga": {
+      "energy_gap": 29,
+      "natural_error": 32,
+      "v_error": 13
+    },
+    "fem": {
+      "energy_gap": 98,
+      "natural_error": 113,
+      "v_error": 46
+    }
+  },
+  "validity_policy": {
+    "audit_relative_tolerance": 0.01,
+    "energy_sign": "retain signed quadrature gap; exclude unresolved negative energy from energy summaries",
+    "metric_rule": "successful coefficient solve, finite nonnegative metric, and successive-rule relative difference <= 0.01",
+    "same_policy_for_all_methods": true
+  }
 }

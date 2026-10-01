@@ -37,7 +37,10 @@ def evaluate_fields(spec: ProblemSpec, points: np.ndarray, weights: np.ndarray,
     l2 = float(np.sqrt(np.dot(weights, (u - exact_u) ** 2) /
                        np.dot(weights, exact_u**2)))
     return {
-        "energy_gap": abs(e_num - e_exact),
+        # Keep the sign: a negative quadrature gap is an evaluation diagnostic,
+        # not a positive approximation error.  Statistical validity is checked
+        # separately for each metric by the shared quality policy.
+        "energy_gap": e_num - e_exact,
         "energy_gap_signed": e_num - e_exact,
         "natural_error": natural,
         "v_error": v_error,

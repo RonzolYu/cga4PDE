@@ -1,0 +1,411 @@
+{
+  "status": "PASS",
+  "all_models_loaded": 466,
+  "representatives_reevaluated": 28,
+  "selection": "largest recorded state for each case/method/FEM degree; RFM seed201 plus C3 seeds206,207,209 at N512",
+  "scope": "fresh loading and reevaluation of saved coefficients, not independent PDE solves",
+  "checks": [
+    {
+      "case_id": "C1",
+      "method": "rfm",
+      "variant": "rfm_relu3",
+      "seed": "201",
+      "dof": 256,
+      "model_path": "data/raw/review_replay_20261001/models/C1_rfm_seed201_n256.npz",
+      "metric_absolute_differences": {
+        "energy_gap": 0.0,
+        "natural_error": 0.0,
+        "l2_error": 0.0
+      },
+      "passed": true
+    },
+    {
+      "case_id": "C2",
+      "method": "rfm",
+      "variant": "rfm_relu3",
+      "seed": "201",
+      "dof": 256,
+      "model_path": "data/raw/review_replay_20261001/models/C2_rfm_seed201_n256.npz",
+      "metric_absolute_differences": {
+        "energy_gap": 0.0,
+        "natural_error": 0.0,
+        "l2_error": 0.0
+      },
+      "passed": true
+    },
+    {
+      "case_id": "C3",
+      "method": "rfm",
+      "variant": "rfm_relu3",
+      "seed": "201",
+      "dof": 512,
+      "model_path": "data/raw/review_replay_20261001/models/C3_rfm_seed201_n512.npz",
+      "metric_absolute_differences": {
+        "energy_gap": 0.0,
+        "natural_error": 0.0,
+        "l2_error": 0.0
+      },
+      "passed": true
+    },
+    {
+      "case_id": "C4",
+      "method": "rfm",
+      "variant": "rfm_relu3",
+      "seed": "201",
+      "dof": 256,
+      "model_path": "data/raw/review_replay_20261001/models/C4_rfm_seed201_n256.npz",
+      "metric_absolute_differences": {
+        "energy_gap": 0.0,
+        "natural_error": 0.0,
+        "v_error": 0.0,
+        "l2_error": 0.0
+      },
+      "passed": true
+    },
+    {
+      "case_id": "C5",
+      "method": "rfm",
+      "variant": "rfm_relu3",
+      "seed": "201",
+      "dof": 512,
+      "model_path": "data/raw/review_replay_20261001/models/C5_rfm_seed201_n512.npz",
+      "metric_absolute_differences": {
+        "energy_gap": 0.0,
+        "natural_error": 0.0,
+        "v_error": 0.0,
+        "l2_error": 0.0
+      },
+      "passed": true
+    },
+    {
+      "case_id": "C1",
+      "method": "cga",
+      "variant": "relu3",
+      "seed": "201",
+      "dof": 256,
+      "model_path": "data/raw/review_replay_20261001/models/C1_cga_seed201_n256.npz",
+      "metric_absolute_differences": {
+        "energy_gap": 0.0,
+        "natural_error": 0.0,
+        "l2_error": 0.0
+      },
+      "passed": true
+    },
+    {
+      "case_id": "C2",
+      "method": "cga",
+      "variant": "relu3",
+      "seed": "201",
+      "dof": 256,
+      "model_path": "data/raw/review_replay_20261001/models/C2_cga_seed201_n256.npz",
+      "metric_absolute_differences": {
+        "energy_gap": 0.0,
+        "natural_error": 0.0,
+        "l2_error": 0.0
+      },
+      "passed": true
+    },
+    {
+      "case_id": "C4",
+      "method": "cga",
+      "variant": "relu3",
+      "seed": "201",
+      "dof": 141,
+      "model_path": "data/raw/review_replay_20261001/models/C4_cga_seed201_n141.npz",
+      "metric_absolute_differences": {
+        "energy_gap": 0.0,
+        "natural_error": 0.0,
+        "v_error": 0.0,
+        "l2_error": 0.0
+      },
+      "passed": true
+    },
+    {
+      "case_id": "C3",
+      "method": "cga",
+      "variant": "relu3",
+      "seed": "201",
+      "dof": 512,
+      "model_path": "data/raw/review_replay_20261001/models/C3_cga_seed201_n512.npz",
+      "metric_absolute_differences": {
+        "energy_gap": 0.0,
+        "natural_error": 0.0,
+        "l2_error": 0.0
+      },
+      "passed": true
+    },
+    {
+      "case_id": "C5",
+      "method": "cga",
+      "variant": "relu3",
+      "seed": "201",
+      "dof": 512,
+      "model_path": "data/raw/review_replay_20261001/models/C5_cga_seed201_n512.npz",
+      "metric_absolute_differences": {
+        "energy_gap": 0.0,
+        "natural_error": 0.0,
+        "v_error": 0.0,
+        "l2_error": 0.0
+      },
+      "passed": true
+    },
+    {
+      "case_id": "C1",
+      "method": "fem",
+      "variant": "p1",
+      "seed": "",
+      "dof": 257,
+      "model_path": "data/raw/review_replay_20261001/models/C1_fem_p1_mesh256.npz",
+      "metric_absolute_differences": {
+        "energy_gap": 0.0,
+        "natural_error": 0.0,
+        "l2_error": 0.0
+      },
+      "passed": true
+    },
+    {
+      "case_id": "C1",
+      "method": "fem",
+      "variant": "p2",
+      "seed": "",
+      "dof": 257,
+      "model_path": "data/raw/review_replay_20261001/models/C1_fem_p2_mesh128.npz",
+      "metric_absolute_differences": {
+        "energy_gap": 0.0,
+        "natural_error": 0.0,
+        "l2_error": 0.0
+      },
+      "passed": true
+    },
+    {
+      "case_id": "C1",
+      "method": "fem",
+      "variant": "p3",
+      "seed": "",
+      "dof": 385,
+      "model_path": "data/raw/review_replay_20261001/models/C1_fem_p3_mesh128.npz",
+      "metric_absolute_differences": {
+        "energy_gap": 0.0,
+        "natural_error": 0.0,
+        "l2_error": 0.0
+      },
+      "passed": true
+    },
+    {
+      "case_id": "C2",
+      "method": "fem",
+      "variant": "p1",
+      "seed": "",
+      "dof": 257,
+      "model_path": "data/raw/review_replay_20261001/models/C2_fem_p1_mesh256.npz",
+      "metric_absolute_differences": {
+        "energy_gap": 0.0,
+        "natural_error": 0.0,
+        "l2_error": 0.0
+      },
+      "passed": true
+    },
+    {
+      "case_id": "C2",
+      "method": "fem",
+      "variant": "p2",
+      "seed": "",
+      "dof": 257,
+      "model_path": "data/raw/review_replay_20261001/models/C2_fem_p2_mesh128.npz",
+      "metric_absolute_differences": {
+        "energy_gap": 0.0,
+        "natural_error": 0.0,
+        "l2_error": 0.0
+      },
+      "passed": true
+    },
+    {
+      "case_id": "C2",
+      "method": "fem",
+      "variant": "p3",
+      "seed": "",
+      "dof": 385,
+      "model_path": "data/raw/review_replay_20261001/models/C2_fem_p3_mesh128.npz",
+      "metric_absolute_differences": {
+        "energy_gap": 0.0,
+        "natural_error": 0.0,
+        "l2_error": 0.0
+      },
+      "passed": true
+    },
+    {
+      "case_id": "C4",
+      "method": "fem",
+      "variant": "p1",
+      "seed": "",
+      "dof": 256,
+      "model_path": "data/raw/review_replay_20261001/models/C4_fem_p1_mesh256.npz",
+      "metric_absolute_differences": {
+        "energy_gap": 0.0,
+        "natural_error": 0.0,
+        "v_error": 0.0,
+        "l2_error": 0.0
+      },
+      "passed": true
+    },
+    {
+      "case_id": "C4",
+      "method": "fem",
+      "variant": "p2",
+      "seed": "",
+      "dof": 256,
+      "model_path": "data/raw/review_replay_20261001/models/C4_fem_p2_mesh128.npz",
+      "metric_absolute_differences": {
+        "energy_gap": 0.0,
+        "natural_error": 0.0,
+        "v_error": 0.0,
+        "l2_error": 0.0
+      },
+      "passed": true
+    },
+    {
+      "case_id": "C4",
+      "method": "fem",
+      "variant": "p3",
+      "seed": "",
+      "dof": 384,
+      "model_path": "data/raw/review_replay_20261001/models/C4_fem_p3_mesh128.npz",
+      "metric_absolute_differences": {
+        "energy_gap": 0.0,
+        "natural_error": 0.0,
+        "v_error": 0.0,
+        "l2_error": 0.0
+      },
+      "passed": true
+    },
+    {
+      "case_id": "C3",
+      "method": "fem",
+      "variant": "p1",
+      "seed": "",
+      "dof": 529,
+      "model_path": "data/raw/review_replay_20261001/models/C3_fem_p1_mesh22.npz",
+      "metric_absolute_differences": {
+        "energy_gap": 0.0,
+        "natural_error": 0.0,
+        "l2_error": 0.0
+      },
+      "passed": true
+    },
+    {
+      "case_id": "C3",
+      "method": "fem",
+      "variant": "p2",
+      "seed": "",
+      "dof": 529,
+      "model_path": "data/raw/review_replay_20261001/models/C3_fem_p2_mesh11.npz",
+      "metric_absolute_differences": {
+        "energy_gap": 0.0,
+        "natural_error": 0.0,
+        "l2_error": 0.0
+      },
+      "passed": true
+    },
+    {
+      "case_id": "C3",
+      "method": "fem",
+      "variant": "p3",
+      "seed": "",
+      "dof": 484,
+      "model_path": "data/raw/review_replay_20261001/models/C3_fem_p3_mesh7.npz",
+      "metric_absolute_differences": {
+        "energy_gap": 0.0,
+        "natural_error": 0.0,
+        "l2_error": 0.0
+      },
+      "passed": true
+    },
+    {
+      "case_id": "C5",
+      "method": "fem",
+      "variant": "p1",
+      "seed": "",
+      "dof": 528,
+      "model_path": "data/raw/review_replay_20261001/models/C5_fem_p1_mesh22.npz",
+      "metric_absolute_differences": {
+        "energy_gap": 0.0,
+        "natural_error": 0.0,
+        "v_error": 0.0,
+        "l2_error": 0.0
+      },
+      "passed": true
+    },
+    {
+      "case_id": "C5",
+      "method": "fem",
+      "variant": "p2",
+      "seed": "",
+      "dof": 528,
+      "model_path": "data/raw/review_replay_20261001/models/C5_fem_p2_mesh11.npz",
+      "metric_absolute_differences": {
+        "energy_gap": 0.0,
+        "natural_error": 0.0,
+        "v_error": 0.0,
+        "l2_error": 0.0
+      },
+      "passed": true
+    },
+    {
+      "case_id": "C5",
+      "method": "fem",
+      "variant": "p3",
+      "seed": "",
+      "dof": 483,
+      "model_path": "data/raw/review_replay_20261001/models/C5_fem_p3_mesh7.npz",
+      "metric_absolute_differences": {
+        "energy_gap": 0.0,
+        "natural_error": 0.0,
+        "v_error": 0.0,
+        "l2_error": 0.0
+      },
+      "passed": true
+    },
+    {
+      "case_id": "C3",
+      "method": "rfm",
+      "variant": "rfm_relu3",
+      "seed": "206",
+      "dof": 512,
+      "model_path": "data/raw/review_replay_20261001/models/C3_rfm_seed206_n512.npz",
+      "metric_absolute_differences": {
+        "energy_gap": 0.0,
+        "natural_error": 0.0,
+        "l2_error": 0.0
+      },
+      "passed": true
+    },
+    {
+      "case_id": "C3",
+      "method": "rfm",
+      "variant": "rfm_relu3",
+      "seed": "207",
+      "dof": 512,
+      "model_path": "data/raw/review_replay_20261001/models/C3_rfm_seed207_n512.npz",
+      "metric_absolute_differences": {
+        "energy_gap": 0.0,
+        "natural_error": 0.0,
+        "l2_error": 0.0
+      },
+      "passed": true
+    },
+    {
+      "case_id": "C3",
+      "method": "rfm",
+      "variant": "rfm_relu3",
+      "seed": "209",
+      "dof": 512,
+      "model_path": "data/raw/review_replay_20261001/models/C3_rfm_seed209_n512.npz",
+      "metric_absolute_differences": {
+        "energy_gap": 0.0,
+        "natural_error": 0.0,
+        "l2_error": 0.0
+      },
+      "passed": true
+    }
+  ]
+}

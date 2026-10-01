@@ -28,25 +28,29 @@ energy errors. Consequently, even on computational ranges where a uniform asympt
 theory is not yet available, the analysis provides quantitative and directly testable
 explanations of the observed algorithmic trajectories.
 
-The one-dimensional pure and regularized $p=4$ experiments further support this
-finite-trajectory framework. Over the calibration range $N=8$--$32$ and the continuation
-to $N=64$, the direct projection and energy identities agree to floating-point accuracy
-under two quadrature rules, and both the source-based and fractional-innovation bounds
-enclose the computed errors. For the prescribed exponent $\alpha=6$, the theory yields
-finite-range comparison powers $6$, $3$, and $3/2$ for the energy, natural distance, and
-$W^{1,4}$ error, respectively. In the continuation range, the normalized-innovation
-sufficient condition holds for 27 of 32 transitions in the pure model and 28 of 32
-transitions in the regularized model, indicating that the proposed theoretical mechanism
-remains informative for the majority of the observed greedy steps.
+\begin{revision}
+The one-dimensional pure and regularized $p=4$ experiments support this
+finite-trajectory framework. On the calibration range $N=8$--$32$, both the
+source-based and fractional-innovation bounds enclose the computed errors.
+For the prescribed benchmark $\alpha=6$, the conditional comparison powers
+on this range are $6$, $3$, and $3/2$ for the energy, natural distance, and
+$W^{1,4}$ error, respectively. The projection and quartic identities remain
+accurate under two quadrature rules on the continuation to $N=64$.
+The normalized-innovation sufficient condition holds for 27 of 32 continuation
+transitions in the pure model and 28 of 32 in the regularized model.
+Numerical coverage by a conservative expression on the continuation does not
+establish the same theorem guarantee throughout that range.
+\end{revision}
 
-The equal-coefficient comparisons also demonstrate the practical approximation capability
-of CGA. At the largest common coefficient count, CGA achieves the smallest relative
-Sobolev error in all four primary comparisons after restricting the RFM statistics to the
-reported converged realizations; the same error ordering is observed in the two-dimensional
-pure $p=4$ example. These results indicate that adaptive greedy atom selection can provide
-competitive, and in these test problems more coefficient-efficient, approximations under a
-fixed number of independent coefficients, highlighting the potential of finite-pool CGA for
-nonlinear PDE approximation.
+\begin{revision}
+The revised equal-coefficient comparisons use refitted CGA prefixes and fully
+archived FEM and RFM states with the same metric-specific quadrature policy.
+Their endpoint values describe the approximation errors for the specified
+problems and valid samples. They do not establish uniform superiority over
+all widths, excluded realizations, or computational-work budgets. The
+componentwise gradient seminorm, full Sobolev norm, and natural distance are
+reported as distinct metrics rather than interchangeable relative errors.
+\end{revision}
 
 Overall, the theoretical and numerical results show that finite-pool CGA admits a coherent
 variational analysis while providing effective low-dimensional adaptive approximations for

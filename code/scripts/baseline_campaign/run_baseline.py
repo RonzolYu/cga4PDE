@@ -24,7 +24,7 @@ import numpy as np
 
 HERE = Path(__file__).resolve()
 PACKAGE_ROOT = HERE.parents[3]
-PACKAGE = PACKAGE_ROOT / "reproducibility" / "scripts" / "cga_refactor" / "src"
+PACKAGE = PACKAGE_ROOT / "code" / "scripts" / "cga_refactor" / "src"
 sys.path.insert(0, str(PACKAGE))
 
 from cga_refactor.config import config_for  # noqa: E402

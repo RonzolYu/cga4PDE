@@ -1,0 +1,56 @@
+{
+  "schema_version": "cga-artifacts-v1",
+  "experiment_validation_passed": true,
+  "diagnostic_validation_passed": true,
+  "figure_count_pdf": 22,
+  "baseline_theory_lines": false,
+  "baseline_order_plots": false,
+  "rfm_required_seed_count": 10,
+  "rfm_endpoint_status": {
+    "C1": {
+      "dof": 256,
+      "prescribed": 10,
+      "successful": 10,
+      "failed": 0,
+      "aggregate_ranking_eligible": true
+    },
+    "C2": {
+      "dof": 256,
+      "prescribed": 10,
+      "successful": 10,
+      "failed": 0,
+      "aggregate_ranking_eligible": true
+    },
+    "C3": {
+      "dof": 256,
+      "prescribed": 10,
+      "successful": 10,
+      "failed": 0,
+      "aggregate_ranking_eligible": true
+    },
+    "C4": {
+      "dof": 128,
+      "prescribed": 10,
+      "successful": 10,
+      "failed": 0,
+      "aggregate_ranking_eligible": true
+    },
+    "C5": {
+      "dof": 256,
+      "prescribed": 10,
+      "successful": 4,
+      "failed": 6,
+      "aggregate_ranking_eligible": false
+    }
+  },
+  "rfm_nonconforming_rows": 0,
+  "rfm_nonconserving_rows": 0,
+  "main_baseline_points_are_actual": true,
+  "interpolation_rows": 162,
+  "unbracketed_interpolations": 0,
+  "nonpositive_log_points": [],
+  "continuous_certificate_claimed": false,
+  "finite_rate_certificate_claimed": false,
+  "problems": [],
+  "passed": true
+}

@@ -10,43 +10,43 @@
     "C1": {
       "dof": 256,
       "prescribed": 10,
-      "successful": 10,
-      "failed": 0,
+      "metric_valid": 10,
+      "metric_excluded": 0,
       "aggregate_ranking_eligible": true
     },
     "C2": {
       "dof": 256,
       "prescribed": 10,
-      "successful": 10,
-      "failed": 0,
+      "metric_valid": 10,
+      "metric_excluded": 0,
       "aggregate_ranking_eligible": true
     },
     "C3": {
       "dof": 256,
       "prescribed": 10,
-      "successful": 10,
-      "failed": 0,
+      "metric_valid": 10,
+      "metric_excluded": 0,
       "aggregate_ranking_eligible": true
     },
     "C4": {
       "dof": 128,
       "prescribed": 10,
-      "successful": 10,
-      "failed": 0,
+      "metric_valid": 10,
+      "metric_excluded": 0,
       "aggregate_ranking_eligible": true
     },
     "C5": {
       "dof": 256,
       "prescribed": 10,
-      "successful": 4,
-      "failed": 6,
+      "metric_valid": 6,
+      "metric_excluded": 4,
       "aggregate_ranking_eligible": false
     }
   },
   "rfm_nonconforming_rows": 0,
   "rfm_nonconserving_rows": 0,
   "main_baseline_points_are_actual": true,
-  "interpolation_rows": 162,
+  "interpolation_rows": 159,
   "unbracketed_interpolations": 0,
   "nonpositive_log_points": [],
   "continuous_certificate_claimed": false,

@@ -135,11 +135,11 @@ def main() -> None:
         report.append(f"- undefined citation `{key}` at {display_path(path)}:{line}")
     for path, line, name in missing_graphics:
         report.append(f"- missing graphic `{name}` at {display_path(path)}:{line}")
-    if len(report) == 12:
+    if not (duplicate_labels or undefined_refs or undefined_cites or missing_graphics):
         report.append("- No static dependency problems found.")
 
     REPORT.parent.mkdir(parents=True, exist_ok=True)
-    REPORT.write_text("\n".join(report) + "\n", encoding="utf-8")
+    REPORT.write_text("\n".join(report).rstrip() + "\n", encoding="utf-8")
     status = {
         "files": len(files),
         "labels": len(labels),

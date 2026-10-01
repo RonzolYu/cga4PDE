@@ -47,6 +47,22 @@ class FEMResult:
     wall_time_sec: float
 
 
+class _PointwiseLinePp(ElementLinePp):
+    """Invalidate the scikit-fem 11 polynomial cache when points change.
+
+    ElementLinePp checks only the number of points.  Equal-size probe batches
+    can contain different reference coordinates, so the cache must also key
+    on their values.  Assembly and arbitrary-point evaluation then agree.
+    """
+
+    def lbasis(self, X, i):
+        cached = getattr(self, "_reference_points", None)
+        if cached is None or not np.array_equal(cached, X):
+            self.P, self.dP = self._reval_legendre(X[0, :], self.p)
+            self._reference_points = X.copy()
+        return self.P[i], self.dP[i]
+
+
 def _mesh_and_element(dim: int, degree: int, n: int):
     grid = np.linspace(0.0, 1.0, n + 1)
     if dim == 1:
@@ -56,7 +72,7 @@ def _mesh_and_element(dim: int, degree: int, n: int):
         elif degree == 2:
             element = ElementLineP2()
         else:
-            element = ElementLinePp(degree)
+            element = _PointwiseLinePp(degree)
     else:
         mesh = MeshTri.init_tensor(grid, grid)
         element = {1: ElementTriP1(), 2: ElementTriP2(), 3: ElementTriP3()}[degree]

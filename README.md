@@ -27,3 +27,13 @@ The default `code/tex` link points to `../paper/sisc_cga`, so the reproduction s
 use exactly the paper source shipped in this repository. The environment is specified
 in `code/config/environment.yml`. The audit reports in `code/review/` record the final
 page count, source graph, citations, and logical-chain checks.
+
+## Consistency revision, 2026-10-01
+
+The marked manuscript synchronizes its metric definitions and comparison scope
+with the code. The primary comparisons use the fully archived
+`review_replay_20261001` batch: 320 RFM, 32 refitted CGA-prefix, and 114 FEM states.
+Historical comparison inputs remain separate. Each primary metric uses a shared
+solve/sign/quadrature policy; prescribed RFM denominators remain ten. See
+`paper/sisc_cga/supplement/S3_failures_and_statistics.md` and `S4_reproduction.md`
+for sample definitions, provenance, and the distinct reproduction modes.

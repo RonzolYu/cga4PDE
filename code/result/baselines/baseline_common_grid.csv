@@ -1,347 +1,342 @@
 schema_version,case_id,metric,method,dof,value,is_interpolated,left_dof,left_value,right_dof,right_value,formula
-cga-artifacts-v1,C1,energy_gap,CGA,8,12.402160108433417,False,8,12.402160108433417,8,12.402160108433417,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C1,energy_gap,CGA,16,6.968037186922658,False,16,6.968037186922658,16,6.968037186922658,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C1,energy_gap,CGA,32,0.4276896451080603,False,32,0.4276896451080603,32,0.4276896451080603,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C1,energy_gap,CGA,64,0.0039830723900564635,False,64,0.0039830723900564635,64,0.0039830723900564635,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C1,energy_gap,CGA,128,2.5770213468945258e-05,False,128,2.5770213468945258e-05,128,2.5770213468945258e-05,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C1,energy_gap,CGA,256,3.8007409486340293e-07,False,256,3.8007409486340293e-07,256,3.8007409486340293e-07,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C1,energy_gap,RFM,8,11.844216711115674,False,8,11.844216711115674,8,11.844216711115674,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C1,energy_gap,RFM,16,7.0218904280975405,False,16,7.0218904280975405,16,7.0218904280975405,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C1,energy_gap,RFM,32,1.7210094748597715,False,32,1.7210094748597715,32,1.7210094748597715,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C1,energy_gap,RFM,64,0.07551045654362198,False,64,0.07551045654362198,64,0.07551045654362198,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C1,energy_gap,RFM,128,0.0008134394602077322,False,128,0.0008134394602077322,128,0.0008134394602077322,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C1,energy_gap,RFM,256,8.377177156404514e-07,False,256,8.377177156404514e-07,256,8.377177156404514e-07,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C1,energy_gap,FEM P1,8,8.763997306738272,True,5,14.518287010222371,9,7.722667970762075,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C1,energy_gap,CGA,8,12.402160107197052,False,8,12.402160107197052,8,12.402160107197052,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C1,energy_gap,CGA,16,6.968037188428795,False,16,6.968037188428795,16,6.968037188428795,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C1,energy_gap,CGA,32,0.4276896455648469,False,32,0.4276896455648469,32,0.4276896455648469,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C1,energy_gap,CGA,64,0.0039830729987748725,False,64,0.0039830729987748725,64,0.0039830729987748725,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C1,energy_gap,CGA,128,2.577075871101897e-05,False,128,2.577075871101897e-05,128,2.577075871101897e-05,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C1,energy_gap,CGA,256,3.8000705870899765e-07,False,256,3.8000705870899765e-07,256,3.8000705870899765e-07,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C1,energy_gap,RFM,8,11.844216711173384,False,8,11.844216711173384,8,11.844216711173384,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C1,energy_gap,RFM,16,7.021890427092252,False,16,7.021890427092252,16,7.021890427092252,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C1,energy_gap,RFM,32,1.7210094809728655,False,32,1.7210094809728655,32,1.7210094809728655,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C1,energy_gap,RFM,64,0.07551045951725399,False,64,0.07551045951725399,64,0.07551045951725399,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C1,energy_gap,RFM,128,0.000813439421149198,False,128,0.000813439421149198,128,0.000813439421149198,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C1,energy_gap,RFM,256,8.398641977436228e-07,False,256,8.398641977436228e-07,256,8.398641977436228e-07,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C1,energy_gap,FEM P1,8,8.763997306738272,True,5,14.51828701022237,9,7.722667970762075,linear interpolation of log(value) in log(DOF); no extrapolation
 cga-artifacts-v1,C1,energy_gap,FEM P1,16,6.9350652178636825,True,9,7.722667970762075,17,6.856904811340939,linear interpolation of log(value) in log(DOF); no extrapolation
 cga-artifacts-v1,C1,energy_gap,FEM P1,32,2.3447555040014008,True,17,6.856904811340939,33,2.22548972146528,linear interpolation of log(value) in log(DOF); no extrapolation
 cga-artifacts-v1,C1,energy_gap,FEM P1,64,0.6136800038400001,True,33,2.22548972146528,65,0.5954511945744017,linear interpolation of log(value) in log(DOF); no extrapolation
 cga-artifacts-v1,C1,energy_gap,FEM P1,128,0.15380497051059433,True,65,0.5954511945744017,129,0.1514325126592908,linear interpolation of log(value) in log(DOF); no extrapolation
 cga-artifacts-v1,C1,energy_gap,FEM P1,256,0.03831916439202766,True,129,0.1514325126592908,257,0.03802079264652747,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C1,energy_gap,FEM P2,8,10.477770298852125,True,5,13.559240993692388,9,9.822228581379566,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C1,energy_gap,FEM P2,16,7.730912302182808,True,9,9.822228581379566,17,7.538322612334298,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C1,energy_gap,FEM P2,32,1.369918657412044,True,17,7.538322612334298,33,1.2608581401815186,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C1,energy_gap,FEM P2,64,0.10837761454709677,True,33,1.2608581401815186,65,0.10232792893038578,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C1,energy_gap,FEM P2,128,0.007040213139046618,True,65,0.10232792893038578,129,0.0068271046201218155,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C1,energy_gap,FEM P2,256,0.0004405304833009681,True,129,0.0068271046201218155,257,0.00043371582643914053,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C1,energy_gap,FEM P3,8,12.146177889756766,True,7,13.003662568459388,13,9.478116442303886,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C1,energy_gap,FEM P3,16,6.51830053537648,True,13,9.478116442303886,25,2.915268792832407,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C1,energy_gap,FEM P3,32,0.8918776117619636,True,25,2.915268792832407,49,0.11547520636001352,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C1,energy_gap,FEM P3,64,0.024780528274778894,True,49,0.11547520636001352,97,0.0022564091267440745,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C1,energy_gap,FEM P3,128,0.0004316105830403023,True,97,0.0022564091267440745,193,3.727185251278797e-05,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C1,energy_gap,FEM P2,8,10.477770363090132,True,5,13.559241408546653,9,9.822228581379568,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C1,energy_gap,FEM P2,16,7.730912302182804,True,9,9.822228581379568,17,7.538322612334294,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C1,energy_gap,FEM P2,32,1.369918657412044,True,17,7.538322612334294,33,1.2608581401815186,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C1,energy_gap,FEM P2,64,0.10837761454710047,True,33,1.2608581401815186,65,0.10232792893038933,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C1,energy_gap,FEM P2,128,0.007040213139042997,True,65,0.10232792893038933,129,0.006827104620118263,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C1,energy_gap,FEM P2,256,0.0004405304832973786,True,129,0.006827104620118263,257,0.0004337158264355878,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C1,energy_gap,FEM P3,8,12.146181686600112,True,7,13.003667751333772,13,9.478116442303886,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C1,energy_gap,FEM P3,16,6.518300535376474,True,13,9.478116442303886,25,2.9152687928324,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C1,energy_gap,FEM P3,32,0.8918776117619622,True,25,2.9152687928324,49,0.11547520636001352,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C1,energy_gap,FEM P3,64,0.024780528274763642,True,49,0.11547520636001352,97,0.0022564091267405217,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C1,energy_gap,FEM P3,128,0.0004316105830398967,True,97,0.0022564091267405217,193,3.727185251278797e-05,linear interpolation of log(value) in log(DOF); no extrapolation
 cga-artifacts-v1,C1,energy_gap,FEM P3,256,6.83888764966136e-06,True,193,3.727185251278797e-05,385,5.9051119905007e-07,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C1,relative_sobolev,CGA,8,0.7123134412286959,False,8,0.7123134412286959,8,0.7123134412286959,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C1,relative_sobolev,CGA,16,0.5339218603360937,False,16,0.5339218603360937,16,0.5339218603360937,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C1,relative_sobolev,CGA,32,0.13227776259042842,False,32,0.13227776259042842,32,0.13227776259042842,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C1,relative_sobolev,CGA,64,0.012765316069298326,False,64,0.012765316069298326,64,0.012765316069298326,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C1,relative_sobolev,CGA,128,0.0010267896450288035,False,128,0.0010267896450288035,128,0.0010267896450288035,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C1,relative_sobolev,CGA,256,0.00012469717669209528,False,256,0.00012469717669209528,256,0.00012469717669209528,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C1,relative_sobolev,RFM,8,0.6961062173065804,False,8,0.6961062173065804,8,0.6961062173065804,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C1,relative_sobolev,RFM,16,0.5359764996510082,False,16,0.5359764996510082,16,0.5359764996510082,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C1,relative_sobolev,RFM,32,0.2653421169355273,False,32,0.2653421169355273,32,0.2653421169355273,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C1,relative_sobolev,RFM,64,0.05557793890781977,False,64,0.05557793890781977,64,0.05557793890781977,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C1,relative_sobolev,RFM,128,0.005762936981132944,False,128,0.005762936981132944,128,0.005762936981132944,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C1,relative_sobolev,RFM,256,0.0001853036947919546,False,256,0.0001853036947919546,256,0.0001853036947919546,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C1,relative_sobolev,CGA,8,0.7123134412241172,False,8,0.7123134412241172,8,0.7123134412241172,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C1,relative_sobolev,CGA,16,0.5339218603380697,False,16,0.5339218603380697,16,0.5339218603380697,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C1,relative_sobolev,CGA,32,0.13227776257651144,False,32,0.13227776257651144,32,0.13227776257651144,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C1,relative_sobolev,CGA,64,0.012765316062923568,False,64,0.012765316062923568,64,0.012765316062923568,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C1,relative_sobolev,CGA,128,0.0010267896467233664,False,128,0.0010267896467233664,128,0.0010267896467233664,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C1,relative_sobolev,CGA,256,0.00012469717001272235,False,256,0.00012469717001272235,256,0.00012469717001272235,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C1,relative_sobolev,RFM,8,0.6961062173082029,False,8,0.6961062173082029,8,0.6961062173082029,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C1,relative_sobolev,RFM,16,0.5359764996117478,False,16,0.5359764996117478,16,0.5359764996117478,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C1,relative_sobolev,RFM,32,0.26534211697807264,False,32,0.26534211697807264,32,0.26534211697807264,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C1,relative_sobolev,RFM,64,0.05557793929770424,False,64,0.05557793929770424,64,0.05557793929770424,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C1,relative_sobolev,RFM,128,0.005762936954998417,False,128,0.005762936954998417,128,0.005762936954998417,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C1,relative_sobolev,RFM,256,0.0001853036957205878,False,256,0.0001853036957205878,256,0.0001853036957205878,linear interpolation of log(value) in log(DOF); no extrapolation
 cga-artifacts-v1,C1,relative_sobolev,FEM P1,8,0.5987886922391614,True,5,0.7706907765507895,9,0.5620903821644476,linear interpolation of log(value) in log(DOF); no extrapolation
 cga-artifacts-v1,C1,relative_sobolev,FEM P1,16,0.5326571332988886,True,9,0.5620903821644476,17,0.5296470197713126,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C1,relative_sobolev,FEM P1,32,0.309721429202835,True,17,0.5296470197713126,33,0.30174165570464984,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C1,relative_sobolev,FEM P1,64,0.15845044341430242,True,33,0.30174165570464984,65,0.15607938965109242,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C1,relative_sobolev,FEM P1,128,0.07932455748202014,True,65,0.15607938965109242,129,0.07871038503668759,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C1,relative_sobolev,FEM P1,256,0.03959410109962705,True,129,0.07871038503668759,257,0.039439650341829904,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C1,relative_sobolev,FEM P2,8,0.6547219622334017,True,5,0.7448008480826361,9,0.6339098367434935,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C1,relative_sobolev,FEM P2,16,0.562390331825893,True,9,0.6339098367434935,17,0.5553411208784524,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C1,relative_sobolev,FEM P2,32,0.23673902949968353,True,17,0.5553411208784524,33,0.22712010796038495,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C1,relative_sobolev,FEM P2,64,0.06658743203357136,True,33,0.22712010796038495,65,0.06470227702755574,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C1,relative_sobolev,FEM P2,128,0.016971310388357943,True,65,0.06470227702755574,129,0.016712474272656524,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C1,relative_sobolev,FEM P2,256,0.004245320232203964,True,129,0.016712474272656524,257,0.004212356387293623,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C1,relative_sobolev,FEM P3,8,0.7049239909751918,True,7,0.7293824651817085,13,0.6227066341214115,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C1,relative_sobolev,FEM P3,16,0.5164040775550579,True,13,0.6227066341214115,25,0.34535184019443865,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C1,relative_sobolev,FEM P3,32,0.19101835634345324,True,25,0.34535184019443865,49,0.06873324469473137,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C1,relative_sobolev,FEM P1,32,0.3097214292028349,True,17,0.5296470197713126,33,0.3017416557046498,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C1,relative_sobolev,FEM P1,64,0.15845044341430242,True,33,0.3017416557046498,65,0.15607938965109242,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C1,relative_sobolev,FEM P1,128,0.0793245574820201,True,65,0.15607938965109242,129,0.07871038503668755,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C1,relative_sobolev,FEM P1,256,0.039594101099626945,True,129,0.07871038503668755,257,0.039439650341829786,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C1,relative_sobolev,FEM P2,8,0.6547219642404143,True,5,0.744800859476482,9,0.6339098367434935,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C1,relative_sobolev,FEM P2,16,0.5623903318258932,True,9,0.6339098367434935,17,0.5553411208784526,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C1,relative_sobolev,FEM P2,32,0.23673902949968353,True,17,0.5553411208784526,33,0.22712010796038493,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C1,relative_sobolev,FEM P2,64,0.06658743203357131,True,33,0.22712010796038493,65,0.06470227702755572,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C1,relative_sobolev,FEM P2,128,0.01697131038835793,True,65,0.06470227702755572,129,0.016712474272656496,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C1,relative_sobolev,FEM P2,256,0.0042453202322039335,True,129,0.016712474272656496,257,0.004212356387293595,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C1,relative_sobolev,FEM P3,8,0.704924101153298,True,7,0.7293826105368074,13,0.6227066341214115,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C1,relative_sobolev,FEM P3,16,0.5164040775550579,True,13,0.6227066341214115,25,0.3453518401944387,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C1,relative_sobolev,FEM P3,32,0.1910183563434533,True,25,0.3453518401944387,49,0.06873324469473137,linear interpolation of log(value) in log(DOF); no extrapolation
 cga-artifacts-v1,C1,relative_sobolev,FEM P3,64,0.03184034412654323,True,49,0.06873324469473137,97,0.009607964649353914,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C1,relative_sobolev,FEM P3,128,0.004202120626354471,True,97,0.009607964649353914,193,0.001234846462908003,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C1,relative_sobolev,FEM P3,256,0.0005289507135832648,True,193,0.001234846462908003,385,0.00015543060670698106,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C2,energy_gap,CGA,8,12.911527798756008,False,8,12.911527798756008,8,12.911527798756008,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C2,energy_gap,CGA,16,9.114159946181626,False,16,9.114159946181626,16,9.114159946181626,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C2,energy_gap,CGA,32,0.3751610552444973,False,32,0.3751610552444973,32,0.3751610552444973,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C2,energy_gap,CGA,64,0.002238373195865506,False,64,0.002238373195865506,64,0.002238373195865506,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C2,energy_gap,CGA,128,4.3005446777044654e-05,False,128,4.3005446777044654e-05,128,4.3005446777044654e-05,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C2,energy_gap,CGA,256,3.609955570027523e-07,False,256,3.609955570027523e-07,256,3.609955570027523e-07,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C2,energy_gap,RFM,8,11.857835546641217,False,8,11.857835546641217,8,11.857835546641217,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C2,energy_gap,RFM,16,7.023629434475907,False,16,7.023629434475907,16,7.023629434475907,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C2,energy_gap,RFM,32,1.7212297431363304,False,32,1.7212297431363304,32,1.7212297431363304,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C2,energy_gap,RFM,64,0.07550901522738052,False,64,0.07550901522738052,64,0.07550901522738052,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C2,energy_gap,RFM,128,0.000813436400784795,False,128,0.000813436400784795,128,0.000813436400784795,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C2,energy_gap,RFM,256,8.377336495613008e-07,False,256,8.377336495613008e-07,256,8.377336495613008e-07,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C2,energy_gap,FEM P1,8,8.766510901030276,True,5,14.53262002279602,9,7.723527952576237,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C2,energy_gap,FEM P1,16,6.935484918382044,True,9,7.723527952576237,17,6.857283051479168,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C2,energy_gap,FEM P1,32,2.3449631545625005,True,17,6.857283051479168,33,2.2256904258613552,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C2,energy_gap,FEM P1,64,0.6136952380120048,True,33,2.2256904258613552,65,0.5954650652908633,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C2,energy_gap,FEM P1,128,0.15380590405259303,True,65,0.5954650652908633,129,0.15143340184639342,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C2,energy_gap,FEM P1,256,0.038319221713255976,True,129,0.15143340184639342,257,0.03802084857500532,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C2,energy_gap,FEM P2,8,10.480912286517555,True,5,13.560910187894525,9,9.82560914475063,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C2,energy_gap,FEM P2,16,7.731555940825659,True,9,9.82560914475063,17,7.538743000053959,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C2,energy_gap,FEM P2,32,1.3700945001919673,True,17,7.538743000053959,33,1.2610244369651618,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C2,energy_gap,FEM P2,64,0.1083795817676195,True,33,1.2610244369651618,65,0.10232951392692158,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C2,energy_gap,FEM P2,128,0.0070402413007992215,True,65,0.10232951392692158,129,0.006827131028622091,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C2,energy_gap,FEM P2,256,0.0004405309163560758,True,129,0.006827131028622091,257,0.0004337162456771182,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C2,energy_gap,FEM P3,8,12.146002529439643,True,7,13.002263805095815,13,9.481189678644817,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C2,energy_gap,FEM P3,16,6.520118170359539,True,13,9.481189678644817,25,2.9157973021985164,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C2,energy_gap,FEM P3,32,0.8919781754429286,True,25,2.9157973021985164,49,0.11547456818039947,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C2,energy_gap,FEM P3,64,0.0247805119435974,True,49,0.11547456818039947,97,0.002256424740966878,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C2,energy_gap,FEM P3,128,0.0004316126677704705,True,97,0.002256424740966878,193,3.727191719704592e-05,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C2,energy_gap,FEM P3,256,6.838895891873303e-06,True,193,3.727191719704592e-05,385,5.905114583981685e-07,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C2,relative_sobolev,CGA,8,0.7176574618963447,False,8,0.7176574618963447,8,0.7176574618963447,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C2,relative_sobolev,CGA,16,0.6100056475436884,False,16,0.6100056475436884,16,0.6100056475436884,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C2,relative_sobolev,CGA,32,0.12388799361123469,False,32,0.12388799361123469,32,0.12388799361123469,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C2,relative_sobolev,CGA,64,0.00956920253363204,False,64,0.00956920253363204,64,0.00956920253363204,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C2,relative_sobolev,CGA,128,0.0013264246175767411,False,128,0.0013264246175767411,128,0.0013264246175767411,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C2,relative_sobolev,CGA,256,0.00012152710531189445,False,256,0.00012152710531189445,256,0.00012152710531189445,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C2,relative_sobolev,RFM,8,0.6961492620910301,False,8,0.6961492620910301,8,0.6961492620910301,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C2,relative_sobolev,RFM,16,0.5359775653469745,False,16,0.5359775653469745,16,0.5359775653469745,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C2,relative_sobolev,RFM,32,0.2653421968654892,False,32,0.2653421968654892,32,0.2653421968654892,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C2,relative_sobolev,RFM,64,0.05557793932327455,False,64,0.05557793932327455,64,0.05557793932327455,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C2,relative_sobolev,RFM,128,0.005762936991634849,False,128,0.005762936991634849,128,0.005762936991634849,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C2,relative_sobolev,RFM,256,0.00018530463478851552,False,256,0.00018530463478851552,256,0.00018530463478851552,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C2,relative_sobolev,FEM P1,8,0.5987891925014164,True,5,0.7706931802833655,9,0.5620905301169382,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C2,relative_sobolev,FEM P1,16,0.5326575767133164,True,9,0.5620905301169382,17,0.5296474924477896,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C2,relative_sobolev,FEM P1,32,0.30972157109424964,True,17,0.5296474924477896,33,0.30174178756487485,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C2,relative_sobolev,FEM P1,64,0.15845046441480748,True,33,0.30174178756487485,65,0.1560794092250483,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C2,relative_sobolev,FEM P1,128,0.0793245601427658,True,65,0.1560794092250483,129,0.07871038759379126,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C2,relative_sobolev,FEM P1,256,0.039594101429536774,True,129,0.07871038759379126,257,0.03943965066503348,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C2,relative_sobolev,FEM P2,8,0.6547381273072932,True,5,0.7448881498618828,9,0.6339107904908817,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C2,relative_sobolev,FEM P2,16,0.5623904924456772,True,9,0.6339107904908817,17,0.5553412081586101,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C2,relative_sobolev,FEM P2,32,0.23673907061085084,True,17,0.5553412081586101,33,0.22712014758338175,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C2,relative_sobolev,FEM P2,64,0.0665874328182588,True,33,0.22712014758338175,65,0.064702277543661,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C2,relative_sobolev,FEM P2,128,0.016971310398929254,True,65,0.064702277543661,129,0.016712474281655225,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C2,relative_sobolev,FEM P2,256,0.0042453202323618055,True,129,0.016712474281655225,257,0.004212356387438232,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C2,relative_sobolev,FEM P3,8,0.7049758783939575,True,7,0.7294504751978803,13,0.6227080134483656,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C2,relative_sobolev,FEM P3,16,0.5164048856340874,True,13,0.6227080134483656,25,0.34535189795557947,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C2,relative_sobolev,FEM P3,32,0.19101837686456702,True,25,0.34535189795557947,49,0.06873324498167106,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C2,relative_sobolev,FEM P3,64,0.03184034421070536,True,49,0.06873324498167106,97,0.009607964651839985,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C2,relative_sobolev,FEM P3,128,0.004202120627020724,True,97,0.009607964651839985,193,0.0012348464629205653,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C2,relative_sobolev,FEM P3,256,0.0005289507135865595,True,193,0.0012348464629205653,385,0.0001554306067070636,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C3,energy_gap,CGA,8,5.007873341767828,False,8,5.007873341767828,8,5.007873341767828,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C3,energy_gap,CGA,16,2.8024631189262283,False,16,2.8024631189262283,16,2.8024631189262283,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C3,energy_gap,CGA,32,1.730349654741362,False,32,1.730349654741362,32,1.730349654741362,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C3,energy_gap,CGA,64,0.024270616151486735,False,64,0.024270616151486735,64,0.024270616151486735,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C3,energy_gap,CGA,128,0.0019933437534778164,False,128,0.0019933437534778164,128,0.0019933437534778164,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C3,energy_gap,CGA,256,0.00016646356082006264,False,256,0.00016646356082006264,256,0.00016646356082006264,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C3,energy_gap,CGA,512,4.581729817054736e-05,False,512,4.581729817054736e-05,512,4.581729817054736e-05,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C3,energy_gap,RFM,8,9.18896880781035,False,8,9.18896880781035,8,9.18896880781035,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C3,energy_gap,RFM,16,6.0761945302802856,False,16,6.0761945302802856,16,6.0761945302802856,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C3,energy_gap,RFM,32,1.413832093971581,False,32,1.413832093971581,32,1.413832093971581,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C3,energy_gap,RFM,64,0.08256076069896512,False,64,0.08256076069896512,64,0.08256076069896512,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C3,energy_gap,RFM,128,0.005362019378411631,False,128,0.005362019378411631,128,0.005362019378411631,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C3,energy_gap,RFM,256,0.0005174040287316828,False,256,0.0005174040287316828,256,0.0005174040287316828,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C3,energy_gap,RFM,512,4.029159044272035e-05,False,512,4.029159044272035e-05,512,4.029159044272035e-05,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C3,energy_gap,FEM P1,8,6.313012893703075,True,4,9.012728890273689,9,5.942414411475775,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C3,energy_gap,FEM P1,16,5.864323164283958,False,16,5.864323164283958,16,5.864323164283958,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C3,energy_gap,FEM P1,32,3.368575811959969,True,25,4.136823523632605,36,3.054055626298368,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C3,energy_gap,FEM P1,64,1.6827312830597068,True,49,2.182692069424907,81,1.3377081501516486,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C3,energy_gap,FEM P1,128,0.8243463200763521,True,81,1.3377081501516486,144,0.7277633183611094,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C3,energy_gap,FEM P1,256,0.4086721305931245,True,144,0.7277633183611094,289,0.3618775926066924,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C3,energy_gap,FEM P1,512,0.17265739788071383,True,289,0.3618775926066924,529,0.16551213976901025,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C3,energy_gap,FEM P2,16,3.132459600003006,True,9,6.953902207008015,25,1.6874887996994854,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C3,energy_gap,FEM P2,32,1.3761361655140147,True,25,1.6874887996994854,49,0.9677692264950046,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C3,energy_gap,FEM P2,64,0.6262864482707714,True,49,0.9677692264950046,81,0.4266426455185801,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C3,energy_gap,FEM P2,128,0.17540386680423475,True,121,0.20711153828728612,169,0.07717677823996283,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C3,energy_gap,FEM P2,256,0.039750491938275796,True,169,0.07717677823996283,289,0.03275011631845004,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C3,energy_gap,FEM P2,512,0.008094195751512821,True,289,0.03275011631845004,529,0.0074731347851226815,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C3,energy_gap,FEM P3,16,5.639343901712367,False,16,5.639343901712367,16,5.639343901712367,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C3,energy_gap,FEM P3,32,1.889713025463563,True,16,5.639343901712367,49,0.9649648797837216,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C3,energy_gap,FEM P3,64,0.3975451161566331,True,49,0.9649648797837216,100,0.09032460729438085,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C3,energy_gap,FEM P3,128,0.047207681497115815,True,100,0.09032460729438085,169,0.022741697192778076,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C3,energy_gap,FEM P3,256,0.004268761270207477,False,256,0.004268761270207477,256,0.004268761270207477,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C3,relative_sobolev,CGA,8,0.7073144211455945,False,8,0.7073144211455945,8,0.7073144211455945,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C3,relative_sobolev,CGA,16,0.5288357651403212,False,16,0.5288357651403212,16,0.5288357651403212,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C3,relative_sobolev,CGA,32,0.4152391920167592,False,32,0.4152391920167592,32,0.4152391920167592,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C3,relative_sobolev,CGA,64,0.049268608325407644,False,64,0.049268608325407644,64,0.049268608325407644,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C3,relative_sobolev,CGA,128,0.014122330382715584,False,128,0.014122330382715584,128,0.014122330382715584,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C3,relative_sobolev,CGA,256,0.004073930222378274,False,256,0.004073930222378274,256,0.004073930222378274,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C3,relative_sobolev,CGA,512,0.0019898919668570668,False,512,0.0019898919668570668,512,0.0019898919668570668,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C3,relative_sobolev,RFM,8,0.957999296703726,False,8,0.957999296703726,8,0.957999296703726,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C3,relative_sobolev,RFM,16,0.7788800973960123,False,16,0.7788800973960123,16,0.7788800973960123,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C3,relative_sobolev,RFM,32,0.3759598540181477,False,32,0.3759598540181477,32,0.3759598540181477,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C3,relative_sobolev,RFM,64,0.0908639882730127,False,64,0.0908639882730127,64,0.0908639882730127,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C3,relative_sobolev,RFM,128,0.023160066854218432,False,128,0.023160066854218432,128,0.023160066854218432,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C3,relative_sobolev,RFM,256,0.007195350931935174,False,256,0.007195350931935174,256,0.007195350931935174,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C3,relative_sobolev,RFM,512,0.0021195361989907006,False,512,0.0021195361989907006,512,0.0021195361989907006,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C3,relative_sobolev,FEM P1,8,0.7942555247107679,True,4,0.9487837387283826,9,0.7706210126085851,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C3,relative_sobolev,FEM P1,16,0.7681576661856844,False,16,0.7681576661856844,16,0.7681576661856844,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C3,relative_sobolev,FEM P1,32,0.5807972015770649,True,25,0.6486655503465018,36,0.5509653498605186,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C3,relative_sobolev,FEM P1,64,0.4162695944693107,True,49,0.4754601609024706,81,0.370207226255956,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C3,relative_sobolev,FEM P1,128,0.29280321105091106,True,81,0.370207226255956,144,0.2756476985731606,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C3,relative_sobolev,FEM P1,256,0.20498301308594172,True,144,0.2756476985731606,289,0.19257933685182071,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C3,relative_sobolev,FEM P1,512,0.14317330022138286,True,289,0.19257933685182071,529,0.140769525297682,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C3,relative_sobolev,FEM P2,16,0.559644974293795,True,9,0.8335465763764625,25,0.4108752600709466,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C3,relative_sobolev,FEM P2,32,0.37343914075636986,True,25,0.4108752600709466,49,0.31667017984076473,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C3,relative_sobolev,FEM P2,64,0.24816372241283993,True,49,0.31667017984076473,81,0.200149878136057,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C3,relative_sobolev,FEM P2,128,0.12762454420584937,True,121,0.13492907884565436,169,0.09694127182245259,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C3,relative_sobolev,FEM P2,256,0.06416839714606797,True,169,0.09694127182245259,289,0.056885774505902785,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C3,relative_sobolev,FEM P2,512,0.03185132954006916,True,289,0.056885774505902785,529,0.030813549210212156,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C3,relative_sobolev,FEM P3,16,0.7506698983917992,False,16,0.7506698983917992,16,0.7506698983917992,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C3,relative_sobolev,FEM P3,32,0.4346483992411372,True,16,0.7506698983917992,49,0.3106423964615268,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C3,relative_sobolev,FEM P3,64,0.19970258809740704,True,49,0.3106423964615268,100,0.09544189883398198,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C3,relative_sobolev,FEM P3,128,0.06602005580025093,True,100,0.09544189883398198,169,0.043602057746799976,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C3,relative_sobolev,FEM P3,256,0.0229690931620406,False,256,0.0229690931620406,256,0.0229690931620406,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C4,energy_gap,CGA,8,0.02362930203707947,False,8,0.02362930203707947,8,0.02362930203707947,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C4,energy_gap,CGA,16,0.00033715156979496896,False,16,0.00033715156979496896,16,0.00033715156979496896,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C4,energy_gap,CGA,32,3.1802491662347165e-06,False,32,3.1802491662347165e-06,32,3.1802491662347165e-06,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C4,energy_gap,CGA,64,1.4414302995646722e-07,False,64,1.4414302995646722e-07,64,1.4414302995646722e-07,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C4,energy_gap,CGA,128,6.187406142998952e-10,False,128,6.187406142998952e-10,128,6.187406142998952e-10,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C4,energy_gap,RFM,8,0.3949859811203851,False,8,0.3949859811203851,8,0.3949859811203851,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C4,energy_gap,RFM,16,0.004343970553264853,False,16,0.004343970553264853,16,0.004343970553264853,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C4,energy_gap,RFM,32,0.000279430407857717,False,32,0.000279430407857717,32,0.000279430407857717,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C4,energy_gap,RFM,64,5.892336247370622e-06,False,64,5.892336247370622e-06,64,5.892336247370622e-06,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C4,energy_gap,RFM,128,8.109677196443954e-08,False,128,8.109677196443954e-08,128,8.109677196443954e-08,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C4,energy_gap,FEM P1,8,13.285751430534901,False,8,13.285751430534901,8,13.285751430534901,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C4,energy_gap,FEM P1,16,3.633306414575486,False,16,3.633306414575486,16,3.633306414575486,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C4,energy_gap,FEM P1,32,0.9307042522680149,False,32,0.9307042522680149,32,0.9307042522680149,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C4,energy_gap,FEM P1,64,0.23418668416297805,False,64,0.23418668416297805,64,0.23418668416297805,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C4,energy_gap,FEM P1,128,0.058644981983945854,False,128,0.058644981983945854,128,0.058644981983945854,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C4,energy_gap,FEM P2,8,2.9252716356940027,False,8,2.9252716356940027,8,2.9252716356940027,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C4,energy_gap,FEM P2,16,0.41708017533181874,False,16,0.41708017533181874,16,0.41708017533181874,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C1,relative_sobolev,FEM P3,128,0.00420212062635446,True,97,0.009607964649353914,193,0.0012348464629079927,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C1,relative_sobolev,FEM P3,256,0.0005289507135832501,True,193,0.0012348464629079927,385,0.00015543060670697255,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C2,energy_gap,CGA,8,12.911527798300197,False,8,12.911527798300197,8,12.911527798300197,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C2,energy_gap,CGA,16,9.114159946653235,False,16,9.114159946653235,16,9.114159946653235,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C2,energy_gap,CGA,32,0.37516105627112495,False,32,0.37516105627112495,32,0.37516105627112495,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C2,energy_gap,CGA,64,0.0022383740108153916,False,64,0.0022383740108153916,64,0.0022383740108153916,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C2,energy_gap,CGA,128,4.3005961973818785e-05,False,128,4.3005961973818785e-05,128,4.3005961973818785e-05,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C2,energy_gap,CGA,256,3.611560401850511e-07,False,256,3.611560401850511e-07,256,3.611560401850511e-07,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C2,energy_gap,RFM,8,11.857835546698375,False,8,11.857835546698375,8,11.857835546698375,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C2,energy_gap,RFM,16,7.023629433471472,False,16,7.023629433471472,16,7.023629433471472,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C2,energy_gap,RFM,32,1.7212297492517052,False,32,1.7212297492517052,32,1.7212297492517052,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C2,energy_gap,RFM,64,0.07550901819559996,False,64,0.07550901819559996,64,0.07550901819559996,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C2,energy_gap,RFM,128,0.0008134363593423899,False,128,0.0008134363593423899,128,0.0008134363593423899,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C2,energy_gap,RFM,256,8.398993625036155e-07,False,256,8.398993625036155e-07,256,8.398993625036155e-07,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C2,energy_gap,FEM P1,8,8.766510901030319,True,5,14.53262002279643,9,7.723527952576234,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C2,energy_gap,FEM P1,16,6.935484918382048,True,9,7.723527952576234,17,6.857283051479172,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C2,energy_gap,FEM P1,32,2.3449631545624974,True,17,6.857283051479172,33,2.2256904258613517,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C2,energy_gap,FEM P1,64,0.6136952380120048,True,33,2.2256904258613517,65,0.5954650652908633,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C2,energy_gap,FEM P1,128,0.1538059040525966,True,65,0.5954650652908633,129,0.15143340184639698,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C2,energy_gap,FEM P1,256,0.03831922171324528,True,129,0.15143340184639698,257,0.03802084857499466,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C2,energy_gap,FEM P2,8,10.480912454689635,True,5,13.560911273768081,9,9.825609144751258,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C2,energy_gap,FEM P2,16,7.731555940825704,True,9,9.825609144751258,17,7.538743000053955,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C2,energy_gap,FEM P2,32,1.3700945001919635,True,17,7.538743000053955,33,1.2610244369651582,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C2,energy_gap,FEM P2,64,0.10837958176761583,True,33,1.2610244369651582,65,0.10232951392691803,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C2,energy_gap,FEM P2,128,0.007040241300791969,True,65,0.10232951392691803,129,0.0068271310286149856,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C2,energy_gap,FEM P2,256,0.0004405309163453092,True,129,0.0068271310286149856,257,0.00043371624566646005,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C2,energy_gap,FEM P3,8,12.146007756036212,True,7,13.002270938987678,13,9.481189678645695,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C2,energy_gap,FEM P3,16,6.520118170359946,True,13,9.481189678645695,25,2.9157973021985093,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C2,energy_gap,FEM P3,32,0.8919781754429371,True,25,2.9157973021985093,49,0.11547456818040303,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C2,energy_gap,FEM P3,64,0.024780511943567358,True,49,0.11547456818040303,97,0.0022564247409597726,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C2,energy_gap,FEM P3,128,0.00043161266775307565,True,97,0.0022564247409597726,193,3.727191719349321e-05,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C2,energy_gap,FEM P3,256,6.8388958746567164e-06,True,193,3.727191719349321e-05,385,5.905114548454549e-07,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C2,relative_sobolev,CGA,8,0.7176574619246613,False,8,0.7176574619246613,8,0.7176574619246613,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C2,relative_sobolev,CGA,16,0.6100056475369618,False,16,0.6100056475369618,16,0.6100056475369618,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C2,relative_sobolev,CGA,32,0.12388799359635652,False,32,0.12388799359635652,32,0.12388799359635652,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C2,relative_sobolev,CGA,64,0.009569202530386022,False,64,0.009569202530386022,64,0.009569202530386022,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C2,relative_sobolev,CGA,128,0.0013264246161278255,False,128,0.0013264246161278255,128,0.0013264246161278255,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C2,relative_sobolev,CGA,256,0.00012152710843502245,False,256,0.00012152710843502245,256,0.00012152710843502245,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C2,relative_sobolev,RFM,8,0.6961492620877927,False,8,0.6961492620877927,8,0.6961492620877927,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C2,relative_sobolev,RFM,16,0.5359775653076893,False,16,0.5359775653076893,16,0.5359775653076893,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C2,relative_sobolev,RFM,32,0.2653421969080664,False,32,0.2653421969080664,32,0.2653421969080664,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C2,relative_sobolev,RFM,64,0.0555779397130815,False,64,0.0555779397130815,64,0.0555779397130815,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C2,relative_sobolev,RFM,128,0.005762936964337431,False,128,0.005762936964337431,128,0.005762936964337431,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C2,relative_sobolev,RFM,256,0.0001853073999982535,False,256,0.0001853073999982535,256,0.0001853073999982535,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C2,relative_sobolev,FEM P1,8,0.5987891924674608,True,5,0.770693180065264,9,0.5620905301169383,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C2,relative_sobolev,FEM P1,16,0.5326575767155002,True,9,0.5620905301169383,17,0.5296474924501898,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C2,relative_sobolev,FEM P1,32,0.30972157109562126,True,17,0.5296474924501898,33,0.3017417875662096,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C2,relative_sobolev,FEM P1,64,0.15845046441573926,True,33,0.3017417875662096,65,0.15607940922597147,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C2,relative_sobolev,FEM P1,128,0.07932456014324031,True,65,0.15607940922597147,129,0.07871038759426213,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C2,relative_sobolev,FEM P1,256,0.03959410142977424,True,129,0.07871038759426213,257,0.03943965066527004,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C2,relative_sobolev,FEM P2,8,0.6547382894033259,True,5,0.7448890703116644,9,0.6339107904605643,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C2,relative_sobolev,FEM P2,16,0.5623904924431133,True,9,0.6339107904605643,17,0.5553412081586102,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C2,relative_sobolev,FEM P2,32,0.23673907061181942,True,17,0.5553412081586102,33,0.22712014758435622,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C2,relative_sobolev,FEM P2,64,0.06658743281848777,True,33,0.22712014758435622,65,0.06470227754388216,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C2,relative_sobolev,FEM P2,128,0.01697131039898837,True,65,0.06470227754388216,129,0.016712474281713435,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C2,relative_sobolev,FEM P2,256,0.0042453202323770685,True,129,0.016712474281713435,257,0.00421235638745338,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C2,relative_sobolev,FEM P3,8,0.7049765948004553,True,7,0.7294514204152283,13,0.622708013255025,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C2,relative_sobolev,FEM P3,16,0.5164048855251095,True,13,0.622708013255025,25,0.3453518979565202,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C2,relative_sobolev,FEM P3,32,0.1910183768650374,True,25,0.3453518979565202,49,0.06873324498180926,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C2,relative_sobolev,FEM P3,64,0.031840344210783765,True,49,0.06873324498180926,97,0.009607964651870405,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C2,relative_sobolev,FEM P3,128,0.0042021206270362495,True,97,0.009607964651870405,193,0.0012348464629260937,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C2,relative_sobolev,FEM P3,256,0.0005289507136064786,True,193,0.0012348464629260937,385,0.00015543060672036676,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C3,energy_gap,CGA,8,5.00787331332748,False,8,5.00787331332748,8,5.00787331332748,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C3,energy_gap,CGA,16,2.802461356339017,False,16,2.802461356339017,16,2.802461356339017,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C3,energy_gap,CGA,32,1.7303487342075492,False,32,1.7303487342075492,32,1.7303487342075492,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C3,energy_gap,CGA,64,0.024271016857962735,False,64,0.024271016857962735,64,0.024271016857962735,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C3,energy_gap,CGA,128,0.001993221867433448,False,128,0.001993221867433448,128,0.001993221867433448,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C3,energy_gap,CGA,256,0.00016593770747697079,False,256,0.00016593770747697079,256,0.00016593770747697079,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C3,energy_gap,CGA,512,3.95686588170463e-05,False,512,3.95686588170463e-05,512,3.95686588170463e-05,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C3,energy_gap,RFM,8,9.188968814659248,False,8,9.188968814659248,8,9.188968814659248,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C3,energy_gap,RFM,16,6.076191625387814,False,16,6.076191625387814,16,6.076191625387814,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C3,energy_gap,RFM,32,1.4138318460419486,False,32,1.4138318460419486,32,1.4138318460419486,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C3,energy_gap,RFM,64,0.08256304352779509,False,64,0.08256304352779509,64,0.08256304352779509,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C3,energy_gap,RFM,128,0.005361958342816386,False,128,0.005361958342816386,128,0.005361958342816386,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C3,energy_gap,RFM,256,0.0005173726108385068,False,256,0.0005173726108385068,256,0.0005173726108385068,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C3,energy_gap,RFM,512,5.1263826101433096e-05,False,512,5.1263826101433096e-05,512,5.1263826101433096e-05,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C3,energy_gap,FEM P1,8,6.313347264720277,True,4,9.01279998834826,9,5.942774671708044,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C3,energy_gap,FEM P1,16,5.902265570832894,False,16,5.902265570832894,16,5.902265570832894,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C3,energy_gap,FEM P1,32,3.363296838626582,True,25,4.174443101834572,36,3.033856209881387,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C3,energy_gap,FEM P1,64,1.696990807719531,True,36,3.033856209881387,81,1.3377540192379147,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C3,energy_gap,FEM P1,128,0.8416072039302795,True,81,1.3377540192379147,289,0.3688905990870932,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C3,energy_gap,FEM P1,256,0.41708925943131775,True,81,1.3377540192379147,289,0.3688905990870932,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C3,energy_gap,FEM P2,16,3.133291084220288,True,9,6.954048621878586,25,1.6882566799302428,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C3,energy_gap,FEM P2,32,1.2457109917744875,True,25,1.6882566799302428,81,0.3969537462337751,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C3,energy_gap,FEM P2,64,0.5305435409593897,True,25,1.6882566799302428,81,0.3969537462337751,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C3,energy_gap,FEM P2,128,0.16718158755053095,True,121,0.1861558945449957,289,0.035245490865772666,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C3,energy_gap,FEM P2,256,0.044438629958741045,True,121,0.1861558945449957,289,0.035245490865772666,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C3,energy_gap,FEM P3,16,5.639445248359626,False,16,5.639445248359626,16,5.639445248359626,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C3,energy_gap,FEM P3,32,1.8894878296940112,True,16,5.639445248359626,49,0.9647685464190978,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C3,energy_gap,FEM P3,64,0.39743285958448005,True,49,0.9647685464190978,100,0.09028719202631663,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C3,energy_gap,FEM P3,128,0.04323677623341232,True,100,0.09028719202631663,169,0.01887615071472304,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C3,relative_sobolev,CGA,8,0.707314421478911,False,8,0.707314421478911,8,0.707314421478911,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C3,relative_sobolev,CGA,16,0.5288357341561591,False,16,0.5288357341561591,16,0.5288357341561591,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C3,relative_sobolev,CGA,32,0.41523917909146835,False,32,0.41523917909146835,32,0.41523917909146835,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C3,relative_sobolev,CGA,64,0.04926859791591263,False,64,0.04926859791591263,64,0.04926859791591263,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C3,relative_sobolev,CGA,128,0.014122252697564269,False,128,0.014122252697564269,128,0.014122252697564269,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C3,relative_sobolev,CGA,256,0.004073973953426827,False,256,0.004073973953426827,256,0.004073973953426827,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C3,relative_sobolev,CGA,512,0.001989268908243274,False,512,0.001989268908243274,512,0.001989268908243274,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C3,relative_sobolev,RFM,8,0.9579992949684393,False,8,0.9579992949684393,8,0.9579992949684393,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C3,relative_sobolev,RFM,16,0.7788799284167232,False,16,0.7788799284167232,16,0.7788799284167232,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C3,relative_sobolev,RFM,32,0.3759598766015874,False,32,0.3759598766015874,32,0.3759598766015874,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C3,relative_sobolev,RFM,64,0.09086570579155857,False,64,0.09086570579155857,64,0.09086570579155857,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C3,relative_sobolev,RFM,128,0.023160069193815462,False,128,0.023160069193815462,128,0.023160069193815462,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C3,relative_sobolev,RFM,256,0.00719570486734941,False,256,0.00719570486734941,256,0.00719570486734941,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C3,relative_sobolev,RFM,512,0.0022649211411678817,False,512,0.0022649211411678817,512,0.0022649211411678817,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C3,relative_sobolev,FEM P1,8,0.7942397083183094,True,4,0.9487795854785492,9,0.7706036324707949,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C3,relative_sobolev,FEM P1,16,0.765766018434993,False,16,0.765766018434993,16,0.765766018434993,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C3,relative_sobolev,FEM P1,32,0.579526621541891,True,25,0.6469715527198855,36,0.5498714912233447,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C3,relative_sobolev,FEM P1,64,0.4159532622119233,True,49,0.4747536984708348,81,0.3701631088769596,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C3,relative_sobolev,FEM P1,128,0.2926132290383677,True,81,0.3701631088769596,144,0.275431278772181,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C3,relative_sobolev,FEM P1,256,0.20470259329950205,True,144,0.275431278772181,289,0.19229223860022338,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C3,relative_sobolev,FEM P1,512,0.1431466192388948,True,289,0.19229223860022338,529,0.14075378731212584,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C3,relative_sobolev,FEM P2,16,0.559687442294956,True,9,0.8335261683478876,25,0.41093842869326863,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C3,relative_sobolev,FEM P2,32,0.3735235311143842,True,25,0.41093842869326863,49,0.31678123009606335,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C3,relative_sobolev,FEM P2,64,0.24745656537273603,True,49,0.31678123009606335,81,0.19901625508312343,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C3,relative_sobolev,FEM P2,128,0.12786391720209594,True,121,0.13514911628515064,169,0.09724045017132622,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C3,relative_sobolev,FEM P2,256,0.06427855538206863,True,169,0.09724045017132622,289,0.05696070508865036,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C3,relative_sobolev,FEM P2,512,0.03185585221777506,True,289,0.05696070508865036,529,0.030815857538028197,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C3,relative_sobolev,FEM P3,16,0.7506612335033628,False,16,0.7506612335033628,16,0.7506612335033628,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C3,relative_sobolev,FEM P3,32,0.43462597615082593,True,16,0.7506612335033628,49,0.310618723956519,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C3,relative_sobolev,FEM P3,64,0.19963270926698568,True,49,0.310618723956519,100,0.09536486370052766,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C3,relative_sobolev,FEM P3,128,0.06587474897787701,True,100,0.09536486370052766,169,0.04343778656963796,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C3,relative_sobolev,FEM P3,256,0.022933229333787847,False,256,0.022933229333787847,256,0.022933229333787847,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C4,energy_gap,CGA,8,0.023629302029576138,False,8,0.023629302029576138,8,0.023629302029576138,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C4,energy_gap,CGA,16,0.0003371515515482315,False,16,0.0003371515515482315,16,0.0003371515515482315,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C4,energy_gap,CGA,32,3.1802443345441134e-06,False,32,3.1802443345441134e-06,32,3.1802443345441134e-06,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C4,energy_gap,CGA,64,1.4420066918319208e-07,False,64,1.4420066918319208e-07,64,1.4420066918319208e-07,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C4,energy_gap,RFM,8,0.3949859809849272,False,8,0.3949859809849272,8,0.3949859809849272,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C4,energy_gap,RFM,16,0.004343970585324541,False,16,0.004343970585324541,16,0.004343970585324541,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C4,energy_gap,RFM,32,0.0002794308033458037,False,32,0.0002794308033458037,32,0.0002794308033458037,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C4,energy_gap,RFM,64,5.892097306059441e-06,False,64,5.892097306059441e-06,64,5.892097306059441e-06,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C4,energy_gap,RFM,128,8.106036375465919e-08,False,128,8.106036375465919e-08,128,8.106036375465919e-08,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C4,energy_gap,FEM P1,8,13.28575143053473,False,8,13.28575143053473,8,13.28575143053473,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C4,energy_gap,FEM P1,16,3.6333064145753724,False,16,3.6333064145753724,16,3.6333064145753724,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C4,energy_gap,FEM P1,32,0.9307042522679012,False,32,0.9307042522679012,32,0.9307042522679012,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C4,energy_gap,FEM P1,64,0.23418668416275068,False,64,0.23418668416275068,64,0.23418668416275068,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C4,energy_gap,FEM P1,128,0.05864498198383217,False,128,0.05864498198383217,128,0.05864498198383217,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C4,energy_gap,FEM P2,8,2.9252716356772908,False,8,2.9252716356772908,8,2.9252716356772908,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C4,energy_gap,FEM P2,16,0.4170801753317619,False,16,0.4170801753317619,16,0.4170801753317619,linear interpolation of log(value) in log(DOF); no extrapolation
 cga-artifacts-v1,C4,energy_gap,FEM P2,32,0.028220796509117463,False,32,0.028220796509117463,32,0.028220796509117463,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C4,energy_gap,FEM P2,64,0.0017982732902055432,False,64,0.0017982732902055432,64,0.0017982732902055432,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C4,energy_gap,FEM P2,128,0.00011293210911844653,False,128,0.00011293210911844653,128,0.00011293210911844653,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C4,energy_gap,FEM P3,8,0.04042957238089692,True,6,0.06649130444651519,12,0.02005264383285521,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C4,energy_gap,FEM P3,16,0.0040069821587326755,True,12,0.02005264383285521,24,0.00041412646066874004,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C4,energy_gap,FEM P3,32,8.680356078766515e-05,True,24,0.00041412646066874004,48,9.596458426130994e-06,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C4,energy_gap,FEM P3,64,1.7644448218094415e-06,True,48,9.596458426130994e-06,96,1.6217165921261767e-07,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C4,energy_gap,FEM P3,128,2.9082412925595922e-08,True,96,1.6217165921261767e-07,192,2.5805775294429623e-09,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C4,relative_sobolev,CGA,8,0.03567009866309886,False,8,0.03567009866309886,8,0.03567009866309886,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C4,relative_sobolev,CGA,16,0.004460312382210044,False,16,0.004460312382210044,16,0.004460312382210044,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C4,relative_sobolev,CGA,32,0.0002868558138203917,False,32,0.0002868558138203917,32,0.0002868558138203917,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C4,relative_sobolev,CGA,64,0.00017999690469357903,False,64,0.00017999690469357903,64,0.00017999690469357903,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C4,relative_sobolev,CGA,128,1.5789640455483173e-05,False,128,1.5789640455483173e-05,128,1.5789640455483173e-05,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C4,relative_sobolev,RFM,8,0.0829087080851427,False,8,0.0829087080851427,8,0.0829087080851427,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C4,relative_sobolev,RFM,16,0.009297202996800556,False,16,0.009297202996800556,16,0.009297202996800556,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C4,relative_sobolev,RFM,32,0.0025113406725561695,False,32,0.0025113406725561695,32,0.0025113406725561695,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C4,relative_sobolev,RFM,64,0.0005151732577860875,False,64,0.0005151732577860875,64,0.0005151732577860875,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C4,relative_sobolev,RFM,128,9.102704118004628e-05,False,128,9.102704118004628e-05,128,9.102704118004628e-05,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C4,relative_sobolev,FEM P1,8,0.2969170144598846,False,8,0.2969170144598846,8,0.2969170144598846,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C4,relative_sobolev,FEM P1,16,0.14433576198846618,False,16,0.14433576198846618,16,0.14433576198846618,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C4,relative_sobolev,FEM P1,32,0.0697057952110548,False,32,0.0697057952110548,32,0.0697057952110548,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C4,relative_sobolev,FEM P1,64,0.03396726538804655,False,64,0.03396726538804655,64,0.03396726538804655,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C4,relative_sobolev,FEM P1,128,0.016717012073586668,False,128,0.016717012073586668,128,0.016717012073586668,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C4,relative_sobolev,FEM P2,8,0.16559815139212544,False,8,0.16559815139212544,8,0.16559815139212544,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C4,relative_sobolev,FEM P2,16,0.03134839675628506,False,16,0.03134839675628506,16,0.03134839675628506,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C4,relative_sobolev,FEM P2,32,0.007085128646784382,False,32,0.007085128646784382,32,0.007085128646784382,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C4,relative_sobolev,FEM P2,64,0.001744733406903518,False,64,0.001744733406903518,64,0.001744733406903518,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C4,relative_sobolev,FEM P2,128,0.0004349641328017658,False,128,0.0004349641328017658,128,0.0004349641328017658,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C4,relative_sobolev,FEM P3,8,0.056724209727201456,True,6,0.07158149970659355,12,0.04086686940898253,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C4,relative_sobolev,FEM P3,16,0.01862384638447717,True,12,0.04086686940898253,24,0.0061522113209410674,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C4,relative_sobolev,FEM P3,32,0.0024974466834882226,True,24,0.0061522113209410674,48,0.0007009041157948325,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C4,relative_sobolev,FEM P3,64,0.0002777730352533752,True,48,0.0007009041157948325,96,7.536110664808428e-05,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C4,relative_sobolev,FEM P3,128,2.9720962696032185e-05,True,96,7.536110664808428e-05,192,8.008255225665098e-06,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C4,v_distance,CGA,8,0.010280188073937921,False,8,0.010280188073937921,8,0.010280188073937921,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C4,v_distance,CGA,16,0.0012406043393640594,False,16,0.0012406043393640594,16,0.0012406043393640594,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C4,v_distance,CGA,32,0.00012046109068646486,False,32,0.00012046109068646486,32,0.00012046109068646486,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C4,v_distance,CGA,64,2.564584306520198e-05,False,64,2.564584306520198e-05,64,2.564584306520198e-05,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C4,v_distance,CGA,128,1.6802570536223682e-06,False,128,1.6802570536223682e-06,128,1.6802570536223682e-06,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C4,v_distance,RFM,8,0.042787191104979846,False,8,0.042787191104979846,8,0.042787191104979846,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C4,v_distance,RFM,16,0.004454727453716004,False,16,0.004454727453716004,16,0.004454727453716004,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C4,v_distance,RFM,32,0.001104121319054341,False,32,0.001104121319054341,32,0.001104121319054341,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C4,v_distance,RFM,64,0.0001631346305677294,False,64,0.0001631346305677294,64,0.0001631346305677294,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C4,v_distance,RFM,128,1.9236054189759047e-05,False,128,1.9236054189759047e-05,128,1.9236054189759047e-05,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C4,v_distance,FEM P1,8,0.2540754813739835,False,8,0.2540754813739835,8,0.2540754813739835,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C4,v_distance,FEM P1,16,0.13000855211572893,False,16,0.13000855211572893,16,0.13000855211572893,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C4,v_distance,FEM P1,32,0.06534762156216593,False,32,0.06534762156216593,32,0.06534762156216593,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C4,v_distance,FEM P1,64,0.03271288556545509,False,64,0.03271288556545509,64,0.03271288556545509,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C4,v_distance,FEM P1,128,0.01636100910258442,False,128,0.01636100910258442,128,0.01636100910258442,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C4,v_distance,FEM P2,8,0.11897725672128866,False,8,0.11897725672128866,8,0.11897725672128866,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C4,v_distance,FEM P2,16,0.0437560497567856,False,16,0.0437560497567856,16,0.0437560497567856,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C4,v_distance,FEM P2,32,0.011354727066083769,False,32,0.011354727066083769,32,0.011354727066083769,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C4,v_distance,FEM P2,64,0.0028648663422256664,False,64,0.0028648663422256664,64,0.0028648663422256664,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C4,v_distance,FEM P2,128,0.0007178511374083512,False,128,0.0007178511374083512,128,0.0007178511374083512,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C4,v_distance,FEM P3,8,0.013275705422773013,True,6,0.016935718985597377,12,0.009419263505218824,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C4,v_distance,FEM P3,16,0.004234842483076038,True,12,0.009419263505218824,24,0.0013725082940626698,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C4,v_distance,FEM P3,32,0.000628754699815327,True,24,0.0013725082940626698,48,0.00020923774716077658,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C4,v_distance,FEM P3,64,8.972185323110153e-05,True,48,0.00020923774716077658,96,2.7201651928541827e-05,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C4,v_distance,FEM P3,128,1.1519191148228598e-05,True,96,2.7201651928541827e-05,192,3.4313401142455905e-06,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C5,energy_gap,CGA,8,171.32298968379268,False,8,171.32298968379268,8,171.32298968379268,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C5,energy_gap,CGA,16,30.701558817819034,False,16,30.701558817819034,16,30.701558817819034,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C5,energy_gap,CGA,32,6.475703544843441,False,32,6.475703544843441,32,6.475703544843441,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C5,energy_gap,CGA,64,0.1479048717014848,False,64,0.1479048717014848,64,0.1479048717014848,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C5,energy_gap,CGA,128,0.011400834796972958,False,128,0.011400834796972958,128,0.011400834796972958,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C5,energy_gap,CGA,256,0.001072793427738361,False,256,0.001072793427738361,256,0.001072793427738361,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C5,energy_gap,RFM,8,317.6381399385268,False,8,317.6381399385268,8,317.6381399385268,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C5,energy_gap,RFM,16,188.1642175653029,False,16,188.1642175653029,16,188.1642175653029,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C5,energy_gap,RFM,32,43.59085920420844,False,32,43.59085920420844,32,43.59085920420844,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C5,energy_gap,RFM,64,2.751137819966658,False,64,2.751137819966658,64,2.751137819966658,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C5,energy_gap,RFM,128,0.16467016031072035,False,128,0.16467016031072035,128,0.16467016031072035,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C5,energy_gap,RFM,256,0.02573241972632445,False,256,0.02573241972632445,256,0.02573241972632445,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C5,energy_gap,FEM P1,8,168.71404367140224,False,8,168.71404367140224,8,168.71404367140224,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C5,energy_gap,FEM P1,16,172.1837992574365,True,15,178.4195484915703,24,137.69757072786524,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C5,energy_gap,FEM P1,32,103.50296954586288,True,24,137.69757072786524,35,94.69682591224387,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C5,energy_gap,FEM P1,64,50.62768963276231,True,48,67.22390712993473,80,40.63279389300931,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C5,energy_gap,FEM P1,128,24.54764571312081,True,80,40.63279389300931,143,21.79750882018334,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C5,energy_gap,FEM P1,256,12.102839571464765,True,143,21.79750882018334,288,10.744982422968008,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C5,energy_gap,FEM P2,8,254.47886257594672,False,8,254.47886257594672,8,254.47886257594672,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C5,energy_gap,FEM P2,16,107.61262386643195,True,8,254.47886257594672,24,65.04455822773105,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C5,energy_gap,FEM P2,32,50.06406391231025,True,24,65.04455822773105,48,34.617545994897796,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C5,energy_gap,FEM P2,64,18.138610481831655,True,48,34.617545994897796,80,10.98707731279552,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C5,energy_gap,FEM P2,128,6.513920170697557,True,120,7.670717663409164,168,3.271224265294336,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C5,energy_gap,FEM P2,256,1.6618062221465493,True,168,3.271224265294336,288,1.3750973478888682,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C5,energy_gap,FEM P3,16,217.31901234299042,True,15,246.46167696679643,48,25.51438236655156,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C5,energy_gap,FEM P3,32,56.25171703712202,True,15,246.46167696679643,48,25.51438236655156,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C5,energy_gap,FEM P3,64,11.630851539880638,True,48,25.51438236655156,99,3.533955508585393,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C5,energy_gap,FEM P3,128,1.8999778896806647,True,99,3.533955508585393,168,0.9850897114454256,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C5,energy_gap,FEM P3,256,0.13713825230436208,True,255,0.13788545182922007,483,0.05680549413375502,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C5,relative_sobolev,CGA,8,0.7760251102239298,False,8,0.7760251102239298,8,0.7760251102239298,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C5,relative_sobolev,CGA,16,0.3624497524371621,False,16,0.3624497524371621,16,0.3624497524371621,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C5,relative_sobolev,CGA,32,0.15275472454447261,False,32,0.15275472454447261,32,0.15275472454447261,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C5,relative_sobolev,CGA,64,0.030777214146687434,False,64,0.030777214146687434,64,0.030777214146687434,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C5,relative_sobolev,CGA,128,0.010168034990330423,False,128,0.010168034990330423,128,0.010168034990330423,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C5,relative_sobolev,CGA,256,0.002493618623083861,False,256,0.002493618623083861,256,0.002493618623083861,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C5,relative_sobolev,RFM,8,1.0178719085227121,False,8,1.0178719085227121,8,1.0178719085227121,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C5,relative_sobolev,RFM,16,0.7970414062099991,False,16,0.7970414062099991,16,0.7970414062099991,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C5,relative_sobolev,RFM,32,0.42900502018262554,False,32,0.42900502018262554,32,0.42900502018262554,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C5,relative_sobolev,RFM,64,0.12260004337842098,False,64,0.12260004337842098,64,0.12260004337842098,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C5,relative_sobolev,RFM,128,0.035362151164344775,False,128,0.035362151164344775,128,0.035362151164344775,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C5,relative_sobolev,RFM,256,0.012483080193583847,False,256,0.012483080193583847,256,0.012483080193583847,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C5,relative_sobolev,FEM P1,8,0.8073749917142765,False,8,0.8073749917142765,8,0.8073749917142765,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C5,relative_sobolev,FEM P1,16,0.8261759087288222,True,15,0.853495807592937,24,0.6734533619262284,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C5,relative_sobolev,FEM P1,32,0.6260036115290845,True,24,0.6734533619262284,35,0.61191742290024,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C5,relative_sobolev,FEM P1,64,0.4710547446416224,True,48,0.5392754771986424,80,0.42414040828304844,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C5,relative_sobolev,FEM P1,128,0.33199098354031736,True,80,0.42414040828304844,143,0.31336026033553904,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C5,relative_sobolev,FEM P1,256,0.23248010409627615,True,143,0.31336026033553904,288,0.21885730611851578,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C5,relative_sobolev,FEM P2,8,0.9276628890201611,False,8,0.9276628890201611,8,0.9276628890201611,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C5,relative_sobolev,FEM P2,16,0.608094173251094,True,8,0.9276628890201611,24,0.47498227754793243,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C5,relative_sobolev,FEM P2,32,0.43487699313765993,True,24,0.47498227754793243,48,0.3840344174934651,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C5,relative_sobolev,FEM P2,64,0.31645943848767294,True,48,0.3840344174934651,80,0.2723467414217979,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C5,relative_sobolev,FEM P2,128,0.1669744989885608,True,120,0.17619649959246778,168,0.13313026329211924,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C5,relative_sobolev,FEM P2,256,0.08725333486822663,True,168,0.13313026329211924,288,0.077530356702421,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C5,relative_sobolev,FEM P3,16,0.8691740207347654,True,15,0.9091039687394181,48,0.4046227925448577,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C5,relative_sobolev,FEM P3,32,0.5365404611520236,True,15,0.9091039687394181,48,0.4046227925448577,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C5,relative_sobolev,FEM P3,64,0.26044592703412806,True,48,0.4046227925448577,99,0.13353140900748955,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C5,relative_sobolev,FEM P3,128,0.092467948385023,True,99,0.13353140900748955,168,0.06267099194542404,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C5,relative_sobolev,FEM P3,256,0.04018611998512744,True,255,0.04041806256322467,483,0.01580039351889095,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C5,v_distance,CGA,8,0.7999229662946721,False,8,0.7999229662946721,8,0.7999229662946721,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C5,v_distance,CGA,16,0.38624704523756004,False,16,0.38624704523756004,16,0.38624704523756004,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C5,v_distance,CGA,32,0.17863353212841482,False,32,0.17863353212841482,32,0.17863353212841482,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C5,v_distance,CGA,64,0.027013634361347315,False,64,0.027013634361347315,64,0.027013634361347315,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C5,v_distance,CGA,128,0.007452267315203394,False,128,0.007452267315203394,128,0.007452267315203394,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C5,v_distance,CGA,256,0.0022884390314750324,False,256,0.0022884390314750324,256,0.0022884390314750324,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C5,v_distance,RFM,8,0.9815053302033421,False,8,0.9815053302033421,8,0.9815053302033421,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C5,v_distance,RFM,16,0.8420480984195451,False,16,0.8420480984195451,16,0.8420480984195451,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C5,v_distance,RFM,32,0.4564537997083742,False,32,0.4564537997083742,32,0.4564537997083742,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C5,v_distance,RFM,64,0.11648666293973917,False,64,0.11648666293973917,64,0.11648666293973917,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C5,v_distance,RFM,128,0.02825637243107325,False,128,0.02825637243107325,128,0.02825637243107325,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C5,v_distance,RFM,256,0.011145140687796555,False,256,0.011145140687796555,256,0.011145140687796555,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C5,v_distance,FEM P1,8,0.81117362104304,False,8,0.81117362104304,8,0.81117362104304,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C5,v_distance,FEM P1,16,0.8215101208248077,True,15,0.8314296526056918,24,0.7618415674452512,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C5,v_distance,FEM P1,32,0.6766313583892883,True,24,0.7618415674452512,35,0.6520878501069205,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C5,v_distance,FEM P1,64,0.4964904758403636,True,48,0.5727991746854305,80,0.4443744110574285,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C5,v_distance,FEM P1,128,0.3540964094440427,True,80,0.4443744110574285,143,0.33563541116821954,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C5,v_distance,FEM P1,256,0.24993054052221023,True,143,0.33563541116821954,288,0.23546163837965825,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C5,v_distance,FEM P2,8,0.9658282325038814,False,8,0.9658282325038814,8,0.9658282325038814,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C5,v_distance,FEM P2,16,0.71593264263297,True,8,0.9658282325038814,24,0.6009119173744504,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C5,v_distance,FEM P2,32,0.5190327839240041,True,24,0.6009119173744504,48,0.4222143952457477,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C5,v_distance,FEM P2,64,0.30818745861490104,True,48,0.4222143952457477,80,0.24141718634747192,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C5,v_distance,FEM P2,128,0.18178345472452354,True,120,0.193895875718903,168,0.13852117194293914,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C5,v_distance,FEM P2,256,0.09425574007789252,True,168,0.13852117194293914,288,0.08463532935254507,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C5,v_distance,FEM P3,16,0.9107118803923212,True,15,0.9610122372276263,48,0.36470287185436123,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C5,v_distance,FEM P3,32,0.5112380070966233,True,15,0.9610122372276263,48,0.36470287185436123,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C5,v_distance,FEM P3,64,0.24478284257993477,True,48,0.36470287185436123,99,0.13372311050437535,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C5,v_distance,FEM P3,128,0.09452695685857132,True,99,0.13372311050437535,168,0.06547798489490148,linear interpolation of log(value) in log(DOF); no extrapolation
-cga-artifacts-v1,C5,v_distance,FEM P3,256,0.028716681406032615,True,255,0.028897663000258932,483,0.010365082619050232,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C4,energy_gap,FEM P2,64,0.0017982732899781695,False,64,0.0017982732899781695,64,0.0017982732899781695,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C4,energy_gap,FEM P2,128,0.0001129321090047597,False,128,0.0001129321090047597,128,0.0001129321090047597,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C4,energy_gap,FEM P3,8,0.03988272500460259,True,6,0.06496123551454502,12,0.020052642106065832,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C4,energy_gap,FEM P3,16,0.004006981956889919,True,12,0.020052642106065832,24,0.00041412646066874004,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C4,energy_gap,FEM P3,32,8.680356036086545e-05,True,24,0.00041412646066874004,48,9.596458312444156e-06,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C4,energy_gap,FEM P3,64,1.7644445528968908e-06,True,48,9.596458312444156e-06,96,1.621716023691988e-07,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C4,energy_gap,FEM P3,128,2.9081875201520486e-08,True,96,1.621716023691988e-07,192,2.5804638426052406e-09,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C4,relative_sobolev,CGA,8,0.03567008901491497,False,8,0.03567008901491497,8,0.03567008901491497,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C4,relative_sobolev,CGA,16,0.00446031087448068,False,16,0.00446031087448068,16,0.00446031087448068,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C4,relative_sobolev,CGA,32,0.00028689021566914084,False,32,0.00028689021566914084,32,0.00028689021566914084,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C4,relative_sobolev,CGA,64,0.0001801759498846442,False,64,0.0001801759498846442,64,0.0001801759498846442,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C4,relative_sobolev,CGA,128,3.39470104779249e-05,False,128,3.39470104779249e-05,128,3.39470104779249e-05,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C4,relative_sobolev,RFM,8,0.08290870800688466,False,8,0.08290870800688466,8,0.08290870800688466,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C4,relative_sobolev,RFM,16,0.009297202985401482,False,16,0.009297202985401482,16,0.009297202985401482,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C4,relative_sobolev,RFM,32,0.002511572741954885,False,32,0.002511572741954885,32,0.002511572741954885,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C4,relative_sobolev,RFM,64,0.000516831408334281,False,64,0.000516831408334281,64,0.000516831408334281,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C4,relative_sobolev,RFM,128,7.817570952812044e-05,False,128,7.817570952812044e-05,128,7.817570952812044e-05,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C4,relative_sobolev,FEM P1,8,0.2969170144746324,False,8,0.2969170144746324,8,0.2969170144746324,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C4,relative_sobolev,FEM P1,16,0.14433576198847164,False,16,0.14433576198847164,16,0.14433576198847164,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C4,relative_sobolev,FEM P1,32,0.06970579521105381,False,32,0.06970579521105381,32,0.06970579521105381,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C4,relative_sobolev,FEM P1,64,0.03396726538803268,False,64,0.03396726538803268,64,0.03396726538803268,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C4,relative_sobolev,FEM P1,128,0.016717012073354066,False,128,0.016717012073354066,128,0.016717012073354066,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C4,relative_sobolev,FEM P2,8,0.16559794083614016,False,8,0.16559794083614016,8,0.16559794083614016,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C4,relative_sobolev,FEM P2,16,0.031348396902465915,False,16,0.031348396902465915,16,0.031348396902465915,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C4,relative_sobolev,FEM P2,32,0.007085128646840807,False,32,0.007085128646840807,32,0.007085128646840807,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C4,relative_sobolev,FEM P2,64,0.0017447334069033928,False,64,0.0017447334069033928,64,0.0017447334069033928,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C4,relative_sobolev,FEM P2,128,0.0004349641328014036,False,128,0.0004349641328014036,128,0.0004349641328014036,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C4,relative_sobolev,FEM P3,8,0.05454932405974133,True,6,0.06694621961197027,12,0.04087334274411111,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C4,relative_sobolev,FEM P3,16,0.018625594543658853,True,12,0.04087334274411111,24,0.006152229275688953,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C4,relative_sobolev,FEM P3,32,0.002497450994371924,True,24,0.006152229275688953,48,0.0007009041477972036,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C4,relative_sobolev,FEM P3,64,0.00027777304363067474,True,48,0.0007009041477972036,96,7.536110727455371e-05,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C4,relative_sobolev,FEM P3,128,2.9720962841972923e-05,True,96,7.536110727455371e-05,192,8.008255226584127e-06,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C4,v_distance,CGA,8,0.010280188180232984,False,8,0.010280188180232984,8,0.010280188180232984,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C4,v_distance,CGA,16,0.0012406043399583258,False,16,0.0012406043399583258,16,0.0012406043399583258,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C4,v_distance,CGA,32,0.00012046109932215716,False,32,0.00012046109932215716,32,0.00012046109932215716,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C4,v_distance,CGA,64,2.5652123920981167e-05,False,64,2.5652123920981167e-05,64,2.5652123920981167e-05,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C4,v_distance,CGA,128,1.730895360997454e-06,False,128,1.730895360997454e-06,128,1.730895360997454e-06,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C4,v_distance,RFM,8,0.04278719110725687,False,8,0.04278719110725687,8,0.04278719110725687,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C4,v_distance,RFM,16,0.004454727453374024,False,16,0.004454727453374024,16,0.004454727453374024,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C4,v_distance,RFM,32,0.001104121340887234,False,32,0.001104121340887234,32,0.001104121340887234,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C4,v_distance,RFM,64,0.00016313478548668782,False,64,0.00016313478548668782,64,0.00016313478548668782,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C4,v_distance,RFM,128,1.9232038272099724e-05,False,128,1.9232038272099724e-05,128,1.9232038272099724e-05,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C4,v_distance,FEM P1,8,0.25407548137723723,False,8,0.25407548137723723,8,0.25407548137723723,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C4,v_distance,FEM P1,16,0.13000855211572937,False,16,0.13000855211572937,16,0.13000855211572937,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C4,v_distance,FEM P1,32,0.06534762156216592,False,32,0.06534762156216592,32,0.06534762156216592,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C4,v_distance,FEM P1,64,0.03271288556545504,False,64,0.03271288556545504,64,0.03271288556545504,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C4,v_distance,FEM P1,128,0.016361009102584246,False,128,0.016361009102584246,128,0.016361009102584246,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C4,v_distance,FEM P2,8,0.1189772437804575,False,8,0.1189772437804575,8,0.1189772437804575,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C4,v_distance,FEM P2,16,0.043756049756973024,False,16,0.043756049756973024,16,0.043756049756973024,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C4,v_distance,FEM P2,32,0.01135472706608379,False,32,0.01135472706608379,32,0.01135472706608379,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C4,v_distance,FEM P2,64,0.0028648663422256608,False,64,0.0028648663422256608,64,0.0028648663422256608,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C4,v_distance,FEM P2,128,0.0007178511374083743,False,128,0.0007178511374083743,128,0.0007178511374083743,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C4,v_distance,FEM P3,8,0.013229618452579962,True,6,0.016835441014092522,12,0.009419180569497997,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C4,v_distance,FEM P3,16,0.004234820643401599,True,12,0.009419180569497997,24,0.0013725082722662993,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C4,v_distance,FEM P3,32,0.0006287546938102077,True,24,0.0013725082722662993,48,0.00020923774702908974,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C4,v_distance,FEM P3,64,8.972185319679557e-05,True,48,0.00020923774702908974,96,2.7201651927610948e-05,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C4,v_distance,FEM P3,128,1.151919114799492e-05,True,96,2.7201651927610948e-05,192,3.4313401142433946e-06,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C5,energy_gap,CGA,8,171.3229069608139,False,8,171.3229069608139,8,171.3229069608139,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C5,energy_gap,CGA,16,30.701638910830866,False,16,30.701638910830866,16,30.701638910830866,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C5,energy_gap,CGA,32,6.475711507387814,False,32,6.475711507387814,32,6.475711507387814,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C5,energy_gap,CGA,64,0.14792169685352974,False,64,0.14792169685352974,64,0.14792169685352974,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C5,energy_gap,CGA,128,0.01141429529099014,False,128,0.01141429529099014,128,0.01141429529099014,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C5,energy_gap,CGA,256,0.001074584329330719,False,256,0.001074584329330719,256,0.001074584329330719,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C5,energy_gap,RFM,8,323.4568223578507,False,8,323.4568223578507,8,323.4568223578507,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C5,energy_gap,RFM,16,187.07657810426375,False,16,187.07657810426375,16,187.07657810426375,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C5,energy_gap,RFM,32,44.211124357056605,False,32,44.211124357056605,32,44.211124357056605,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C5,energy_gap,RFM,64,2.501971315875977,False,64,2.501971315875977,64,2.501971315875977,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C5,energy_gap,RFM,128,0.15962322086687664,False,128,0.15962322086687664,128,0.15962322086687664,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C5,energy_gap,RFM,256,0.01912451809246818,False,256,0.01912451809246818,256,0.01912451809246818,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C5,energy_gap,FEM P1,8,168.71888983566458,False,8,168.71888983566458,8,168.71888983566458,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C5,energy_gap,FEM P1,16,172.8250910520483,True,15,179.06942012188827,24,138.28144897771853,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C5,energy_gap,FEM P1,32,102.86108213831528,True,24,138.28144897771853,35,93.80364232228101,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C5,energy_gap,FEM P1,64,51.00116915389499,True,35,93.80364232228101,80,40.71323205601266,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C5,energy_gap,FEM P1,128,25.455382136417196,True,80,40.71323205601266,143,22.78726618711545,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C5,energy_gap,FEM P1,256,12.381002839042479,True,143,22.78726618711545,288,10.943836703214629,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C5,energy_gap,FEM P2,8,238.20714717350452,False,8,238.20714717350452,8,238.20714717350452,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C5,energy_gap,FEM P2,16,105.04492062818494,True,8,238.20714717350452,24,65.06901743595711,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C5,energy_gap,FEM P2,32,42.00969551119422,True,24,65.06901743595711,80,10.425704354151662,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C5,energy_gap,FEM P2,64,14.638616228456394,True,24,65.06901743595711,80,10.425704354151662,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C5,energy_gap,FEM P2,128,5.049022155845836,True,80,10.425704354151662,288,1.4450785525239667,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C5,energy_gap,FEM P2,256,1.733025731382151,True,80,10.425704354151662,288,1.4450785525239667,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C5,energy_gap,FEM P3,16,180.19711566618022,True,15,202.13013807784895,48,25.503883630877567,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C5,energy_gap,FEM P3,32,52.480647788451634,True,15,202.13013807784895,48,25.503883630877567,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C5,energy_gap,FEM P3,64,11.735613464173692,True,48,25.503883630877567,168,0.8682441919969506,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C5,energy_gap,FEM P3,128,1.8083761697046252,True,48,25.503883630877567,168,0.8682441919969506,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C5,relative_sobolev,CGA,8,0.7760249058794627,False,8,0.7760249058794627,8,0.7760249058794627,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C5,relative_sobolev,CGA,16,0.3624502746282977,False,16,0.3624502746282977,16,0.3624502746282977,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C5,relative_sobolev,CGA,32,0.15275467818043983,False,32,0.15275467818043983,32,0.15275467818043983,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C5,relative_sobolev,CGA,64,0.030776675016906924,False,64,0.030776675016906924,64,0.030776675016906924,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C5,relative_sobolev,CGA,128,0.010165477275017293,False,128,0.010165477275017293,128,0.010165477275017293,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C5,relative_sobolev,CGA,256,0.002493059769700485,False,256,0.002493059769700485,256,0.002493059769700485,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C5,relative_sobolev,RFM,8,1.0168696036549898,False,8,1.0168696036549898,8,1.0168696036549898,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C5,relative_sobolev,RFM,16,0.7836832132536019,False,16,0.7836832132536019,16,0.7836832132536019,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C5,relative_sobolev,RFM,32,0.4314947231717116,False,32,0.4314947231717116,32,0.4314947231717116,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C5,relative_sobolev,RFM,64,0.11538338967507777,False,64,0.11538338967507777,64,0.11538338967507777,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C5,relative_sobolev,RFM,128,0.030942652157444985,False,128,0.030942652157444985,128,0.030942652157444985,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C5,relative_sobolev,RFM,256,0.01147216936786501,False,256,0.01147216936786501,256,0.01147216936786501,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C5,relative_sobolev,FEM P1,8,0.8075621256194777,False,8,0.8075621256194777,8,0.8075621256194777,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C5,relative_sobolev,FEM P1,16,0.8241735934729922,True,15,0.8512749791115262,24,0.6725766693080729,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C5,relative_sobolev,FEM P1,32,0.6230822202889735,True,24,0.6725766693080729,35,0.6084217921852493,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C5,relative_sobolev,FEM P1,64,0.4716370818895469,True,48,0.5400783764425195,80,0.4245816618450854,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C5,relative_sobolev,FEM P1,128,0.3316483166416524,True,80,0.4245816618450854,143,0.31288389838700076,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C5,relative_sobolev,FEM P1,256,0.2320939748628009,True,143,0.31288389838700076,288,0.21848757368523697,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C5,relative_sobolev,FEM P2,8,0.8382190055303818,False,8,0.8382190055303818,8,0.8382190055303818,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C5,relative_sobolev,FEM P2,16,0.5857511107694874,True,8,0.8382190055303818,24,0.474970890002883,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C5,relative_sobolev,FEM P2,32,0.4345957690950728,True,24,0.474970890002883,48,0.3834492783589834,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C5,relative_sobolev,FEM P2,64,0.31619385263211247,True,48,0.3834492783589834,80,0.27226284787973515,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C5,relative_sobolev,FEM P2,128,0.16734981376380556,True,120,0.1764846918012461,168,0.13377341153861122,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C5,relative_sobolev,FEM P2,256,0.08754286435962304,True,168,0.13377341153861122,288,0.07775485944239369,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C5,relative_sobolev,FEM P3,16,0.7128709453388761,True,15,0.7368928765184073,48,0.4055060442868986,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C5,relative_sobolev,FEM P3,32,0.49937242270084586,True,15,0.7368928765184073,48,0.4055060442868986,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C5,relative_sobolev,FEM P3,64,0.26143526879796025,True,48,0.4055060442868986,99,0.13436647528062517,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C5,relative_sobolev,FEM P3,128,0.0927609102820592,True,99,0.13436647528062517,168,0.06266551945020944,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C5,relative_sobolev,FEM P3,256,0.03625458745763146,True,168,0.06266551945020944,483,0.015891357747986088,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C5,v_distance,CGA,8,0.7999222219452571,False,8,0.7999222219452571,8,0.7999222219452571,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C5,v_distance,CGA,16,0.386247501670808,False,16,0.386247501670808,16,0.386247501670808,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C5,v_distance,CGA,32,0.17863355643441467,False,32,0.17863355643441467,32,0.17863355643441467,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C5,v_distance,CGA,64,0.02701363895198435,False,64,0.02701363895198435,64,0.02701363895198435,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C5,v_distance,CGA,128,0.0074522450711174875,False,128,0.0074522450711174875,128,0.0074522450711174875,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C5,v_distance,CGA,256,0.0022883373078592985,False,256,0.0022883373078592985,256,0.0022883373078592985,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C5,v_distance,RFM,8,0.9820988585705817,False,8,0.9820988585705817,8,0.9820988585705817,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C5,v_distance,RFM,16,0.8490687833112117,False,16,0.8490687833112117,16,0.8490687833112117,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C5,v_distance,RFM,32,0.4564537976889833,False,32,0.4564537976889833,32,0.4564537976889833,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C5,v_distance,RFM,64,0.11146573651629649,False,64,0.11146573651629649,64,0.11146573651629649,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C5,v_distance,RFM,128,0.028082864396945042,False,128,0.028082864396945042,128,0.028082864396945042,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C5,v_distance,RFM,256,0.009616116468350172,False,256,0.009616116468350172,256,0.009616116468350172,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C5,v_distance,FEM P1,8,0.8113037619016646,False,8,0.8113037619016646,8,0.8113037619016646,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C5,v_distance,FEM P1,16,0.8191668308577856,True,15,0.8289616953306854,24,0.7602235005557557,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C5,v_distance,FEM P1,32,0.6764847069988621,True,24,0.7602235005557557,35,0.6523343908519765,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C5,v_distance,FEM P1,64,0.4958214993247307,True,48,0.5722445342256398,80,0.4436450265293977,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C5,v_distance,FEM P1,128,0.3527673175756162,True,80,0.4436450265293977,143,0.33420869199406406,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C5,v_distance,FEM P1,256,0.2494382998395666,True,143,0.33420869199406406,288,0.2351066895059624,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C5,v_distance,FEM P2,8,0.9233417028702313,False,8,0.9233417028702313,8,0.9233417028702313,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C5,v_distance,FEM P2,16,0.7040861057865416,True,8,0.9233417028702313,24,0.6008336302371176,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C5,v_distance,FEM P2,32,0.519636251335523,True,24,0.6008336302371176,48,0.42347590320343226,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C5,v_distance,FEM P2,64,0.3074391071857488,True,48,0.42347590320343226,80,0.23982163181005495,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C5,v_distance,FEM P2,128,0.1811250901061315,True,120,0.19243286636076307,168,0.14033326319965234,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C5,v_distance,FEM P2,256,0.09488955838407599,True,168,0.14033326319965234,288,0.08505460768369115,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C5,v_distance,FEM P3,16,0.8348340212210233,True,15,0.8765024132103242,48,0.36435257834605933,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C5,v_distance,FEM P3,32,0.4947844373341173,True,15,0.8765024132103242,48,0.36435257834605933,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C5,v_distance,FEM P3,64,0.24485776008072532,True,48,0.36435257834605933,99,0.13402127214214027,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C5,v_distance,FEM P3,128,0.0942223586505887,True,99,0.13402127214214027,168,0.06489124393883619,linear interpolation of log(value) in log(DOF); no extrapolation
+cga-artifacts-v1,C5,v_distance,FEM P3,256,0.028827962907423878,True,255,0.029010858783709948,483,0.010334921180941484,linear interpolation of log(value) in log(DOF); no extrapolation

@@ -1,0 +1,16 @@
+{
+  "python": "3.12.14",
+  "platform": "macOS-27.0.1-arm64-arm-64bit",
+  "packages": {
+    "numpy": "2.3.5",
+    "scipy": "1.18.1",
+    "matplotlib": "3.11.2",
+    "scikit-fem": "11.0.0",
+    "pytest": "9.1.1",
+    "pypdf": "6.10.0",
+    "pandas": "2.2.3"
+  },
+  "blas_threads": 1,
+  "seed_execution": "disjoint workers; each fit has one BLAS thread",
+  "cross_method_timing_claim": false
+}
