@@ -296,7 +296,7 @@ def config_for(model: str, dim: int, *, profile: str = "report", seed: int = 201
                                 audit_sobol_power=13 if not p_family else 14)
         target = 32 if dim == 1 else 64
     solver = SolverConfig(
-        scale_rtol=1e-6 if dim == 2 and relu_power >= 3 else 1e-12,
+        scale_rtol=1e-6 if dim == 2 and relu_value >= 3 else 1e-12,
         projection_atol=1e-11 if model == "linear" else 1e-9,
         projection_rtol=1e-10 if model == "linear" else (1e-6 if p_family else 1e-7),
     )

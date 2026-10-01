@@ -1,0 +1,28 @@
+{
+  "passed": true,
+  "batch": "review_replay_20261001",
+  "model_counts": {
+    "rfm": 320,
+    "cga": 32,
+    "fem": 114
+  },
+  "metric_valid_counts": {
+    "rfm": {
+      "energy_gap": 299,
+      "natural_error": 306,
+      "v_error": 119
+    },
+    "cga": {
+      "energy_gap": 29,
+      "natural_error": 32,
+      "v_error": 13
+    },
+    "fem": {
+      "energy_gap": 98,
+      "natural_error": 113,
+      "v_error": 46
+    }
+  },
+  "protocol_sha256": "fbe4904d8be5f2979aa48d19d959400a573aec5543407e5edafbbf398eb19a0a",
+  "all_model_hashes_verified": true
+}

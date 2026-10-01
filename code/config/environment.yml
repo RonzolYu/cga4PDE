@@ -2,7 +2,7 @@ name: cga-paper
 channels:
   - conda-forge
 dependencies:
-  - python=3.13
+  - python=3.12
   - numpy>=2.0
   - scipy>=1.13
   - matplotlib>=3.8
@@ -11,3 +11,4 @@ dependencies:
   - pip
   - pip:
       - scikit-fem==11.0.0
+      - pypdf>=5

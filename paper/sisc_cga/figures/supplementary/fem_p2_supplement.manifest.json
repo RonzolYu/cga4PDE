@@ -1,0 +1,11 @@
+{
+  "schema_version": "cga-artifacts-v1",
+  "artifact": "tex/figures/supplementary/fem_p2_supplement.pdf",
+  "kind": "figure",
+  "input_files_sha256": "data/derived/baselines/baseline_actual_points.csv#9be5702523ce50851eebeb9bc261cb3e710fc852c70b7bfffab03f6a190529f3",
+  "filters": "all cases;actual FEM P2 points",
+  "semantic": "P2 is reported as a supplementary polynomial-degree reference",
+  "command": "python scripts/generate_artifacts.py",
+  "output_sha256": "38f5f807806b34e87bfc3e9fb6b7ba24418193d39e693003943e93870765160a",
+  "validation": "source-to-plot checks passed"
+}

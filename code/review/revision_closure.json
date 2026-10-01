@@ -1,0 +1,66 @@
+{
+  "status": "PASS",
+  "date": "2026-10-01",
+  "base_commit": "679f95ca0ea0c70e473c42222c895ba58e229a52",
+  "branch": "fix/review-consistency-20261001",
+  "scope": "Implementation and manuscript consistency; submission is tracked by the GitHub pull request.",
+  "issues": [
+    {
+      "id": "A01",
+      "fix": "Correct default 2D ReLU comparison to use the resolved value.",
+      "evidence": "scripts/cga_refactor/tests/test_variational_consistency.py"
+    },
+    {
+      "id": "A02",
+      "fix": "Remove obsolete p=1.5 test; test current rejection behavior and full collection.",
+      "evidence": "reports/unit_tests.json"
+    },
+    {
+      "id": "A03",
+      "fix": "Keep atom axis last before flattening batch gradients; save QR basis and test legacy reconstruction/restart.",
+      "evidence": "scripts/cga_refactor/tests/test_variational_consistency.py"
+    },
+    {
+      "id": "A04",
+      "fix": "Synchronize paper formulas, labels, metric registry and generated plots with componentwise gradient seminorm/full reaction norm.",
+      "evidence": "../paper/sisc_cga/sections/08_numerical_methodology.tex"
+    },
+    {
+      "id": "A05",
+      "fix": "Signed energy and shared metric-specific quadrature filtering; complete 466-model archive with failed states and audit reasons.",
+      "evidence": "data/raw/review_replay_20261001/archive_validation.json"
+    },
+    {
+      "id": "B01",
+      "fix": "Separate calibration bounds from numerical continuation coverage and remove unsupported ranking claims.",
+      "evidence": "../paper/sisc_cga/sections/10_discussion.tex"
+    },
+    {
+      "id": "B02",
+      "fix": "Replace stale full-theory duplicate by link to canonical corrected supplement.",
+      "evidence": "chapter5_theory.tex"
+    },
+    {
+      "id": "B03",
+      "fix": "Declare pypdf and verified Python version; distinguish artifact rebuilding, saved-state reevaluation and fresh fits in S4.",
+      "evidence": "../paper/sisc_cga/supplement/S4_reproduction.md"
+    }
+  ],
+  "additional_repairs": [
+    "FEM P3 probe cache keys on reference coordinates, not batch size; all 66 1D FEM states freshly reevaluated.",
+    "Equivalent cached quadrature Hessian actions avoid repeated matrix-free contractions; recorded backend and implementation snapshots retained.",
+    "Reproduction exports and verifies every product named in the artifact manifest."
+  ],
+  "verification": {
+    "unit_tests": "reports/unit_tests.json",
+    "archive": "data/raw/review_replay_20261001/archive_validation.json",
+    "fresh_reevaluation": "review/review_replay_reevaluation.json",
+    "vector_figures": "review/baseline_evidence_verification.json",
+    "reproduction": "reports/reproduction_acceptance.json",
+    "paper": "review/structure_check_sisc.json"
+  },
+  "limits": [
+    "CGA comparisons refit fixed archived prefixes, not entire new greedy trajectories.",
+    "Quadrature agreement and finite-range numerical coverage are not rigorous enclosures or unconditional rate proofs."
+  ]
+}

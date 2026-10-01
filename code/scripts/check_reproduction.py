@@ -58,8 +58,18 @@ def main():
         require_files = ['tex/generated/ch8_p4_tables.tex', 'tex/generated/continuation_summary.tex',
                          'tex/figures/cga/cga_p4_representative.pdf']
         assert all((artifacts / p).is_file() for p in require_files)
+        import csv
+        with (artifacts/'manifest/figure_table_manifest.csv').open(newline='') as f:
+            manifested = list(csv.DictReader(f))
+        assert all((artifacts/r['artifact']).is_file() and
+                   digest(artifacts/r['artifact'])==r['output_sha256'] for r in manifested)
+        checks.append(dict(name='all_manifested_outputs_exported', passed=True, count=len(manifested)))
         diagnostics, d = run('diagnostics_recomputed', 'diagnostics', True)
-        assert d['rfm']['successes'] == 304 and d['rfm']['failures'] == 9
+        declared=json.loads((package/'data/derived/experiments/experiment_validation.json').read_text())['rfm']
+        assert d['rfm']['rows']==declared['rows']
+        assert d['rfm']['failures']==declared['failures']
+        assert d['rfm']['successes']==declared['rows']-declared['failures']
+        assert d['rfm']['archived_models']==466
         after = {str(p.relative_to(package)): digest(p) for p in package.rglob('*') if p.is_file()}
         checks.append(dict(name='output_root_honored_source_unchanged', passed=before == after))
         assert before == after
@@ -77,6 +87,10 @@ def main():
                 p.write_bytes(saved)
 
         changed_file('data/derived/experiments/cga_metrics_long.csv', None, 'missing_input_fails', 'artifacts')
+        import csv
+        with (package/'data/derived/experiments/rfm_multiseed_raw.csv').open(newline='') as f:
+            model_path=next(csv.DictReader(f))['model_path']
+        changed_file(model_path,None,'missing_comparison_model_fails','artifacts')
         relative = 'data/derived/window_diagnostics/window_certificate_validation.json'
         validation = json.loads((package / relative).read_text())
         validation['passed'] = False

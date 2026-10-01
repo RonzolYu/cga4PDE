@@ -1,0 +1,28 @@
+{
+  "schema_version": "cga-review-replay-20261001-v1",
+  "description": "New, fully archived coefficient replay; historical metrics are preserved separately.",
+  "seeds": [201, 202, 203, 204, 205, 206, 207, 208, 209, 210],
+  "widths": {
+    "C1": [8, 16, 32, 64, 128, 256],
+    "C2": [8, 16, 32, 64, 128, 256],
+    "C3": [8, 16, 32, 64, 128, 256, 512],
+    "C4": [8, 16, 32, 64, 128, 256],
+    "C5": [8, 16, 32, 64, 128, 256, 512]
+  },
+  "rfm": {"crossing_fraction": 0.9, "sobol_fraction": 0.75, "anchor_padding": 0.05},
+  "quadrature": {
+    "train_1d_order": 8,
+    "train_2d_cells": 64,
+    "train_2d_order": 3,
+    "evaluation_1d": [[2048, 8], [3072, 8]],
+    "evaluation_2d": [[64, 3], [80, 3], [128, 4], [192, 4]]
+  },
+  "solver": {"lbfgs_maxiter": 400, "lbfgs_gtol": 1e-9, "lbfgs_ftol": 1e-14, "newtoncg_maxiter": 100, "rank_rcond": 1e-12},
+  "fem": {"assembly_order": 12, "assembly_order_1d_multifrequency": 24, "newton_rtol": 1e-9, "newton_atol": 1e-11, "newton_maxiter": 60},
+  "validity": {
+    "audit_relative_tolerance": 0.01,
+    "energy_sign": "retain signed quadrature gap; exclude unresolved negative energy from energy summaries",
+    "metric_rule": "successful coefficient solve, finite nonnegative metric, and successive-rule relative difference <= 0.01",
+    "same_policy_for_all_methods": true
+  }
+}

@@ -1,17 +1,18 @@
 \begin{table}[!htbp]
 \centering\scriptsize
-\caption{Relative Sobolev error at the largest common coefficient count reported for each problem. RFM statistics use successful realizations from ten prescribed runs and are reported as median [Q1,Q3]. The first four problems have ten successful runs; the two-dimensional pure \(p=4\) row is conditional on four successful runs and is not included in an aggregate ranking. Ratios larger than one mean that the corresponding comparison error is larger than the CGA error.}
+\caption{\revtext{Relative $H^1$ error for C1--C3 and relative gradient $L^4$ seminorm for C4--C5 at the prescribed common coefficient counts. RFM statistics are median [Q1,Q3] over metric-valid realizations from ten prescribed seeds. Valid means a successful solve and an at-most-one-percent successive-quadrature difference for that metric; incomplete groups are conditional comparisons. Ratios larger than one favor CGA.}}
 \label{tab:baseline-terminal}
+\begin{revision}
 \resizebox{\linewidth}{!}{%
 \begin{tabular}{@{}crrrrrr@{}}
 \toprule
-Problem & DOF & CGA & RFM median [Q1,Q3] & Success & RFM/CGA & FEM P3/CGA \\ \midrule
+Problem & DOF & CGA & RFM median [Q1,Q3] & Valid & RFM/CGA & FEM P3/CGA \\ \midrule
 Linear, d=1 & 256 & $1.247\!\times\!10^{-4}$ & $1.853\!\times\!10^{-4}$ [$1.779\!\times\!10^{-4}$, $1.913\!\times\!10^{-4}$] & 10/10 & 1.49 & 4.24 \\
 Cubic, d=1 & 256 & $1.215\!\times\!10^{-4}$ & $1.853\!\times\!10^{-4}$ [$1.779\!\times\!10^{-4}$, $1.913\!\times\!10^{-4}$] & 10/10 & 1.52 & 4.35 \\
-Sinh, d=2 & 256 & $4.074\!\times\!10^{-3}$ & $7.195\!\times\!10^{-3}$ [$6.472\!\times\!10^{-3}$, $8.663\!\times\!10^{-3}$] & 10/10 & 1.77 & 5.64 \\
-Pure p=4, d=1 & 128 & $1.579\!\times\!10^{-5}$ & $9.103\!\times\!10^{-5}$ [$6.108\!\times\!10^{-5}$, $2.077\!\times\!10^{-4}$] & 10/10 & 5.76 & 1.88 \\
-Pure p=4, d=2 & 256 & $2.494\!\times\!10^{-3}$ & $1.248\!\times\!10^{-2}$ [$1.087\!\times\!10^{-2}$, $1.465\!\times\!10^{-2}$] & 4/10 & 5.01 & 16.12 \\
+Sinh, d=2 & 256 & $4.074\!\times\!10^{-3}$ & $7.196\!\times\!10^{-3}$ [$6.472\!\times\!10^{-3}$, $8.663\!\times\!10^{-3}$] & 10/10 & 1.77 & 5.63 \\
+Pure p=4, d=1 & 128 & $3.395\!\times\!10^{-5}$ & $7.818\!\times\!10^{-5}$ [$6.046\!\times\!10^{-5}$, $1.400\!\times\!10^{-4}$] & 10/10 & 2.30 & 0.88 \\
+Pure p=4, d=2 & 256 & $2.493\!\times\!10^{-3}$ & $1.147\!\times\!10^{-2}$ [$9.730\!\times\!10^{-3}$, $1.360\!\times\!10^{-2}$] & 6/10 & 4.60 & 14.54 \\
 \bottomrule
-\end{tabular}%
-}
+\end{tabular}}
+\end{revision}
 \end{table}

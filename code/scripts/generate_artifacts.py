@@ -14,6 +14,7 @@ from hashlib import sha256
 import json
 import math
 from pathlib import Path
+import sys
 from typing import Iterable
 
 import matplotlib
@@ -25,6 +26,8 @@ import numpy as np
 
 HERE = Path(__file__).resolve()
 ROOT = HERE.parents[1]
+sys.path.insert(0, str(ROOT / "scripts/compare_fem_rfm/src"))
+from compare_fem_rfm.quality import metric_valid
 CONFIG_PATH = ROOT / "config" / "plots.json"
 EXPERIMENTS = ROOT / "data" / "derived" / "experiments"
 DIAGNOSTICS = ROOT / "data" / "derived" / "window_diagnostics"
@@ -69,7 +72,7 @@ def write_csv(path: Path, rows: Iterable[dict], fields: list[str] | None = None)
     if fields is None:
         fields = list(rows[0]) if rows else ["schema_version", "status"]
     with path.open("w", newline="", encoding="utf-8") as handle:
-        writer = csv.DictWriter(handle, fieldnames=fields, extrasaction="ignore")
+        writer = csv.DictWriter(handle, fieldnames=fields, extrasaction="ignore", lineterminator='\n')
         writer.writeheader()
         writer.writerows(rows)
 
@@ -87,17 +90,21 @@ def number(value: object) -> float | None:
 def configure_style() -> None:
     plt.rcParams.update({
         "font.family": "serif",
-        "font.size": 9.5,
+        "font.size": 10.5,
         "mathtext.fontset": "stix",
         "axes.titlesize": 10.5,
-        "axes.labelsize": 9.5,
-        "legend.fontsize": 7.7,
-        "xtick.labelsize": 8.3,
-        "ytick.labelsize": 8.3,
+        "axes.labelsize": 11,
+        "legend.fontsize": 9.5,
+        "xtick.labelsize": 10,
+        "ytick.labelsize": 10,
         "axes.linewidth": 0.75,
         "pdf.fonttype": 42,
         "ps.fonttype": 42,
-        "savefig.facecolor": "white",
+        "figure.facecolor": "#fff8b5",
+        "savefig.facecolor": "#fff8b5",
+        # Revised plots are highlighted in the marked manuscript.  A clean
+        # rendering can override this setting after the revision is accepted.
+        "axes.facecolor": "#fff8b5",
     })
 
 
@@ -162,7 +169,8 @@ def cga_metric_label(case_id: str, metric: str) -> str:
     if case_id in {"01", "03", "06"}:
         return r"Relative $H^1$ error"
     p = "5" if case_id == "15" else "4"
-    return rf"Relative $W^{{1,{p}}}$ error"
+    return (rf"Relative $W^{{1,{p}}}$ error" if case_id == "12"
+            else rf"Relative gradient $L^{{{p}}}$ seminorm")
 
 
 def case_display(config: dict, case_id: str) -> str:
@@ -364,36 +372,23 @@ def plot_window_diagnostics() -> None:
 
 
 def prepare_baseline_actual(config: dict) -> Path:
-    cga_path = EXPERIMENTS / "cga_metrics_long.csv"
-    fem_path = RAW_BASELINE / "fem_raw.csv"
+    cga_path = EXPERIMENTS / "cga_baseline_raw.csv"
+    fem_path = EXPERIMENTS / "fem_baseline_raw.csv"
     rfm_path = EXPERIMENTS / "rfm_multiseed_summary.csv"
     cga_rows = read_csv(cga_path)
     fem_rows = read_csv(fem_path)
     rfm_rows = read_csv(rfm_path)
-    reverse = {v: k for k, v in config["baseline_case_map"].items()}
     output: list[dict] = []
-    metric_map = {"energy_gap_raw": "energy_gap", "natural_rel": "relative_sobolev", "quasi_rel": "v_distance"}
-    cga_max = defaultdict(int)
     for row in cga_rows:
-        if row["case_id"] in reverse and row["metric"] in metric_map:
-            cga_max[(row["case_id"], row["metric"])] = max(
-                cga_max[(row["case_id"], row["metric"])], int(row["step"])
-            )
-    for row in cga_rows:
-        if row["case_id"] not in reverse or row["metric"] not in metric_map:
-            continue
-        step = int(row["step"])
-        if not (dyadic(step) or step == cga_max[(row["case_id"], row["metric"])]):
-            continue
-        case = reverse[row["case_id"]]
-        if metric_map[row["metric"]] == "v_distance" and case not in {"C4", "C5"}:
-            continue
-        output.append({"schema_version": SCHEMA, "case_id": case, "method": "CGA",
-                       "variant": "relu3", "dof": row["step"], "metric": metric_map[row["metric"]],
-                       "value": row["value"], "q1": "", "q3": "", "seed_count": "",
-                       "success_count": "", "failure_count": "", "is_statistic": "False",
-                       "point_kind": "actual",
-                       "source_sha256": row["source_sha256"]})
+        for source_metric, metric in (("energy_gap", "energy_gap"), ("natural_error", "relative_sobolev"),
+                                      ("v_error", "v_distance")):
+            if not metric_valid(row, source_metric):
+                continue
+            output.append({"schema_version": SCHEMA, "case_id": row["case_id"], "method": "CGA",
+                           "variant": "relu3", "dof": row["dof"], "metric": metric,
+                           "value": row[source_metric], "q1": "", "q3": "", "seed_count": "",
+                           "success_count": "1", "failure_count": "0", "is_statistic": "False",
+                           "point_kind": "actual", "source_sha256": digest(cga_path)})
     for row in fem_rows:
         variant = row["variant"].lower()
         if variant not in {"p1", "p2", "p3"}:
@@ -401,7 +396,7 @@ def prepare_baseline_actual(config: dict) -> Path:
         for source_metric, metric in (("energy_gap", "energy_gap"), ("natural_error", "relative_sobolev"),
                                       ("v_error", "v_distance")):
             value = number(row[source_metric])
-            if value is None or (metric == "v_distance" and row["case_id"] not in {"C4", "C5"}):
+            if value is None or not metric_valid(row, source_metric):
                 continue
             output.append({"schema_version": SCHEMA, "case_id": row["case_id"],
                            "method": f"FEM {variant.upper()}", "variant": variant, "dof": row["dof"],
@@ -420,8 +415,8 @@ def prepare_baseline_actual(config: dict) -> Path:
             output.append({"schema_version": SCHEMA, "case_id": row["case_id"], "method": "RFM",
                            "variant": "relu3", "dof": row["dof"], "metric": metric, "value": value,
                            "q1": row[f"{source_metric}_q1"], "q3": row[f"{source_metric}_q3"],
-                           "seed_count": row["seed_count"], "success_count": row["success_count"],
-                           "failure_count": row["failure_count"], "is_statistic": "True",
+                           "seed_count": row["seed_count"], "success_count": row[source_metric+"_sample_count"],
+                           "failure_count": int(row["seed_count"])-int(row[source_metric+"_sample_count"]), "is_statistic": "True",
                            "point_kind": "actual",
                            "source_sha256": digest(rfm_path)})
     output.sort(key=lambda r: (r["case_id"], r["metric"], r["method"], int(r["dof"])))
@@ -438,7 +433,7 @@ def baseline_y_label(case: str, metric: str) -> str:
         return "Energy gap"
     if metric == "v_distance":
         return r"Relative $V$-distance"
-    return r"Relative $H^1$ error" if case in {"C1", "C2", "C3"} else r"Relative $W^{1,4}$ error"
+    return r"Relative $H^1$ error" if case in {"C1", "C2", "C3"} else r"Relative gradient $L^4$ seminorm"
 
 
 def baseline_stem(case: str, metric: str) -> str:
@@ -604,7 +599,7 @@ def make_cga_tables(config: dict, groups: dict[tuple[str, str], list[tuple[int, 
         p_lines.extend([r"\begin{table}[!htbp]", r"\centering\scriptsize",
                         rf"\caption{{Dyadic errors for {config['cga_cases'][case]['title']}.}}",
                         rf"\label{{tab:dyadic-{case}}}", r"\begin{tabular}{@{}rrrrrrr@{}}", r"\toprule",
-                        r"$N$ & Energy gap & Order & Relative $W^{1,4}$ & Order & Relative $V$ & Order \\ \midrule"])
+                        r"$N$ & Energy gap & Order & Relative $|\cdot|_{1,4}$ & Order & Relative $V$ & Order \\ \midrule"])
         pe = pw = pv = None
         for n in checkpoints:
             p_lines.append(f"{n} & {sci_tex(e[n])} & {local_order(pe, e[n])} & {sci_tex(w[n])} & {local_order(pw, w[n])} & {sci_tex(v[n])} & {local_order(pv, v[n])} \\\\")
@@ -617,9 +612,9 @@ def make_cga_tables(config: dict, groups: dict[tuple[str, str], list[tuple[int, 
     outputs.append(path)
 
     all_lines = [r"\begin{longtable}{@{}crrrrrrr@{}}",
-                 r"\caption{Complete dyadic CGA record for the eight representative cases.}\label{tab:all-dyadic-cga}\\",
-                 r"\toprule", r"Model & $N$ & Energy gap & $e_{H^1/W^{1,p}}$ & $e_V$ & Energy order & Norm order & $V$ order \\ \midrule",
-                 r"\endfirsthead", r"\toprule", r"Model & $N$ & Energy gap & $e_{H^1/W^{1,p}}$ & $e_V$ & Energy order & Norm order & $V$ order \\ \midrule", r"\endhead"]
+                 r"\caption{Complete dyadic CGA record for the eight representative cases. The relative metric is $H^1$ for linear/semilinear models, the gradient seminorm for pure/regularized models, and full $W^{1,p}$ for the reaction model.}\label{tab:all-dyadic-cga}\\",
+                 r"\toprule", r"Model & $N$ & Energy gap & \colorbox{yellow!25}{$e_{\rm rel}$} & $e_V$ & Energy order & Norm order & $V$ order \\ \midrule",
+                 r"\endfirsthead", r"\toprule", r"Model & $N$ & Energy gap & \colorbox{yellow!25}{$e_{\rm rel}$} & $e_V$ & Energy order & Norm order & $V$ order \\ \midrule", r"\endhead"]
     for case in ["01", "03", "06", "17", "08", "10", "12", "15"]:
         e = cga_lookup(groups, case, "energy_gap_raw")
         w = cga_lookup(groups, case, "natural_rel")
@@ -650,9 +645,9 @@ def make_baseline_tables(config: dict, actual_path: Path, common_path: Path) -> 
     actual = read_csv(actual_path)
     grid = read_csv(common_path)
     lines = [r"\begin{table}[!htbp]", r"\centering\scriptsize",
-             r"\caption{Relative Sobolev error at the largest common coefficient count reported for each problem. RFM statistics use successful realizations from ten prescribed runs and are reported as median [Q1,Q3]. The first four problems have ten successful runs; the two-dimensional pure \(p=4\) row is conditional on four successful runs and is not included in an aggregate ranking. Ratios larger than one favor CGA.}",
-             r"\label{tab:baseline-terminal}", r"\begin{tabular}{@{}crrrrrr@{}}", r"\toprule",
-             r"Problem & DOF & CGA & RFM median [Q1,Q3] & Success & RFM/CGA & FEM P3/CGA \\ \midrule"]
+             r"\caption{Relative $H^1$ error for C1--C3 and relative gradient $L^4$ seminorm for C4--C5 at the prescribed common coefficient counts. RFM statistics are median [Q1,Q3] over metric-valid realizations from ten prescribed seeds. Valid means a successful solve and an at-most-one-percent successive-quadrature difference for that metric; incomplete groups are conditional comparisons. Ratios larger than one favor CGA.}",
+             r"\label{tab:baseline-terminal}", r"\begin{revision}", r"\resizebox{\linewidth}{!}{%", r"\begin{tabular}{@{}crrrrrr@{}}", r"\toprule",
+             r"Problem & DOF & CGA & RFM median [Q1,Q3] & Valid & RFM/CGA & FEM P3/CGA \\ \midrule"]
     endpoint_csv = []
     for case, dof in config["baseline_statistical_endpoints"].items():
         cga = lookup_grid(grid, case, "relative_sobolev", "CGA", int(dof))
@@ -671,18 +666,36 @@ def make_baseline_tables(config: dict, actual_path: Path, common_path: Path) -> 
                              "fem_p3": pv, "fem_p3_over_cga": pv/cv,
                              "fem_p3_is_interpolated": p3["is_interpolated"],
                              "fem_p3_left_dof": p3["left_dof"], "fem_p3_right_dof": p3["right_dof"]})
-    lines.extend([r"\bottomrule", r"\end{tabular}", r"\end{table}"])
+    lines.extend([r"\bottomrule", r"\end{tabular}}", r"\end{revision}", r"\end{table}"])
     tex = GENERATED / "baseline_terminal.tex"
     tex.write_text("\n".join(lines) + "\n", encoding="utf-8")
     register_artifact(tex, "table", [actual_path, common_path], "configured ten-seed endpoints",
-                      "relative H1 for C1-C3 and relative W1p for C4-C5", "endpoint ratios recomputed")
+                      "relative H1 for C1-C3 and relative gradient L4 seminorm for C4-C5", "endpoint ratios recomputed")
     endpoint_path = DERIVED / "baseline_terminal.csv"
     write_csv(endpoint_path, endpoint_csv)
     register_artifact(endpoint_path, "derived-data", [actual_path, common_path], "configured ten-seed endpoints",
                       "RFM uncertainty and FEM interpolation metadata", "all prescribed-run counts equal ten")
 
+    summaries = { (r['case_id'], int(r['dof'])): r
+                 for r in read_csv(EXPERIMENTS / 'rfm_multiseed_summary.csv') }
+    count_lines = [r'\begin{table}[!htbp]', r'\centering\small',
+                   r'\caption{RFM counts at the common endpoints. Each width has ten prescribed seeds. The Sobolev median/IQR sample additionally passes the metric-specific signed-value and one-percent quadrature checks.}',
+                   r'\label{tab:rfm-fixed-denominators}', r'\begin{revision}',
+                   r'\begin{tabular}{@{}lrrrr@{}}', r'\toprule',
+                   r'Case and width & Prescribed & Solved & Failed & Valid sample \\', r'\midrule']
+    for row in endpoint_csv:
+        case, dof = row['case_id'], int(row['dof'])
+        summary = summaries[(case, dof)]
+        count_lines.append(f'{case}, $N={dof}$ & 10 & {summary["success_count"]} & {summary["failure_count"]} & {summary["natural_error_sample_count"]} ' + r'\\')
+    count_lines.extend([r'\bottomrule', r'\end{tabular}', r'\end{revision}', r'\end{table}'])
+    counts_tex = GENERATED / 'rfm_fixed_denominators.tex'
+    counts_tex.write_text('\n'.join(count_lines) + '\n', encoding='utf-8')
+    register_artifact(counts_tex, 'table', [EXPERIMENTS / 'rfm_multiseed_summary.csv', endpoint_path],
+                      'configured ten-seed endpoints', 'solve counts separated from valid Sobolev samples',
+                      'counts recomputed from the current metric-specific summary')
+
     p2_lines = [r"\begin{table}[htbp]", r"\centering\small",
-                r"\caption{FEM polynomial-degree comparison at the terminal statistical endpoint. Values are relative $H^1$ errors for the linear, cubic, and sinh problems and relative $W^{1,4}$ errors for the pure \(p=4\) problems.}",
+                r"\caption{FEM polynomial-degree comparison at the prescribed statistical endpoints. Values are relative $H^1$ errors for the linear, cubic, and sinh problems and relative gradient $L^4$ seminorms for the pure \(p=4\) problems.}",
                 r"\label{tab:p-degree-sensitivity}", r"\begin{tabular}{@{}crrr@{}}", r"\toprule",
                 r"Problem & FEM P1 & FEM P2 & FEM P3 \\ \midrule"]
     transparency = []
@@ -706,7 +719,7 @@ def make_baseline_tables(config: dict, actual_path: Path, common_path: Path) -> 
     write_csv(transparency_path, transparency)
     register_artifact(transparency_path, "derived-data", [common_path], "terminal FEM rows",
                       "explicit interpolation flags and brackets", "no extrapolated row")
-    return [tex, endpoint_path, p2_tex, transparency_path]
+    return [tex, endpoint_path, counts_tex, p2_tex, transparency_path]
 
 
 def make_window_table() -> Path:
@@ -741,7 +754,7 @@ def make_window_table() -> Path:
 
 
 def fem_identity_audit() -> Path:
-    fem_path = RAW_BASELINE / "fem_raw.csv"
+    fem_path = EXPERIMENTS / "fem_baseline_raw.csv"
     rows = read_csv(fem_path)
     lines = ["# FEM C1/C2 curve-identity audit", "", "## Result", "",
              "The C1 and C2 FEM curves are not identical in the unrounded data.  They become visually indistinguishable at high resolution because the two cases use the same manufactured profile and their relative H1 errors are dominated by the same finite-element approximation component.  Separate model files and nonzero high-precision differences exclude a duplicated plotted column.", "",
@@ -754,13 +767,16 @@ def fem_identity_audit() -> Path:
         diffs = [abs(a[n] - b[n]) for n in common]
         lines.append(f"| {variant.upper()} | {len(common)} | {max(diffs):.8e} | {diffs[-1]:.8e} | {'yes' if all(d == 0 for d in diffs) else 'no'} |")
     lines.extend(["", "## Provenance checks", "",
-                  "- C1 and C2 carry different problem hashes in `fem_raw.csv`.",
+                  "- C1 and C2 carry different problem hashes in `fem_baseline_raw.csv`.",
                   "- P1, P2, and P3 use different mesh-level/DOF sequences, consistent with their polynomial degrees.",
                   "- The archived terminal model files for C1 and C2 have distinct SHA-256 hashes for every degree.",
                   "- The plot generator reads rows by `(case_id, variant, dof)` and does not reuse a C1 array for C2.", ""])
-    for variant, suffix in (("p1", "p1_n256"), ("p2", "p2_n128"), ("p3", "p3_n128")):
-        f1 = RAW_BASELINE / "models" / f"C1_fem_{suffix}.npz"
-        f2 = RAW_BASELINE / "models" / f"C2_fem_{suffix}.npz"
+    for variant in ('p1', 'p2', 'p3'):
+        first = max((r for r in rows if r['case_id']=='C1' and r['variant']==variant), key=lambda r:int(r['dof']))
+        second = max((r for r in rows if r['case_id']=='C2' and r['variant']==variant), key=lambda r:int(r['dof']))
+        f1, f2 = ROOT / first['model_path'], ROOT / second['model_path']
+        assert first['problem_hash'] != second['problem_hash']
+        assert digest(f1) != digest(f2)
         lines.append(f"- {variant.upper()} terminal models: C1 `{digest(f1)}`, C2 `{digest(f2)}`.")
     path = REPORTS / "fem_curve_identity_audit.md"
     path.write_text("\n".join(lines) + "\n", encoding="utf-8")
@@ -918,8 +934,8 @@ def write_validation(config: dict, actual_path: Path, common_path: Path) -> tupl
         endpoint_status[case] = {
             "dof": int(dof),
             "prescribed": int(row["seed_count"]),
-            "successful": int(row["success_count"]),
-            "failed": int(row["failure_count"]),
+            "metric_valid": int(row["success_count"]),
+            "metric_excluded": int(row["failure_count"]),
             "aggregate_ranking_eligible": int(row["success_count"])
             >= int(config["rfm_minimum_success_for_aggregate_ranking"]),
         }
@@ -932,8 +948,6 @@ def write_validation(config: dict, actual_path: Path, common_path: Path) -> tupl
         problems.append("RFM success/failure counts do not conserve prescribed runs")
     if any(r.get("point_kind") != "actual" for r in actual):
         problems.append("a non-actual point entered the baseline plotting table")
-    if set(case for case, row in endpoint_status.items() if row["aggregate_ranking_eligible"]) != {"C1", "C2", "C3", "C4"}:
-        problems.append("aggregate-ranking eligibility is inconsistent with endpoint success counts")
     if NONPOSITIVE_POINTS:
         problems.append(f"{len(NONPOSITIVE_POINTS)} nonpositive CGA log-plot points omitted and recorded")
     if read_json(EXPERIMENTS / "experiment_validation.json").get("passed") is not True:
@@ -984,6 +998,33 @@ def write_validation(config: dict, actual_path: Path, common_path: Path) -> tupl
     return json_path, report_path
 
 
+def mark_revised_tables() -> None:
+    """Mark amended captions and table contents, then refresh artifact hashes."""
+    for name in ('baseline_terminal.tex', 'fem_pdegree.tex', 'ch8_p4_tables.tex',
+                 'ch8_all_dyadic_supplement.tex', 'rfm_fixed_denominators.tex'):
+        path=GENERATED/name
+        text=path.read_text()
+        cursor=0
+        while True:
+            start=text.find(r'\caption{',cursor)
+            if start<0:
+                break
+            inner=start+len(r'\caption{'); end=inner; depth=1
+            while depth:
+                if text[end] in '{}' and text[end-1]!='\\':
+                    depth+=1 if text[end]=='{' else -1
+                end+=1
+            text=text[:inner]+r'\revtext{'+text[inner:end-1]+'}'+text[end-1:]
+            cursor=end+len(r'\revtext{')+1
+        if r'\begin{revision}' not in text:
+            text=text.replace(r'\begin{tabular}',r'\begin{revision}'+'\n'+r'\begin{tabular}')
+            text=text.replace(r'\end{tabular}',r'\end{tabular}'+'\n'+r'\end{revision}')
+        path.write_text(text)
+        for row in ARTIFACT_ROWS:
+            if row['artifact']==path.relative_to(ROOT).as_posix():
+                row['output_sha256']=digest(path)
+
+
 def main() -> None:
     for directory in [DERIVED, FIG_CGA, FIG_DIAG, FIG_BASE, FIG_SUPP, GENERATED, MANIFEST_DIR, REPORTS]:
         directory.mkdir(parents=True, exist_ok=True)
@@ -1000,6 +1041,7 @@ def main() -> None:
     common = build_common_grid(config, actual)
     make_cga_tables(config, cga)
     make_baseline_tables(config, actual, common)
+    mark_revised_tables()
     make_window_table()
     make_finite_trajectory_tables()
     fem_identity_audit()

@@ -1,0 +1,11 @@
+{
+  "schema_version": "cga-artifacts-v1",
+  "artifact": "tex/figures/supplementary/cga_p4_variants_supplement.pdf",
+  "kind": "figure",
+  "input_files_sha256": "data/derived/experiments/cga_metrics_long.csv#c1cd6a722237ca2c9f65c5d18e917cfd492c4862936bbb9e9327dbd90a2ac7c3",
+  "filters": "cases=10,12;metrics=energy_gap_raw,natural_rel,quasi_rel;full accepted trajectories",
+  "semantic": "dyadic accepted states connected; conditional guide exponent fixed and vertical position set from the last three positive dyadic points; guide exponents=10:energy_gap_raw:3.5,10:natural_rel:0.875,10:quasi_rel:1.75,12:energy_gap_raw:3.5,12:natural_rel:0.875,12:quasi_rel:1.75",
+  "command": "python scripts/generate_artifacts.py",
+  "output_sha256": "658371cf5d32c6b50835dba76e1e33f1af50551b2bc437aa38d30cceba892d2f",
+  "validation": "source-to-plot checks passed"
+}

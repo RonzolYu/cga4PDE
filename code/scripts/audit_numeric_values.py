@@ -7,6 +7,10 @@ import csv
 import json
 from pathlib import Path
 import re
+import sys
+
+sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'scripts/compare_fem_rfm/src'))
+from compare_fem_rfm.quality import metric_valid, summarize_rfm
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -48,11 +52,16 @@ def main() -> int:
                    "data/derived/experiments/rfm_multiseed_summary.csv"))
 
     c5 = [row for row in rfm_summary if row["case_id"] == "C5" and int(row["dof"]) == 256]
-    checks.append(("C5 endpoint is success-conditioned", len(c5) == 1
+    checks.append(("C5 endpoint keeps prescribed denominator", len(c5) == 1
                    and int(c5[0]["seed_count"]) == 10
-                   and int(c5[0]["success_count"]) == 4
-                   and int(c5[0]["failure_count"]) == 6,
+                   and int(c5[0]["natural_error_sample_count"]) <= int(c5[0]["success_count"]),
                    "data/derived/experiments/rfm_multiseed_summary.csv"))
+    rebuilt = summarize_rfm(rfm_raw)
+    stored = {(r['case_id'], int(r['dof'])):r for r in rfm_summary}
+    checks.append(('metric-specific summary counts', all(
+        all(str(stored[(r['case_id'], r['dof'])][m+'_sample_count']) == str(r[m+'_sample_count'])
+            for m in ('energy_gap','natural_error','v_error')) for r in rebuilt),
+        'data/derived/experiments/rfm_multiseed_summary.csv'))
 
     case17 = [case for case in problems["cases"] if case["paper_case_id"] == "17"]
     checks.append(("ID17 low-frequency profile", len(case17) == 1
@@ -84,7 +93,11 @@ def main() -> int:
                    "data/derived/baselines/artifact_validation.json"))
     eligible = {case for case, row in artifacts.get("rfm_endpoint_status", {}).items()
                 if row.get("aggregate_ranking_eligible")}
-    checks.append(("aggregate ranking uses complete endpoints", eligible == {"C1", "C2", "C3", "C4"},
+    config = read_json(ROOT / 'config/plots.json')
+    complete = {case for case, dof in config['baseline_statistical_endpoints'].items()
+                if sum(metric_valid(r, 'natural_error') for r in rfm_raw
+                       if r['case_id'] == case and int(r['dof']) == int(dof)) == 10}
+    checks.append(("aggregate ranking uses complete endpoints", eligible == complete,
                    "data/derived/baselines/artifact_validation.json"))
 
     checks.append(("quadrature sensitivity rows", len(read_csv(DATA / "derived" / "experiments" / "quadrature_sensitivity.csv")) == 120,

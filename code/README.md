@@ -26,3 +26,23 @@ historical raw JSON may retain the numeric placeholder used by the solver, while
 the public experiment index leaves the mathematical parameter blank.  Use
 `cga_refactor.config.frozen_case_config` when a paper case (including its
 explicit (p) and ReLU settings) must be materialized directly.
+
+## Revised comparison batch (2026-10-01)
+
+The primary comparisons use `data/raw/review_replay_20261001/`, with a complete
+coefficient archive and a frozen `config/review_replay.json` protocol. Historical
+comparison inputs are retained separately in `data/raw/historical_baseline_202609/`.
+The new batch refits fixed CGA greedy prefixes and reruns FEM/RFM coefficient
+fits; it does not replace the original CGA selection trajectories.
+
+Every primary error statistic requires a successful solve, a finite nonnegative
+metric, and a successive-quadrature relative difference at most 0.01. The same
+rule applies to CGA, FEM, and RFM. Energy gaps retain their sign; metric-specific
+exclusions do not change the ten-seed prescribed RFM denominator. For pure and
+regularized p-models, `natural_rel` is the relative componentwise gradient Lp
+seminorm, not a relative full W1p norm. See `config/metrics.json` and Supplement S3.
+
+Reevaluation and fresh-fit commands, including their scope, are documented in
+`../paper/sisc_cga/supplement/S4_reproduction.md`. The main PDF marks amended
+text, formulas, tables, and regenerated plots in yellow. `chapter5_theory.tex`
+points to the canonical full proof in the paper supplement.

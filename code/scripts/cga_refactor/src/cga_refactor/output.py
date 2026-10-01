@@ -116,6 +116,8 @@ def save_checkpoint(run_dir: Path, state: object) -> None:
                         accepted=state.accepted_atom_count, rank=state.effective_rank,
                         accepted_indices=np.asarray(state.accepted_indices, dtype=np.int64),
                         coefficients=state.coefficients,
+                        q_basis=state.q_basis,
+                        r_matrix=state.r_matrix,
                         candidate_consumed=state.candidate_pool.consumed,
                         history_rows=state.history_rows,
                         initial_best_score=state.initial_best_score,

@@ -14,10 +14,10 @@ def read_csv(path):
     with path.open(newline="", encoding="utf-8") as f:
         return list(csv.DictReader(f))
 
-def write_csv(path, rows):
+def write_csv(path, rows, fieldnames=None):
     path.parent.mkdir(parents=True, exist_ok=True)
     with path.open("w", newline="", encoding="utf-8") as f:
-        writer = csv.DictWriter(f, fieldnames=list(rows[0]))
+        writer = csv.DictWriter(f, fieldnames=fieldnames or list(rows[0]), lineterminator='\n')
         writer.writeheader()
         writer.writerows(rows)
 
@@ -26,7 +26,8 @@ def require(condition, message):
         raise ValueError(message)
 
 def aggregate_rfm(stage, options):
-    import numpy as np
+    sys.path.insert(0, str(stage / 'scripts/compare_fem_rfm/src'))
+    from compare_fem_rfm.quality import summarize_rfm
     base = stage / "data/derived/experiments"
     raw = read_csv(base / "rfm_multiseed_raw.csv")
     groups, identifiers = defaultdict(list), set()
@@ -42,28 +43,31 @@ def aggregate_rfm(stage, options):
     require(sorted({int(r["seed"]) for r in raw}) == expected["seeds"], "RFM seed set differs")
     oldpath = base / "rfm_multiseed_summary.csv"
     old = {(r["case_id"], int(r["dof"])): r for r in read_csv(oldpath)} if oldpath.exists() else {}
-    summaries = []
-    for (case, dof), rows in sorted(groups.items()):
-        ok = [r for r in rows if r["solver_success"] == "True"]
-        row = dict(schema_version="cga-experiments-v1", case_id=case, dof=dof, seed_count=len(rows),
-                   success_count=len(ok), failure_count=len(rows)-len(ok),
-                   failure_reasons="; ".join(sorted({r["solver_message"] for r in rows if r["solver_success"] == "False"})) or "none",
-                   config_hashes=";".join(sorted({r["config_hash"] for r in rows})))
-        for metric in ("energy_gap", "natural_error", "v_error", "l2_error", "wall_time_sec"):
-            values = [float(r[metric]) for r in ok if r[metric] not in ("", "NA", "nan", "NaN")]
-            require(all(math.isfinite(v) for v in values), f"nonfinite {case}/{dof}/{metric}")
-            q = np.quantile(values, [.5, .25, .75], method="linear") if values else ["NA"]*3
-            for suffix, value in zip(("median", "q1", "q3"), q):
-                field = metric + "_" + suffix
-                row[field] = value
-                if (case, dof) in old and value != "NA":
-                    require(math.isclose(float(old[(case, dof)][field]), value, rel_tol=options["summary_rtol"], abs_tol=options["summary_atol"]),
-                            f"stored summary mismatch: {case}/{dof}/{field}")
-        summaries.append(row)
+    protocol = json.loads((stage / 'config/review_replay.json').read_text())
+    require(set(groups) == {(case, width) for case, widths in protocol['widths'].items()
+                            for width in widths}, 'RFM width grid differs from protocol')
+    for key, rows in groups.items():
+        require(sorted(int(r['seed']) for r in rows) == protocol['seeds'], f'incomplete seed group: {key}')
+    summaries = summarize_rfm(raw, protocol['validity']['audit_relative_tolerance'])
+    for row in summaries:
+        key = row['case_id'], int(row['dof'])
+        require(key in old, f'missing stored summary: {key}')
+        for field, value in row.items():
+            if field.endswith(('_median', '_q1', '_q3')) and value != 'NA':
+                require(math.isclose(float(old[key][field]), value, rel_tol=options['summary_rtol'],
+                                     abs_tol=options['summary_atol']), f'stored summary mismatch: {key}/{field}')
+            elif field.endswith('_count') or value == 'NA':
+                require(str(old[key][field]) == str(value), f'stored count/value mismatch: {key}/{field}')
+    archived = raw + read_csv(base / 'cga_baseline_raw.csv') + read_csv(base / 'fem_baseline_raw.csv')
+    for row in archived:
+        model = (stage / row['model_path']).resolve()
+        require(model.is_relative_to(stage), 'model path escapes package')
+        require(model.is_file() and sha(model) == row['model_sha256'], f'missing or changed state: {row["model_path"]}')
     write_csv(oldpath, summaries)
-    write_csv(stage / "result/review_checks/rfm_failures.csv", failures)
+    write_csv(stage / "result/review_checks/rfm_failures.csv", failures, list(raw[0]))
     return dict(rows=len(raw), successes=len(raw)-len(failures), failures=len(failures), groups=len(summaries),
-                quantile_method="numpy.quantile(method=linear); successful rows only; incomplete groups retained")
+                archived_models=len(archived),
+                quantile_method="linear interpolation; per-metric solver and signed-value/quadrature checks; ten prescribed seeds retained")
 
 def continuation_table(stage):
     rows = [r for r in read_csv(stage / "result/continuation_20260914/continuation_summary.csv") if r["order"] == "20"]
@@ -165,6 +169,14 @@ def execute(args):
                 products += list((stage / "data/derived/baselines").glob("*"))
                 products += list((stage / "result/fractional_innovation").glob("*"))
                 products += [stage / "manifest/figure_table_manifest.csv"]
+                # Publish every listed product, including audit reports, so the
+                # exported manifest never refers to discarded temporary files.
+                entries = read_csv(stage / 'manifest/figure_table_manifest.csv')
+                for entry in entries:
+                    artifact = stage / entry['artifact']
+                    require(artifact.is_file() and sha(artifact)==entry['output_sha256'],
+                            f'missing or changed manifested output: {entry["artifact"]}')
+                    products.append(artifact)
             else:
                 run("section85_analysis.py")
                 run("continuation_experiments.py", "analyze")

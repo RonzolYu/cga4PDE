@@ -1,13 +1,18 @@
 \begin{table}[!htbp]
 \centering\small
-\caption{RFM sample counts at the two widths with unsuccessful coefficient solves. Each width has ten prescribed seeds. Median and interquartile range (IQR) use the successful solves; unsuccessful attempts remain in the denominator.}
+\caption{\revtext{RFM counts at the common endpoints. Each width has ten prescribed seeds. The Sobolev median/IQR sample additionally passes the metric-specific signed-value and one-percent quadrature checks.}}
 \label{tab:rfm-fixed-denominators}
+\begin{revision}
 \begin{tabular}{@{}lrrrr@{}}
 \toprule
-Case and width & Prescribed & Successful & Unsuccessful & IQR sample \\
+Case and width & Prescribed & Solved & Failed & Valid sample \\
 \midrule
-C5, $N=128$ & 10 & 7 & 3 & 7 \\
-C5, $N=256$ & 10 & 4 & 6 & 4 \\
+C1, $N=256$ & 10 & 10 & 0 & 10 \\
+C2, $N=256$ & 10 & 10 & 0 & 10 \\
+C3, $N=256$ & 10 & 10 & 0 & 10 \\
+C4, $N=128$ & 10 & 10 & 0 & 10 \\
+C5, $N=256$ & 10 & 7 & 3 & 6 \\
 \bottomrule
 \end{tabular}
+\end{revision}
 \end{table}

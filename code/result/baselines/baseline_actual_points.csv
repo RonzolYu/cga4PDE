@@ -1,462 +1,409 @@
 schema_version,case_id,method,variant,dof,metric,value,q1,q3,seed_count,success_count,failure_count,is_statistic,point_kind,source_sha256
-cga-artifacts-v1,C1,CGA,relu3,1,energy_gap,19.587026184567492,,,,,,False,actual,93c7446e1632767f5ef3198b19fe41dbf19be6fca6677133894596bbf41918fa
-cga-artifacts-v1,C1,CGA,relu3,2,energy_gap,14.533811707117763,,,,,,False,actual,93c7446e1632767f5ef3198b19fe41dbf19be6fca6677133894596bbf41918fa
-cga-artifacts-v1,C1,CGA,relu3,4,energy_gap,14.156605638759988,,,,,,False,actual,93c7446e1632767f5ef3198b19fe41dbf19be6fca6677133894596bbf41918fa
-cga-artifacts-v1,C1,CGA,relu3,8,energy_gap,12.402160108433417,,,,,,False,actual,93c7446e1632767f5ef3198b19fe41dbf19be6fca6677133894596bbf41918fa
-cga-artifacts-v1,C1,CGA,relu3,16,energy_gap,6.968037186922658,,,,,,False,actual,93c7446e1632767f5ef3198b19fe41dbf19be6fca6677133894596bbf41918fa
-cga-artifacts-v1,C1,CGA,relu3,32,energy_gap,0.4276896451080603,,,,,,False,actual,93c7446e1632767f5ef3198b19fe41dbf19be6fca6677133894596bbf41918fa
-cga-artifacts-v1,C1,CGA,relu3,64,energy_gap,0.0039830723900564635,,,,,,False,actual,93c7446e1632767f5ef3198b19fe41dbf19be6fca6677133894596bbf41918fa
-cga-artifacts-v1,C1,CGA,relu3,128,energy_gap,2.5770213468945258e-05,,,,,,False,actual,93c7446e1632767f5ef3198b19fe41dbf19be6fca6677133894596bbf41918fa
-cga-artifacts-v1,C1,CGA,relu3,256,energy_gap,3.8007409486340293e-07,,,,,,False,actual,93c7446e1632767f5ef3198b19fe41dbf19be6fca6677133894596bbf41918fa
-cga-artifacts-v1,C1,FEM P1,p1,5,energy_gap,14.518287010222371,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C1,FEM P1,p1,9,energy_gap,7.722667970762075,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C1,FEM P1,p1,17,energy_gap,6.856904811340939,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C1,FEM P1,p1,33,energy_gap,2.22548972146528,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C1,FEM P1,p1,65,energy_gap,0.5954511945744017,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C1,FEM P1,p1,129,energy_gap,0.1514325126592908,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C1,FEM P1,p1,257,energy_gap,0.03802079264652747,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C1,FEM P2,p2,5,energy_gap,13.559240993692388,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C1,FEM P2,p2,9,energy_gap,9.822228581379566,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C1,FEM P2,p2,17,energy_gap,7.538322612334298,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C1,FEM P2,p2,33,energy_gap,1.2608581401815186,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C1,FEM P2,p2,65,energy_gap,0.10232792893038578,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C1,FEM P2,p2,129,energy_gap,0.0068271046201218155,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C1,FEM P2,p2,257,energy_gap,0.00043371582643914053,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C1,FEM P3,p3,4,energy_gap,14.07135594464802,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C1,FEM P3,p3,7,energy_gap,13.003662568459388,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C1,FEM P3,p3,13,energy_gap,9.478116442303886,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C1,FEM P3,p3,25,energy_gap,2.915268792832407,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C1,FEM P3,p3,49,energy_gap,0.11547520636001352,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C1,FEM P3,p3,97,energy_gap,0.0022564091267440745,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C1,FEM P3,p3,193,energy_gap,3.727185251278797e-05,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C1,FEM P3,p3,385,energy_gap,5.9051119905007e-07,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C1,RFM,relu3,8,energy_gap,11.844216711115674,11.675709617531101,12.116300859448774,10,10,0,True,actual,3a03680122c933b6407ae7b2a0acd99d79ca1ff4d81ae01280b7265ce7c1e493
-cga-artifacts-v1,C1,RFM,relu3,16,energy_gap,7.0218904280975405,6.705173918255045,7.4751636135363935,10,10,0,True,actual,3a03680122c933b6407ae7b2a0acd99d79ca1ff4d81ae01280b7265ce7c1e493
-cga-artifacts-v1,C1,RFM,relu3,32,energy_gap,1.7210094748597715,1.4649013785580234,2.4656657227976364,10,10,0,True,actual,3a03680122c933b6407ae7b2a0acd99d79ca1ff4d81ae01280b7265ce7c1e493
-cga-artifacts-v1,C1,RFM,relu3,64,energy_gap,0.07551045654362198,0.0401854855466226,0.11710602496200018,10,10,0,True,actual,3a03680122c933b6407ae7b2a0acd99d79ca1ff4d81ae01280b7265ce7c1e493
-cga-artifacts-v1,C1,RFM,relu3,128,energy_gap,0.0008134394602077322,0.0004889401654954995,0.0014136987435806603,10,10,0,True,actual,3a03680122c933b6407ae7b2a0acd99d79ca1ff4d81ae01280b7265ce7c1e493
-cga-artifacts-v1,C1,RFM,relu3,256,energy_gap,8.377177156404514e-07,7.743918999381094e-07,8.961159476683633e-07,10,10,0,True,actual,3a03680122c933b6407ae7b2a0acd99d79ca1ff4d81ae01280b7265ce7c1e493
-cga-artifacts-v1,C1,CGA,relu3,1,relative_sobolev,0.8951724846375603,,,,,,False,actual,93c7446e1632767f5ef3198b19fe41dbf19be6fca6677133894596bbf41918fa
-cga-artifacts-v1,C1,CGA,relu3,2,relative_sobolev,0.7711027240440437,,,,,,False,actual,93c7446e1632767f5ef3198b19fe41dbf19be6fca6677133894596bbf41918fa
-cga-artifacts-v1,C1,CGA,relu3,4,relative_sobolev,0.7610304601169554,,,,,,False,actual,93c7446e1632767f5ef3198b19fe41dbf19be6fca6677133894596bbf41918fa
-cga-artifacts-v1,C1,CGA,relu3,8,relative_sobolev,0.7123134412286959,,,,,,False,actual,93c7446e1632767f5ef3198b19fe41dbf19be6fca6677133894596bbf41918fa
-cga-artifacts-v1,C1,CGA,relu3,16,relative_sobolev,0.5339218603360937,,,,,,False,actual,93c7446e1632767f5ef3198b19fe41dbf19be6fca6677133894596bbf41918fa
-cga-artifacts-v1,C1,CGA,relu3,32,relative_sobolev,0.13227776259042842,,,,,,False,actual,93c7446e1632767f5ef3198b19fe41dbf19be6fca6677133894596bbf41918fa
-cga-artifacts-v1,C1,CGA,relu3,64,relative_sobolev,0.012765316069298326,,,,,,False,actual,93c7446e1632767f5ef3198b19fe41dbf19be6fca6677133894596bbf41918fa
-cga-artifacts-v1,C1,CGA,relu3,128,relative_sobolev,0.0010267896450288035,,,,,,False,actual,93c7446e1632767f5ef3198b19fe41dbf19be6fca6677133894596bbf41918fa
-cga-artifacts-v1,C1,CGA,relu3,256,relative_sobolev,0.00012469717669209528,,,,,,False,actual,93c7446e1632767f5ef3198b19fe41dbf19be6fca6677133894596bbf41918fa
-cga-artifacts-v1,C1,FEM P1,p1,5,relative_sobolev,0.7706907765507895,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C1,FEM P1,p1,9,relative_sobolev,0.5620903821644476,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C1,FEM P1,p1,17,relative_sobolev,0.5296470197713126,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C1,FEM P1,p1,33,relative_sobolev,0.30174165570464984,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C1,FEM P1,p1,65,relative_sobolev,0.15607938965109242,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C1,FEM P1,p1,129,relative_sobolev,0.07871038503668759,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C1,FEM P1,p1,257,relative_sobolev,0.039439650341829904,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C1,FEM P2,p2,5,relative_sobolev,0.7448008480826361,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C1,FEM P2,p2,9,relative_sobolev,0.6339098367434935,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C1,FEM P2,p2,17,relative_sobolev,0.5553411208784524,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C1,FEM P2,p2,33,relative_sobolev,0.22712010796038495,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C1,FEM P2,p2,65,relative_sobolev,0.06470227702755574,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C1,FEM P2,p2,129,relative_sobolev,0.016712474272656524,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C1,FEM P2,p2,257,relative_sobolev,0.004212356387293623,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C1,FEM P3,p3,4,relative_sobolev,0.7587355745190268,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C1,FEM P3,p3,7,relative_sobolev,0.7293824651817085,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C1,FEM P3,p3,13,relative_sobolev,0.6227066341214115,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C1,FEM P3,p3,25,relative_sobolev,0.34535184019443865,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C1,FEM P3,p3,49,relative_sobolev,0.06873324469473137,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C1,FEM P3,p3,97,relative_sobolev,0.009607964649353914,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C1,FEM P3,p3,193,relative_sobolev,0.001234846462908003,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C1,FEM P3,p3,385,relative_sobolev,0.00015543060670698106,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C1,RFM,relu3,8,relative_sobolev,0.6961062173065804,0.6911337475347722,0.7040544193849043,10,10,0,True,actual,3a03680122c933b6407ae7b2a0acd99d79ca1ff4d81ae01280b7265ce7c1e493
-cga-artifacts-v1,C1,RFM,relu3,16,relative_sobolev,0.5359764996510082,0.5237363707660196,0.552978975055997,10,10,0,True,actual,3a03680122c933b6407ae7b2a0acd99d79ca1ff4d81ae01280b7265ce7c1e493
-cga-artifacts-v1,C1,RFM,relu3,32,relative_sobolev,0.2653421169355273,0.24480780158806945,0.31760663057607547,10,10,0,True,actual,3a03680122c933b6407ae7b2a0acd99d79ca1ff4d81ae01280b7265ce7c1e493
-cga-artifacts-v1,C1,RFM,relu3,64,relative_sobolev,0.05557793890781977,0.040544800217015724,0.0688864787754769,10,10,0,True,actual,3a03680122c933b6407ae7b2a0acd99d79ca1ff4d81ae01280b7265ce7c1e493
-cga-artifacts-v1,C1,RFM,relu3,128,relative_sobolev,0.005762936981132944,0.00446548442320606,0.007604405021773741,10,10,0,True,actual,3a03680122c933b6407ae7b2a0acd99d79ca1ff4d81ae01280b7265ce7c1e493
-cga-artifacts-v1,C1,RFM,relu3,256,relative_sobolev,0.0001853036947919546,0.00017793309281231373,0.0001912855992735679,10,10,0,True,actual,3a03680122c933b6407ae7b2a0acd99d79ca1ff4d81ae01280b7265ce7c1e493
-cga-artifacts-v1,C2,CGA,relu3,1,energy_gap,19.679129427833594,,,,,,False,actual,dd380d9ef1149208321164b88528fb2f03f156075c332f0d92b5064fffd8508e
-cga-artifacts-v1,C2,CGA,relu3,2,energy_gap,14.663016571940275,,,,,,False,actual,dd380d9ef1149208321164b88528fb2f03f156075c332f0d92b5064fffd8508e
-cga-artifacts-v1,C2,CGA,relu3,4,energy_gap,14.336460034993406,,,,,,False,actual,dd380d9ef1149208321164b88528fb2f03f156075c332f0d92b5064fffd8508e
-cga-artifacts-v1,C2,CGA,relu3,8,energy_gap,12.911527798756008,,,,,,False,actual,dd380d9ef1149208321164b88528fb2f03f156075c332f0d92b5064fffd8508e
-cga-artifacts-v1,C2,CGA,relu3,16,energy_gap,9.114159946181626,,,,,,False,actual,dd380d9ef1149208321164b88528fb2f03f156075c332f0d92b5064fffd8508e
-cga-artifacts-v1,C2,CGA,relu3,32,energy_gap,0.3751610552444973,,,,,,False,actual,dd380d9ef1149208321164b88528fb2f03f156075c332f0d92b5064fffd8508e
-cga-artifacts-v1,C2,CGA,relu3,64,energy_gap,0.002238373195865506,,,,,,False,actual,dd380d9ef1149208321164b88528fb2f03f156075c332f0d92b5064fffd8508e
-cga-artifacts-v1,C2,CGA,relu3,128,energy_gap,4.3005446777044654e-05,,,,,,False,actual,dd380d9ef1149208321164b88528fb2f03f156075c332f0d92b5064fffd8508e
-cga-artifacts-v1,C2,CGA,relu3,256,energy_gap,3.609955570027523e-07,,,,,,False,actual,dd380d9ef1149208321164b88528fb2f03f156075c332f0d92b5064fffd8508e
-cga-artifacts-v1,C2,FEM P1,p1,5,energy_gap,14.53262002279602,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C2,FEM P1,p1,9,energy_gap,7.723527952576237,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C2,FEM P1,p1,17,energy_gap,6.857283051479168,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C2,FEM P1,p1,33,energy_gap,2.2256904258613552,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C2,FEM P1,p1,65,energy_gap,0.5954650652908633,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C2,FEM P1,p1,129,energy_gap,0.15143340184639342,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C2,FEM P1,p1,257,energy_gap,0.03802084857500532,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C2,FEM P2,p2,5,energy_gap,13.560910187894525,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C2,FEM P2,p2,9,energy_gap,9.82560914475063,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C2,FEM P2,p2,17,energy_gap,7.538743000053959,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C2,FEM P2,p2,33,energy_gap,1.2610244369651618,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C2,FEM P2,p2,65,energy_gap,0.10232951392692158,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C2,FEM P2,p2,129,energy_gap,0.006827131028622091,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C2,FEM P2,p2,257,energy_gap,0.0004337162456771182,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C2,FEM P3,p3,4,energy_gap,14.07089045648237,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C2,FEM P3,p3,7,energy_gap,13.002263805095815,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C2,FEM P3,p3,13,energy_gap,9.481189678644817,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C2,FEM P3,p3,25,energy_gap,2.9157973021985164,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C2,FEM P3,p3,49,energy_gap,0.11547456818039947,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C2,FEM P3,p3,97,energy_gap,0.002256424740966878,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C2,FEM P3,p3,193,energy_gap,3.727191719704592e-05,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C2,FEM P3,p3,385,energy_gap,5.905114583981685e-07,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C2,RFM,relu3,8,energy_gap,11.857835546641217,11.681743734052933,12.296699315152013,10,10,0,True,actual,3a03680122c933b6407ae7b2a0acd99d79ca1ff4d81ae01280b7265ce7c1e493
-cga-artifacts-v1,C2,RFM,relu3,16,energy_gap,7.023629434475907,6.705958263713573,7.476117046813355,10,10,0,True,actual,3a03680122c933b6407ae7b2a0acd99d79ca1ff4d81ae01280b7265ce7c1e493
-cga-artifacts-v1,C2,RFM,relu3,32,energy_gap,1.7212297431363304,1.4649050127089458,2.4661750375135076,10,10,0,True,actual,3a03680122c933b6407ae7b2a0acd99d79ca1ff4d81ae01280b7265ce7c1e493
-cga-artifacts-v1,C2,RFM,relu3,64,energy_gap,0.07550901522738052,0.04018463766987601,0.11711833161667862,10,10,0,True,actual,3a03680122c933b6407ae7b2a0acd99d79ca1ff4d81ae01280b7265ce7c1e493
-cga-artifacts-v1,C2,RFM,relu3,128,energy_gap,0.000813436400784795,0.000488945607056479,0.0014137563871337022,10,10,0,True,actual,3a03680122c933b6407ae7b2a0acd99d79ca1ff4d81ae01280b7265ce7c1e493
-cga-artifacts-v1,C2,RFM,relu3,256,energy_gap,8.377336495613008e-07,7.744052030744797e-07,8.961271191765263e-07,10,10,0,True,actual,3a03680122c933b6407ae7b2a0acd99d79ca1ff4d81ae01280b7265ce7c1e493
-cga-artifacts-v1,C2,CGA,relu3,1,relative_sobolev,0.895326304950738,,,,,,False,actual,dd380d9ef1149208321164b88528fb2f03f156075c332f0d92b5064fffd8508e
-cga-artifacts-v1,C2,CGA,relu3,2,relative_sobolev,0.7716208309263356,,,,,,False,actual,dd380d9ef1149208321164b88528fb2f03f156075c332f0d92b5064fffd8508e
-cga-artifacts-v1,C2,CGA,relu3,4,relative_sobolev,0.7618906682272903,,,,,,False,actual,dd380d9ef1149208321164b88528fb2f03f156075c332f0d92b5064fffd8508e
-cga-artifacts-v1,C2,CGA,relu3,8,relative_sobolev,0.7176574618963447,,,,,,False,actual,dd380d9ef1149208321164b88528fb2f03f156075c332f0d92b5064fffd8508e
-cga-artifacts-v1,C2,CGA,relu3,16,relative_sobolev,0.6100056475436884,,,,,,False,actual,dd380d9ef1149208321164b88528fb2f03f156075c332f0d92b5064fffd8508e
-cga-artifacts-v1,C2,CGA,relu3,32,relative_sobolev,0.12388799361123469,,,,,,False,actual,dd380d9ef1149208321164b88528fb2f03f156075c332f0d92b5064fffd8508e
-cga-artifacts-v1,C2,CGA,relu3,64,relative_sobolev,0.00956920253363204,,,,,,False,actual,dd380d9ef1149208321164b88528fb2f03f156075c332f0d92b5064fffd8508e
-cga-artifacts-v1,C2,CGA,relu3,128,relative_sobolev,0.0013264246175767411,,,,,,False,actual,dd380d9ef1149208321164b88528fb2f03f156075c332f0d92b5064fffd8508e
-cga-artifacts-v1,C2,CGA,relu3,256,relative_sobolev,0.00012152710531189445,,,,,,False,actual,dd380d9ef1149208321164b88528fb2f03f156075c332f0d92b5064fffd8508e
-cga-artifacts-v1,C2,FEM P1,p1,5,relative_sobolev,0.7706931802833655,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C2,FEM P1,p1,9,relative_sobolev,0.5620905301169382,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C2,FEM P1,p1,17,relative_sobolev,0.5296474924477896,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C2,FEM P1,p1,33,relative_sobolev,0.30174178756487485,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C2,FEM P1,p1,65,relative_sobolev,0.1560794092250483,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C2,FEM P1,p1,129,relative_sobolev,0.07871038759379126,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C2,FEM P1,p1,257,relative_sobolev,0.03943965066503348,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C2,FEM P2,p2,5,relative_sobolev,0.7448881498618828,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C2,FEM P2,p2,9,relative_sobolev,0.6339107904908817,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C2,FEM P2,p2,17,relative_sobolev,0.5553412081586101,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C2,FEM P2,p2,33,relative_sobolev,0.22712014758338175,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C2,FEM P2,p2,65,relative_sobolev,0.064702277543661,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C2,FEM P2,p2,129,relative_sobolev,0.016712474281655225,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C2,FEM P2,p2,257,relative_sobolev,0.004212356387438232,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C2,FEM P3,p3,4,relative_sobolev,0.7589444139747592,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C2,FEM P3,p3,7,relative_sobolev,0.7294504751978803,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C2,FEM P3,p3,13,relative_sobolev,0.6227080134483656,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C2,FEM P3,p3,25,relative_sobolev,0.34535189795557947,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C2,FEM P3,p3,49,relative_sobolev,0.06873324498167106,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C2,FEM P3,p3,97,relative_sobolev,0.009607964651839985,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C2,FEM P3,p3,193,relative_sobolev,0.0012348464629205653,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C2,FEM P3,p3,385,relative_sobolev,0.0001554306067070636,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C2,RFM,relu3,8,relative_sobolev,0.6961492620910301,0.691137807682861,0.7047073231239517,10,10,0,True,actual,3a03680122c933b6407ae7b2a0acd99d79ca1ff4d81ae01280b7265ce7c1e493
-cga-artifacts-v1,C2,RFM,relu3,16,relative_sobolev,0.5359775653469745,0.5237365357806667,0.5529792380144369,10,10,0,True,actual,3a03680122c933b6407ae7b2a0acd99d79ca1ff4d81ae01280b7265ce7c1e493
-cga-artifacts-v1,C2,RFM,relu3,32,relative_sobolev,0.2653421968654892,0.2448078694844178,0.3176067233118338,10,10,0,True,actual,3a03680122c933b6407ae7b2a0acd99d79ca1ff4d81ae01280b7265ce7c1e493
-cga-artifacts-v1,C2,RFM,relu3,64,relative_sobolev,0.05557793932327455,0.040544800391277856,0.06888648413769793,10,10,0,True,actual,3a03680122c933b6407ae7b2a0acd99d79ca1ff4d81ae01280b7265ce7c1e493
-cga-artifacts-v1,C2,RFM,relu3,128,relative_sobolev,0.005762936991634849,0.004465484426805485,0.007604405041318788,10,10,0,True,actual,3a03680122c933b6407ae7b2a0acd99d79ca1ff4d81ae01280b7265ce7c1e493
-cga-artifacts-v1,C2,RFM,relu3,256,relative_sobolev,0.00018530463478851552,0.0001779350505435415,0.00019128710866903154,10,10,0,True,actual,3a03680122c933b6407ae7b2a0acd99d79ca1ff4d81ae01280b7265ce7c1e493
-cga-artifacts-v1,C3,CGA,relu3,1,energy_gap,9.567323006083999,,,,,,False,actual,62a5eca62a7a87473550c36d89524826da5e26750f70c586438b0bce9be52a62
-cga-artifacts-v1,C3,CGA,relu3,2,energy_gap,9.122766813082741,,,,,,False,actual,62a5eca62a7a87473550c36d89524826da5e26750f70c586438b0bce9be52a62
-cga-artifacts-v1,C3,CGA,relu3,4,energy_gap,8.23527415937251,,,,,,False,actual,62a5eca62a7a87473550c36d89524826da5e26750f70c586438b0bce9be52a62
-cga-artifacts-v1,C3,CGA,relu3,8,energy_gap,5.007873341767828,,,,,,False,actual,62a5eca62a7a87473550c36d89524826da5e26750f70c586438b0bce9be52a62
-cga-artifacts-v1,C3,CGA,relu3,16,energy_gap,2.8024631189262283,,,,,,False,actual,62a5eca62a7a87473550c36d89524826da5e26750f70c586438b0bce9be52a62
-cga-artifacts-v1,C3,CGA,relu3,32,energy_gap,1.730349654741362,,,,,,False,actual,62a5eca62a7a87473550c36d89524826da5e26750f70c586438b0bce9be52a62
-cga-artifacts-v1,C3,CGA,relu3,64,energy_gap,0.024270616151486735,,,,,,False,actual,62a5eca62a7a87473550c36d89524826da5e26750f70c586438b0bce9be52a62
-cga-artifacts-v1,C3,CGA,relu3,128,energy_gap,0.0019933437534778164,,,,,,False,actual,62a5eca62a7a87473550c36d89524826da5e26750f70c586438b0bce9be52a62
-cga-artifacts-v1,C3,CGA,relu3,256,energy_gap,0.00016646356082006264,,,,,,False,actual,62a5eca62a7a87473550c36d89524826da5e26750f70c586438b0bce9be52a62
-cga-artifacts-v1,C3,CGA,relu3,512,energy_gap,4.581729817054736e-05,,,,,,False,actual,62a5eca62a7a87473550c36d89524826da5e26750f70c586438b0bce9be52a62
-cga-artifacts-v1,C3,FEM P1,p1,4,energy_gap,9.012728890273689,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C3,FEM P1,p1,9,energy_gap,5.942414411475775,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C3,FEM P1,p1,16,energy_gap,5.864323164283958,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C3,FEM P1,p1,25,energy_gap,4.136823523632605,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C3,FEM P1,p1,36,energy_gap,3.054055626298368,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C3,FEM P1,p1,49,energy_gap,2.182692069424907,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C3,FEM P1,p1,81,energy_gap,1.3377081501516486,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C3,FEM P1,p1,144,energy_gap,0.7277633183611094,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C3,FEM P1,p1,289,energy_gap,0.3618775926066924,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C3,FEM P1,p1,529,energy_gap,0.16551213976901025,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C3,FEM P2,p2,9,energy_gap,6.953902207008015,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C3,FEM P2,p2,25,energy_gap,1.6874887996994854,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C3,FEM P2,p2,49,energy_gap,0.9677692264950046,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C3,FEM P2,p2,81,energy_gap,0.4266426455185801,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C3,FEM P2,p2,121,energy_gap,0.20711153828728612,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C3,FEM P2,p2,169,energy_gap,0.07717677823996283,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C3,FEM P2,p2,289,energy_gap,0.03275011631845004,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C3,FEM P2,p2,529,energy_gap,0.0074731347851226815,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C3,FEM P3,p3,16,energy_gap,5.639343901712367,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C3,FEM P3,p3,49,energy_gap,0.9649648797837216,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C3,FEM P3,p3,100,energy_gap,0.09032460729438085,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C3,FEM P3,p3,169,energy_gap,0.022741697192778076,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C3,FEM P3,p3,256,energy_gap,0.004268761270207477,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C3,FEM P3,p3,484,energy_gap,0.002660741836248093,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C3,RFM,relu3,8,energy_gap,9.18896880781035,8.529766860885214,9.644559825227143,10,10,0,True,actual,3a03680122c933b6407ae7b2a0acd99d79ca1ff4d81ae01280b7265ce7c1e493
-cga-artifacts-v1,C3,RFM,relu3,16,energy_gap,6.0761945302802856,4.845214552082253,6.769428851210758,10,10,0,True,actual,3a03680122c933b6407ae7b2a0acd99d79ca1ff4d81ae01280b7265ce7c1e493
-cga-artifacts-v1,C3,RFM,relu3,32,energy_gap,1.413832093971581,0.8490251469007597,1.6411944381828105,10,10,0,True,actual,3a03680122c933b6407ae7b2a0acd99d79ca1ff4d81ae01280b7265ce7c1e493
-cga-artifacts-v1,C3,RFM,relu3,64,energy_gap,0.08256076069896512,0.032558536366891655,0.12220105904973044,10,10,0,True,actual,3a03680122c933b6407ae7b2a0acd99d79ca1ff4d81ae01280b7265ce7c1e493
-cga-artifacts-v1,C3,RFM,relu3,128,energy_gap,0.005362019378411631,0.004951669882729881,0.007407481736636079,10,10,0,True,actual,3a03680122c933b6407ae7b2a0acd99d79ca1ff4d81ae01280b7265ce7c1e493
-cga-artifacts-v1,C3,RFM,relu3,256,energy_gap,0.0005174040287316828,0.00041879785921050683,0.0007505705285928421,10,10,0,True,actual,3a03680122c933b6407ae7b2a0acd99d79ca1ff4d81ae01280b7265ce7c1e493
-cga-artifacts-v1,C3,RFM,relu3,512,energy_gap,4.029159044272035e-05,3.3429177308974545e-05,4.819277759438023e-05,10,10,0,True,actual,3a03680122c933b6407ae7b2a0acd99d79ca1ff4d81ae01280b7265ce7c1e493
-cga-artifacts-v1,C3,CGA,relu3,1,relative_sobolev,0.9775041751399974,,,,,,False,actual,62a5eca62a7a87473550c36d89524826da5e26750f70c586438b0bce9be52a62
-cga-artifacts-v1,C3,CGA,relu3,2,relative_sobolev,0.9545297735574525,,,,,,False,actual,62a5eca62a7a87473550c36d89524826da5e26750f70c586438b0bce9be52a62
-cga-artifacts-v1,C3,CGA,relu3,4,relative_sobolev,0.9069293152824964,,,,,,False,actual,62a5eca62a7a87473550c36d89524826da5e26750f70c586438b0bce9be52a62
-cga-artifacts-v1,C3,CGA,relu3,8,relative_sobolev,0.7073144211455945,,,,,,False,actual,62a5eca62a7a87473550c36d89524826da5e26750f70c586438b0bce9be52a62
-cga-artifacts-v1,C3,CGA,relu3,16,relative_sobolev,0.5288357651403212,,,,,,False,actual,62a5eca62a7a87473550c36d89524826da5e26750f70c586438b0bce9be52a62
-cga-artifacts-v1,C3,CGA,relu3,32,relative_sobolev,0.4152391920167592,,,,,,False,actual,62a5eca62a7a87473550c36d89524826da5e26750f70c586438b0bce9be52a62
-cga-artifacts-v1,C3,CGA,relu3,64,relative_sobolev,0.049268608325407644,,,,,,False,actual,62a5eca62a7a87473550c36d89524826da5e26750f70c586438b0bce9be52a62
-cga-artifacts-v1,C3,CGA,relu3,128,relative_sobolev,0.014122330382715584,,,,,,False,actual,62a5eca62a7a87473550c36d89524826da5e26750f70c586438b0bce9be52a62
-cga-artifacts-v1,C3,CGA,relu3,256,relative_sobolev,0.004073930222378274,,,,,,False,actual,62a5eca62a7a87473550c36d89524826da5e26750f70c586438b0bce9be52a62
-cga-artifacts-v1,C3,CGA,relu3,512,relative_sobolev,0.0019898919668570668,,,,,,False,actual,62a5eca62a7a87473550c36d89524826da5e26750f70c586438b0bce9be52a62
-cga-artifacts-v1,C3,FEM P1,p1,4,relative_sobolev,0.9487837387283826,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C3,FEM P1,p1,9,relative_sobolev,0.7706210126085851,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C3,FEM P1,p1,16,relative_sobolev,0.7681576661856844,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C3,FEM P1,p1,25,relative_sobolev,0.6486655503465018,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C3,FEM P1,p1,36,relative_sobolev,0.5509653498605186,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C3,FEM P1,p1,49,relative_sobolev,0.4754601609024706,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C3,FEM P1,p1,81,relative_sobolev,0.370207226255956,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C3,FEM P1,p1,144,relative_sobolev,0.2756476985731606,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C3,FEM P1,p1,289,relative_sobolev,0.19257933685182071,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C3,FEM P1,p1,529,relative_sobolev,0.140769525297682,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C3,FEM P2,p2,9,relative_sobolev,0.8335465763764625,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C3,FEM P2,p2,25,relative_sobolev,0.4108752600709466,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C3,FEM P2,p2,49,relative_sobolev,0.31667017984076473,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C3,FEM P2,p2,81,relative_sobolev,0.200149878136057,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C3,FEM P2,p2,121,relative_sobolev,0.13492907884565436,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C3,FEM P2,p2,169,relative_sobolev,0.09694127182245259,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C3,FEM P2,p2,289,relative_sobolev,0.056885774505902785,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C3,FEM P2,p2,529,relative_sobolev,0.030813549210212156,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C3,FEM P3,p3,16,relative_sobolev,0.7506698983917992,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C3,FEM P3,p3,49,relative_sobolev,0.3106423964615268,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C3,FEM P3,p3,100,relative_sobolev,0.09544189883398198,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C3,FEM P3,p3,169,relative_sobolev,0.043602057746799976,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C3,FEM P3,p3,256,relative_sobolev,0.0229690931620406,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C3,FEM P3,p3,484,relative_sobolev,0.0085477685726225,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C3,RFM,relu3,8,relative_sobolev,0.957999296703726,0.922908348842591,0.9814248072865022,10,10,0,True,actual,3a03680122c933b6407ae7b2a0acd99d79ca1ff4d81ae01280b7265ce7c1e493
-cga-artifacts-v1,C3,RFM,relu3,16,relative_sobolev,0.7788800973960123,0.695628601016705,0.8218718165312373,10,10,0,True,actual,3a03680122c933b6407ae7b2a0acd99d79ca1ff4d81ae01280b7265ce7c1e493
-cga-artifacts-v1,C3,RFM,relu3,32,relative_sobolev,0.3759598540181477,0.29090883616572283,0.40483911737356937,10,10,0,True,actual,3a03680122c933b6407ae7b2a0acd99d79ca1ff4d81ae01280b7265ce7c1e493
-cga-artifacts-v1,C3,RFM,relu3,64,relative_sobolev,0.0908639882730127,0.05699925257507098,0.11043747455346528,10,10,0,True,actual,3a03680122c933b6407ae7b2a0acd99d79ca1ff4d81ae01280b7265ce7c1e493
-cga-artifacts-v1,C3,RFM,relu3,128,relative_sobolev,0.023160066854218432,0.022255025371667948,0.02721723262688856,10,10,0,True,actual,3a03680122c933b6407ae7b2a0acd99d79ca1ff4d81ae01280b7265ce7c1e493
-cga-artifacts-v1,C3,RFM,relu3,256,relative_sobolev,0.007195350931935174,0.006471700578512594,0.008662722262823969,10,10,0,True,actual,3a03680122c933b6407ae7b2a0acd99d79ca1ff4d81ae01280b7265ce7c1e493
-cga-artifacts-v1,C3,RFM,relu3,512,relative_sobolev,0.0021195361989907006,0.0019552892313726847,0.0022895222937028303,10,10,0,True,actual,3a03680122c933b6407ae7b2a0acd99d79ca1ff4d81ae01280b7265ce7c1e493
-cga-artifacts-v1,C4,CGA,relu3,1,energy_gap,313.9125251934976,,,,,,False,actual,f6994e23a0ff86cd66c37daba0e507dbef857680e42db61efae5fecf1f9526df
-cga-artifacts-v1,C4,CGA,relu3,2,energy_gap,186.09679350427905,,,,,,False,actual,f6994e23a0ff86cd66c37daba0e507dbef857680e42db61efae5fecf1f9526df
-cga-artifacts-v1,C4,CGA,relu3,4,energy_gap,30.75313399397743,,,,,,False,actual,f6994e23a0ff86cd66c37daba0e507dbef857680e42db61efae5fecf1f9526df
-cga-artifacts-v1,C4,CGA,relu3,8,energy_gap,0.02362930203707947,,,,,,False,actual,f6994e23a0ff86cd66c37daba0e507dbef857680e42db61efae5fecf1f9526df
-cga-artifacts-v1,C4,CGA,relu3,16,energy_gap,0.00033715156979496896,,,,,,False,actual,f6994e23a0ff86cd66c37daba0e507dbef857680e42db61efae5fecf1f9526df
-cga-artifacts-v1,C4,CGA,relu3,32,energy_gap,3.1802491662347165e-06,,,,,,False,actual,f6994e23a0ff86cd66c37daba0e507dbef857680e42db61efae5fecf1f9526df
-cga-artifacts-v1,C4,CGA,relu3,64,energy_gap,1.4414302995646722e-07,,,,,,False,actual,f6994e23a0ff86cd66c37daba0e507dbef857680e42db61efae5fecf1f9526df
-cga-artifacts-v1,C4,CGA,relu3,128,energy_gap,6.187406142998952e-10,,,,,,False,actual,f6994e23a0ff86cd66c37daba0e507dbef857680e42db61efae5fecf1f9526df
-cga-artifacts-v1,C4,CGA,relu3,141,energy_gap,1.7223555914824829e-10,,,,,,False,actual,f6994e23a0ff86cd66c37daba0e507dbef857680e42db61efae5fecf1f9526df
-cga-artifacts-v1,C4,FEM P1,p1,4,energy_gap,65.52089254765394,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C4,FEM P1,p1,8,energy_gap,13.285751430534901,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C4,FEM P1,p1,16,energy_gap,3.633306414575486,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C4,FEM P1,p1,32,energy_gap,0.9307042522680149,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C4,FEM P1,p1,64,energy_gap,0.23418668416297805,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C4,FEM P1,p1,128,energy_gap,0.058644981983945854,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C4,FEM P1,p1,256,energy_gap,0.014667518614203345,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C4,FEM P2,p2,4,energy_gap,65.52090636493631,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C4,FEM P2,p2,8,energy_gap,2.9252716356940027,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C4,FEM P2,p2,16,energy_gap,0.41708017533181874,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C4,FEM P2,p2,32,energy_gap,0.028220796509117463,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C4,FEM P2,p2,64,energy_gap,0.0017982732902055432,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C4,FEM P2,p2,128,energy_gap,0.00011293210911844653,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C4,FEM P2,p2,256,energy_gap,7.066694365676085e-06,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C4,FEM P3,p3,3,energy_gap,192.1091028882156,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C4,FEM P3,p3,6,energy_gap,0.06649130444651519,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C4,FEM P3,p3,12,energy_gap,0.02005264383285521,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C4,FEM P3,p3,24,energy_gap,0.00041412646066874004,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C4,FEM P3,p3,48,energy_gap,9.596458426130994e-06,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C4,FEM P3,p3,96,energy_gap,1.6217165921261767e-07,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C4,FEM P3,p3,192,energy_gap,2.5805775294429623e-09,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C4,FEM P3,p3,384,energy_gap,4.058620106661692e-11,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C4,RFM,relu3,8,energy_gap,0.3949859811203851,0.13341042938571945,3.957625730418087,10,10,0,True,actual,3a03680122c933b6407ae7b2a0acd99d79ca1ff4d81ae01280b7265ce7c1e493
-cga-artifacts-v1,C4,RFM,relu3,16,energy_gap,0.004343970553264853,0.001988148487512831,0.005760051815130396,10,10,0,True,actual,3a03680122c933b6407ae7b2a0acd99d79ca1ff4d81ae01280b7265ce7c1e493
-cga-artifacts-v1,C4,RFM,relu3,32,energy_gap,0.000279430407857717,0.00015227841393539165,0.0007348088577714407,10,10,0,True,actual,3a03680122c933b6407ae7b2a0acd99d79ca1ff4d81ae01280b7265ce7c1e493
-cga-artifacts-v1,C4,RFM,relu3,64,energy_gap,5.892336247370622e-06,3.641532387632651e-06,1.4079989355764155e-05,10,10,0,True,actual,3a03680122c933b6407ae7b2a0acd99d79ca1ff4d81ae01280b7265ce7c1e493
-cga-artifacts-v1,C4,RFM,relu3,128,energy_gap,8.109677196443954e-08,3.6488771115728014e-08,8.907163362437132e-08,10,10,0,True,actual,3a03680122c933b6407ae7b2a0acd99d79ca1ff4d81ae01280b7265ce7c1e493
-cga-artifacts-v1,C4,RFM,relu3,256,energy_gap,3.4503955248510465e-10,2.7920066258957377e-10,4.277609377822955e-10,10,10,0,True,actual,3a03680122c933b6407ae7b2a0acd99d79ca1ff4d81ae01280b7265ce7c1e493
-cga-artifacts-v1,C4,CGA,relu3,1,relative_sobolev,0.9094524434831879,,,,,,False,actual,f6994e23a0ff86cd66c37daba0e507dbef857680e42db61efae5fecf1f9526df
-cga-artifacts-v1,C4,CGA,relu3,2,relative_sobolev,0.6777675328269491,,,,,,False,actual,f6994e23a0ff86cd66c37daba0e507dbef857680e42db61efae5fecf1f9526df
-cga-artifacts-v1,C4,CGA,relu3,4,relative_sobolev,0.36807094954065245,,,,,,False,actual,f6994e23a0ff86cd66c37daba0e507dbef857680e42db61efae5fecf1f9526df
-cga-artifacts-v1,C4,CGA,relu3,8,relative_sobolev,0.03567009866309886,,,,,,False,actual,f6994e23a0ff86cd66c37daba0e507dbef857680e42db61efae5fecf1f9526df
-cga-artifacts-v1,C4,CGA,relu3,16,relative_sobolev,0.004460312382210044,,,,,,False,actual,f6994e23a0ff86cd66c37daba0e507dbef857680e42db61efae5fecf1f9526df
-cga-artifacts-v1,C4,CGA,relu3,32,relative_sobolev,0.0002868558138203917,,,,,,False,actual,f6994e23a0ff86cd66c37daba0e507dbef857680e42db61efae5fecf1f9526df
-cga-artifacts-v1,C4,CGA,relu3,64,relative_sobolev,0.00017999690469357903,,,,,,False,actual,f6994e23a0ff86cd66c37daba0e507dbef857680e42db61efae5fecf1f9526df
-cga-artifacts-v1,C4,CGA,relu3,128,relative_sobolev,1.5789640455483173e-05,,,,,,False,actual,f6994e23a0ff86cd66c37daba0e507dbef857680e42db61efae5fecf1f9526df
-cga-artifacts-v1,C4,CGA,relu3,141,relative_sobolev,1.077055066640588e-05,,,,,,False,actual,f6994e23a0ff86cd66c37daba0e507dbef857680e42db61efae5fecf1f9526df
-cga-artifacts-v1,C4,FEM P1,p1,4,relative_sobolev,0.5390450288276871,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C4,FEM P1,p1,8,relative_sobolev,0.2969170144598846,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C4,FEM P1,p1,16,relative_sobolev,0.14433576198846618,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C4,FEM P1,p1,32,relative_sobolev,0.0697057952110548,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C4,FEM P1,p1,64,relative_sobolev,0.03396726538804655,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C4,FEM P1,p1,128,relative_sobolev,0.016717012073586668,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C4,FEM P1,p1,256,relative_sobolev,0.008285108944990769,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C4,FEM P2,p2,4,relative_sobolev,0.5391297938616816,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C4,FEM P2,p2,8,relative_sobolev,0.16559815139212544,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C4,FEM P2,p2,16,relative_sobolev,0.03134839675628506,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C4,FEM P2,p2,32,relative_sobolev,0.007085128646784382,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C4,FEM P2,p2,64,relative_sobolev,0.001744733406903518,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C4,FEM P2,p2,128,relative_sobolev,0.0004349641328017658,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C4,FEM P2,p2,256,relative_sobolev,0.00010867092917091537,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C4,FEM P3,p3,3,relative_sobolev,0.7284429590682323,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C4,FEM P3,p3,6,relative_sobolev,0.07158149970659355,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C4,FEM P3,p3,12,relative_sobolev,0.04086686940898253,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C4,FEM P3,p3,24,relative_sobolev,0.0061522113209410674,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C4,FEM P3,p3,48,relative_sobolev,0.0007009041157948325,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C4,FEM P3,p3,96,relative_sobolev,7.536110664808428e-05,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C4,FEM P3,p3,192,relative_sobolev,8.008255225665098e-06,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C4,FEM P3,p3,384,relative_sobolev,8.497790292221335e-07,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C4,RFM,relu3,8,relative_sobolev,0.0829087080851427,0.07180532845397458,0.20702012149368304,10,10,0,True,actual,3a03680122c933b6407ae7b2a0acd99d79ca1ff4d81ae01280b7265ce7c1e493
-cga-artifacts-v1,C4,RFM,relu3,16,relative_sobolev,0.009297202996800556,0.007917488064714918,0.010255623407643964,10,10,0,True,actual,3a03680122c933b6407ae7b2a0acd99d79ca1ff4d81ae01280b7265ce7c1e493
-cga-artifacts-v1,C4,RFM,relu3,32,relative_sobolev,0.0025113406725561695,0.0016383578119539622,0.004918758663785718,10,10,0,True,actual,3a03680122c933b6407ae7b2a0acd99d79ca1ff4d81ae01280b7265ce7c1e493
-cga-artifacts-v1,C4,RFM,relu3,64,relative_sobolev,0.0005151732577860875,0.0003550364639858356,0.0011202992300098043,10,10,0,True,actual,3a03680122c933b6407ae7b2a0acd99d79ca1ff4d81ae01280b7265ce7c1e493
-cga-artifacts-v1,C4,RFM,relu3,128,relative_sobolev,9.102704118004628e-05,6.10767246883433e-05,0.00020773633578139025,10,10,0,True,actual,3a03680122c933b6407ae7b2a0acd99d79ca1ff4d81ae01280b7265ce7c1e493
-cga-artifacts-v1,C4,RFM,relu3,256,relative_sobolev,8.773581793772909e-05,5.084270678139013e-05,0.00013482883150232194,10,10,0,True,actual,3a03680122c933b6407ae7b2a0acd99d79ca1ff4d81ae01280b7265ce7c1e493
-cga-artifacts-v1,C4,CGA,relu3,1,v_distance,0.9326547442988359,,,,,,False,actual,f6994e23a0ff86cd66c37daba0e507dbef857680e42db61efae5fecf1f9526df
-cga-artifacts-v1,C4,CGA,relu3,2,v_distance,0.8916414086985377,,,,,,False,actual,f6994e23a0ff86cd66c37daba0e507dbef857680e42db61efae5fecf1f9526df
-cga-artifacts-v1,C4,CGA,relu3,4,v_distance,0.3667189278390127,,,,,,False,actual,f6994e23a0ff86cd66c37daba0e507dbef857680e42db61efae5fecf1f9526df
-cga-artifacts-v1,C4,CGA,relu3,8,v_distance,0.010280188073937921,,,,,,False,actual,f6994e23a0ff86cd66c37daba0e507dbef857680e42db61efae5fecf1f9526df
-cga-artifacts-v1,C4,CGA,relu3,16,v_distance,0.0012406043393640594,,,,,,False,actual,f6994e23a0ff86cd66c37daba0e507dbef857680e42db61efae5fecf1f9526df
-cga-artifacts-v1,C4,CGA,relu3,32,v_distance,0.00012046109068646486,,,,,,False,actual,f6994e23a0ff86cd66c37daba0e507dbef857680e42db61efae5fecf1f9526df
-cga-artifacts-v1,C4,CGA,relu3,64,v_distance,2.564584306520198e-05,,,,,,False,actual,f6994e23a0ff86cd66c37daba0e507dbef857680e42db61efae5fecf1f9526df
-cga-artifacts-v1,C4,CGA,relu3,128,v_distance,1.6802570536223682e-06,,,,,,False,actual,f6994e23a0ff86cd66c37daba0e507dbef857680e42db61efae5fecf1f9526df
-cga-artifacts-v1,C4,CGA,relu3,141,v_distance,8.862193518839437e-07,,,,,,False,actual,f6994e23a0ff86cd66c37daba0e507dbef857680e42db61efae5fecf1f9526df
-cga-artifacts-v1,C4,FEM P1,p1,4,v_distance,0.5869538592867329,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C4,FEM P1,p1,8,v_distance,0.2540754813739835,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C4,FEM P1,p1,16,v_distance,0.13000855211572893,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C4,FEM P1,p1,32,v_distance,0.06534762156216593,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C4,FEM P1,p1,64,v_distance,0.03271288556545509,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C4,FEM P1,p1,128,v_distance,0.01636100910258442,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C4,FEM P1,p1,256,v_distance,0.008181052739763828,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C4,FEM P2,p2,4,v_distance,0.5869991597951375,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C4,FEM P2,p2,8,v_distance,0.11897725672128866,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C4,FEM P2,p2,16,v_distance,0.0437560497567856,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C4,FEM P2,p2,32,v_distance,0.011354727066083769,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C4,FEM P2,p2,64,v_distance,0.0028648663422256664,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C4,FEM P2,p2,128,v_distance,0.0007178511374083512,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C4,FEM P2,p2,256,v_distance,0.0001795648412282103,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C4,FEM P3,p3,3,v_distance,0.9550325950844394,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C4,FEM P3,p3,6,v_distance,0.016935718985597377,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C4,FEM P3,p3,12,v_distance,0.009419263505218824,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C4,FEM P3,p3,24,v_distance,0.0013725082940626698,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C4,FEM P3,p3,48,v_distance,0.00020923774716077658,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C4,FEM P3,p3,96,v_distance,2.7201651928541827e-05,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C4,FEM P3,p3,192,v_distance,3.4313401142455905e-06,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C4,FEM P3,p3,384,v_distance,4.298667072421742e-07,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C4,RFM,relu3,8,v_distance,0.042787191104979846,0.02558115281263857,0.12549927320359794,10,10,0,True,actual,3a03680122c933b6407ae7b2a0acd99d79ca1ff4d81ae01280b7265ce7c1e493
-cga-artifacts-v1,C4,RFM,relu3,16,v_distance,0.004454727453716004,0.003010426364417741,0.005117066428343463,10,10,0,True,actual,3a03680122c933b6407ae7b2a0acd99d79ca1ff4d81ae01280b7265ce7c1e493
-cga-artifacts-v1,C4,RFM,relu3,32,v_distance,0.001104121319054341,0.0008335099170496779,0.001820655846656749,10,10,0,True,actual,3a03680122c933b6407ae7b2a0acd99d79ca1ff4d81ae01280b7265ce7c1e493
-cga-artifacts-v1,C4,RFM,relu3,64,v_distance,0.0001631346305677294,0.00012841576860477447,0.0002506901210467953,10,10,0,True,actual,3a03680122c933b6407ae7b2a0acd99d79ca1ff4d81ae01280b7265ce7c1e493
-cga-artifacts-v1,C4,RFM,relu3,128,v_distance,1.9236054189759047e-05,1.289614247424001e-05,2.0152458145277523e-05,10,10,0,True,actual,3a03680122c933b6407ae7b2a0acd99d79ca1ff4d81ae01280b7265ce7c1e493
-cga-artifacts-v1,C4,RFM,relu3,256,v_distance,1.203204635771061e-06,1.1146406493161655e-06,1.3063858916928328e-06,10,10,0,True,actual,3a03680122c933b6407ae7b2a0acd99d79ca1ff4d81ae01280b7265ce7c1e493
-cga-artifacts-v1,C5,CGA,relu3,1,energy_gap,347.920435291085,,,,,,False,actual,6d81942b302d13300c3647405a00815e6889bf8414f20361cbc7e8f89df0904c
-cga-artifacts-v1,C5,CGA,relu3,2,energy_gap,330.5754878987503,,,,,,False,actual,6d81942b302d13300c3647405a00815e6889bf8414f20361cbc7e8f89df0904c
-cga-artifacts-v1,C5,CGA,relu3,4,energy_gap,295.9832937372135,,,,,,False,actual,6d81942b302d13300c3647405a00815e6889bf8414f20361cbc7e8f89df0904c
-cga-artifacts-v1,C5,CGA,relu3,8,energy_gap,171.32298968379268,,,,,,False,actual,6d81942b302d13300c3647405a00815e6889bf8414f20361cbc7e8f89df0904c
-cga-artifacts-v1,C5,CGA,relu3,16,energy_gap,30.701558817819034,,,,,,False,actual,6d81942b302d13300c3647405a00815e6889bf8414f20361cbc7e8f89df0904c
-cga-artifacts-v1,C5,CGA,relu3,32,energy_gap,6.475703544843441,,,,,,False,actual,6d81942b302d13300c3647405a00815e6889bf8414f20361cbc7e8f89df0904c
-cga-artifacts-v1,C5,CGA,relu3,64,energy_gap,0.1479048717014848,,,,,,False,actual,6d81942b302d13300c3647405a00815e6889bf8414f20361cbc7e8f89df0904c
-cga-artifacts-v1,C5,CGA,relu3,128,energy_gap,0.011400834796972958,,,,,,False,actual,6d81942b302d13300c3647405a00815e6889bf8414f20361cbc7e8f89df0904c
-cga-artifacts-v1,C5,CGA,relu3,256,energy_gap,0.001072793427738361,,,,,,False,actual,6d81942b302d13300c3647405a00815e6889bf8414f20361cbc7e8f89df0904c
-cga-artifacts-v1,C5,CGA,relu3,512,energy_gap,0.0004974722972406198,,,,,,False,actual,6d81942b302d13300c3647405a00815e6889bf8414f20361cbc7e8f89df0904c
-cga-artifacts-v1,C5,FEM P1,p1,3,energy_gap,304.1370113295421,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C5,FEM P1,p1,8,energy_gap,168.71404367140224,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C5,FEM P1,p1,15,energy_gap,178.4195484915703,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C5,FEM P1,p1,24,energy_gap,137.69757072786524,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C5,FEM P1,p1,35,energy_gap,94.69682591224387,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C5,FEM P1,p1,48,energy_gap,67.22390712993473,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C5,FEM P1,p1,80,energy_gap,40.63279389300931,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C5,FEM P1,p1,143,energy_gap,21.79750882018334,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C5,FEM P1,p1,288,energy_gap,10.744982422968008,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C5,FEM P1,p1,528,energy_gap,4.868569210162434,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C5,FEM P2,p2,8,energy_gap,254.47886257594672,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C5,FEM P2,p2,24,energy_gap,65.04455822773105,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C5,FEM P2,p2,48,energy_gap,34.617545994897796,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C5,FEM P2,p2,80,energy_gap,10.98707731279552,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C5,FEM P2,p2,120,energy_gap,7.670717663409164,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C5,FEM P2,p2,168,energy_gap,3.271224265294336,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C5,FEM P2,p2,288,energy_gap,1.3750973478888682,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C5,FEM P2,p2,528,energy_gap,0.3645312507371159,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C5,FEM P3,p3,15,energy_gap,246.46167696679643,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C5,FEM P3,p3,48,energy_gap,25.51438236655156,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C5,FEM P3,p3,99,energy_gap,3.533955508585393,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C5,FEM P3,p3,168,energy_gap,0.9850897114454256,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C5,FEM P3,p3,255,energy_gap,0.13788545182922007,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C5,FEM P3,p3,483,energy_gap,0.05680549413375502,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C5,RFM,relu3,8,energy_gap,317.6381399385268,291.64933498160434,332.6179879426712,10,10,0,True,actual,3a03680122c933b6407ae7b2a0acd99d79ca1ff4d81ae01280b7265ce7c1e493
-cga-artifacts-v1,C5,RFM,relu3,16,energy_gap,188.1642175653029,155.0305519030993,210.1840461310613,10,10,0,True,actual,3a03680122c933b6407ae7b2a0acd99d79ca1ff4d81ae01280b7265ce7c1e493
-cga-artifacts-v1,C5,RFM,relu3,32,energy_gap,43.59085920420844,27.845647949825477,56.06445597498572,10,10,0,True,actual,3a03680122c933b6407ae7b2a0acd99d79ca1ff4d81ae01280b7265ce7c1e493
-cga-artifacts-v1,C5,RFM,relu3,64,energy_gap,2.751137819966658,1.360579288721226,4.728193422340837,10,10,0,True,actual,3a03680122c933b6407ae7b2a0acd99d79ca1ff4d81ae01280b7265ce7c1e493
-cga-artifacts-v1,C5,RFM,relu3,128,energy_gap,0.16467016031072035,0.13009656987398444,0.2169585111846004,10,7,3,True,actual,3a03680122c933b6407ae7b2a0acd99d79ca1ff4d81ae01280b7265ce7c1e493
-cga-artifacts-v1,C5,RFM,relu3,256,energy_gap,0.02573241972632445,0.01896892244226933,0.035269742755176026,10,4,6,True,actual,3a03680122c933b6407ae7b2a0acd99d79ca1ff4d81ae01280b7265ce7c1e493
-cga-artifacts-v1,C5,CGA,relu3,1,relative_sobolev,0.9805963190858558,,,,,,False,actual,6d81942b302d13300c3647405a00815e6889bf8414f20361cbc7e8f89df0904c
-cga-artifacts-v1,C5,CGA,relu3,2,relative_sobolev,0.9601461437513399,,,,,,False,actual,6d81942b302d13300c3647405a00815e6889bf8414f20361cbc7e8f89df0904c
-cga-artifacts-v1,C5,CGA,relu3,4,relative_sobolev,0.9148465861287726,,,,,,False,actual,6d81942b302d13300c3647405a00815e6889bf8414f20361cbc7e8f89df0904c
-cga-artifacts-v1,C5,CGA,relu3,8,relative_sobolev,0.7760251102239298,,,,,,False,actual,6d81942b302d13300c3647405a00815e6889bf8414f20361cbc7e8f89df0904c
-cga-artifacts-v1,C5,CGA,relu3,16,relative_sobolev,0.3624497524371621,,,,,,False,actual,6d81942b302d13300c3647405a00815e6889bf8414f20361cbc7e8f89df0904c
-cga-artifacts-v1,C5,CGA,relu3,32,relative_sobolev,0.15275472454447261,,,,,,False,actual,6d81942b302d13300c3647405a00815e6889bf8414f20361cbc7e8f89df0904c
-cga-artifacts-v1,C5,CGA,relu3,64,relative_sobolev,0.030777214146687434,,,,,,False,actual,6d81942b302d13300c3647405a00815e6889bf8414f20361cbc7e8f89df0904c
-cga-artifacts-v1,C5,CGA,relu3,128,relative_sobolev,0.010168034990330423,,,,,,False,actual,6d81942b302d13300c3647405a00815e6889bf8414f20361cbc7e8f89df0904c
-cga-artifacts-v1,C5,CGA,relu3,256,relative_sobolev,0.002493618623083861,,,,,,False,actual,6d81942b302d13300c3647405a00815e6889bf8414f20361cbc7e8f89df0904c
-cga-artifacts-v1,C5,CGA,relu3,512,relative_sobolev,0.0036007938124299793,,,,,,False,actual,6d81942b302d13300c3647405a00815e6889bf8414f20361cbc7e8f89df0904c
-cga-artifacts-v1,C5,FEM P1,p1,3,relative_sobolev,0.9886063534084788,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C5,FEM P1,p1,8,relative_sobolev,0.8073749917142765,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C5,FEM P1,p1,15,relative_sobolev,0.853495807592937,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C5,FEM P1,p1,24,relative_sobolev,0.6734533619262284,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C5,FEM P1,p1,35,relative_sobolev,0.61191742290024,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C5,FEM P1,p1,48,relative_sobolev,0.5392754771986424,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C5,FEM P1,p1,80,relative_sobolev,0.42414040828304844,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C5,FEM P1,p1,143,relative_sobolev,0.31336026033553904,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C5,FEM P1,p1,288,relative_sobolev,0.21885730611851578,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C5,FEM P1,p1,528,relative_sobolev,0.15868882175293444,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C5,FEM P2,p2,8,relative_sobolev,0.9276628890201611,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C5,FEM P2,p2,24,relative_sobolev,0.47498227754793243,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C5,FEM P2,p2,48,relative_sobolev,0.3840344174934651,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C5,FEM P2,p2,80,relative_sobolev,0.2723467414217979,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C5,FEM P2,p2,120,relative_sobolev,0.17619649959246778,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C5,FEM P2,p2,168,relative_sobolev,0.13313026329211924,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C5,FEM P2,p2,288,relative_sobolev,0.077530356702421,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C5,FEM P2,p2,528,relative_sobolev,0.040865640467783945,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C5,FEM P3,p3,15,relative_sobolev,0.9091039687394181,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C5,FEM P3,p3,48,relative_sobolev,0.4046227925448577,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C5,FEM P3,p3,99,relative_sobolev,0.13353140900748955,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C5,FEM P3,p3,168,relative_sobolev,0.06267099194542404,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C5,FEM P3,p3,255,relative_sobolev,0.04041806256322467,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C5,FEM P3,p3,483,relative_sobolev,0.01580039351889095,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C5,RFM,relu3,8,relative_sobolev,1.0178719085227121,0.9971350905322653,1.0340292319543924,10,10,0,True,actual,3a03680122c933b6407ae7b2a0acd99d79ca1ff4d81ae01280b7265ce7c1e493
-cga-artifacts-v1,C5,RFM,relu3,16,relative_sobolev,0.7970414062099991,0.7529473209589588,0.820356670214114,10,10,0,True,actual,3a03680122c933b6407ae7b2a0acd99d79ca1ff4d81ae01280b7265ce7c1e493
-cga-artifacts-v1,C5,RFM,relu3,32,relative_sobolev,0.42900502018262554,0.3499644982964438,0.46553704378895255,10,10,0,True,actual,3a03680122c933b6407ae7b2a0acd99d79ca1ff4d81ae01280b7265ce7c1e493
-cga-artifacts-v1,C5,RFM,relu3,64,relative_sobolev,0.12260004337842098,0.08045247031549363,0.13663646918973404,10,10,0,True,actual,3a03680122c933b6407ae7b2a0acd99d79ca1ff4d81ae01280b7265ce7c1e493
-cga-artifacts-v1,C5,RFM,relu3,128,relative_sobolev,0.035362151164344775,0.028013091710559712,0.035682743438117004,10,7,3,True,actual,3a03680122c933b6407ae7b2a0acd99d79ca1ff4d81ae01280b7265ce7c1e493
-cga-artifacts-v1,C5,RFM,relu3,256,relative_sobolev,0.012483080193583847,0.010865332341039757,0.014650917726434376,10,4,6,True,actual,3a03680122c933b6407ae7b2a0acd99d79ca1ff4d81ae01280b7265ce7c1e493
-cga-artifacts-v1,C5,CGA,relu3,1,v_distance,0.9886345671707135,,,,,,False,actual,6d81942b302d13300c3647405a00815e6889bf8414f20361cbc7e8f89df0904c
-cga-artifacts-v1,C5,CGA,relu3,2,v_distance,0.9770317457957882,,,,,,False,actual,6d81942b302d13300c3647405a00815e6889bf8414f20361cbc7e8f89df0904c
-cga-artifacts-v1,C5,CGA,relu3,4,v_distance,0.9541213546212052,,,,,,False,actual,6d81942b302d13300c3647405a00815e6889bf8414f20361cbc7e8f89df0904c
-cga-artifacts-v1,C5,CGA,relu3,8,v_distance,0.7999229662946721,,,,,,False,actual,6d81942b302d13300c3647405a00815e6889bf8414f20361cbc7e8f89df0904c
-cga-artifacts-v1,C5,CGA,relu3,16,v_distance,0.38624704523756004,,,,,,False,actual,6d81942b302d13300c3647405a00815e6889bf8414f20361cbc7e8f89df0904c
-cga-artifacts-v1,C5,CGA,relu3,32,v_distance,0.17863353212841482,,,,,,False,actual,6d81942b302d13300c3647405a00815e6889bf8414f20361cbc7e8f89df0904c
-cga-artifacts-v1,C5,CGA,relu3,64,v_distance,0.027013634361347315,,,,,,False,actual,6d81942b302d13300c3647405a00815e6889bf8414f20361cbc7e8f89df0904c
-cga-artifacts-v1,C5,CGA,relu3,128,v_distance,0.007452267315203394,,,,,,False,actual,6d81942b302d13300c3647405a00815e6889bf8414f20361cbc7e8f89df0904c
-cga-artifacts-v1,C5,CGA,relu3,256,v_distance,0.0022884390314750324,,,,,,False,actual,6d81942b302d13300c3647405a00815e6889bf8414f20361cbc7e8f89df0904c
-cga-artifacts-v1,C5,CGA,relu3,512,v_distance,0.0015841281793294408,,,,,,False,actual,6d81942b302d13300c3647405a00815e6889bf8414f20361cbc7e8f89df0904c
-cga-artifacts-v1,C5,FEM P1,p1,3,v_distance,0.9613058730403515,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C5,FEM P1,p1,8,v_distance,0.81117362104304,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C5,FEM P1,p1,15,v_distance,0.8314296526056918,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C5,FEM P1,p1,24,v_distance,0.7618415674452512,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C5,FEM P1,p1,35,v_distance,0.6520878501069205,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C5,FEM P1,p1,48,v_distance,0.5727991746854305,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C5,FEM P1,p1,80,v_distance,0.4443744110574285,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C5,FEM P1,p1,143,v_distance,0.33563541116821954,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C5,FEM P1,p1,288,v_distance,0.23546163837965825,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C5,FEM P1,p1,528,v_distance,0.1733701440828051,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C5,FEM P2,p2,8,v_distance,0.9658282325038814,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C5,FEM P2,p2,24,v_distance,0.6009119173744504,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C5,FEM P2,p2,48,v_distance,0.4222143952457477,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C5,FEM P2,p2,80,v_distance,0.24141718634747192,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C5,FEM P2,p2,120,v_distance,0.193895875718903,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C5,FEM P2,p2,168,v_distance,0.13852117194293914,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C5,FEM P2,p2,288,v_distance,0.08463532935254507,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C5,FEM P2,p2,528,v_distance,0.046840160353989614,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C5,FEM P3,p3,15,v_distance,0.9610122372276263,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C5,FEM P3,p3,48,v_distance,0.36470287185436123,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C5,FEM P3,p3,99,v_distance,0.13372311050437535,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C5,FEM P3,p3,168,v_distance,0.06547798489490148,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C5,FEM P3,p3,255,v_distance,0.028897663000258932,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C5,FEM P3,p3,483,v_distance,0.010365082619050232,,,,True,0,False,actual,bada55e33777b09c2979668b573eb04b1969bea22be70096f6fc0eaf4dee19c8
-cga-artifacts-v1,C5,RFM,relu3,8,v_distance,0.9815053302033421,0.9539584481268109,1.004082244038866,10,10,0,True,actual,3a03680122c933b6407ae7b2a0acd99d79ca1ff4d81ae01280b7265ce7c1e493
-cga-artifacts-v1,C5,RFM,relu3,16,v_distance,0.8420480984195451,0.7699576306530848,0.8732716595029457,10,10,0,True,actual,3a03680122c933b6407ae7b2a0acd99d79ca1ff4d81ae01280b7265ce7c1e493
-cga-artifacts-v1,C5,RFM,relu3,32,v_distance,0.4564537997083742,0.3651231455522058,0.5194455323526738,10,10,0,True,actual,3a03680122c933b6407ae7b2a0acd99d79ca1ff4d81ae01280b7265ce7c1e493
-cga-artifacts-v1,C5,RFM,relu3,64,v_distance,0.11648666293973917,0.08064115921442225,0.1512849201988749,10,10,0,True,actual,3a03680122c933b6407ae7b2a0acd99d79ca1ff4d81ae01280b7265ce7c1e493
-cga-artifacts-v1,C5,RFM,relu3,128,v_distance,0.02825637243107325,0.02517837569563909,0.03263078527381026,10,7,3,True,actual,3a03680122c933b6407ae7b2a0acd99d79ca1ff4d81ae01280b7265ce7c1e493
-cga-artifacts-v1,C5,RFM,relu3,256,v_distance,0.011145140687796555,0.009575881462510162,0.013110136301867064,10,4,6,True,actual,3a03680122c933b6407ae7b2a0acd99d79ca1ff4d81ae01280b7265ce7c1e493
+cga-artifacts-v1,C1,CGA,relu3,8,energy_gap,12.402160107197052,,,,1,0,False,actual,9a916ee78dd771a62e8474a6e682864c183086b1de690502f48484cf3ea754fd
+cga-artifacts-v1,C1,CGA,relu3,16,energy_gap,6.968037188428795,,,,1,0,False,actual,9a916ee78dd771a62e8474a6e682864c183086b1de690502f48484cf3ea754fd
+cga-artifacts-v1,C1,CGA,relu3,32,energy_gap,0.4276896455648469,,,,1,0,False,actual,9a916ee78dd771a62e8474a6e682864c183086b1de690502f48484cf3ea754fd
+cga-artifacts-v1,C1,CGA,relu3,64,energy_gap,0.0039830729987748725,,,,1,0,False,actual,9a916ee78dd771a62e8474a6e682864c183086b1de690502f48484cf3ea754fd
+cga-artifacts-v1,C1,CGA,relu3,128,energy_gap,2.577075871101897e-05,,,,1,0,False,actual,9a916ee78dd771a62e8474a6e682864c183086b1de690502f48484cf3ea754fd
+cga-artifacts-v1,C1,CGA,relu3,256,energy_gap,3.8000705870899765e-07,,,,1,0,False,actual,9a916ee78dd771a62e8474a6e682864c183086b1de690502f48484cf3ea754fd
+cga-artifacts-v1,C1,FEM P1,p1,5,energy_gap,14.51828701022237,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C1,FEM P1,p1,9,energy_gap,7.722667970762075,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C1,FEM P1,p1,17,energy_gap,6.856904811340939,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C1,FEM P1,p1,33,energy_gap,2.22548972146528,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C1,FEM P1,p1,65,energy_gap,0.5954511945744017,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C1,FEM P1,p1,129,energy_gap,0.1514325126592908,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C1,FEM P1,p1,257,energy_gap,0.03802079264652747,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C1,FEM P2,p2,5,energy_gap,13.559241408546653,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C1,FEM P2,p2,9,energy_gap,9.822228581379568,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C1,FEM P2,p2,17,energy_gap,7.538322612334294,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C1,FEM P2,p2,33,energy_gap,1.2608581401815186,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C1,FEM P2,p2,65,energy_gap,0.10232792893038933,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C1,FEM P2,p2,129,energy_gap,0.006827104620118263,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C1,FEM P2,p2,257,energy_gap,0.0004337158264355878,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C1,FEM P3,p3,4,energy_gap,18544.816321611896,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C1,FEM P3,p3,7,energy_gap,13.003667751333772,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C1,FEM P3,p3,13,energy_gap,9.478116442303886,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C1,FEM P3,p3,25,energy_gap,2.9152687928324,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C1,FEM P3,p3,49,energy_gap,0.11547520636001352,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C1,FEM P3,p3,97,energy_gap,0.0022564091267405217,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C1,FEM P3,p3,193,energy_gap,3.727185251278797e-05,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C1,FEM P3,p3,385,energy_gap,5.9051119905007e-07,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C1,RFM,relu3,8,energy_gap,11.844216711173384,11.67570961720156,12.116300858818231,10,10,0,True,actual,9cdcf96ce96f1e86fb50e0975b5a33b3cc9bfd90c76e89a79f09b5b30e54a229
+cga-artifacts-v1,C1,RFM,relu3,16,energy_gap,7.021890427092252,6.705173917689493,7.475163611706424,10,10,0,True,actual,9cdcf96ce96f1e86fb50e0975b5a33b3cc9bfd90c76e89a79f09b5b30e54a229
+cga-artifacts-v1,C1,RFM,relu3,32,energy_gap,1.7210094809728655,1.4649013630601075,2.465665720805979,10,10,0,True,actual,9cdcf96ce96f1e86fb50e0975b5a33b3cc9bfd90c76e89a79f09b5b30e54a229
+cga-artifacts-v1,C1,RFM,relu3,64,energy_gap,0.07551045951725399,0.040185481808400425,0.11710604286523285,10,10,0,True,actual,9cdcf96ce96f1e86fb50e0975b5a33b3cc9bfd90c76e89a79f09b5b30e54a229
+cga-artifacts-v1,C1,RFM,relu3,128,energy_gap,0.000813439421149198,0.0004889410918407222,0.0014136941263647174,10,10,0,True,actual,9cdcf96ce96f1e86fb50e0975b5a33b3cc9bfd90c76e89a79f09b5b30e54a229
+cga-artifacts-v1,C1,RFM,relu3,256,energy_gap,8.398641977436228e-07,7.740900462849254e-07,8.940526541323379e-07,10,10,0,True,actual,9cdcf96ce96f1e86fb50e0975b5a33b3cc9bfd90c76e89a79f09b5b30e54a229
+cga-artifacts-v1,C1,CGA,relu3,8,relative_sobolev,0.7123134412241172,,,,1,0,False,actual,9a916ee78dd771a62e8474a6e682864c183086b1de690502f48484cf3ea754fd
+cga-artifacts-v1,C1,CGA,relu3,16,relative_sobolev,0.5339218603380697,,,,1,0,False,actual,9a916ee78dd771a62e8474a6e682864c183086b1de690502f48484cf3ea754fd
+cga-artifacts-v1,C1,CGA,relu3,32,relative_sobolev,0.13227776257651144,,,,1,0,False,actual,9a916ee78dd771a62e8474a6e682864c183086b1de690502f48484cf3ea754fd
+cga-artifacts-v1,C1,CGA,relu3,64,relative_sobolev,0.012765316062923568,,,,1,0,False,actual,9a916ee78dd771a62e8474a6e682864c183086b1de690502f48484cf3ea754fd
+cga-artifacts-v1,C1,CGA,relu3,128,relative_sobolev,0.0010267896467233664,,,,1,0,False,actual,9a916ee78dd771a62e8474a6e682864c183086b1de690502f48484cf3ea754fd
+cga-artifacts-v1,C1,CGA,relu3,256,relative_sobolev,0.00012469717001272235,,,,1,0,False,actual,9a916ee78dd771a62e8474a6e682864c183086b1de690502f48484cf3ea754fd
+cga-artifacts-v1,C1,FEM P1,p1,5,relative_sobolev,0.7706907765507895,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C1,FEM P1,p1,9,relative_sobolev,0.5620903821644476,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C1,FEM P1,p1,17,relative_sobolev,0.5296470197713126,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C1,FEM P1,p1,33,relative_sobolev,0.3017416557046498,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C1,FEM P1,p1,65,relative_sobolev,0.15607938965109242,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C1,FEM P1,p1,129,relative_sobolev,0.07871038503668755,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C1,FEM P1,p1,257,relative_sobolev,0.039439650341829786,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C1,FEM P2,p2,5,relative_sobolev,0.744800859476482,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C1,FEM P2,p2,9,relative_sobolev,0.6339098367434935,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C1,FEM P2,p2,17,relative_sobolev,0.5553411208784526,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C1,FEM P2,p2,33,relative_sobolev,0.22712010796038493,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C1,FEM P2,p2,65,relative_sobolev,0.06470227702755572,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C1,FEM P2,p2,129,relative_sobolev,0.016712474272656496,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C1,FEM P2,p2,257,relative_sobolev,0.004212356387293595,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C1,FEM P3,p3,4,relative_sobolev,27.54442690235032,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C1,FEM P3,p3,7,relative_sobolev,0.7293826105368074,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C1,FEM P3,p3,13,relative_sobolev,0.6227066341214115,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C1,FEM P3,p3,25,relative_sobolev,0.3453518401944387,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C1,FEM P3,p3,49,relative_sobolev,0.06873324469473137,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C1,FEM P3,p3,97,relative_sobolev,0.009607964649353914,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C1,FEM P3,p3,193,relative_sobolev,0.0012348464629079927,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C1,FEM P3,p3,385,relative_sobolev,0.00015543060670697255,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C1,RFM,relu3,8,relative_sobolev,0.6961062173082029,0.6911337475346961,0.7040544193840437,10,10,0,True,actual,9cdcf96ce96f1e86fb50e0975b5a33b3cc9bfd90c76e89a79f09b5b30e54a229
+cga-artifacts-v1,C1,RFM,relu3,16,relative_sobolev,0.5359764996117478,0.5237363707927267,0.5529789750197809,10,10,0,True,actual,9cdcf96ce96f1e86fb50e0975b5a33b3cc9bfd90c76e89a79f09b5b30e54a229
+cga-artifacts-v1,C1,RFM,relu3,32,relative_sobolev,0.26534211697807264,0.24480780144915637,0.317606630301449,10,10,0,True,actual,9cdcf96ce96f1e86fb50e0975b5a33b3cc9bfd90c76e89a79f09b5b30e54a229
+cga-artifacts-v1,C1,RFM,relu3,64,relative_sobolev,0.05557793929770424,0.0405448002978559,0.06888647978586873,10,10,0,True,actual,9cdcf96ce96f1e86fb50e0975b5a33b3cc9bfd90c76e89a79f09b5b30e54a229
+cga-artifacts-v1,C1,RFM,relu3,128,relative_sobolev,0.005762936954998417,0.004465484406354221,0.0076044047024740775,10,10,0,True,actual,9cdcf96ce96f1e86fb50e0975b5a33b3cc9bfd90c76e89a79f09b5b30e54a229
+cga-artifacts-v1,C1,RFM,relu3,256,relative_sobolev,0.0001853036957205878,0.00017793308903134186,0.00019128564121472427,10,10,0,True,actual,9cdcf96ce96f1e86fb50e0975b5a33b3cc9bfd90c76e89a79f09b5b30e54a229
+cga-artifacts-v1,C2,CGA,relu3,8,energy_gap,12.911527798300197,,,,1,0,False,actual,9a916ee78dd771a62e8474a6e682864c183086b1de690502f48484cf3ea754fd
+cga-artifacts-v1,C2,CGA,relu3,16,energy_gap,9.114159946653235,,,,1,0,False,actual,9a916ee78dd771a62e8474a6e682864c183086b1de690502f48484cf3ea754fd
+cga-artifacts-v1,C2,CGA,relu3,32,energy_gap,0.37516105627112495,,,,1,0,False,actual,9a916ee78dd771a62e8474a6e682864c183086b1de690502f48484cf3ea754fd
+cga-artifacts-v1,C2,CGA,relu3,64,energy_gap,0.0022383740108153916,,,,1,0,False,actual,9a916ee78dd771a62e8474a6e682864c183086b1de690502f48484cf3ea754fd
+cga-artifacts-v1,C2,CGA,relu3,128,energy_gap,4.3005961973818785e-05,,,,1,0,False,actual,9a916ee78dd771a62e8474a6e682864c183086b1de690502f48484cf3ea754fd
+cga-artifacts-v1,C2,CGA,relu3,256,energy_gap,3.611560401850511e-07,,,,1,0,False,actual,9a916ee78dd771a62e8474a6e682864c183086b1de690502f48484cf3ea754fd
+cga-artifacts-v1,C2,FEM P1,p1,5,energy_gap,14.53262002279643,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C2,FEM P1,p1,9,energy_gap,7.723527952576234,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C2,FEM P1,p1,17,energy_gap,6.857283051479172,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C2,FEM P1,p1,33,energy_gap,2.2256904258613517,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C2,FEM P1,p1,65,energy_gap,0.5954650652908633,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C2,FEM P1,p1,129,energy_gap,0.15143340184639698,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C2,FEM P1,p1,257,energy_gap,0.03802084857499466,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C2,FEM P2,p2,5,energy_gap,13.560911273768081,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C2,FEM P2,p2,9,energy_gap,9.825609144751258,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C2,FEM P2,p2,17,energy_gap,7.538743000053955,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C2,FEM P2,p2,33,energy_gap,1.2610244369651582,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C2,FEM P2,p2,65,energy_gap,0.10232951392691803,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C2,FEM P2,p2,129,energy_gap,0.0068271310286149856,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C2,FEM P2,p2,257,energy_gap,0.00043371624566646005,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C2,FEM P3,p3,4,energy_gap,327.0794418530006,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C2,FEM P3,p3,7,energy_gap,13.002270938987678,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C2,FEM P3,p3,13,energy_gap,9.481189678645695,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C2,FEM P3,p3,25,energy_gap,2.9157973021985093,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C2,FEM P3,p3,49,energy_gap,0.11547456818040303,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C2,FEM P3,p3,97,energy_gap,0.0022564247409597726,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C2,FEM P3,p3,193,energy_gap,3.727191719349321e-05,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C2,FEM P3,p3,385,energy_gap,5.905114548454549e-07,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C2,RFM,relu3,8,energy_gap,11.857835546698375,11.681743733723719,12.296699314909935,10,10,0,True,actual,9cdcf96ce96f1e86fb50e0975b5a33b3cc9bfd90c76e89a79f09b5b30e54a229
+cga-artifacts-v1,C2,RFM,relu3,16,energy_gap,7.023629433471472,6.70595826314802,7.47611704498399,10,10,0,True,actual,9cdcf96ce96f1e86fb50e0975b5a33b3cc9bfd90c76e89a79f09b5b30e54a229
+cga-artifacts-v1,C2,RFM,relu3,32,energy_gap,1.7212297492517052,1.4649049973169497,2.466175035513009,10,10,0,True,actual,9cdcf96ce96f1e86fb50e0975b5a33b3cc9bfd90c76e89a79f09b5b30e54a229
+cga-artifacts-v1,C2,RFM,relu3,64,energy_gap,0.07550901819559996,0.040184633926431346,0.11711834951966882,10,10,0,True,actual,9cdcf96ce96f1e86fb50e0975b5a33b3cc9bfd90c76e89a79f09b5b30e54a229
+cga-artifacts-v1,C2,RFM,relu3,128,energy_gap,0.0008134363593423899,0.0004889465295470075,0.0014137517726950932,10,10,0,True,actual,9cdcf96ce96f1e86fb50e0975b5a33b3cc9bfd90c76e89a79f09b5b30e54a229
+cga-artifacts-v1,C2,RFM,relu3,256,energy_gap,8.398993625036155e-07,7.741054659504698e-07,8.943615226186807e-07,10,10,0,True,actual,9cdcf96ce96f1e86fb50e0975b5a33b3cc9bfd90c76e89a79f09b5b30e54a229
+cga-artifacts-v1,C2,CGA,relu3,8,relative_sobolev,0.7176574619246613,,,,1,0,False,actual,9a916ee78dd771a62e8474a6e682864c183086b1de690502f48484cf3ea754fd
+cga-artifacts-v1,C2,CGA,relu3,16,relative_sobolev,0.6100056475369618,,,,1,0,False,actual,9a916ee78dd771a62e8474a6e682864c183086b1de690502f48484cf3ea754fd
+cga-artifacts-v1,C2,CGA,relu3,32,relative_sobolev,0.12388799359635652,,,,1,0,False,actual,9a916ee78dd771a62e8474a6e682864c183086b1de690502f48484cf3ea754fd
+cga-artifacts-v1,C2,CGA,relu3,64,relative_sobolev,0.009569202530386022,,,,1,0,False,actual,9a916ee78dd771a62e8474a6e682864c183086b1de690502f48484cf3ea754fd
+cga-artifacts-v1,C2,CGA,relu3,128,relative_sobolev,0.0013264246161278255,,,,1,0,False,actual,9a916ee78dd771a62e8474a6e682864c183086b1de690502f48484cf3ea754fd
+cga-artifacts-v1,C2,CGA,relu3,256,relative_sobolev,0.00012152710843502245,,,,1,0,False,actual,9a916ee78dd771a62e8474a6e682864c183086b1de690502f48484cf3ea754fd
+cga-artifacts-v1,C2,FEM P1,p1,5,relative_sobolev,0.770693180065264,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C2,FEM P1,p1,9,relative_sobolev,0.5620905301169383,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C2,FEM P1,p1,17,relative_sobolev,0.5296474924501898,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C2,FEM P1,p1,33,relative_sobolev,0.3017417875662096,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C2,FEM P1,p1,65,relative_sobolev,0.15607940922597147,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C2,FEM P1,p1,129,relative_sobolev,0.07871038759426213,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C2,FEM P1,p1,257,relative_sobolev,0.03943965066527004,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C2,FEM P2,p2,5,relative_sobolev,0.7448890703116644,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C2,FEM P2,p2,9,relative_sobolev,0.6339107904605643,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C2,FEM P2,p2,17,relative_sobolev,0.5553412081586102,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C2,FEM P2,p2,33,relative_sobolev,0.22712014758435622,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C2,FEM P2,p2,65,relative_sobolev,0.06470227754388216,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C2,FEM P2,p2,129,relative_sobolev,0.016712474281713435,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C2,FEM P2,p2,257,relative_sobolev,0.00421235638745338,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C2,FEM P3,p3,4,relative_sobolev,1.3656010605970468,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C2,FEM P3,p3,7,relative_sobolev,0.7294514204152283,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C2,FEM P3,p3,13,relative_sobolev,0.622708013255025,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C2,FEM P3,p3,25,relative_sobolev,0.3453518979565202,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C2,FEM P3,p3,49,relative_sobolev,0.06873324498180926,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C2,FEM P3,p3,97,relative_sobolev,0.009607964651870405,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C2,FEM P3,p3,193,relative_sobolev,0.0012348464629260937,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C2,FEM P3,p3,385,relative_sobolev,0.00015543060672036676,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C2,RFM,relu3,8,relative_sobolev,0.6961492620877927,0.6911378076827782,0.7047073231228846,10,10,0,True,actual,9cdcf96ce96f1e86fb50e0975b5a33b3cc9bfd90c76e89a79f09b5b30e54a229
+cga-artifacts-v1,C2,RFM,relu3,16,relative_sobolev,0.5359775653076893,0.5237365358073676,0.5529792379782266,10,10,0,True,actual,9cdcf96ce96f1e86fb50e0975b5a33b3cc9bfd90c76e89a79f09b5b30e54a229
+cga-artifacts-v1,C2,RFM,relu3,32,relative_sobolev,0.2653421969080664,0.24480786934569895,0.31760672303689763,10,10,0,True,actual,9cdcf96ce96f1e86fb50e0975b5a33b3cc9bfd90c76e89a79f09b5b30e54a229
+cga-artifacts-v1,C2,RFM,relu3,64,relative_sobolev,0.0555779397130815,0.040544800472076786,0.06888648514813568,10,10,0,True,actual,9cdcf96ce96f1e86fb50e0975b5a33b3cc9bfd90c76e89a79f09b5b30e54a229
+cga-artifacts-v1,C2,RFM,relu3,128,relative_sobolev,0.005762936964337431,0.004465484411895639,0.0076044047241840655,10,10,0,True,actual,9cdcf96ce96f1e86fb50e0975b5a33b3cc9bfd90c76e89a79f09b5b30e54a229
+cga-artifacts-v1,C2,RFM,relu3,256,relative_sobolev,0.0001853073999982535,0.00017793507238008378,0.00019132118972481124,10,10,0,True,actual,9cdcf96ce96f1e86fb50e0975b5a33b3cc9bfd90c76e89a79f09b5b30e54a229
+cga-artifacts-v1,C3,CGA,relu3,8,energy_gap,5.00787331332748,,,,1,0,False,actual,9a916ee78dd771a62e8474a6e682864c183086b1de690502f48484cf3ea754fd
+cga-artifacts-v1,C3,CGA,relu3,16,energy_gap,2.802461356339017,,,,1,0,False,actual,9a916ee78dd771a62e8474a6e682864c183086b1de690502f48484cf3ea754fd
+cga-artifacts-v1,C3,CGA,relu3,32,energy_gap,1.7303487342075492,,,,1,0,False,actual,9a916ee78dd771a62e8474a6e682864c183086b1de690502f48484cf3ea754fd
+cga-artifacts-v1,C3,CGA,relu3,64,energy_gap,0.024271016857962735,,,,1,0,False,actual,9a916ee78dd771a62e8474a6e682864c183086b1de690502f48484cf3ea754fd
+cga-artifacts-v1,C3,CGA,relu3,128,energy_gap,0.001993221867433448,,,,1,0,False,actual,9a916ee78dd771a62e8474a6e682864c183086b1de690502f48484cf3ea754fd
+cga-artifacts-v1,C3,CGA,relu3,256,energy_gap,0.00016593770747697079,,,,1,0,False,actual,9a916ee78dd771a62e8474a6e682864c183086b1de690502f48484cf3ea754fd
+cga-artifacts-v1,C3,CGA,relu3,512,energy_gap,3.95686588170463e-05,,,,1,0,False,actual,9a916ee78dd771a62e8474a6e682864c183086b1de690502f48484cf3ea754fd
+cga-artifacts-v1,C3,FEM P1,p1,4,energy_gap,9.01279998834826,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C3,FEM P1,p1,9,energy_gap,5.942774671708044,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C3,FEM P1,p1,16,energy_gap,5.902265570832894,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C3,FEM P1,p1,25,energy_gap,4.174443101834572,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C3,FEM P1,p1,36,energy_gap,3.033856209881387,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C3,FEM P1,p1,81,energy_gap,1.3377540192379147,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C3,FEM P1,p1,289,energy_gap,0.3688905990870932,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C3,FEM P2,p2,9,energy_gap,6.954048621878586,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C3,FEM P2,p2,25,energy_gap,1.6882566799302428,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C3,FEM P2,p2,81,energy_gap,0.3969537462337751,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C3,FEM P2,p2,121,energy_gap,0.1861558945449957,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C3,FEM P2,p2,289,energy_gap,0.035245490865772666,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C3,FEM P3,p3,16,energy_gap,5.639445248359626,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C3,FEM P3,p3,49,energy_gap,0.9647685464190978,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C3,FEM P3,p3,100,energy_gap,0.09028719202631663,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C3,FEM P3,p3,169,energy_gap,0.01887615071472304,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C3,RFM,relu3,8,energy_gap,9.188968814659248,8.529766895128004,9.64455982923564,10,10,0,True,actual,9cdcf96ce96f1e86fb50e0975b5a33b3cc9bfd90c76e89a79f09b5b30e54a229
+cga-artifacts-v1,C3,RFM,relu3,16,energy_gap,6.076191625387814,4.845214428235755,6.769428880211718,10,10,0,True,actual,9cdcf96ce96f1e86fb50e0975b5a33b3cc9bfd90c76e89a79f09b5b30e54a229
+cga-artifacts-v1,C3,RFM,relu3,32,energy_gap,1.4138318460419486,0.8490248080848497,1.6411941310331866,10,10,0,True,actual,9cdcf96ce96f1e86fb50e0975b5a33b3cc9bfd90c76e89a79f09b5b30e54a229
+cga-artifacts-v1,C3,RFM,relu3,64,energy_gap,0.08256304352779509,0.032559019321828586,0.12220291484652535,10,10,0,True,actual,9cdcf96ce96f1e86fb50e0975b5a33b3cc9bfd90c76e89a79f09b5b30e54a229
+cga-artifacts-v1,C3,RFM,relu3,128,energy_gap,0.005361958342816386,0.004951988432254417,0.007408500453292,10,10,0,True,actual,9cdcf96ce96f1e86fb50e0975b5a33b3cc9bfd90c76e89a79f09b5b30e54a229
+cga-artifacts-v1,C3,RFM,relu3,256,energy_gap,0.0005173726108385068,0.0004187469980609926,0.0007502194237858362,10,10,0,True,actual,9cdcf96ce96f1e86fb50e0975b5a33b3cc9bfd90c76e89a79f09b5b30e54a229
+cga-artifacts-v1,C3,RFM,relu3,512,energy_gap,5.1263826101433096e-05,4.479179152738766e-05,0.0011678232323735216,10,9,1,True,actual,9cdcf96ce96f1e86fb50e0975b5a33b3cc9bfd90c76e89a79f09b5b30e54a229
+cga-artifacts-v1,C3,CGA,relu3,8,relative_sobolev,0.707314421478911,,,,1,0,False,actual,9a916ee78dd771a62e8474a6e682864c183086b1de690502f48484cf3ea754fd
+cga-artifacts-v1,C3,CGA,relu3,16,relative_sobolev,0.5288357341561591,,,,1,0,False,actual,9a916ee78dd771a62e8474a6e682864c183086b1de690502f48484cf3ea754fd
+cga-artifacts-v1,C3,CGA,relu3,32,relative_sobolev,0.41523917909146835,,,,1,0,False,actual,9a916ee78dd771a62e8474a6e682864c183086b1de690502f48484cf3ea754fd
+cga-artifacts-v1,C3,CGA,relu3,64,relative_sobolev,0.04926859791591263,,,,1,0,False,actual,9a916ee78dd771a62e8474a6e682864c183086b1de690502f48484cf3ea754fd
+cga-artifacts-v1,C3,CGA,relu3,128,relative_sobolev,0.014122252697564269,,,,1,0,False,actual,9a916ee78dd771a62e8474a6e682864c183086b1de690502f48484cf3ea754fd
+cga-artifacts-v1,C3,CGA,relu3,256,relative_sobolev,0.004073973953426827,,,,1,0,False,actual,9a916ee78dd771a62e8474a6e682864c183086b1de690502f48484cf3ea754fd
+cga-artifacts-v1,C3,CGA,relu3,512,relative_sobolev,0.001989268908243274,,,,1,0,False,actual,9a916ee78dd771a62e8474a6e682864c183086b1de690502f48484cf3ea754fd
+cga-artifacts-v1,C3,FEM P1,p1,4,relative_sobolev,0.9487795854785492,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C3,FEM P1,p1,9,relative_sobolev,0.7706036324707949,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C3,FEM P1,p1,16,relative_sobolev,0.765766018434993,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C3,FEM P1,p1,25,relative_sobolev,0.6469715527198855,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C3,FEM P1,p1,36,relative_sobolev,0.5498714912233447,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C3,FEM P1,p1,49,relative_sobolev,0.4747536984708348,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C3,FEM P1,p1,81,relative_sobolev,0.3701631088769596,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C3,FEM P1,p1,144,relative_sobolev,0.275431278772181,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C3,FEM P1,p1,289,relative_sobolev,0.19229223860022338,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C3,FEM P1,p1,529,relative_sobolev,0.14075378731212584,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C3,FEM P2,p2,9,relative_sobolev,0.8335261683478876,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C3,FEM P2,p2,25,relative_sobolev,0.41093842869326863,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C3,FEM P2,p2,49,relative_sobolev,0.31678123009606335,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C3,FEM P2,p2,81,relative_sobolev,0.19901625508312343,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C3,FEM P2,p2,121,relative_sobolev,0.13514911628515064,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C3,FEM P2,p2,169,relative_sobolev,0.09724045017132622,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C3,FEM P2,p2,289,relative_sobolev,0.05696070508865036,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C3,FEM P2,p2,529,relative_sobolev,0.030815857538028197,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C3,FEM P3,p3,16,relative_sobolev,0.7506612335033628,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C3,FEM P3,p3,49,relative_sobolev,0.310618723956519,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C3,FEM P3,p3,100,relative_sobolev,0.09536486370052766,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C3,FEM P3,p3,169,relative_sobolev,0.04343778656963796,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C3,FEM P3,p3,256,relative_sobolev,0.022933229333787847,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C3,FEM P3,p3,484,relative_sobolev,0.00855801552435562,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C3,RFM,relu3,8,relative_sobolev,0.9579992949684393,0.9229083529402564,0.9814248061153962,10,10,0,True,actual,9cdcf96ce96f1e86fb50e0975b5a33b3cc9bfd90c76e89a79f09b5b30e54a229
+cga-artifacts-v1,C3,RFM,relu3,16,relative_sobolev,0.7788799284167232,0.6956285992951432,0.8218718004100373,10,10,0,True,actual,9cdcf96ce96f1e86fb50e0975b5a33b3cc9bfd90c76e89a79f09b5b30e54a229
+cga-artifacts-v1,C3,RFM,relu3,32,relative_sobolev,0.3759598766015874,0.2909087359695566,0.40483911500646846,10,10,0,True,actual,9cdcf96ce96f1e86fb50e0975b5a33b3cc9bfd90c76e89a79f09b5b30e54a229
+cga-artifacts-v1,C3,RFM,relu3,64,relative_sobolev,0.09086570579155857,0.056999264212723104,0.11043802847536886,10,10,0,True,actual,9cdcf96ce96f1e86fb50e0975b5a33b3cc9bfd90c76e89a79f09b5b30e54a229
+cga-artifacts-v1,C3,RFM,relu3,128,relative_sobolev,0.023160069193815462,0.022255022081444274,0.027217327560245932,10,10,0,True,actual,9cdcf96ce96f1e86fb50e0975b5a33b3cc9bfd90c76e89a79f09b5b30e54a229
+cga-artifacts-v1,C3,RFM,relu3,256,relative_sobolev,0.00719570486734941,0.0064717141023527954,0.008662787005796866,10,10,0,True,actual,9cdcf96ce96f1e86fb50e0975b5a33b3cc9bfd90c76e89a79f09b5b30e54a229
+cga-artifacts-v1,C3,RFM,relu3,512,relative_sobolev,0.0022649211411678817,0.0021157669810739094,0.010809547058460956,10,9,1,True,actual,9cdcf96ce96f1e86fb50e0975b5a33b3cc9bfd90c76e89a79f09b5b30e54a229
+cga-artifacts-v1,C4,CGA,relu3,8,energy_gap,0.023629302029576138,,,,1,0,False,actual,9a916ee78dd771a62e8474a6e682864c183086b1de690502f48484cf3ea754fd
+cga-artifacts-v1,C4,CGA,relu3,16,energy_gap,0.0003371515515482315,,,,1,0,False,actual,9a916ee78dd771a62e8474a6e682864c183086b1de690502f48484cf3ea754fd
+cga-artifacts-v1,C4,CGA,relu3,32,energy_gap,3.1802443345441134e-06,,,,1,0,False,actual,9a916ee78dd771a62e8474a6e682864c183086b1de690502f48484cf3ea754fd
+cga-artifacts-v1,C4,CGA,relu3,64,energy_gap,1.4420066918319208e-07,,,,1,0,False,actual,9a916ee78dd771a62e8474a6e682864c183086b1de690502f48484cf3ea754fd
+cga-artifacts-v1,C4,FEM P1,p1,4,energy_gap,65.52089254765258,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C4,FEM P1,p1,8,energy_gap,13.28575143053473,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C4,FEM P1,p1,16,energy_gap,3.6333064145753724,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C4,FEM P1,p1,32,energy_gap,0.9307042522679012,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C4,FEM P1,p1,64,energy_gap,0.23418668416275068,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C4,FEM P1,p1,128,energy_gap,0.05864498198383217,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C4,FEM P1,p1,256,energy_gap,0.014667518614089659,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C4,FEM P2,p2,4,energy_gap,65.52089256793874,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C4,FEM P2,p2,8,energy_gap,2.9252716356772908,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C4,FEM P2,p2,16,energy_gap,0.4170801753317619,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C4,FEM P2,p2,32,energy_gap,0.028220796509117463,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C4,FEM P2,p2,64,energy_gap,0.0017982732899781695,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C4,FEM P2,p2,128,energy_gap,0.0001129321090047597,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C4,FEM P2,p2,256,energy_gap,7.066694308832666e-06,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C4,FEM P3,p3,3,energy_gap,185.8236577706998,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C4,FEM P3,p3,6,energy_gap,0.06496123551454502,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C4,FEM P3,p3,12,energy_gap,0.020052642106065832,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C4,FEM P3,p3,24,energy_gap,0.00041412646066874004,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C4,FEM P3,p3,48,energy_gap,9.596458312444156e-06,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C4,FEM P3,p3,96,energy_gap,1.621716023691988e-07,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C4,FEM P3,p3,192,energy_gap,2.5804638426052406e-09,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C4,FEM P3,p3,384,energy_gap,4.0472514228895307e-11,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C4,RFM,relu3,8,energy_gap,0.3949859809849272,0.13341042922954216,3.9576257300541187,10,10,0,True,actual,9cdcf96ce96f1e86fb50e0975b5a33b3cc9bfd90c76e89a79f09b5b30e54a229
+cga-artifacts-v1,C4,RFM,relu3,16,energy_gap,0.004343970585324541,0.001988148443857085,0.005760051739272853,10,10,0,True,actual,9cdcf96ce96f1e86fb50e0975b5a33b3cc9bfd90c76e89a79f09b5b30e54a229
+cga-artifacts-v1,C4,RFM,relu3,32,energy_gap,0.0002794308033458037,0.00015227840668785575,0.000734809710181139,10,10,0,True,actual,9cdcf96ce96f1e86fb50e0975b5a33b3cc9bfd90c76e89a79f09b5b30e54a229
+cga-artifacts-v1,C4,RFM,relu3,64,energy_gap,5.892097306059441e-06,3.6415851525362086e-06,1.407965805810818e-05,10,10,0,True,actual,9cdcf96ce96f1e86fb50e0975b5a33b3cc9bfd90c76e89a79f09b5b30e54a229
+cga-artifacts-v1,C4,RFM,relu3,128,energy_gap,8.106036375465919e-08,3.668887416097277e-08,8.883566238182539e-08,10,10,0,True,actual,9cdcf96ce96f1e86fb50e0975b5a33b3cc9bfd90c76e89a79f09b5b30e54a229
+cga-artifacts-v1,C4,RFM,relu3,256,energy_gap,3.6993696994613856e-10,3.6993696994613856e-10,3.6993696994613856e-10,10,1,9,True,actual,9cdcf96ce96f1e86fb50e0975b5a33b3cc9bfd90c76e89a79f09b5b30e54a229
+cga-artifacts-v1,C4,CGA,relu3,8,relative_sobolev,0.03567008901491497,,,,1,0,False,actual,9a916ee78dd771a62e8474a6e682864c183086b1de690502f48484cf3ea754fd
+cga-artifacts-v1,C4,CGA,relu3,16,relative_sobolev,0.00446031087448068,,,,1,0,False,actual,9a916ee78dd771a62e8474a6e682864c183086b1de690502f48484cf3ea754fd
+cga-artifacts-v1,C4,CGA,relu3,32,relative_sobolev,0.00028689021566914084,,,,1,0,False,actual,9a916ee78dd771a62e8474a6e682864c183086b1de690502f48484cf3ea754fd
+cga-artifacts-v1,C4,CGA,relu3,64,relative_sobolev,0.0001801759498846442,,,,1,0,False,actual,9a916ee78dd771a62e8474a6e682864c183086b1de690502f48484cf3ea754fd
+cga-artifacts-v1,C4,CGA,relu3,128,relative_sobolev,3.39470104779249e-05,,,,1,0,False,actual,9a916ee78dd771a62e8474a6e682864c183086b1de690502f48484cf3ea754fd
+cga-artifacts-v1,C4,CGA,relu3,141,relative_sobolev,3.3552039205564454e-05,,,,1,0,False,actual,9a916ee78dd771a62e8474a6e682864c183086b1de690502f48484cf3ea754fd
+cga-artifacts-v1,C4,FEM P1,p1,4,relative_sobolev,0.5390450540505295,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C4,FEM P1,p1,8,relative_sobolev,0.2969170144746324,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C4,FEM P1,p1,16,relative_sobolev,0.14433576198847164,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C4,FEM P1,p1,32,relative_sobolev,0.06970579521105381,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C4,FEM P1,p1,64,relative_sobolev,0.03396726538803268,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C4,FEM P1,p1,128,relative_sobolev,0.016717012073354066,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C4,FEM P1,p1,256,relative_sobolev,0.008285108944990861,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C4,FEM P2,p2,4,relative_sobolev,0.5390418070776589,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C4,FEM P2,p2,8,relative_sobolev,0.16559794083614016,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C4,FEM P2,p2,16,relative_sobolev,0.031348396902465915,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C4,FEM P2,p2,32,relative_sobolev,0.007085128646840807,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C4,FEM P2,p2,64,relative_sobolev,0.0017447334069033928,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C4,FEM P2,p2,128,relative_sobolev,0.0004349641328014036,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C4,FEM P2,p2,256,relative_sobolev,0.00010867092917004096,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C4,FEM P3,p3,3,relative_sobolev,0.6649179953377427,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C4,FEM P3,p3,6,relative_sobolev,0.06694621961197027,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C4,FEM P3,p3,12,relative_sobolev,0.04087334274411111,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C4,FEM P3,p3,24,relative_sobolev,0.006152229275688953,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C4,FEM P3,p3,48,relative_sobolev,0.0007009041477972036,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C4,FEM P3,p3,96,relative_sobolev,7.536110727455371e-05,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C4,FEM P3,p3,192,relative_sobolev,8.008255226584127e-06,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C4,FEM P3,p3,384,relative_sobolev,8.501547465505861e-07,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C4,RFM,relu3,8,relative_sobolev,0.08290870800688466,0.0718053284540434,0.20702012149477567,10,10,0,True,actual,9cdcf96ce96f1e86fb50e0975b5a33b3cc9bfd90c76e89a79f09b5b30e54a229
+cga-artifacts-v1,C4,RFM,relu3,16,relative_sobolev,0.009297202985401482,0.007917488058287537,0.010255623395506695,10,10,0,True,actual,9cdcf96ce96f1e86fb50e0975b5a33b3cc9bfd90c76e89a79f09b5b30e54a229
+cga-artifacts-v1,C4,RFM,relu3,32,relative_sobolev,0.002511572741954885,0.0016379248129305309,0.00491875462566399,10,10,0,True,actual,9cdcf96ce96f1e86fb50e0975b5a33b3cc9bfd90c76e89a79f09b5b30e54a229
+cga-artifacts-v1,C4,RFM,relu3,64,relative_sobolev,0.000516831408334281,0.00035555676450907934,0.001120554211450785,10,10,0,True,actual,9cdcf96ce96f1e86fb50e0975b5a33b3cc9bfd90c76e89a79f09b5b30e54a229
+cga-artifacts-v1,C4,RFM,relu3,128,relative_sobolev,7.817570952812044e-05,6.04600625898948e-05,0.00014004058683206335,10,10,0,True,actual,9cdcf96ce96f1e86fb50e0975b5a33b3cc9bfd90c76e89a79f09b5b30e54a229
+cga-artifacts-v1,C4,RFM,relu3,256,relative_sobolev,7.869286256174872e-05,5.021403501357096e-05,0.00010279900404096028,10,10,0,True,actual,9cdcf96ce96f1e86fb50e0975b5a33b3cc9bfd90c76e89a79f09b5b30e54a229
+cga-artifacts-v1,C4,CGA,relu3,8,v_distance,0.010280188180232984,,,,1,0,False,actual,9a916ee78dd771a62e8474a6e682864c183086b1de690502f48484cf3ea754fd
+cga-artifacts-v1,C4,CGA,relu3,16,v_distance,0.0012406043399583258,,,,1,0,False,actual,9a916ee78dd771a62e8474a6e682864c183086b1de690502f48484cf3ea754fd
+cga-artifacts-v1,C4,CGA,relu3,32,v_distance,0.00012046109932215716,,,,1,0,False,actual,9a916ee78dd771a62e8474a6e682864c183086b1de690502f48484cf3ea754fd
+cga-artifacts-v1,C4,CGA,relu3,64,v_distance,2.5652123920981167e-05,,,,1,0,False,actual,9a916ee78dd771a62e8474a6e682864c183086b1de690502f48484cf3ea754fd
+cga-artifacts-v1,C4,CGA,relu3,128,v_distance,1.730895360997454e-06,,,,1,0,False,actual,9a916ee78dd771a62e8474a6e682864c183086b1de690502f48484cf3ea754fd
+cga-artifacts-v1,C4,CGA,relu3,141,v_distance,1.04239099737916e-06,,,,1,0,False,actual,9a916ee78dd771a62e8474a6e682864c183086b1de690502f48484cf3ea754fd
+cga-artifacts-v1,C4,FEM P1,p1,4,v_distance,0.5869538727514624,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C4,FEM P1,p1,8,v_distance,0.25407548137723723,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C4,FEM P1,p1,16,v_distance,0.13000855211572937,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C4,FEM P1,p1,32,v_distance,0.06534762156216592,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C4,FEM P1,p1,64,v_distance,0.03271288556545504,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C4,FEM P1,p1,128,v_distance,0.016361009102584246,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C4,FEM P1,p1,256,v_distance,0.008181052739763803,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C4,FEM P2,p2,4,v_distance,0.5869521394907268,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C4,FEM P2,p2,8,v_distance,0.1189772437804575,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C4,FEM P2,p2,16,v_distance,0.043756049756973024,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C4,FEM P2,p2,32,v_distance,0.01135472706608379,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C4,FEM P2,p2,64,v_distance,0.0028648663422256608,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C4,FEM P2,p2,128,v_distance,0.0007178511374083743,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C4,FEM P2,p2,256,v_distance,0.00017956484122814962,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C4,FEM P3,p3,3,v_distance,0.8789155071451558,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C4,FEM P3,p3,6,v_distance,0.016835441014092522,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C4,FEM P3,p3,12,v_distance,0.009419180569497997,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C4,FEM P3,p3,24,v_distance,0.0013725082722662993,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C4,FEM P3,p3,48,v_distance,0.00020923774702908974,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C4,FEM P3,p3,96,v_distance,2.7201651927610948e-05,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C4,FEM P3,p3,192,v_distance,3.4313401142433946e-06,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C4,FEM P3,p3,384,v_distance,4.2986670714872786e-07,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C4,RFM,relu3,8,v_distance,0.04278719110725687,0.02558115279655221,0.1254992731958131,10,10,0,True,actual,9cdcf96ce96f1e86fb50e0975b5a33b3cc9bfd90c76e89a79f09b5b30e54a229
+cga-artifacts-v1,C4,RFM,relu3,16,v_distance,0.004454727453374024,0.003010426359831104,0.005117066427676643,10,10,0,True,actual,9cdcf96ce96f1e86fb50e0975b5a33b3cc9bfd90c76e89a79f09b5b30e54a229
+cga-artifacts-v1,C4,RFM,relu3,32,v_distance,0.001104121340887234,0.0008335099108849729,0.0018206558848054954,10,10,0,True,actual,9cdcf96ce96f1e86fb50e0975b5a33b3cc9bfd90c76e89a79f09b5b30e54a229
+cga-artifacts-v1,C4,RFM,relu3,64,v_distance,0.00016313478548668782,0.00012841556358449106,0.0002506903616077542,10,10,0,True,actual,9cdcf96ce96f1e86fb50e0975b5a33b3cc9bfd90c76e89a79f09b5b30e54a229
+cga-artifacts-v1,C4,RFM,relu3,128,v_distance,1.9232038272099724e-05,1.2906007973784788e-05,2.012932184809479e-05,10,10,0,True,actual,9cdcf96ce96f1e86fb50e0975b5a33b3cc9bfd90c76e89a79f09b5b30e54a229
+cga-artifacts-v1,C4,RFM,relu3,256,v_distance,1.265104524387441e-06,1.0548544082695876e-06,1.3440931823183247e-06,10,10,0,True,actual,9cdcf96ce96f1e86fb50e0975b5a33b3cc9bfd90c76e89a79f09b5b30e54a229
+cga-artifacts-v1,C5,CGA,relu3,8,energy_gap,171.3229069608139,,,,1,0,False,actual,9a916ee78dd771a62e8474a6e682864c183086b1de690502f48484cf3ea754fd
+cga-artifacts-v1,C5,CGA,relu3,16,energy_gap,30.701638910830866,,,,1,0,False,actual,9a916ee78dd771a62e8474a6e682864c183086b1de690502f48484cf3ea754fd
+cga-artifacts-v1,C5,CGA,relu3,32,energy_gap,6.475711507387814,,,,1,0,False,actual,9a916ee78dd771a62e8474a6e682864c183086b1de690502f48484cf3ea754fd
+cga-artifacts-v1,C5,CGA,relu3,64,energy_gap,0.14792169685352974,,,,1,0,False,actual,9a916ee78dd771a62e8474a6e682864c183086b1de690502f48484cf3ea754fd
+cga-artifacts-v1,C5,CGA,relu3,128,energy_gap,0.01141429529099014,,,,1,0,False,actual,9a916ee78dd771a62e8474a6e682864c183086b1de690502f48484cf3ea754fd
+cga-artifacts-v1,C5,CGA,relu3,256,energy_gap,0.001074584329330719,,,,1,0,False,actual,9a916ee78dd771a62e8474a6e682864c183086b1de690502f48484cf3ea754fd
+cga-artifacts-v1,C5,FEM P1,p1,3,energy_gap,292.5093902616811,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C5,FEM P1,p1,8,energy_gap,168.71888983566458,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C5,FEM P1,p1,15,energy_gap,179.06942012188827,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C5,FEM P1,p1,24,energy_gap,138.28144897771853,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C5,FEM P1,p1,35,energy_gap,93.80364232228101,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C5,FEM P1,p1,80,energy_gap,40.71323205601266,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C5,FEM P1,p1,143,energy_gap,22.78726618711545,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C5,FEM P1,p1,288,energy_gap,10.943836703214629,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C5,FEM P1,p1,528,energy_gap,6.078963583441691,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C5,FEM P2,p2,8,energy_gap,238.20714717350452,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C5,FEM P2,p2,24,energy_gap,65.06901743595711,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C5,FEM P2,p2,80,energy_gap,10.425704354151662,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C5,FEM P2,p2,288,energy_gap,1.4450785525239667,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C5,FEM P3,p3,15,energy_gap,202.13013807784895,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C5,FEM P3,p3,48,energy_gap,25.503883630877567,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C5,FEM P3,p3,168,energy_gap,0.8682441919969506,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C5,RFM,relu3,8,energy_gap,323.4568223578507,294.7002192804241,342.1566520074025,10,10,0,True,actual,9cdcf96ce96f1e86fb50e0975b5a33b3cc9bfd90c76e89a79f09b5b30e54a229
+cga-artifacts-v1,C5,RFM,relu3,16,energy_gap,187.07657810426375,155.03054624909242,214.3204323958676,10,10,0,True,actual,9cdcf96ce96f1e86fb50e0975b5a33b3cc9bfd90c76e89a79f09b5b30e54a229
+cga-artifacts-v1,C5,RFM,relu3,32,energy_gap,44.211124357056605,27.699241250165286,47.6577810087896,10,10,0,True,actual,9cdcf96ce96f1e86fb50e0975b5a33b3cc9bfd90c76e89a79f09b5b30e54a229
+cga-artifacts-v1,C5,RFM,relu3,64,energy_gap,2.501971315875977,0.983941933332872,3.0025590547476497,10,10,0,True,actual,9cdcf96ce96f1e86fb50e0975b5a33b3cc9bfd90c76e89a79f09b5b30e54a229
+cga-artifacts-v1,C5,RFM,relu3,128,energy_gap,0.15962322086687664,0.139330050426679,0.1942230471554467,10,9,1,True,actual,9cdcf96ce96f1e86fb50e0975b5a33b3cc9bfd90c76e89a79f09b5b30e54a229
+cga-artifacts-v1,C5,RFM,relu3,256,energy_gap,0.01912451809246818,0.011955192526059477,0.02919374175614564,10,6,4,True,actual,9cdcf96ce96f1e86fb50e0975b5a33b3cc9bfd90c76e89a79f09b5b30e54a229
+cga-artifacts-v1,C5,RFM,relu3,512,energy_gap,0.0012920832883764888,0.0011252548498532633,0.0013748740219767797,10,4,6,True,actual,9cdcf96ce96f1e86fb50e0975b5a33b3cc9bfd90c76e89a79f09b5b30e54a229
+cga-artifacts-v1,C5,CGA,relu3,8,relative_sobolev,0.7760249058794627,,,,1,0,False,actual,9a916ee78dd771a62e8474a6e682864c183086b1de690502f48484cf3ea754fd
+cga-artifacts-v1,C5,CGA,relu3,16,relative_sobolev,0.3624502746282977,,,,1,0,False,actual,9a916ee78dd771a62e8474a6e682864c183086b1de690502f48484cf3ea754fd
+cga-artifacts-v1,C5,CGA,relu3,32,relative_sobolev,0.15275467818043983,,,,1,0,False,actual,9a916ee78dd771a62e8474a6e682864c183086b1de690502f48484cf3ea754fd
+cga-artifacts-v1,C5,CGA,relu3,64,relative_sobolev,0.030776675016906924,,,,1,0,False,actual,9a916ee78dd771a62e8474a6e682864c183086b1de690502f48484cf3ea754fd
+cga-artifacts-v1,C5,CGA,relu3,128,relative_sobolev,0.010165477275017293,,,,1,0,False,actual,9a916ee78dd771a62e8474a6e682864c183086b1de690502f48484cf3ea754fd
+cga-artifacts-v1,C5,CGA,relu3,256,relative_sobolev,0.002493059769700485,,,,1,0,False,actual,9a916ee78dd771a62e8474a6e682864c183086b1de690502f48484cf3ea754fd
+cga-artifacts-v1,C5,CGA,relu3,512,relative_sobolev,0.003648384560250997,,,,1,0,False,actual,9a916ee78dd771a62e8474a6e682864c183086b1de690502f48484cf3ea754fd
+cga-artifacts-v1,C5,FEM P1,p1,3,relative_sobolev,1.0293852727177275,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C5,FEM P1,p1,8,relative_sobolev,0.8075621256194777,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C5,FEM P1,p1,15,relative_sobolev,0.8512749791115262,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C5,FEM P1,p1,24,relative_sobolev,0.6725766693080729,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C5,FEM P1,p1,35,relative_sobolev,0.6084217921852493,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C5,FEM P1,p1,48,relative_sobolev,0.5400783764425195,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C5,FEM P1,p1,80,relative_sobolev,0.4245816618450854,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C5,FEM P1,p1,143,relative_sobolev,0.31288389838700076,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C5,FEM P1,p1,288,relative_sobolev,0.21848757368523697,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C5,FEM P1,p1,528,relative_sobolev,0.15814527210591664,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C5,FEM P2,p2,8,relative_sobolev,0.8382190055303818,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C5,FEM P2,p2,24,relative_sobolev,0.474970890002883,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C5,FEM P2,p2,48,relative_sobolev,0.3834492783589834,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C5,FEM P2,p2,80,relative_sobolev,0.27226284787973515,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C5,FEM P2,p2,120,relative_sobolev,0.1764846918012461,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C5,FEM P2,p2,168,relative_sobolev,0.13377341153861122,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C5,FEM P2,p2,288,relative_sobolev,0.07775485944239369,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C5,FEM P2,p2,528,relative_sobolev,0.04071318134003147,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C5,FEM P3,p3,15,relative_sobolev,0.7368928765184073,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C5,FEM P3,p3,48,relative_sobolev,0.4055060442868986,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C5,FEM P3,p3,99,relative_sobolev,0.13436647528062517,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C5,FEM P3,p3,168,relative_sobolev,0.06266551945020944,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C5,FEM P3,p3,483,relative_sobolev,0.015891357747986088,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C5,RFM,relu3,8,relative_sobolev,1.0168696036549898,0.9945583753791254,1.029988339946504,10,10,0,True,actual,9cdcf96ce96f1e86fb50e0975b5a33b3cc9bfd90c76e89a79f09b5b30e54a229
+cga-artifacts-v1,C5,RFM,relu3,16,relative_sobolev,0.7836832132536019,0.7462536439347855,0.8652155084616148,10,10,0,True,actual,9cdcf96ce96f1e86fb50e0975b5a33b3cc9bfd90c76e89a79f09b5b30e54a229
+cga-artifacts-v1,C5,RFM,relu3,32,relative_sobolev,0.4314947231717116,0.3392114397485126,0.45000355928247293,10,10,0,True,actual,9cdcf96ce96f1e86fb50e0975b5a33b3cc9bfd90c76e89a79f09b5b30e54a229
+cga-artifacts-v1,C5,RFM,relu3,64,relative_sobolev,0.11538338967507777,0.06833385768982597,0.12722939303381242,10,10,0,True,actual,9cdcf96ce96f1e86fb50e0975b5a33b3cc9bfd90c76e89a79f09b5b30e54a229
+cga-artifacts-v1,C5,RFM,relu3,128,relative_sobolev,0.030942652157444985,0.030433766817930866,0.03375618191152839,10,9,1,True,actual,9cdcf96ce96f1e86fb50e0975b5a33b3cc9bfd90c76e89a79f09b5b30e54a229
+cga-artifacts-v1,C5,RFM,relu3,256,relative_sobolev,0.01147216936786501,0.009729766999039267,0.013596668344984813,10,6,4,True,actual,9cdcf96ce96f1e86fb50e0975b5a33b3cc9bfd90c76e89a79f09b5b30e54a229
+cga-artifacts-v1,C5,RFM,relu3,512,relative_sobolev,0.003486551506933364,0.003393331047994136,0.003579771965872592,10,2,8,True,actual,9cdcf96ce96f1e86fb50e0975b5a33b3cc9bfd90c76e89a79f09b5b30e54a229
+cga-artifacts-v1,C5,CGA,relu3,8,v_distance,0.7999222219452571,,,,1,0,False,actual,9a916ee78dd771a62e8474a6e682864c183086b1de690502f48484cf3ea754fd
+cga-artifacts-v1,C5,CGA,relu3,16,v_distance,0.386247501670808,,,,1,0,False,actual,9a916ee78dd771a62e8474a6e682864c183086b1de690502f48484cf3ea754fd
+cga-artifacts-v1,C5,CGA,relu3,32,v_distance,0.17863355643441467,,,,1,0,False,actual,9a916ee78dd771a62e8474a6e682864c183086b1de690502f48484cf3ea754fd
+cga-artifacts-v1,C5,CGA,relu3,64,v_distance,0.02701363895198435,,,,1,0,False,actual,9a916ee78dd771a62e8474a6e682864c183086b1de690502f48484cf3ea754fd
+cga-artifacts-v1,C5,CGA,relu3,128,v_distance,0.0074522450711174875,,,,1,0,False,actual,9a916ee78dd771a62e8474a6e682864c183086b1de690502f48484cf3ea754fd
+cga-artifacts-v1,C5,CGA,relu3,256,v_distance,0.0022883373078592985,,,,1,0,False,actual,9a916ee78dd771a62e8474a6e682864c183086b1de690502f48484cf3ea754fd
+cga-artifacts-v1,C5,CGA,relu3,512,v_distance,0.001583717046188121,,,,1,0,False,actual,9a916ee78dd771a62e8474a6e682864c183086b1de690502f48484cf3ea754fd
+cga-artifacts-v1,C5,FEM P1,p1,3,v_distance,0.9539558084455732,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C5,FEM P1,p1,8,v_distance,0.8113037619016646,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C5,FEM P1,p1,15,v_distance,0.8289616953306854,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C5,FEM P1,p1,24,v_distance,0.7602235005557557,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C5,FEM P1,p1,35,v_distance,0.6523343908519765,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C5,FEM P1,p1,48,v_distance,0.5722445342256398,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C5,FEM P1,p1,80,v_distance,0.4436450265293977,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C5,FEM P1,p1,143,v_distance,0.33420869199406406,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C5,FEM P1,p1,288,v_distance,0.2351066895059624,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C5,FEM P1,p1,528,v_distance,0.17242937099290956,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C5,FEM P2,p2,8,v_distance,0.9233417028702313,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C5,FEM P2,p2,24,v_distance,0.6008336302371176,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C5,FEM P2,p2,48,v_distance,0.42347590320343226,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C5,FEM P2,p2,80,v_distance,0.23982163181005495,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C5,FEM P2,p2,120,v_distance,0.19243286636076307,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C5,FEM P2,p2,168,v_distance,0.14033326319965234,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C5,FEM P2,p2,288,v_distance,0.08505460768369115,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C5,FEM P2,p2,528,v_distance,0.047200068520287845,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C5,FEM P3,p3,15,v_distance,0.8765024132103242,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C5,FEM P3,p3,48,v_distance,0.36435257834605933,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C5,FEM P3,p3,99,v_distance,0.13402127214214027,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C5,FEM P3,p3,168,v_distance,0.06489124393883619,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C5,FEM P3,p3,255,v_distance,0.029010858783709948,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C5,FEM P3,p3,483,v_distance,0.010334921180941484,,,,True,0,False,actual,d01d102ed8e0893e85ed0fb334c541fac97b5d9dc6003509153faef393889e80
+cga-artifacts-v1,C5,RFM,relu3,8,v_distance,0.9820988585705817,0.9680684974517371,0.998041833662087,10,10,0,True,actual,9cdcf96ce96f1e86fb50e0975b5a33b3cc9bfd90c76e89a79f09b5b30e54a229
+cga-artifacts-v1,C5,RFM,relu3,16,v_distance,0.8490687833112117,0.7726293033953572,0.8734884016153737,10,10,0,True,actual,9cdcf96ce96f1e86fb50e0975b5a33b3cc9bfd90c76e89a79f09b5b30e54a229
+cga-artifacts-v1,C5,RFM,relu3,32,v_distance,0.4564537976889833,0.3631041184337742,0.47784368042283054,10,10,0,True,actual,9cdcf96ce96f1e86fb50e0975b5a33b3cc9bfd90c76e89a79f09b5b30e54a229
+cga-artifacts-v1,C5,RFM,relu3,64,v_distance,0.11146573651629649,0.06909391383224879,0.1209110911381406,10,10,0,True,actual,9cdcf96ce96f1e86fb50e0975b5a33b3cc9bfd90c76e89a79f09b5b30e54a229
+cga-artifacts-v1,C5,RFM,relu3,128,v_distance,0.028082864396945042,0.02609985949227075,0.031100401733135923,10,9,1,True,actual,9cdcf96ce96f1e86fb50e0975b5a33b3cc9bfd90c76e89a79f09b5b30e54a229
+cga-artifacts-v1,C5,RFM,relu3,256,v_distance,0.009616116468350172,0.007644185645556283,0.011949876168944,10,6,4,True,actual,9cdcf96ce96f1e86fb50e0975b5a33b3cc9bfd90c76e89a79f09b5b30e54a229
+cga-artifacts-v1,C5,RFM,relu3,512,v_distance,0.002551883801416477,0.0023504999082819937,0.0026386574725425034,10,4,6,True,actual,9cdcf96ce96f1e86fb50e0975b5a33b3cc9bfd90c76e89a79f09b5b30e54a229

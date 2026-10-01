@@ -1,16 +1,17 @@
 {
   "status": "PASS",
-  "raw_rows": 313,
-  "raw_successes": 304,
-  "raw_failures": 9,
+  "raw_rows": 320,
+  "raw_successes": 310,
+  "raw_failures": 10,
   "summary_groups": 32,
   "figures_checked": 12,
+  "archived_models_checked": 466,
   "source_sha256": {
-    "result/experiments/rfm_multiseed_raw.csv": "d29d64d0cb5cf13d9181ca88ff7bf030bd4fa37e052890d9f09b7c44ea480fcd",
-    "result/experiments/rfm_multiseed_summary.csv": "3a03680122c933b6407ae7b2a0acd99d79ca1ff4d81ae01280b7265ce7c1e493",
-    "result/baselines/baseline_actual_points.csv": "6603e6d756679b31ecf2a72c012dc40d7058f098f50d4c4fd8b4c02543316fed",
-    "result/baselines/baseline_terminal.csv": "056b3aa35731991cab9714113fe8989966e958dc9d0f0d5f8375b93c11540f4a",
+    "result/experiments/rfm_multiseed_raw.csv": "754d93814ed255813b12dd54853c34c0367d7caaff38f71c56d7e34a4d7c55b8",
+    "result/experiments/rfm_multiseed_summary.csv": "9cdcf96ce96f1e86fb50e0975b5a33b3cc9bfd90c76e89a79f09b5b30e54a229",
+    "result/baselines/baseline_actual_points.csv": "9be5702523ce50851eebeb9bc261cb3e710fc852c70b7bfffab03f6a190529f3",
+    "result/baselines/baseline_terminal.csv": "ffbdcf50f7b7243862ffb505c89de5b812382aa74eea2dceddea635eb960a1fd",
     "config/plots.json": "4b087c1dfac61a5298f88d49747ce5da351d1593e3528c85df848061eac01962"
   },
-  "validity_meaning": "finite nonnegative recorded metric and recorded solver_success; no independent residual filter is inferred"
+  "validity_meaning": "successful solve, finite nonnegative signed metric, and successive quadrature relative difference <= 0.01; same rule for every method"
 }

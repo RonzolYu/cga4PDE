@@ -9,6 +9,11 @@
       "error": null
     },
     {
+      "name": "all_manifested_outputs_exported",
+      "passed": true,
+      "count": 61
+    },
+    {
       "name": "diagnostics_recomputed",
       "passed": true,
       "exit_code": 0,
@@ -25,6 +30,13 @@
       "exit_code": 1,
       "status": "FAIL",
       "error": "ValueError: generate_artifacts.py failed; see reports/reproduction_logs/artifacts_01_generate_artifacts.log"
+    },
+    {
+      "name": "missing_comparison_model_fails",
+      "passed": true,
+      "exit_code": 1,
+      "status": "FAIL",
+      "error": "ValueError: missing or changed state: data/raw/review_replay_20261001/models/C1_rfm_seed201_n8.npz"
     },
     {
       "name": "false_validation_fails",
@@ -52,7 +64,7 @@
       "passed": true,
       "exit_code": 1,
       "status": "FAIL",
-      "error": "FileNotFoundError: [Errno 2] No such file or directory: '/private/var/folders/rg/5svsy0c13ds8g_sj_sx47d4c0000gn/T/cga_reproduction_c4px0um0/package/config/absent.json'"
+      "error": "FileNotFoundError: [Errno 2] No such file or directory: '<temporary-package>/package/config/absent.json'"
     },
     {
       "name": "invalid_config_fails",
@@ -79,11 +91,12 @@
     ]
   },
   "rfm": {
-    "rows": 313,
-    "successes": 304,
-    "failures": 9,
+    "rows": 320,
+    "successes": 310,
+    "failures": 10,
     "groups": 32,
-    "quantile_method": "numpy.quantile(method=linear); successful rows only; incomplete groups retained"
+    "archived_models": 466,
+    "quantile_method": "linear interpolation; per-metric solver and signed-value/quadrature checks; ten prescribed seeds retained"
   },
-  "code_sha256": "5c68bc2c52d3ea6ce7338d0831556af314218a2dc5e1bde745d462a695e6daec"
+  "code_sha256": "f280e69f769d1b4c0aecb74974b8093bcd5989c4ce2700c1b39968d675818eb6"
 }

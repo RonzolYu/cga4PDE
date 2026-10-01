@@ -22,7 +22,12 @@
       "source": "data/derived/experiments/rfm_multiseed_summary.csv"
     },
     {
-      "name": "C5 endpoint is success-conditioned",
+      "name": "C5 endpoint keeps prescribed denominator",
+      "passed": true,
+      "source": "data/derived/experiments/rfm_multiseed_summary.csv"
+    },
+    {
+      "name": "metric-specific summary counts",
       "passed": true,
       "source": "data/derived/experiments/rfm_multiseed_summary.csv"
     },

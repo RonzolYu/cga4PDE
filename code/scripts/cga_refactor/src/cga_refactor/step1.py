@@ -19,9 +19,17 @@ def dual_scores(problem: object, u: np.ndarray, grad_u: np.ndarray, f: np.ndarra
 
 
 def feature_columns(values: np.ndarray, grads: np.ndarray, rule: object) -> np.ndarray:
+    """Keep one atom per column in the weighted value/gradient embedding.
+
+    Gradient input axes are (quadrature point, atom, spatial component).
+    Rows enumerate (quadrature point, spatial component), so move the atom
+    axis last before flattening.  This also agrees with incremental columns
+    and the inverse layout used by the stable-coordinate solver.
+    """
     root = np.sqrt(rule.weights)
+    gradient_rows = (root[:, None, None] * grads).transpose(0, 2, 1)
     return np.vstack([root[:, None] * values,
-                      (root[:, None, None] * grads).reshape(values.shape[0] * grads.shape[2], -1)])
+                      gradient_rows.reshape(values.shape[0] * grads.shape[2], values.shape[1])])
 
 
 def innovation(feature: np.ndarray, q_basis: np.ndarray) -> dict[str, object]:

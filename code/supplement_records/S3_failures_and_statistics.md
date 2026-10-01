@@ -1,49 +1,74 @@
-# S3. Sample definitions, unsuccessful solves, and statistics
+# S3. Samples, solve failures, and metric-specific statistics (2026-10-01)
 
-The RFM curves and endpoint table use the seed-level records in
-`code/result/experiments/rfm_multiseed_raw.csv`. The median and quartile records are
-`code/result/experiments/rfm_multiseed_summary.csv`; the plotted values are in
-`code/result/baselines/baseline_actual_points.csv`, and the endpoint records are in
-`code/result/baselines/baseline_terminal.csv`. These are repository-relative paths in
-<https://github.com/RonzolYu/cga4PDE>.
+The revised comparison uses the fully archived `review_replay_20261001` batch,
+not the historical comparison inputs. CGA coefficients are refitted on fixed
+greedy prefixes; FEM and RFM coefficients are newly fitted under the frozen
+`code/config/review_replay.json` protocol. Original CGA training trajectories
+and auxiliary finite-range diagnostics remain separate.
 
-The seed-level file contains 313 states: 304 recorded solver successes and nine
-unsuccessful solves. Every width included in the main RFM comparison has ten
-prescribed and observed seeds, numbered 201–210. All displayed C1–C4 widths have
-ten successful solves. The two incomplete C5 widths are:
+The RFM file has 320 observations and 10 recorded solve failures. Every width has ten prescribed and observed seeds, 201–210. Solve success and metric validity are distinct.
 
-| Case | Width | Prescribed and observed | Successful solves | Unsuccessful solves | Median/IQR sample |
-|---|---:|---:|---:|---:|---:|
-| C5, pure p=4, d=2 | 128 | 10 | 7 | 3 | 7 |
-| C5, pure p=4, d=2 | 256 | 10 | 4 | 6 | 4 |
+An observation contributes to an energy, Sobolev, or V statistic only if its
+solve succeeds, its metric is finite and nonnegative, and its successive
+evaluation-quadrature relative difference is at most 0.01. This policy is
+the same for CGA, FEM, and RFM. Missing or failed audits exclude that metric.
+Energy gaps retain their sign; negative gaps are retained raw and excluded
+from energy summaries. An energy exclusion does not itself exclude a stable
+Sobolev or V observation. Quadrature agreement is not a rigorous enclosure.
 
-At C5, N=128, the unsuccessful seeds are 203, 207, and 208. At N=256, they are
-203, 204, 207, 208, 209, and 210. The recorded solver flag determines inclusion;
-finite numerical metric values from an unsuccessful solve are retained in the
-seed-level records but do not enter the reported median or quartiles. The raw
-solver messages are preserved verbatim in `code/review/rfm_state_audit.csv`.
-A solver flag is not an independent bound on the PDE residual or the quadrature
-error. In particular, a solver message indicating termination can coexist with
-`solver_success=False`; the message alone does not change the sample definition.
+C1–C3 use relative H1 errors. C4–C5 use the componentwise gradient L4
+seminorm, not the relative full W1,4 norm. The V metric is unavailable for
+C1–C3 without affecting their other statistics. Auxiliary L2 and timing
+summaries use successful solves; they are not primary audited comparisons.
 
-Statistics are computed separately for each metric, from successful solves with
-a finite nonnegative recorded value for that metric. The V-distance is defined
-only for C4 and C5 in these comparisons; its unavailable entries in C1–C3 do not
-exclude their energy or H1-error observations. Quartiles use linear interpolation
-between adjacent sorted observations at indices `(n-1)*0.25` and `(n-1)*0.75`,
-with zero-based indexing. The sample counts are preserved separately from the
-prescribed denominator. The C5 endpoint comparison is conditional on its four
-successful solves and does not support an aggregate ranking across all seeds.
+| Case | Width | Prescribed | Solved | Failed | Valid energy | Valid Sobolev | Valid V |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| C1 | 8 | 10 | 10 | 0 | 10 | 10 | 0 |
+| C1 | 16 | 10 | 10 | 0 | 10 | 10 | 0 |
+| C1 | 32 | 10 | 10 | 0 | 10 | 10 | 0 |
+| C1 | 64 | 10 | 10 | 0 | 10 | 10 | 0 |
+| C1 | 128 | 10 | 10 | 0 | 10 | 10 | 0 |
+| C1 | 256 | 10 | 10 | 0 | 10 | 10 | 0 |
+| C2 | 8 | 10 | 10 | 0 | 10 | 10 | 0 |
+| C2 | 16 | 10 | 10 | 0 | 10 | 10 | 0 |
+| C2 | 32 | 10 | 10 | 0 | 10 | 10 | 0 |
+| C2 | 64 | 10 | 10 | 0 | 10 | 10 | 0 |
+| C2 | 128 | 10 | 10 | 0 | 10 | 10 | 0 |
+| C2 | 256 | 10 | 10 | 0 | 10 | 10 | 0 |
+| C3 | 8 | 10 | 10 | 0 | 10 | 10 | 0 |
+| C3 | 16 | 10 | 10 | 0 | 10 | 10 | 0 |
+| C3 | 32 | 10 | 10 | 0 | 10 | 10 | 0 |
+| C3 | 64 | 10 | 10 | 0 | 10 | 10 | 0 |
+| C3 | 128 | 10 | 10 | 0 | 10 | 10 | 0 |
+| C3 | 256 | 10 | 10 | 0 | 10 | 10 | 0 |
+| C3 | 512 | 10 | 10 | 0 | 9 | 9 | 0 |
+| C4 | 8 | 10 | 10 | 0 | 10 | 10 | 10 |
+| C4 | 16 | 10 | 10 | 0 | 10 | 10 | 10 |
+| C4 | 32 | 10 | 10 | 0 | 10 | 10 | 10 |
+| C4 | 64 | 10 | 10 | 0 | 10 | 10 | 10 |
+| C4 | 128 | 10 | 10 | 0 | 10 | 10 | 10 |
+| C4 | 256 | 10 | 10 | 0 | 1 | 10 | 10 |
+| C5 | 8 | 10 | 10 | 0 | 10 | 10 | 10 |
+| C5 | 16 | 10 | 10 | 0 | 10 | 10 | 10 |
+| C5 | 32 | 10 | 10 | 0 | 10 | 10 | 10 |
+| C5 | 64 | 10 | 10 | 0 | 10 | 10 | 10 |
+| C5 | 128 | 10 | 9 | 1 | 9 | 9 | 9 |
+| C5 | 256 | 10 | 7 | 3 | 6 | 6 | 6 |
+| C5 | 512 | 10 | 4 | 6 | 4 | 2 | 4 |
 
-The record also includes ten C4 states at N=256, outside the displayed C4 range,
-and three C5 states at N=512. The latter width does not have the prescribed ten
-observations and is excluded from the main RFM curves and endpoint statistics.
-Consequently, the displayed widths account for 300 prescribed seed attempts,
-with 291 successful solves and nine unsuccessful solves.
+Quartiles use linear interpolation at zero-based positions `(n-1)*p`,
+with p=0.25, 0.5, 0.75. Groups with fewer than ten valid observations are
+conditional samples; exclusions remain in the prescribed denominator.
 
-`code/tools/rebuild_baseline_evidence.py` reconstructs the state ledger,
-medians, quartiles, endpoint ratios, and compact denominator table without
-running new numerical experiments. The generated evidence files are in
-`code/review/`. The script also checks the median, IQR, and comparison
-curves encoded in all twelve baseline PDF figures against their numerical input
-records. Its dependencies are Python and `pypdf`.
+Primary raw CSVs are `code/data/derived/experiments/rfm_multiseed_raw.csv`,
+`cga_baseline_raw.csv`, and `fem_baseline_raw.csv`. Every row records a
+model path/hash, evaluation rule/hash, metric audits, and exclusion reasons.
+There are 320 RFM, 32 CGA-prefix, and 114 FEM coefficient models.
+The RFM summary, plotted actual points, endpoints, and interpolation brackets
+are in `code/result/experiments/` and `code/result/baselines/`.
+
+`code/tools/rebuild_baseline_evidence.py` checks stored statistics and all
+twelve vector baseline figures. This is not an independent PDE solve.
+Fresh loading and reevaluation checks are described in S4. Historical
+inputs remain in `code/data/raw/historical_baseline_202609/` and do not
+supply these revised samples.
