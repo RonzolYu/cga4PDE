@@ -37,3 +37,10 @@ Historical comparison inputs remain separate. Each primary metric uses a shared
 solve/sign/quadrature policy; prescribed RFM denominators remain ten. See
 `paper/sisc_cga/supplement/S3_failures_and_statistics.md` and `S4_reproduction.md`
 for sample definitions, provenance, and the distinct reproduction modes.
+
+The manuscript and generated comparison tables use descriptive problem names.
+Internal directory names and case keys remain in the computational files and
+reproduction instructions. P1, P2 and P3 denote the polynomial degrees of the
+finite-element approximations. The optional
+`python code/scripts/check_reproduction.py --compile-paper` check verifies clean
+compilation and the absence of experimental case identifiers in the rendered PDF.

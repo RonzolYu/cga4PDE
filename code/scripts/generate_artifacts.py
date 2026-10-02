@@ -644,7 +644,7 @@ def make_baseline_tables(config: dict, actual_path: Path, common_path: Path) -> 
     actual = read_csv(actual_path)
     grid = read_csv(common_path)
     lines = [r"\begin{table}[!htbp]", r"\centering\scriptsize",
-             r"\caption{Relative $H^1$ error for C1--C3 and relative gradient $L^4$ seminorm for C4--C5 at the prescribed common coefficient counts. RFM statistics are median [Q1,Q3] over metric-valid realizations from ten prescribed seeds. Valid means a successful solve, a finite nonnegative metric, and an at-most-one-percent successive-quadrature difference for that metric; incomplete groups are conditional comparisons. Ratios larger than one favor CGA.}",
+             r"\caption{Relative $H^1$ errors for the linear, cubic, and hyperbolic-sine problems, and relative gradient $L^4$ seminorms for the pure $p=4$ problems, at the prescribed common coefficient counts. RFM statistics are median [Q1,Q3] over valid observations from ten prescribed seeds. Valid means a successful solve, a finite nonnegative metric, and an at-most-one-percent successive-quadrature difference for that metric; incomplete groups are conditional comparisons. Ratios larger than one favor CGA.}",
              r"\label{tab:baseline-terminal}", r"\resizebox{\linewidth}{!}{%", r"\begin{tabular}{@{}crrrrrr@{}}", r"\toprule",
              r"Problem & DOF & CGA & RFM median [Q1,Q3] & Valid & RFM/CGA & FEM P3/CGA \\ \midrule"]
     endpoint_csv = []
@@ -680,13 +680,15 @@ def make_baseline_tables(config: dict, actual_path: Path, common_path: Path) -> 
     count_lines = [r'\begin{table}[!htbp]', r'\centering\small',
                    r'\caption{RFM counts at the common endpoints. Each width has ten prescribed seeds. The Sobolev median/IQR sample additionally passes the metric-specific signed-value and one-percent quadrature checks.}',
                    r'\label{tab:rfm-fixed-denominators}',
+                   r'\resizebox{\linewidth}{!}{%',
                    r'\begin{tabular}{@{}lrrrr@{}}', r'\toprule',
-                   r'Case and width & Prescribed & Solved & Failed & Valid sample \\', r'\midrule']
+                   r'Problem and width & Prescribed & Solved & Failed & Valid sample \\', r'\midrule']
     for row in endpoint_csv:
         case, dof = row['case_id'], int(row['dof'])
         summary = summaries[(case, dof)]
-        count_lines.append(f'{case}, $N={dof}$ & 10 & {summary["success_count"]} & {summary["failure_count"]} & {summary["natural_error_sample_count"]} ' + r'\\')
-    count_lines.extend([r'\bottomrule', r'\end{tabular}', r'\end{table}'])
+        name = config['cga_cases'][config['baseline_case_map'][case]]['title']
+        count_lines.append(f'{name}, $N={dof}$ & 10 & {summary["success_count"]} & {summary["failure_count"]} & {summary["natural_error_sample_count"]} ' + r'\\')
+    count_lines.extend([r'\bottomrule', r'\end{tabular}}', r'\end{table}'])
     counts_tex = GENERATED / 'rfm_fixed_denominators.tex'
     counts_tex.write_text('\n'.join(count_lines) + '\n', encoding='utf-8')
     register_artifact(counts_tex, 'table', [EXPERIMENTS / 'rfm_multiseed_summary.csv', endpoint_path],
@@ -694,7 +696,7 @@ def make_baseline_tables(config: dict, actual_path: Path, common_path: Path) -> 
                       'counts recomputed from the current metric-specific summary')
 
     p2_lines = [r"\begin{table}[htbp]", r"\centering\small",
-                r"\caption{FEM polynomial-degree comparison at the prescribed statistical endpoints. Values are relative $H^1$ errors for the linear, cubic, and sinh problems and relative gradient $L^4$ seminorms for the pure \(p=4\) problems.}",
+                r"\caption{FEM polynomial-degree comparison at the prescribed statistical endpoints. P1, P2, and P3 denote piecewise linear, quadratic, and cubic Lagrange elements, respectively. Values are relative $H^1$ errors for the linear, cubic, and hyperbolic-sine problems and relative gradient $L^4$ seminorms for the pure \(p=4\) problems.}",
                 r"\label{tab:p-degree-sensitivity}", r"\begin{tabular}{@{}crrr@{}}", r"\toprule",
                 r"Problem & FEM P1 & FEM P2 & FEM P3 \\ \midrule"]
     transparency = []

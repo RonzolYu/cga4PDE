@@ -11,7 +11,7 @@ python tools/rebuild_baseline_evidence.py
 ```
 
 Artifact rebuilding emits clean tables and white figure backgrounds. To check
-that rebuilt products compile with the manuscript, run
+that rebuilt products compile with the manuscript and display descriptive problem names, run
 `python scripts/check_reproduction.py --compile-paper` with `latexmk` on PATH.
 After adopting outputs and compiling the PDF, run
 `python scripts/build_public_inventory.py` and then

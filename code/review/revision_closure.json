@@ -70,14 +70,18 @@
     "fixes": [
       "Generate clean TeX tables and white figure backgrounds; remove revision commands from both generators.",
       "Omit plot PDF wall-clock metadata so repeated rebuilds have stable hashes.",
-      "Refresh the artifact manifest, PDF build record and public package checksums."
+      "Refresh the artifact manifest, PDF build record and public package checksums.",
+      "Use descriptive problem names in the abstract, numerical discussion, comparison prose and generated table captions instead of experimental case identifiers.",
+      "Explain P1/P2/P3 as polynomial degrees and replace internal batch/archive wording by descriptions of computed approximations and coefficient optimization.",
+      "Check regenerated comparison tables and the rendered manuscript for experimental identifiers."
     ],
     "evidence": {
       "clean_rebuild": "reports/reproduction_acceptance.json",
       "paper": "review/structure_check_sisc.json",
       "vector_figures": "review/baseline_figure_verification.csv",
-      "inventory_check": "python code/scripts/build_public_inventory.py --check"
+      "inventory_check": "python code/scripts/build_public_inventory.py --check",
+      "manuscript_wording": "review/internal_language_check.md"
     },
-    "scope": "Formatting and publication integrity; numerical models, evaluations and scientific conclusions unchanged."
+    "scope": "Publication formatting, descriptive manuscript wording and integrity checks; numerical models, evaluations, metric definitions and scientific conclusions unchanged."
   }
 }

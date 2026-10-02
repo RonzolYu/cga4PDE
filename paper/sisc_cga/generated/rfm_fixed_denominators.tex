@@ -2,15 +2,16 @@
 \centering\small
 \caption{RFM counts at the common endpoints. Each width has ten prescribed seeds. The Sobolev median/IQR sample additionally passes the metric-specific signed-value and one-percent quadrature checks.}
 \label{tab:rfm-fixed-denominators}
+\resizebox{\linewidth}{!}{%
 \begin{tabular}{@{}lrrrr@{}}
 \toprule
-Case and width & Prescribed & Solved & Failed & Valid sample \\
+Problem and width & Prescribed & Solved & Failed & Valid sample \\
 \midrule
-C1, $N=256$ & 10 & 10 & 0 & 10 \\
-C2, $N=256$ & 10 & 10 & 0 & 10 \\
-C3, $N=256$ & 10 & 10 & 0 & 10 \\
-C4, $N=128$ & 10 & 10 & 0 & 10 \\
-C5, $N=256$ & 10 & 7 & 3 & 6 \\
+Linear reaction--diffusion, d=1, $N=256$ & 10 & 10 & 0 & 10 \\
+Cubic semilinear problem, d=1, $N=256$ & 10 & 10 & 0 & 10 \\
+Hyperbolic-sine problem, d=2, $N=256$ & 10 & 10 & 0 & 10 \\
+Pure p=4 problem, d=1, k=3, $N=128$ & 10 & 10 & 0 & 10 \\
+Pure p=4 problem, d=2, k=3, $N=256$ & 10 & 7 & 3 & 6 \\
 \bottomrule
-\end{tabular}
+\end{tabular}}
 \end{table}

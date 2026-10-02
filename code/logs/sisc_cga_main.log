@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.8.18)  2 OCT 2026 13:29
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.8.18)  2 OCT 2026 14:14
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -781,74 +781,74 @@ Package pdftex.def Info: figures/cga/cga_linear_cubic.pdf  used on input line 1
 
 
 [19]
-
-[20 <./figures/cga/cga_linear_cubic.pdf>]
-<figures/cga/cga_p4_representative.pdf, id=467, 692.67787pt x 378.80008pt>
+<figures/cga/cga_p4_representative.pdf, id=429, 692.67787pt x 378.80008pt>
 File: figures/cga/cga_p4_representative.pdf Graphic file (type pdf)
 <use figures/cga/cga_p4_representative.pdf>
 Package pdftex.def Info: figures/cga/cga_p4_representative.pdf  used on input l
 ine 168.
 (pdftex.def)             Requested size: 362.97447pt x 198.50308pt.
 
-(./sections/06e_merged_window_experiment.tex
 
-[21 <./figures/cga/cga_p4_representative.pdf>])) (./sections/09_results.tex
+[20 <./figures/cga/cga_linear_cubic.pdf>]
+(./sections/06e_merged_window_experiment.tex)) (./sections/09_results.tex
+
+[21 <./figures/cga/cga_p4_representative.pdf>]
 <figures/baselines/C1_relative_h1_error.pdf, id=507, 383.94443pt x 250.07059pt>
 
 File: figures/baselines/C1_relative_h1_error.pdf Graphic file (type pdf)
 <use figures/baselines/C1_relative_h1_error.pdf>
 Package pdftex.def Info: figures/baselines/C1_relative_h1_error.pdf  used on in
-put line 51.
+put line 57.
 (pdftex.def)             Requested size: 181.49007pt x 118.20857pt.
 <figures/baselines/C2_relative_h1_error.pdf, id=508, 383.94443pt x 250.07059pt>
 
 File: figures/baselines/C2_relative_h1_error.pdf Graphic file (type pdf)
 <use figures/baselines/C2_relative_h1_error.pdf>
 Package pdftex.def Info: figures/baselines/C2_relative_h1_error.pdf  used on in
-put line 52.
+put line 58.
 (pdftex.def)             Requested size: 181.49007pt x 118.20857pt.
 <figures/baselines/C3_relative_h1_error.pdf, id=509, 383.94443pt x 250.07059pt>
 
 File: figures/baselines/C3_relative_h1_error.pdf Graphic file (type pdf)
 <use figures/baselines/C3_relative_h1_error.pdf>
 Package pdftex.def Info: figures/baselines/C3_relative_h1_error.pdf  used on in
-put line 62.
+put line 69.
 (pdftex.def)             Requested size: 118.5255pt x 77.19673pt.
 <figures/baselines/C4_relative_w1p_error.pdf, id=510, 384.06487pt x 250.73553pt
 >
 File: figures/baselines/C4_relative_w1p_error.pdf Graphic file (type pdf)
 <use figures/baselines/C4_relative_w1p_error.pdf>
 Package pdftex.def Info: figures/baselines/C4_relative_w1p_error.pdf  used on i
-nput line 63.
+nput line 70.
 (pdftex.def)             Requested size: 118.5255pt x 77.37904pt.
 <figures/baselines/C5_relative_w1p_error.pdf, id=511, 384.06487pt x 250.73553pt
 >
 File: figures/baselines/C5_relative_w1p_error.pdf Graphic file (type pdf)
 <use figures/baselines/C5_relative_w1p_error.pdf>
 Package pdftex.def Info: figures/baselines/C5_relative_w1p_error.pdf  used on i
-nput line 64.
+nput line 71.
 (pdftex.def)             Requested size: 118.5255pt x 77.37904pt.
 
 
-[22] (./generated/baseline_terminal.tex)
-
-[23 <./figures/baselines/C1_relative_h1_error.pdf> <./figures/baselines/C2_rela
-tive_h1_error.pdf> <./figures/baselines/C3_relative_h1_error.pdf> <./figures/ba
-selines/C4_relative_w1p_error.pdf> <./figures/baselines/C5_relative_w1p_error.p
-df>]
-<figures/baselines/C4_v_distance.pdf, id=667, 384.38608pt x 250.73553pt>
+[22 <./figures/baselines/C1_relative_h1_error.pdf> <./figures/baselines/C2_rela
+tive_h1_error.pdf>] (./generated/baseline_terminal.tex)
+<figures/baselines/C4_v_distance.pdf, id=578, 384.38608pt x 250.73553pt>
 File: figures/baselines/C4_v_distance.pdf Graphic file (type pdf)
 <use figures/baselines/C4_v_distance.pdf>
 Package pdftex.def Info: figures/baselines/C4_v_distance.pdf  used on input lin
-e 94.
+e 101.
 (pdftex.def)             Requested size: 181.49007pt x 118.38899pt.
-<figures/baselines/C5_v_distance.pdf, id=668, 384.38608pt x 250.73553pt>
+<figures/baselines/C5_v_distance.pdf, id=579, 384.38608pt x 250.73553pt>
 File: figures/baselines/C5_v_distance.pdf Graphic file (type pdf)
 <use figures/baselines/C5_v_distance.pdf>
 Package pdftex.def Info: figures/baselines/C5_v_distance.pdf  used on input lin
-e 95.
+e 102.
 (pdftex.def)             Requested size: 181.49007pt x 118.38899pt.
-) (./sections/10_discussion.tex
+
+
+[23 <./figures/baselines/C3_relative_h1_error.pdf> <./figures/baselines/C4_rela
+tive_w1p_error.pdf> <./figures/baselines/C5_relative_w1p_error.pdf>])
+(./sections/10_discussion.tex
 
 [24 <./figures/baselines/C4_v_distance.pdf> <./figures/baselines/C5_v_distance.
 pdf>]) (./sections/11_code_data_availability.tex) (./main.bbl
@@ -871,11 +871,11 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 20D5B0A637901909DD4D5DF4DFE9A423;7161.
  ) 
 Here is how much of TeX's memory you used:
- 20355 strings out of 467800
- 330052 string characters out of 5431882
- 780880 words of memory out of 5000000
+ 20361 strings out of 467800
+ 330092 string characters out of 5431882
+ 782050 words of memory out of 5000000
  46698 multiletter control sequences out of 15000+600000
- 649265 words of font info for 220 fonts, out of 8000000 for 9000
+ 649343 words of font info for 223 fonts, out of 8000000 for 9000
  2715 hyphenation exceptions out of 8191
  89i,12n,93p,1001b,772s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
@@ -905,10 +905,10 @@ onts/type1/public/amsfonts/cm/cmti8.pfb></usr/local/texlive/2025/texmf-dist/fon
 ts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2025/texmf-dist/font
 s/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2025/texmf-dist/
 fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on main.pdf (26 pages, 674692 bytes).
+Output written on main.pdf (26 pages, 673514 bytes).
 PDF statistics:
- 882 PDF objects out of 1000 (max. 8388607)
- 667 compressed objects within 7 object streams
+ 880 PDF objects out of 1000 (max. 8388607)
+ 665 compressed objects within 7 object streams
  187 named destinations out of 1000 (max. 500000)
  33550 words of extra memory for PDF output out of 35830 (max. 10000000)
 

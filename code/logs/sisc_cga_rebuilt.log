@@ -226,27 +226,27 @@ e 116.
 
 [3]
 
-LaTeX Warning: Reference `sec:setting' on page 1 undefined on input line 131.
+LaTeX Warning: Reference `sec:setting' on page 1 undefined on input line 132.
 
 
-LaTeX Warning: Reference `sec:c5-descent' on page 1 undefined on input line 132
+LaTeX Warning: Reference `sec:c5-descent' on page 1 undefined on input line 133
 .
 
 
-LaTeX Warning: Reference `sec:pgeometry' on page 1 undefined on input line 133.
+LaTeX Warning: Reference `sec:pgeometry' on page 1 undefined on input line 134.
 
 
 
-LaTeX Warning: Reference `sec:c5' on page 1 undefined on input line 134.
+LaTeX Warning: Reference `sec:c5' on page 1 undefined on input line 135.
 
 
-LaTeX Warning: Reference `sec:numerics' on page 1 undefined on input line 135.
+LaTeX Warning: Reference `sec:numerics' on page 1 undefined on input line 136.
 
 
-LaTeX Warning: Reference `sec:results' on page 1 undefined on input line 136.
+LaTeX Warning: Reference `sec:results' on page 1 undefined on input line 137.
 
 
-LaTeX Warning: Reference `sec:discussion' on page 1 undefined on input line 136
+LaTeX Warning: Reference `sec:discussion' on page 1 undefined on input line 137
 .
 
 ) (./sections/02_setting_algorithms.tex
@@ -470,6 +470,7 @@ LaTeX Warning: Reference `prop:c5-descent' on page 1 undefined on input line 38
 LaTeX Warning: Reference `tab:cases' on page 1 undefined on input line 48.
 
 
+Underfull \vbox (badness 3919) has occurred while \output is active
 [18]
 
 LaTeX Warning: Reference `cor:metric-rates' on page 1 undefined on input line 1
@@ -499,33 +500,33 @@ LaTeX Warning: Reference `sec:numerics' on page 1 undefined on input line 14.
 [21 <./figures/cga/cga_p4_representative.pdf>]
 
 LaTeX Warning: Reference `tab:baseline-terminal' on page 1 undefined on input l
-ine 39.
+ine 44.
 
 
-LaTeX Warning: Reference `sec:numerics' on page 1 undefined on input line 46.
-
-
-LaTeX Warning: Reference `tab:baseline-terminal' on page 1 undefined on input l
-ine 68.
+LaTeX Warning: Reference `sec:numerics' on page 1 undefined on input line 52.
 
 
 LaTeX Warning: Reference `tab:baseline-terminal' on page 1 undefined on input l
-ine 68.
+ine 75.
+
+
+LaTeX Warning: Reference `tab:baseline-terminal' on page 1 undefined on input l
+ine 75.
 
 
 [22 <./figures/baselines/C1_relative_h1_error.pdf> <./figures/baselines/C2_rela
 tive_h1_error.pdf>]
 
 LaTeX Warning: Reference `tab:baseline-terminal' on page 1 undefined on input l
-ine 73.
+ine 80.
 
 (./generated/baseline_terminal.tex)
 
-LaTeX Warning: Reference `fig:baseline-v' on page 1 undefined on input line 87.
+LaTeX Warning: Reference `fig:baseline-v' on page 1 undefined on input line 94.
 
 
 
-LaTeX Warning: Reference `sec:numerics' on page 1 undefined on input line 87.
+LaTeX Warning: Reference `sec:numerics' on page 1 undefined on input line 94.
 
 
 [23 <./figures/baselines/C3_relative_h1_error.pdf> <./figures/baselines/C4_rela
@@ -550,34 +551,36 @@ Package rerunfilecheck Warning: File `main.out' has changed.
 (rerunfilecheck)                Rerun to get outlines right
 (rerunfilecheck)                or use package `bookmark'.
 
- )</usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
-></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb><
-/usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><
-/usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></
-usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex7.pfb
-></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb>
-</usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></
-usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></us
-r/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/
-local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/lo
-cal/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/loca
-l/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/
-texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/tex
-live/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texliv
-e/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2
-025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2025
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2025/te
-xmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2025/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive/2025/texmf
--dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2025/texmf-d
-ist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2025/texmf-dis
-t/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2025/texmf-dist/
-fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2025/texmf-dist/f
-onts/type1/public/amsfonts/cm/cmti8.pfb></usr/local/texlive/2025/texmf-dist/fon
-ts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2025/texmf-dist/font
-s/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2025/texmf-dist/
-fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on main.pdf (25 pages, 658181 bytes).
+ )
+(see the transcript file for additional information)</usr/local/texlive/2025/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2025/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/local/texlive/2025/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/local/texlive/2025/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2025/texmf-
+dist/fonts/type1/public/amsfonts/cmextra/cmex7.pfb></usr/local/texlive/2025/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2025/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2025/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2025/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2025/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2025/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmmi9.pfb></usr/local/texlive/2025/texmf-dist/fon
+ts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2025/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2025/texmf-dist/fonts/ty
+pe1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmr8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmr9.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmsy10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmsy5.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsf
+onts/cm/cmsy6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmsy7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmsy8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmti10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmti8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/c
+mtt10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbo
+ls/msam10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/s
+ymbols/msbm10.pfb>
+Output written on main.pdf (25 pages, 656742 bytes).
 Transcript written on main.log.
 Latexmk: Getting log file 'main.log'
 Latexmk: Examining 'main.fls'
@@ -865,13 +868,13 @@ input line 302.
 [18]
 [19]
 [20 <./figures/cga/cga_linear_cubic.pdf>]
-(./sections/06e_merged_window_experiment.tex
-[21 <./figures/cga/cga_p4_representative.pdf>])) (./sections/09_results.tex
-[22] (./generated/baseline_terminal.tex)
-[23 <./figures/baselines/C1_relative_h1_error.pdf> <./figures/baselines/C2_rela
-tive_h1_error.pdf> <./figures/baselines/C3_relative_h1_error.pdf> <./figures/ba
-selines/C4_relative_w1p_error.pdf> <./figures/baselines/C5_relative_w1p_error.p
-df>]) (./sections/10_discussion.tex
+(./sections/06e_merged_window_experiment.tex)) (./sections/09_results.tex
+[21 <./figures/cga/cga_p4_representative.pdf>]
+[22 <./figures/baselines/C1_relative_h1_error.pdf> <./figures/baselines/C2_rela
+tive_h1_error.pdf>] (./generated/baseline_terminal.tex)
+[23 <./figures/baselines/C3_relative_h1_error.pdf> <./figures/baselines/C4_rela
+tive_w1p_error.pdf> <./figures/baselines/C5_relative_w1p_error.pdf>])
+(./sections/10_discussion.tex
 [24 <./figures/baselines/C4_v_distance.pdf> <./figures/baselines/C5_v_distance.
 pdf>]) (./sections/11_code_data_availability.tex) (./main.bbl
 Underfull \vbox (badness 2626) has occurred while \output is active
@@ -918,7 +921,7 @@ m/cmti10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm
 mtt10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbo
 ls/msam10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/s
 ymbols/msbm10.pfb>
-Output written on main.pdf (26 pages, 673733 bytes).
+Output written on main.pdf (26 pages, 672638 bytes).
 Transcript written on main.log.
 Latexmk: Getting log file 'main.log'
 Latexmk: Examining 'main.fls'
@@ -1069,13 +1072,13 @@ ty (/usr/local/texlive/2025/texmf-dist/tex/latex/kvoptions/kvoptions.sty)))
 [18]
 [19]
 [20 <./figures/cga/cga_linear_cubic.pdf>]
-(./sections/06e_merged_window_experiment.tex
-[21 <./figures/cga/cga_p4_representative.pdf>])) (./sections/09_results.tex
-[22] (./generated/baseline_terminal.tex)
-[23 <./figures/baselines/C1_relative_h1_error.pdf> <./figures/baselines/C2_rela
-tive_h1_error.pdf> <./figures/baselines/C3_relative_h1_error.pdf> <./figures/ba
-selines/C4_relative_w1p_error.pdf> <./figures/baselines/C5_relative_w1p_error.p
-df>]) (./sections/10_discussion.tex
+(./sections/06e_merged_window_experiment.tex)) (./sections/09_results.tex
+[21 <./figures/cga/cga_p4_representative.pdf>]
+[22 <./figures/baselines/C1_relative_h1_error.pdf> <./figures/baselines/C2_rela
+tive_h1_error.pdf>] (./generated/baseline_terminal.tex)
+[23 <./figures/baselines/C3_relative_h1_error.pdf> <./figures/baselines/C4_rela
+tive_w1p_error.pdf> <./figures/baselines/C5_relative_w1p_error.pdf>])
+(./sections/10_discussion.tex
 [24 <./figures/baselines/C4_v_distance.pdf> <./figures/baselines/C5_v_distance.
 pdf>]) (./sections/11_code_data_availability.tex) (./main.bbl
 Underfull \vbox (badness 2626) has occurred while \output is active
@@ -1109,7 +1112,7 @@ m/cmti10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm
 mtt10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbo
 ls/msam10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/s
 ymbols/msbm10.pfb>
-Output written on main.pdf (26 pages, 674692 bytes).
+Output written on main.pdf (26 pages, 673514 bytes).
 Transcript written on main.log.
 Latexmk: Getting log file 'main.log'
 Latexmk: Examining 'main.fls'

@@ -13,8 +13,8 @@
   "package": "paper/sisc_cga",
   "main": "main.tex",
   "page_count": 26,
-  "pdf_sha256": "d042cc96f2031320f479f7c89052904a7d4b2777d9860229c034c66f91a06aa4",
-  "abstract_whitespace_words": 230,
+  "pdf_sha256": "8a83d08f5d38af3458ee64297caf648b0d4b984017fbf18303c2c1389d9d7c4a",
+  "abstract_whitespace_words": 240,
   "abstract_word_count_method": "PDF extraction, excluding review line numbers",
   "build": "latexmk -pdf -interaction=nonstopmode -halt-on-error -cd main.tex",
   "tex_errors": 0,
@@ -24,6 +24,8 @@
   "revision_commands_present": false,
   "highlight_annotations": 0,
   "rendered_pages": 26,
-  "visual_inspection": "All pages in contact sheets; pages 1, 23, 24 and 25 also individually inspected.",
-  "rebuilt_manuscript_compile": "reports/reproduction_acceptance.json"
+  "visual_inspection": "All 26 pages in contact sheets; pages 1, 22, 23 and 25 also individually inspected at 145 dpi.",
+  "rebuilt_manuscript_compile": "reports/reproduction_acceptance.json",
+  "experiment_identifiers_in_rendered_manuscript": [],
+  "problem_names_in_regenerated_tables": true
 }

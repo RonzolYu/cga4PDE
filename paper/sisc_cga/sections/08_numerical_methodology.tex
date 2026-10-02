@@ -74,14 +74,14 @@ For the main eight-case suite, the one-dimensional target width is 256 and the
 two-dimensional target width is 512. The separate quartic auxiliary numerical tests use
 \(N=8\)--32 for calibration and continue through \(N=64\). The
 one-dimensional pure \(p=4\) case reaches 141 retained atoms within 768 attempted selections and
-therefore has \(N=128\) as its last dyadic
-state. The CGA curves show the retained states over the reported range. Markers identify the
-powers of two used for local-order tables and are the only states joined by the display curves; the
+therefore has \(N=128\) as its largest power-of-two coefficient count.
+The CGA curves show the computed approximations over the reported range. Markers identify the
+powers of two used for local-order tables and are the only points joined by the display curves; the
 values at all retained widths are supplied with the supplementary numerical data.
 
 The quartic finite-trajectory calculation uses two finite index ranges. The constants
-and source quantities are calibrated only on the 25 retained states
-$N=8,\ldots,32$; the states $N=33,\ldots,64$ continue the same trajectory
+and source quantities are calibrated only on the 25 approximations at
+$N=8,\ldots,32$; the approximations at $N=33,\ldots,64$ continue the same trajectory
 with these constants held fixed. Consequently, the
 number of transitions satisfying the normalized-innovation condition on
 $32<N\le64$ measures whether the calibration remains informative immediately beyond
@@ -126,11 +126,11 @@ the energy gap and \(N^{-\beta_H}\) for either the \(H^1\) error or the natural 
 standard \(p\)-structure energy, the corresponding comparison power for the \(W^{1,p}\) error is
 \(N^{-2\beta_H/p}\), as follows from the energy-to-metric conversion in
 \Cref{cor:metric-rates}. The exponent is fixed by the stated theory and is not fitted to the curve.
-The vertical position is chosen once from the last up to three positive dyadic states by a median in log scale. The displayed segments are conditional reference curves, not fitted exponents and not evidence that the continuous coverage, source, and transfer assumptions hold on the plotted range.
+The vertical position is chosen once from the last up to three positive values at power-of-two counts by a median in log scale. The displayed segments are conditional reference curves, not fitted exponents and not evidence that the continuous coverage, source, and transfer assumptions hold on the plotted range.
 
 \subsection{Linear and cubic calibration}
 
-\Cref{fig:cga-linear-cubic} shows the retained dyadic states for the linear and cubic multifrequency
+\Cref{fig:cga-linear-cubic} shows the computed approximations at powers of two for the linear and cubic multifrequency
 problems.  Both curves decrease rapidly after about 32 atoms.  Between \(N=128\) and 256, the
 linear energy and \(H^1\) orders are 6.083 and 3.042, whereas the cubic orders are 6.896 and 3.448; the
 corresponding terminal relative \(H^1\) errors are \(1.247\times10^{-4}\) and
@@ -157,7 +157,7 @@ therefore exhibits slower decay than the preceding interval.
 \Cref{fig:cga-p4-representative} presents the one- and two-dimensional pure \(p=4\) cases using energy,
 relative gradient \(L^4\) seminorm error, and relative \(V\)-distance. The one-dimensional case reaches relative errors
 \(1.579\times10^{-5}\) in the gradient seminorm and \(1.680\times10^{-6}\) in the \(V\)-distance at its last
-dyadic state \(N=128\). For the two-dimensional pure \(p=4\) problem, the interval \(128\to256\) has energy and \(V\)-orders 3.410 and
+power-of-two count \(N=128\). For the two-dimensional pure \(p=4\) problem, the interval \(128\to256\) has energy and \(V\)-orders 3.410 and
 1.703.  On the final interval the \(V\)-distance continues to decrease, but the relative gradient seminorm
 error increases from \(2.494\times10^{-3}\) to \(3.601\times10^{-3}\). Thus the terminal
 Sobolev-error behavior is nonmonotone even though the \(V\)-distance decreases.

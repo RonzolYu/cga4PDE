@@ -11,10 +11,17 @@ references/citations, or duplicate labels. The source dependency check passes:
 The public repository URL occurs as an actual PDF link annotation. The source,
 generated tables, and figure backgrounds use clean formatting without revision
 highlights. All 26 pages were rendered and inspected in contact sheets; pages
-1, 23, 24, and 25 were also inspected individually. Compilation is recorded in
+1, 22, 23, and 25 were also inspected individually at 145 dpi. Compilation is recorded in
 `structure_check_sisc.json`; it does not certify the scientific claims.
 
-The acceptance run passes 13 checks, including clean output formatting and a
+The manuscript uses descriptive problem names in its abstract, comparisons,
+captions, conclusion and code availability statement. The rendered PDF contains
+no C1--C5 experimental identifiers, internal batch name, or `P2 states` wording.
+P1, P2 and P3 are explicitly defined as Lagrange-element polynomial degrees.
+Exact computational directory names remain in the reproduction instructions.
+
+The acceptance run passes 15 checks, including clean output formatting,
+descriptive names in regenerated comparison tables and the rendered PDF, and a
 fresh manuscript build after regenerating missing figures and tables in a
 disposable package. All 61 manifested products and 93 exported artifact-mode
 outputs match the adopted files. The 12 baseline vector PDFs match the current

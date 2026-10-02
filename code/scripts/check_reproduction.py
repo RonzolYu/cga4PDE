@@ -3,6 +3,7 @@ from pathlib import Path
 import argparse
 import hashlib
 import json
+import re
 import shutil
 import subprocess
 import sys
@@ -75,6 +76,12 @@ def main(compile_paper=False):
                 assert image.convert('RGB').getpixel((0, 0)) == (255, 255, 255), path
         checks.append(dict(name='clean_tables_and_figure_backgrounds', passed=True,
                            tables=len(tables), figure_previews=len(previews)))
+        comparison_tables = ('baseline_terminal.tex', 'rfm_fixed_denominators.tex', 'fem_pdegree.tex')
+        for name in comparison_tables:
+            text = (artifacts / 'tex/generated' / name).read_text()
+            assert not re.search(r'\bC[1-5]\b|review_replay', text), name
+        checks.append(dict(name='rebuilt_comparison_tables_use_problem_names', passed=True,
+                           tables=list(comparison_tables)))
         if compile_paper:
             latexmk = shutil.which('latexmk')
             if latexmk is None:
@@ -99,10 +106,16 @@ def main(compile_paper=False):
                            ('Undefined control sequence', 'undefined references',
                             'undefined citations', 'Overfull', 'multiply defined'))
             from pypdf import PdfReader
-            pages = len(PdfReader(manuscript / 'main.pdf').pages)
+            pdf = PdfReader(manuscript / 'main.pdf')
+            pages = len(pdf.pages)
             checks.append(dict(name='rebuilt_clean_manuscript_compiles', passed=True,
                                exit_code=build.returncode, pages=pages,
                                log='logs/sisc_cga_rebuilt.log'))
+            for number, page in enumerate(pdf.pages, 1):
+                text = page.extract_text()
+                assert not re.search(r'\bC[1-5]\b|review_replay|P2\s+states', text), number
+            checks.append(dict(name='rendered_manuscript_omits_experiment_identifiers',
+                               passed=True, pages=pages))
         diagnostics, d = run('diagnostics_recomputed', 'diagnostics', True)
         declared=json.loads((package/'data/derived/experiments/experiment_validation.json').read_text())['rfm']
         assert d['rfm']['rows']==declared['rows']
