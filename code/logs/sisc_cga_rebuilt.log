@@ -1,0 +1,1124 @@
+Rc files read:
+  NONE
+Latexmk: This is Latexmk, John Collins, 27 Dec. 2024. Version 4.86a.
+Latexmk: Changing directory to './'
+No existing .aux file, so I'll make a simple one, and require run of *latex.
+Latexmk: applying rule 'pdflatex'...
+Rule 'pdflatex':  Reasons for rerun
+Category 'other':
+  Rerun of 'pdflatex' forced or previously required:
+    Reason or flag: 'Initial setup'
+
+------------
+Run number 1 of rule 'pdflatex'
+------------
+------------
+Running 'pdflatex  -interaction=nonstopmode -halt-on-error -recorder  "main.tex"'
+------------
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+(./main.tex
+LaTeX2e <2025-06-01> patch level 1
+L3 programming layer <2025-08-13>
+(./siamart251216.cls
+Document Class: siamart251216 2025/12/16 v1.4.8 LaTeX document e-class
+(/usr/local/texlive/2025/texmf-dist/tex/latex/amsmath/amsmath.sty
+For additional information on amsmath, use the `?' option.
+(/usr/local/texlive/2025/texmf-dist/tex/latex/amsmath/amstext.sty
+(/usr/local/texlive/2025/texmf-dist/tex/latex/amsmath/amsgen.sty))
+(/usr/local/texlive/2025/texmf-dist/tex/latex/amsmath/amsbsy.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/amsmath/amsopn.sty))
+(/usr/local/texlive/2025/texmf-dist/tex/latex/ntheorem/ntheorem.sty
+Style `ntheorem', Version 1.33 <2011/08/15>
+(/usr/local/texlive/2025/texmf-dist/tex/latex/base/ifthen.sty))
+(/usr/local/texlive/2025/texmf-dist/tex/latex/hyperref/xr-hyper.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/iftex/ifpdf.sty
+(/usr/local/texlive/2025/texmf-dist/tex/generic/iftex/iftex.sty))
+(/usr/local/texlive/2025/texmf-dist/tex/latex/hyperref/hyperref.sty
+(/usr/local/texlive/2025/texmf-dist/tex/latex/graphics/keyval.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+(/usr/local/texlive/2025/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+(/usr/local/texlive/2025/texmf-dist/tex/generic/infwarerr/infwarerr.sty)))
+(/usr/local/texlive/2025/texmf-dist/tex/latex/hycolor/hycolor.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/hyperref/nameref.sty
+(/usr/local/texlive/2025/texmf-dist/tex/latex/refcount/refcount.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/gettitlestring/gettitlestring.s
+ty (/usr/local/texlive/2025/texmf-dist/tex/latex/kvoptions/kvoptions.sty)))
+(/usr/local/texlive/2025/texmf-dist/tex/latex/etoolbox/etoolbox.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/stringenc/stringenc.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/hyperref/pd1enc.def)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/intcalc/intcalc.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/hyperref/puenc.def)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/url/url.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/bitset/bitset.sty
+(/usr/local/texlive/2025/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty)))
+(/usr/local/texlive/2025/texmf-dist/tex/latex/hyperref/hpdftex.def
+(/usr/local/texlive/2025/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+
+(/usr/local/texlive/2025/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+))) (/usr/local/texlive/2025/texmf-dist/tex/latex/graphics/graphics.sty
+(/usr/local/texlive/2025/texmf-dist/tex/latex/graphics/trig.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/graphics-cfg/graphics.cfg)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/graphics-def/pdftex.def))
+(/usr/local/texlive/2025/texmf-dist/tex/latex/graphics/graphicx.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/epstopdf-pkg/epstopdf.sty
+(/usr/local/texlive/2025/texmf-dist/tex/latex/grfext/grfext.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+(/usr/local/texlive/2025/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg)))
+(/usr/local/texlive/2025/texmf-dist/tex/latex/xcolor/xcolor.sty
+(/usr/local/texlive/2025/texmf-dist/tex/latex/graphics-cfg/color.cfg)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/graphics/mathcolor.ltx))
+(/usr/local/texlive/2025/texmf-dist/tex/latex/hypcap/hypcap.sty
+(/usr/local/texlive/2025/texmf-dist/tex/latex/letltxmacro/letltxmacro.sty))
+(/usr/local/texlive/2025/texmf-dist/tex/latex/algorithms/algorithm.sty
+(/usr/local/texlive/2025/texmf-dist/tex/latex/float/float.sty))
+(/usr/local/texlive/2025/texmf-dist/tex/latex/cleveref/cleveref.sty)
+==> First Aid for cleveref.sty applied!
+(/usr/local/texlive/2025/texmf-dist/tex/latex/lineno/lineno.sty))
+(/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/amsfonts.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/amssymb.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/mathtools/mathtools.sty
+(/usr/local/texlive/2025/texmf-dist/tex/latex/tools/calc.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/mathtools/mhsetup.sty))
+(/usr/local/texlive/2025/texmf-dist/tex/latex/tools/bm.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/booktabs/booktabs.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/tools/longtable.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/tools/array.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/multirow/multirow.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/tools/tabularx.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/subfig/subfig.sty
+(/usr/local/texlive/2025/texmf-dist/tex/latex/caption/caption3.sty))
+(/usr/local/texlive/2025/texmf-dist/tex/latex/placeins/placeins.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/enumitem/enumitem.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/microtype/microtype.sty
+(/usr/local/texlive/2025/texmf-dist/tex/latex/microtype/microtype-pdftex.def)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/microtype/microtype.cfg))
+(/usr/local/texlive/2025/texmf-dist/tex/latex/natbib/natbib.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def)
+(./main.aux)
+(/usr/local/texlive/2025/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+) (/usr/local/texlive/2025/texmf-dist/tex/latex/microtype/mt-cmr.cfg)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsa.fd)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/microtype/mt-msa.cfg)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsb.fd)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/microtype/mt-msb.cfg)
+(./sections/00_frontmatter.tex) (./sections/01_introduction.tex
+
+Package natbib Warning: Citation `BrennerScott2008' on page 1 undefined on inpu
+t line 7.
+
+
+Package natbib Warning: Citation `EYu2018' on page 1 undefined on input line 10
+.
+
+
+Package natbib Warning: Citation `SiegelXuOGA2022' on page 1 undefined on input
+ line 15.
+
+
+Package natbib Warning: Citation `LiSiegelEntropy2024' on page 1 undefined on i
+nput line 15.
+
+
+Package natbib Warning: Citation `TemlyakovCGA2013' on page 1 undefined on inpu
+t line 16.
+
+
+Package natbib Warning: Citation `TemlyakovGreedy2014' on page 1 undefined on i
+nput line 16.
+
+
+Package natbib Warning: Citation `DereventsovTemlyakov2022' on page 1 undefined
+ on input line 18.
+
+
+[1{/usr/local/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+
+Package natbib Warning: Citation `SiegelHongJinHaoXu2023' on page 2 undefined o
+n input line 28.
+
+
+Package natbib Warning: Citation `XuXu2025' on page 2 undefined on input line 3
+1.
+
+
+Package natbib Warning: Citation `BernaFalco2025' on page 2 undefined on input 
+line 36.
+
+
+Package natbib Warning: Citation `SiegelXuVariation2023' on page 2 undefined on
+ input line 38.
+
+
+Package natbib Warning: Citation `SiegelXuSharp2024' on page 2 undefined on inp
+ut line 38.
+
+
+Package natbib Warning: Citation `MaoSiegelXu2026' on page 2 undefined on input
+ line 38.
+
+
+LaTeX Warning: Reference `sec:c5-hessian' on page 2 undefined on input line 44.
+
+
+
+Package natbib Warning: Citation `TemlyakovCGA2013' on page 2 undefined on inpu
+t line 51.
+
+
+Package natbib Warning: Citation `TemlyakovGreedy2014' on page 2 undefined on i
+nput line 51.
+
+
+Package natbib Warning: Citation `DereventsovTemlyakov2022' on page 2 undefined
+ on input line 52.
+
+
+Package natbib Warning: Citation `SiegelXuOGA2022' on page 2 undefined on input
+ line 55.
+
+
+Package natbib Warning: Citation `LiSiegelEntropy2024' on page 2 undefined on i
+nput line 55.
+
+
+Package natbib Warning: Citation `XuXu2025' on page 2 undefined on input line 5
+7.
+
+
+Package natbib Warning: Citation `BarrettLiu1993' on page 2 undefined on input 
+line 68.
+
+
+Package natbib Warning: Citation `DieningKreuzer2008' on page 2 undefined on in
+put line 68.
+
+
+Package natbib Warning: Citation `LeePark2025' on page 2 undefined on input lin
+e 68.
+
+
+LaTeX Warning: Reference `ass:atomic' on page 1 undefined on input line 75.
+
+
+LaTeX Warning: Reference `ass:directional' on page 1 undefined on input line 76
+.
+
+
+[2]
+
+Package natbib Warning: Citation `RahimiRecht2007' on page 3 undefined on input
+ line 114.
+
+
+Package natbib Warning: Citation `ChenChiEYang2022' on page 3 undefined on inpu
+t line 115.
+
+
+Package natbib Warning: Citation `MaoXuXu2026' on page 3 undefined on input lin
+e 116.
+
+
+[3]
+
+LaTeX Warning: Reference `sec:setting' on page 1 undefined on input line 131.
+
+
+LaTeX Warning: Reference `sec:c5-descent' on page 1 undefined on input line 132
+.
+
+
+LaTeX Warning: Reference `sec:pgeometry' on page 1 undefined on input line 133.
+
+
+
+LaTeX Warning: Reference `sec:c5' on page 1 undefined on input line 134.
+
+
+LaTeX Warning: Reference `sec:numerics' on page 1 undefined on input line 135.
+
+
+LaTeX Warning: Reference `sec:results' on page 1 undefined on input line 136.
+
+
+LaTeX Warning: Reference `sec:discussion' on page 1 undefined on input line 136
+.
+
+) (./sections/02_setting_algorithms.tex
+
+LaTeX Warning: Reference `sec:models' on page 1 undefined on input line 17.
+
+
+[4]
+
+LaTeX Warning: Reference `prop:1dsource' on page 1 undefined on input line 80.
+
+
+Package natbib Warning: Citation `SiegelXuVariation2023' on page 5 undefined on
+ input line 99.
+
+
+Package natbib Warning: Citation `SiegelXuSharp2024' on page 5 undefined on inp
+ut line 99.
+
+
+Package natbib Warning: Citation `MaoSiegelXu2026' on page 5 undefined on input
+ line 99.
+
+
+[5]
+
+LaTeX Warning: Reference `lem:projection' on page 1 undefined on input line 125
+.
+
+
+LaTeX Warning: Reference `lem:projection' on page 1 undefined on input line 138
+.
+
+
+LaTeX Warning: Reference `lem:projection' on page 1 undefined on input line 142
+.
+
+
+[6]
+
+LaTeX Warning: Reference `eq:pool-coverage' on page 1 undefined on input line 2
+34.
+
+
+LaTeX Warning: Reference `eq:score-error' on page 1 undefined on input line 234
+.
+
+
+[7]
+
+LaTeX Warning: Reference `eq:active-sublevel' on page 1 undefined on input line
+ 267.
+
+
+LaTeX Warning: Reference `alg:finite' on page 1 undefined on input line 277.
+
+) (./sections/04_natural_geometry.tex (./sections/07_energy_families.tex
+
+LaTeX Warning: Reference `eq:reaction-energy' on page 1 undefined on input line
+ 4.
+
+
+LaTeX Warning: Reference `eq:reg-energy' on page 1 undefined on input line 4.
+
+
+LaTeX Warning: Reference `eq:pure-energy' on page 1 undefined on input line 4.
+
+
+LaTeX Warning: Reference `eq:sinh-energy' on page 1 undefined on input line 18.
+
+
+
+[8]
+
+LaTeX Warning: Reference `eq:reg-energy' on page 1 undefined on input line 32.
+
+
+LaTeX Warning: Reference `ass:model-data' on page 1 undefined on input line 38.
+
+
+
+LaTeX Warning: Reference `eq:sinh-energy' on page 1 undefined on input line 38.
+
+
+
+LaTeX Warning: Reference `eq:cubic-energy' on page 1 undefined on input line 38
+.
+
+
+LaTeX Warning: Reference `eq:linear-energy' on page 1 undefined on input line 3
+8.
+
+
+LaTeX Warning: Reference `eq:reg-energy' on page 1 undefined on input line 39.
+
+
+LaTeX Warning: Reference `eq:pure-energy' on page 1 undefined on input line 39.
+
+
+
+LaTeX Warning: Reference `eq:reaction-energy' on page 1 undefined on input line
+ 40.
+
+
+LaTeX Warning: Reference `sec:c5-hessian' on page 1 undefined on input line 48.
+
+
+
+[9])
+
+Package natbib Warning: Citation `BarrettLiu1993' on page 10 undefined on input
+ line 73.
+
+
+Package natbib Warning: Citation `DieningKreuzer2008' on page 10 undefined on i
+nput line 73.
+
+
+Package natbib Warning: Citation `LeePark2025' on page 10 undefined on input li
+ne 73.
+
+
+[10]
+
+LaTeX Warning: Reference `thm:energy-v' on page 1 undefined on input line 130.
+
+
+LaTeX Warning: Reference `thm:energy-v' on page 1 undefined on input line 146.
+
+
+LaTeX Warning: Reference `lem:pstructure' on page 1 undefined on input line 153
+.
+
+) (./sections/05_theory.tex
+[11]
+
+LaTeX Warning: Reference `eq:c5-orthogonality-defect' on page 12 undefined on i
+nput line 111.
+
+
+[12]
+
+LaTeX Warning: Reference `eq:c5-atomic' on page 13 undefined on input line 140.
+
+
+
+LaTeX Warning: Reference `lem:c5-recurrence' on page 13 undefined on input line
+ 145.
+
+
+LaTeX Warning: Reference `lem:c5-recurrence' on page 13 undefined on input line
+ 176.
+
+
+LaTeX Warning: Reference `thm:energy-v' on page 13 undefined on input line 183.
+
+
+
+LaTeX Warning: Reference `cor:metric-rates' on page 13 undefined on input line 
+183.
+
+
+LaTeX Warning: Reference `eq:c5-hessian' on page 13 undefined on input line 211
+.
+
+
+[13]
+
+LaTeX Warning: Reference `lem:c5-projection' on page 14 undefined on input line
+ 238.
+
+
+[14]
+
+Package natbib Warning: Citation `LiSiegelEntropy2024' on page 15 undefined on 
+input line 302.
+
+
+LaTeX Warning: Reference `eq:c5-entropy' on page 15 undefined on input line 324
+.
+
+
+LaTeX Warning: Reference `eq:c5-hessian' on page 15 undefined on input line 330
+.
+
+
+LaTeX Warning: Reference `eq:c5-bridge' on page 15 undefined on input line 330.
+
+
+
+LaTeX Warning: Reference `eq:c5-relative' on page 15 undefined on input line 33
+2.
+
+
+LaTeX Warning: Reference `eq:c5-entropy' on page 15 undefined on input line 353
+.
+
+
+[15]
+
+LaTeX Warning: Reference `eq:c5-quartic' on page 16 undefined on input line 447
+.
+
+
+[16]
+
+LaTeX Warning: Reference `prop:c5-quartic' on page 1 undefined on input line 46
+5.
+
+) (./sections/08_numerical_methodology.tex
+
+LaTeX Warning: Reference `sec:setting' on page 1 undefined on input line 26.
+
+
+LaTeX Warning: Reference `prop:c5-descent' on page 1 undefined on input line 38
+.
+
+
+[17]
+
+LaTeX Warning: Reference `tab:cases' on page 1 undefined on input line 48.
+
+
+[18]
+
+LaTeX Warning: Reference `cor:metric-rates' on page 1 undefined on input line 1
+28.
+
+
+LaTeX Warning: Reference `fig:cga-linear-cubic' on page 1 undefined on input li
+ne 133.
+
+
+[19]
+
+LaTeX Warning: Reference `fig:cga-p4-representative' on page 1 undefined on inp
+ut line 157.
+
+
+[20 <./figures/cga/cga_linear_cubic.pdf>]
+(./sections/06e_merged_window_experiment.tex
+
+LaTeX Warning: Reference `sec:c5' on page 1 undefined on input line 5.
+
+)) (./sections/09_results.tex
+
+LaTeX Warning: Reference `sec:numerics' on page 1 undefined on input line 14.
+
+
+[21 <./figures/cga/cga_p4_representative.pdf>]
+
+LaTeX Warning: Reference `tab:baseline-terminal' on page 1 undefined on input l
+ine 39.
+
+
+LaTeX Warning: Reference `sec:numerics' on page 1 undefined on input line 46.
+
+
+LaTeX Warning: Reference `tab:baseline-terminal' on page 1 undefined on input l
+ine 68.
+
+
+LaTeX Warning: Reference `tab:baseline-terminal' on page 1 undefined on input l
+ine 68.
+
+
+[22 <./figures/baselines/C1_relative_h1_error.pdf> <./figures/baselines/C2_rela
+tive_h1_error.pdf>]
+
+LaTeX Warning: Reference `tab:baseline-terminal' on page 1 undefined on input l
+ine 73.
+
+(./generated/baseline_terminal.tex)
+
+LaTeX Warning: Reference `fig:baseline-v' on page 1 undefined on input line 87.
+
+
+
+LaTeX Warning: Reference `sec:numerics' on page 1 undefined on input line 87.
+
+
+[23 <./figures/baselines/C3_relative_h1_error.pdf> <./figures/baselines/C4_rela
+tive_w1p_error.pdf> <./figures/baselines/C5_relative_w1p_error.pdf>])
+(./sections/10_discussion.tex
+[24 <./figures/baselines/C4_v_distance.pdf> <./figures/baselines/C5_v_distance.
+pdf>]) (./sections/11_code_data_availability.tex)
+No file main.bbl.
+
+Package natbib Warning: There were undefined citations.
+
+
+[25] (./main.aux)
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+
+Package rerunfilecheck Warning: File `main.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+ )</usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
+></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb><
+/usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><
+/usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></
+usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex7.pfb
+></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb>
+</usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></
+usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></us
+r/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/
+local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/lo
+cal/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/loca
+l/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/
+texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/tex
+live/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texliv
+e/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2
+025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2025
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2025/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2025/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive/2025/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2025/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2025/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2025/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2025/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmti8.pfb></usr/local/texlive/2025/texmf-dist/fon
+ts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2025/texmf-dist/font
+s/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2025/texmf-dist/
+fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on main.pdf (25 pages, 658181 bytes).
+Transcript written on main.log.
+Latexmk: Getting log file 'main.log'
+Latexmk: Examining 'main.fls'
+Latexmk: Examining 'main.log'
+Latexmk: Missing bbl file 'main.bbl' in following:
+ No file main.bbl.
+Latexmk: References changed.
+Latexmk: References changed.
+Latexmk: Log file says output to 'main.pdf'
+Latexmk: Found bibliography file(s):
+  ./References/references.bib
+Latexmk: applying rule 'bibtex main'...
+Rule 'bibtex main':  Reasons for rerun
+Category 'other':
+  Rerun of 'bibtex main' forced or previously required:
+    Reason or flag: 'Initial set up of rule'
+
+------------
+Run number 1 of rule 'bibtex main'
+------------
+------------
+Running 'bibtex  "main.aux"'
+------------
+This is BibTeX, Version 0.99d (TeX Live 2025)
+The top-level auxiliary file: main.aux
+The style file: siamplain.bst
+Database file #1: References/references.bib
+Latexmk: applying rule 'pdflatex'...
+Rule 'pdflatex':  Reasons for rerun
+Changed files or newly in use/created:
+  main.aux
+  main.bbl
+  main.out
+
+------------
+Run number 2 of rule 'pdflatex'
+------------
+------------
+Running 'pdflatex  -interaction=nonstopmode -halt-on-error -recorder  "main.tex"'
+------------
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+(./main.tex
+LaTeX2e <2025-06-01> patch level 1
+L3 programming layer <2025-08-13>
+(./siamart251216.cls
+Document Class: siamart251216 2025/12/16 v1.4.8 LaTeX document e-class
+(/usr/local/texlive/2025/texmf-dist/tex/latex/amsmath/amsmath.sty
+For additional information on amsmath, use the `?' option.
+(/usr/local/texlive/2025/texmf-dist/tex/latex/amsmath/amstext.sty
+(/usr/local/texlive/2025/texmf-dist/tex/latex/amsmath/amsgen.sty))
+(/usr/local/texlive/2025/texmf-dist/tex/latex/amsmath/amsbsy.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/amsmath/amsopn.sty))
+(/usr/local/texlive/2025/texmf-dist/tex/latex/ntheorem/ntheorem.sty
+Style `ntheorem', Version 1.33 <2011/08/15>
+(/usr/local/texlive/2025/texmf-dist/tex/latex/base/ifthen.sty))
+(/usr/local/texlive/2025/texmf-dist/tex/latex/hyperref/xr-hyper.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/iftex/ifpdf.sty
+(/usr/local/texlive/2025/texmf-dist/tex/generic/iftex/iftex.sty))
+(/usr/local/texlive/2025/texmf-dist/tex/latex/hyperref/hyperref.sty
+(/usr/local/texlive/2025/texmf-dist/tex/latex/graphics/keyval.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+(/usr/local/texlive/2025/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+(/usr/local/texlive/2025/texmf-dist/tex/generic/infwarerr/infwarerr.sty)))
+(/usr/local/texlive/2025/texmf-dist/tex/latex/hycolor/hycolor.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/hyperref/nameref.sty
+(/usr/local/texlive/2025/texmf-dist/tex/latex/refcount/refcount.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/gettitlestring/gettitlestring.s
+ty (/usr/local/texlive/2025/texmf-dist/tex/latex/kvoptions/kvoptions.sty)))
+(/usr/local/texlive/2025/texmf-dist/tex/latex/etoolbox/etoolbox.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/stringenc/stringenc.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/hyperref/pd1enc.def)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/intcalc/intcalc.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/hyperref/puenc.def)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/url/url.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/bitset/bitset.sty
+(/usr/local/texlive/2025/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty)))
+(/usr/local/texlive/2025/texmf-dist/tex/latex/hyperref/hpdftex.def
+(/usr/local/texlive/2025/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+
+(/usr/local/texlive/2025/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+))) (/usr/local/texlive/2025/texmf-dist/tex/latex/graphics/graphics.sty
+(/usr/local/texlive/2025/texmf-dist/tex/latex/graphics/trig.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/graphics-cfg/graphics.cfg)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/graphics-def/pdftex.def))
+(/usr/local/texlive/2025/texmf-dist/tex/latex/graphics/graphicx.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/epstopdf-pkg/epstopdf.sty
+(/usr/local/texlive/2025/texmf-dist/tex/latex/grfext/grfext.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+(/usr/local/texlive/2025/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg)))
+(/usr/local/texlive/2025/texmf-dist/tex/latex/xcolor/xcolor.sty
+(/usr/local/texlive/2025/texmf-dist/tex/latex/graphics-cfg/color.cfg)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/graphics/mathcolor.ltx))
+(/usr/local/texlive/2025/texmf-dist/tex/latex/hypcap/hypcap.sty
+(/usr/local/texlive/2025/texmf-dist/tex/latex/letltxmacro/letltxmacro.sty))
+(/usr/local/texlive/2025/texmf-dist/tex/latex/algorithms/algorithm.sty
+(/usr/local/texlive/2025/texmf-dist/tex/latex/float/float.sty))
+(/usr/local/texlive/2025/texmf-dist/tex/latex/cleveref/cleveref.sty)
+==> First Aid for cleveref.sty applied!
+(/usr/local/texlive/2025/texmf-dist/tex/latex/lineno/lineno.sty))
+(/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/amsfonts.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/amssymb.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/mathtools/mathtools.sty
+(/usr/local/texlive/2025/texmf-dist/tex/latex/tools/calc.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/mathtools/mhsetup.sty))
+(/usr/local/texlive/2025/texmf-dist/tex/latex/tools/bm.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/booktabs/booktabs.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/tools/longtable.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/tools/array.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/multirow/multirow.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/tools/tabularx.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/subfig/subfig.sty
+(/usr/local/texlive/2025/texmf-dist/tex/latex/caption/caption3.sty))
+(/usr/local/texlive/2025/texmf-dist/tex/latex/placeins/placeins.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/enumitem/enumitem.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/microtype/microtype.sty
+(/usr/local/texlive/2025/texmf-dist/tex/latex/microtype/microtype-pdftex.def)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/microtype/microtype.cfg))
+(/usr/local/texlive/2025/texmf-dist/tex/latex/natbib/natbib.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def)
+(./main.aux) (./main.out) (./main.out)
+(/usr/local/texlive/2025/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+) (/usr/local/texlive/2025/texmf-dist/tex/latex/microtype/mt-cmr.cfg)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsa.fd)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/microtype/mt-msa.cfg)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsb.fd)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/microtype/mt-msb.cfg)
+(./sections/00_frontmatter.tex) (./sections/01_introduction.tex
+
+Package natbib Warning: Citation `BrennerScott2008' on page 1 undefined on inpu
+t line 7.
+
+
+Package natbib Warning: Citation `EYu2018' on page 1 undefined on input line 10
+.
+
+
+Package natbib Warning: Citation `SiegelXuOGA2022' on page 1 undefined on input
+ line 15.
+
+
+Package natbib Warning: Citation `LiSiegelEntropy2024' on page 1 undefined on i
+nput line 15.
+
+
+Package natbib Warning: Citation `TemlyakovCGA2013' on page 1 undefined on inpu
+t line 16.
+
+
+Package natbib Warning: Citation `TemlyakovGreedy2014' on page 1 undefined on i
+nput line 16.
+
+
+Package natbib Warning: Citation `DereventsovTemlyakov2022' on page 1 undefined
+ on input line 18.
+
+
+[1{/usr/local/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+
+Package natbib Warning: Citation `SiegelHongJinHaoXu2023' on page 2 undefined o
+n input line 28.
+
+
+Package natbib Warning: Citation `XuXu2025' on page 2 undefined on input line 3
+1.
+
+
+Package natbib Warning: Citation `BernaFalco2025' on page 2 undefined on input 
+line 36.
+
+
+Package natbib Warning: Citation `SiegelXuVariation2023' on page 2 undefined on
+ input line 38.
+
+
+Package natbib Warning: Citation `SiegelXuSharp2024' on page 2 undefined on inp
+ut line 38.
+
+
+Package natbib Warning: Citation `MaoSiegelXu2026' on page 2 undefined on input
+ line 38.
+
+
+Package natbib Warning: Citation `TemlyakovCGA2013' on page 2 undefined on inpu
+t line 51.
+
+
+Package natbib Warning: Citation `TemlyakovGreedy2014' on page 2 undefined on i
+nput line 51.
+
+
+Package natbib Warning: Citation `DereventsovTemlyakov2022' on page 2 undefined
+ on input line 52.
+
+
+Package natbib Warning: Citation `SiegelXuOGA2022' on page 2 undefined on input
+ line 55.
+
+
+Package natbib Warning: Citation `LiSiegelEntropy2024' on page 2 undefined on i
+nput line 55.
+
+
+Package natbib Warning: Citation `XuXu2025' on page 2 undefined on input line 5
+7.
+
+
+Package natbib Warning: Citation `BarrettLiu1993' on page 2 undefined on input 
+line 68.
+
+
+Package natbib Warning: Citation `DieningKreuzer2008' on page 2 undefined on in
+put line 68.
+
+
+Package natbib Warning: Citation `LeePark2025' on page 2 undefined on input lin
+e 68.
+
+
+[2]
+
+Package natbib Warning: Citation `RahimiRecht2007' on page 3 undefined on input
+ line 114.
+
+
+Package natbib Warning: Citation `ChenChiEYang2022' on page 3 undefined on inpu
+t line 115.
+
+
+Package natbib Warning: Citation `MaoXuXu2026' on page 3 undefined on input lin
+e 116.
+
+
+[3]) (./sections/02_setting_algorithms.tex
+[4]
+
+Package natbib Warning: Citation `SiegelXuVariation2023' on page 5 undefined on
+ input line 99.
+
+
+Package natbib Warning: Citation `SiegelXuSharp2024' on page 5 undefined on inp
+ut line 99.
+
+
+Package natbib Warning: Citation `MaoSiegelXu2026' on page 5 undefined on input
+ line 99.
+
+
+[5]
+[6]
+[7]) (./sections/04_natural_geometry.tex (./sections/07_energy_families.tex
+[8]
+[9])
+
+Package natbib Warning: Citation `BarrettLiu1993' on page 10 undefined on input
+ line 73.
+
+
+Package natbib Warning: Citation `DieningKreuzer2008' on page 10 undefined on i
+nput line 73.
+
+
+Package natbib Warning: Citation `LeePark2025' on page 10 undefined on input li
+ne 73.
+
+
+[10]
+[11]) (./sections/05_theory.tex
+[12]
+[13]
+[14]
+
+Package natbib Warning: Citation `LiSiegelEntropy2024' on page 15 undefined on 
+input line 302.
+
+
+[15]
+[16]) (./sections/08_numerical_methodology.tex
+[17]
+[18]
+[19]
+[20 <./figures/cga/cga_linear_cubic.pdf>]
+(./sections/06e_merged_window_experiment.tex
+[21 <./figures/cga/cga_p4_representative.pdf>])) (./sections/09_results.tex
+[22] (./generated/baseline_terminal.tex)
+[23 <./figures/baselines/C1_relative_h1_error.pdf> <./figures/baselines/C2_rela
+tive_h1_error.pdf> <./figures/baselines/C3_relative_h1_error.pdf> <./figures/ba
+selines/C4_relative_w1p_error.pdf> <./figures/baselines/C5_relative_w1p_error.p
+df>]) (./sections/10_discussion.tex
+[24 <./figures/baselines/C4_v_distance.pdf> <./figures/baselines/C5_v_distance.
+pdf>]) (./sections/11_code_data_availability.tex) (./main.bbl
+Underfull \vbox (badness 2626) has occurred while \output is active
+[25])
+
+Package natbib Warning: There were undefined citations.
+
+
+[26] (./main.aux
+
+Package natbib Warning: Citation(s) may have changed.
+(natbib)                Rerun to get citations correct.
+
+)
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ )
+(see the transcript file for additional information)</usr/local/texlive/2025/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2025/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/local/texlive/2025/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/local/texlive/2025/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2025/texmf-
+dist/fonts/type1/public/amsfonts/cmextra/cmex7.pfb></usr/local/texlive/2025/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2025/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2025/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2025/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2025/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2025/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmmi9.pfb></usr/local/texlive/2025/texmf-dist/fon
+ts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2025/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2025/texmf-dist/fonts/ty
+pe1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmr8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmr9.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmsy10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmsy5.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsf
+onts/cm/cmsy6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmsy7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmsy8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmti10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmti8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/c
+mtt10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbo
+ls/msam10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/s
+ymbols/msbm10.pfb>
+Output written on main.pdf (26 pages, 673733 bytes).
+Transcript written on main.log.
+Latexmk: Getting log file 'main.log'
+Latexmk: Examining 'main.fls'
+Latexmk: Examining 'main.log'
+Latexmk: Found input bbl file 'main.bbl'
+Latexmk: Found input bbl file 'main.bbl'
+Latexmk: References changed.
+Latexmk: References changed.
+Latexmk: Log file says output to 'main.pdf'
+Latexmk: Found bibliography file(s):
+  ./References/references.bib
+Latexmk: applying rule 'bibtex main'...
+Rule 'bibtex main':  Reasons for rerun
+Changed files or newly in use/created:
+  main.aux
+
+------------
+Run number 2 of rule 'bibtex main'
+------------
+------------
+Running 'bibtex  "main.aux"'
+------------
+This is BibTeX, Version 0.99d (TeX Live 2025)
+The top-level auxiliary file: main.aux
+The style file: siamplain.bst
+Database file #1: References/references.bib
+Latexmk: applying rule 'pdflatex'...
+Rule 'pdflatex':  Reasons for rerun
+Changed files or newly in use/created:
+  main.aux
+
+------------
+Run number 3 of rule 'pdflatex'
+------------
+------------
+Running 'pdflatex  -interaction=nonstopmode -halt-on-error -recorder  "main.tex"'
+------------
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+(./main.tex
+LaTeX2e <2025-06-01> patch level 1
+L3 programming layer <2025-08-13>
+(./siamart251216.cls
+Document Class: siamart251216 2025/12/16 v1.4.8 LaTeX document e-class
+(/usr/local/texlive/2025/texmf-dist/tex/latex/amsmath/amsmath.sty
+For additional information on amsmath, use the `?' option.
+(/usr/local/texlive/2025/texmf-dist/tex/latex/amsmath/amstext.sty
+(/usr/local/texlive/2025/texmf-dist/tex/latex/amsmath/amsgen.sty))
+(/usr/local/texlive/2025/texmf-dist/tex/latex/amsmath/amsbsy.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/amsmath/amsopn.sty))
+(/usr/local/texlive/2025/texmf-dist/tex/latex/ntheorem/ntheorem.sty
+Style `ntheorem', Version 1.33 <2011/08/15>
+(/usr/local/texlive/2025/texmf-dist/tex/latex/base/ifthen.sty))
+(/usr/local/texlive/2025/texmf-dist/tex/latex/hyperref/xr-hyper.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/iftex/ifpdf.sty
+(/usr/local/texlive/2025/texmf-dist/tex/generic/iftex/iftex.sty))
+(/usr/local/texlive/2025/texmf-dist/tex/latex/hyperref/hyperref.sty
+(/usr/local/texlive/2025/texmf-dist/tex/latex/graphics/keyval.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+(/usr/local/texlive/2025/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+(/usr/local/texlive/2025/texmf-dist/tex/generic/infwarerr/infwarerr.sty)))
+(/usr/local/texlive/2025/texmf-dist/tex/latex/hycolor/hycolor.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/hyperref/nameref.sty
+(/usr/local/texlive/2025/texmf-dist/tex/latex/refcount/refcount.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/gettitlestring/gettitlestring.s
+ty (/usr/local/texlive/2025/texmf-dist/tex/latex/kvoptions/kvoptions.sty)))
+(/usr/local/texlive/2025/texmf-dist/tex/latex/etoolbox/etoolbox.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/stringenc/stringenc.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/hyperref/pd1enc.def)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/intcalc/intcalc.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/hyperref/puenc.def)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/url/url.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/bitset/bitset.sty
+(/usr/local/texlive/2025/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty)))
+(/usr/local/texlive/2025/texmf-dist/tex/latex/hyperref/hpdftex.def
+(/usr/local/texlive/2025/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+
+(/usr/local/texlive/2025/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+))) (/usr/local/texlive/2025/texmf-dist/tex/latex/graphics/graphics.sty
+(/usr/local/texlive/2025/texmf-dist/tex/latex/graphics/trig.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/graphics-cfg/graphics.cfg)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/graphics-def/pdftex.def))
+(/usr/local/texlive/2025/texmf-dist/tex/latex/graphics/graphicx.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/epstopdf-pkg/epstopdf.sty
+(/usr/local/texlive/2025/texmf-dist/tex/latex/grfext/grfext.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+(/usr/local/texlive/2025/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg)))
+(/usr/local/texlive/2025/texmf-dist/tex/latex/xcolor/xcolor.sty
+(/usr/local/texlive/2025/texmf-dist/tex/latex/graphics-cfg/color.cfg)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/graphics/mathcolor.ltx))
+(/usr/local/texlive/2025/texmf-dist/tex/latex/hypcap/hypcap.sty
+(/usr/local/texlive/2025/texmf-dist/tex/latex/letltxmacro/letltxmacro.sty))
+(/usr/local/texlive/2025/texmf-dist/tex/latex/algorithms/algorithm.sty
+(/usr/local/texlive/2025/texmf-dist/tex/latex/float/float.sty))
+(/usr/local/texlive/2025/texmf-dist/tex/latex/cleveref/cleveref.sty)
+==> First Aid for cleveref.sty applied!
+(/usr/local/texlive/2025/texmf-dist/tex/latex/lineno/lineno.sty))
+(/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/amsfonts.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/amssymb.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/mathtools/mathtools.sty
+(/usr/local/texlive/2025/texmf-dist/tex/latex/tools/calc.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/mathtools/mhsetup.sty))
+(/usr/local/texlive/2025/texmf-dist/tex/latex/tools/bm.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/booktabs/booktabs.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/tools/longtable.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/tools/array.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/multirow/multirow.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/tools/tabularx.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/subfig/subfig.sty
+(/usr/local/texlive/2025/texmf-dist/tex/latex/caption/caption3.sty))
+(/usr/local/texlive/2025/texmf-dist/tex/latex/placeins/placeins.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/enumitem/enumitem.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/microtype/microtype.sty
+(/usr/local/texlive/2025/texmf-dist/tex/latex/microtype/microtype-pdftex.def)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/microtype/microtype.cfg))
+(/usr/local/texlive/2025/texmf-dist/tex/latex/natbib/natbib.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def)
+(./main.aux) (./main.out) (./main.out)
+(/usr/local/texlive/2025/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+) (/usr/local/texlive/2025/texmf-dist/tex/latex/microtype/mt-cmr.cfg)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsa.fd)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/microtype/mt-msa.cfg)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsb.fd)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/microtype/mt-msb.cfg)
+(./sections/00_frontmatter.tex) (./sections/01_introduction.tex
+[1{/usr/local/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+[2]
+[3]) (./sections/02_setting_algorithms.tex
+[4]
+[5]
+[6]
+[7]) (./sections/04_natural_geometry.tex (./sections/07_energy_families.tex
+[8]
+[9])
+[10]
+[11]) (./sections/05_theory.tex
+[12]
+[13]
+[14]
+[15]
+[16]) (./sections/08_numerical_methodology.tex
+[17]
+[18]
+[19]
+[20 <./figures/cga/cga_linear_cubic.pdf>]
+(./sections/06e_merged_window_experiment.tex
+[21 <./figures/cga/cga_p4_representative.pdf>])) (./sections/09_results.tex
+[22] (./generated/baseline_terminal.tex)
+[23 <./figures/baselines/C1_relative_h1_error.pdf> <./figures/baselines/C2_rela
+tive_h1_error.pdf> <./figures/baselines/C3_relative_h1_error.pdf> <./figures/ba
+selines/C4_relative_w1p_error.pdf> <./figures/baselines/C5_relative_w1p_error.p
+df>]) (./sections/10_discussion.tex
+[24 <./figures/baselines/C4_v_distance.pdf> <./figures/baselines/C5_v_distance.
+pdf>]) (./sections/11_code_data_availability.tex) (./main.bbl
+Underfull \vbox (badness 2626) has occurred while \output is active
+[25])
+[26] (./main.aux) )
+(see the transcript file for additional information)</usr/local/texlive/2025/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2025/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/local/texlive/2025/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/local/texlive/2025/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2025/texmf-
+dist/fonts/type1/public/amsfonts/cmextra/cmex7.pfb></usr/local/texlive/2025/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2025/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2025/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2025/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2025/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2025/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmmi9.pfb></usr/local/texlive/2025/texmf-dist/fon
+ts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2025/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2025/texmf-dist/fonts/ty
+pe1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmr8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmr9.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmsy10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmsy5.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsf
+onts/cm/cmsy6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmsy7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmsy8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmti10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmti8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/c
+mtt10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbo
+ls/msam10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/s
+ymbols/msbm10.pfb>
+Output written on main.pdf (26 pages, 674692 bytes).
+Transcript written on main.log.
+Latexmk: Getting log file 'main.log'
+Latexmk: Examining 'main.fls'
+Latexmk: Examining 'main.log'
+Latexmk: Found input bbl file 'main.bbl'
+Latexmk: Found input bbl file 'main.bbl'
+Latexmk: Log file says output to 'main.pdf'
+Latexmk: Found bibliography file(s):
+  ./References/references.bib
+Latexmk: All targets (main.pdf) are up-to-date
+Latexmk: Undoing directory change
+

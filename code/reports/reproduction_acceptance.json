@@ -14,6 +14,19 @@
       "count": 61
     },
     {
+      "name": "clean_tables_and_figure_backgrounds",
+      "passed": true,
+      "tables": 13,
+      "figure_previews": 22
+    },
+    {
+      "name": "rebuilt_clean_manuscript_compiles",
+      "passed": true,
+      "exit_code": 0,
+      "pages": 26,
+      "log": "logs/sisc_cga_rebuilt.log"
+    },
+    {
       "name": "diagnostics_recomputed",
       "passed": true,
       "exit_code": 0,
@@ -64,7 +77,7 @@
       "passed": true,
       "exit_code": 1,
       "status": "FAIL",
-      "error": "FileNotFoundError: [Errno 2] No such file or directory: '<temporary-package>/package/config/absent.json'"
+      "error": "FileNotFoundError: [Errno 2] No such file or directory: '/private/var/folders/pz/mcqx6grs0zgfgps5mw19066c0000gn/T/cga_reproduction_symda9hl/package/config/absent.json'"
     },
     {
       "name": "invalid_config_fails",

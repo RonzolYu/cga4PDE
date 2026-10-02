@@ -10,7 +10,7 @@ The repository manifest and the associated numerical records are available at
 specified in S4 and are run from the repository root. The reported index contains 20
 rows; a successful build terminates with `PASS`.
 
-The revised baseline batch is indexed separately by its three raw CSV files
+The baseline comparison batch is indexed separately by its three raw CSV files
 and `archive_validation.json` in `code/data/raw/review_replay_20261001/`.
 It contains 320 RFM, 32 refitted CGA-prefix, and 114 FEM models; these
 records do not change the twenty-row original CGA/sensitivity index.

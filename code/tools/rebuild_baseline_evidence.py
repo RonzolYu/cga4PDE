@@ -158,12 +158,12 @@ def main():
                 all_errors.append(e)
             figure_checks.append({'figure':str(path.relative_to(target)),'other_methods_max_error_pdf_points':max(all_errors),'rfm_points':len(data),'median_max_error_pdf_points':error,'IQR_max_error_pdf_points':band_error,'sha256':digest(path)})
     write(review/'baseline_figure_verification.csv',figure_checks)
-    lines=[r'\begin{table}[!htbp]',r'\centering\small',r'\caption{\revtext{RFM counts at the common endpoints. Each width has ten prescribed seeds. The Sobolev median/IQR sample additionally passes the metric-specific signed-value and one-percent quadrature checks.}}',r'\label{tab:rfm-fixed-denominators}',r'\begin{revision}',r'\begin{tabular}{@{}lrrrr@{}}',r'\toprule',r'Case and width & Prescribed & Solved & Failed & Valid sample \\',r'\midrule']
+    lines=[r'\begin{table}[!htbp]',r'\centering\small',r'\caption{RFM counts at the common endpoints. Each width has ten prescribed seeds. The Sobolev median/IQR sample additionally passes the metric-specific signed-value and one-percent quadrature checks.}',r'\label{tab:rfm-fixed-denominators}',r'\begin{tabular}{@{}lrrrr@{}}',r'\toprule',r'Case and width & Prescribed & Solved & Failed & Valid sample \\',r'\midrule']
     for t in terminal:
         case,n=t['case_id'],int(t['dof'])
         s=next(r for r in stats if r['case_id']==case and r['N']==n)
         lines.append(f'{case}, $N={n}$ & 10 & {s["successes"]} & {s["failures"]} & {s["natural_error_sample_count"]} '+r'\\')
-    lines += [r'\bottomrule',r'\end{tabular}',r'\end{revision}',r'\end{table}']
+    lines += [r'\bottomrule',r'\end{tabular}',r'\end{table}']
     (target/'generated/rfm_fixed_denominators.tex').write_text('\n'.join(lines)+'\n')
     archived=raw+read(root/'data/derived/experiments/cga_baseline_raw.csv')+read(root/'data/derived/experiments/fem_baseline_raw.csv')
     for row in archived:

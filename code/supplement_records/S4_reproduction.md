@@ -1,13 +1,13 @@
-# S4. Reproduction (revision 2026-10-01)
+# S4. Reproduction
 
 The code and numerical records are at <https://github.com/RonzolYu/cga4PDE>.
-The revised comparison uses the explicit `review_replay_20261001` batch. All
+The comparison uses the explicit `review_replay_20261001` batch. All
 320 RFM, 32 refitted CGA-prefix, and 114 FEM comparison states have saved models
 under `code/data/raw/review_replay_20261001/models/`, with SHA256 hashes in the
 raw CSVs. The frozen protocol, evaluator hashes, and archive verification are
 stored beside those models. Historical inputs are retained under
 `code/data/raw/historical_baseline_202609/`; their incomplete model archive is
-not claimed to reproduce the revised comparisons.
+not claimed to reproduce the comparison results.
 
 Install `code/config/environment.yml`, which includes scikit-fem and pypdf.
 From the repository root, rebuild figures/tables or recompute the separate
@@ -20,6 +20,19 @@ python code/scripts/reproduce.py --mode diagnostics \
   --package-root code --output-root reproduction_output
 python code/tools/rebuild_baseline_evidence.py
 python code/scripts/check_reproduction.py
+```
+
+Artifact rebuilding produces clean tables and figures without revision
+highlights. With `latexmk` on PATH, add `--compile-paper` to the acceptance
+command to compile the manuscript using freshly rebuilt products.
+To adopt regenerated products into the package, use `--output-root code` for
+artifact mode, then run `python code/tools/rebuild_baseline_evidence.py` and
+compile `paper/sisc_cga/main.tex` from its own directory. After updating the
+build records, refresh and verify the public checksums:
+
+```bash
+python code/scripts/build_public_inventory.py
+python code/scripts/build_public_inventory.py --check
 ```
 
 Each reproduction invocation builds an isolated temporary copy. It verifies
@@ -51,7 +64,7 @@ python code/tools/replay_baseline_models.py \
 CGA replay refits coefficients on archived selected prefixes; it does not replay
 the greedy selection trajectory. RFM replay fits every configured width and
 seed, and FEM replay fits every specified mesh and degree. Runtime comparisons
-are not claimed. The validated revision runtime and library versions are
+are not claimed. The validated runtime and library versions are
 recorded in `code/data/raw/review_replay_20261001/runtime.json`.
 
 S3's ledger reconstruction is a check of stored metrics and plotting/statistical

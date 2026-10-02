@@ -30,7 +30,7 @@ page count, source graph, citations, and logical-chain checks.
 
 ## Consistency revision, 2026-10-01
 
-The marked manuscript synchronizes its metric definitions and comparison scope
+The clean manuscript synchronizes its metric definitions and comparison scope
 with the code. The primary comparisons use the fully archived
 `review_replay_20261001` batch: 320 RFM, 32 refitted CGA-prefix, and 114 FEM states.
 Historical comparison inputs remain separate. Each primary metric uses a shared

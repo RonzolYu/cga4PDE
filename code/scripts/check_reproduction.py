@@ -1,5 +1,6 @@
 """Integration tests on a disposable package outside the source repository."""
 from pathlib import Path
+import argparse
 import hashlib
 import json
 import shutil
@@ -14,7 +15,7 @@ def digest(path):
     return hashlib.sha256(path.read_bytes()).hexdigest()
 
 
-def main():
+def main(compile_paper=False):
     checks = []
     with tempfile.TemporaryDirectory(prefix='cga_reproduction_') as temporary:
         base = Path(temporary).resolve()
@@ -64,6 +65,44 @@ def main():
         assert all((artifacts/r['artifact']).is_file() and
                    digest(artifacts/r['artifact'])==r['output_sha256'] for r in manifested)
         checks.append(dict(name='all_manifested_outputs_exported', passed=True, count=len(manifested)))
+        tables = list((artifacts / 'tex/generated').glob('*.tex'))
+        revision_tokens = (r'\revtext', r'\begin{revision}', r'\end{revision}', r'\colorbox{yellow')
+        assert all(not any(token in path.read_text() for token in revision_tokens) for path in tables)
+        from PIL import Image
+        previews = list((artifacts / 'tex/figures').rglob('*.png'))
+        for path in previews:
+            with Image.open(path) as image:
+                assert image.convert('RGB').getpixel((0, 0)) == (255, 255, 255), path
+        checks.append(dict(name='clean_tables_and_figure_backgrounds', passed=True,
+                           tables=len(tables), figure_previews=len(previews)))
+        if compile_paper:
+            latexmk = shutil.which('latexmk')
+            if latexmk is None:
+                raise RuntimeError('--compile-paper requires latexmk on PATH')
+            manuscript = base / 'rebuilt_manuscript'
+            shutil.copytree(package / 'tex', manuscript,
+                            ignore=shutil.ignore_patterns('*.aux', '*.bbl', '*.blg', '*.log',
+                                                         '*.fls', '*.fdb_latexmk', '*.out'))
+            for directory in ('generated', 'figures'):
+                shutil.copytree(artifacts / 'tex' / directory, manuscript / directory,
+                                dirs_exist_ok=True)
+            build = subprocess.run([latexmk, '-pdf', '-interaction=nonstopmode',
+                                    '-halt-on-error', '-cd', 'main.tex'], cwd=manuscript,
+                                   stdout=subprocess.PIPE, stderr=subprocess.STDOUT,
+                                   text=True, timeout=180)
+            log = ROOT / 'logs/sisc_cga_rebuilt.log'
+            log.parent.mkdir(parents=True, exist_ok=True)
+            log.write_text(build.stdout)
+            assert build.returncode == 0, build.stdout[-4000:]
+            final_log = (manuscript / 'main.log').read_text()
+            assert not any(token in final_log for token in
+                           ('Undefined control sequence', 'undefined references',
+                            'undefined citations', 'Overfull', 'multiply defined'))
+            from pypdf import PdfReader
+            pages = len(PdfReader(manuscript / 'main.pdf').pages)
+            checks.append(dict(name='rebuilt_clean_manuscript_compiles', passed=True,
+                               exit_code=build.returncode, pages=pages,
+                               log='logs/sisc_cga_rebuilt.log'))
         diagnostics, d = run('diagnostics_recomputed', 'diagnostics', True)
         declared=json.loads((package/'data/derived/experiments/experiment_validation.json').read_text())['rfm']
         assert d['rfm']['rows']==declared['rows']
@@ -118,4 +157,7 @@ def main():
 
 
 if __name__ == '__main__':
-    main()
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--compile-paper', action='store_true',
+                        help='also compile the clean manuscript with rebuilt products; requires latexmk')
+    main(compile_paper=parser.parse_args().compile_paper)

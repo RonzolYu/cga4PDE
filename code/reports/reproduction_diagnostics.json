@@ -36,7 +36,7 @@
       "log": "reports/reproduction_logs/diagnostics_03_audit_numeric_values.log"
     }
   ],
-  "output_root": "<temporary-package>/diagnostics_recomputed",
+  "output_root": "<temporary-reproduction>/diagnostics_recomputed",
   "config_sha256": "b61d59ea328e9e1dd37ba8a2596842da0e657bd60a78be64560565ab26d6b08b",
   "rfm": {
     "rows": 320,
@@ -78,5 +78,6 @@
     "result/review_checks/numeric_checks.json": "2e78860fd1435a2ba676465422173a27bbe872bd2ca0138e1a9747555847b3f2",
     "result/review_checks/rfm_failures.csv": "2543e64b9095a9ea4b72fe7ac852bdb0258115d0c49b228c3bc7689839a13a77",
     "result/review_checks/rfm_seed_counts.csv": "2355ac2eb76eeaeb7bfcc2e11fdf2a1c205953faff050705c98fba9f6a53cd8b"
-  }
+  },
+  "scope": "Acceptance outputs from a disposable copy; frozen diagnostic inputs are not replaced."
 }

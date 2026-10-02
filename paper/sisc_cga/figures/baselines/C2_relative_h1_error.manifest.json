@@ -6,6 +6,6 @@
   "filters": "case=C2;metric=relative_sobolev;actual points only;configured dof cap=256",
   "semantic": "no theory line and no order plot; RFM median/IQR uses ten seeds",
   "command": "python scripts/generate_artifacts.py",
-  "output_sha256": "80a40f5a4cf65c61092b6efd8fc5e742397b01e5034bd6b165bbb778ce0ab6e9",
+  "output_sha256": "f36c05e79730e4abdc7876a61b699058df38ab216f9351214f6e01dcbf7689c1",
   "validation": "source-to-plot checks passed"
 }

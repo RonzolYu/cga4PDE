@@ -10,6 +10,14 @@ python scripts/reproduce.py --mode diagnostics --package-root . --output-root /t
 python tools/rebuild_baseline_evidence.py
 ```
 
+Artifact rebuilding emits clean tables and white figure backgrounds. To check
+that rebuilt products compile with the manuscript, run
+`python scripts/check_reproduction.py --compile-paper` with `latexmk` on PATH.
+After adopting outputs and compiling the PDF, run
+`python scripts/build_public_inventory.py` and then
+`python scripts/build_public_inventory.py --check` to refresh and verify both
+the package checksums and the figure/table manifest.
+
 `data/` contains raw and derived inputs; `result/` contains numerical outputs;
 `config/` records parameters; `scripts/` and `tools/` contain the programs;
 `logs/`, `reports/`, and `review/` contain execution and verification records.
@@ -43,6 +51,6 @@ regularized p-models, `natural_rel` is the relative componentwise gradient Lp
 seminorm, not a relative full W1p norm. See `config/metrics.json` and Supplement S3.
 
 Reevaluation and fresh-fit commands, including their scope, are documented in
-`../paper/sisc_cga/supplement/S4_reproduction.md`. The main PDF marks amended
-text, formulas, tables, and regenerated plots in yellow. `chapter5_theory.tex`
+`../paper/sisc_cga/supplement/S4_reproduction.md`. The main PDF and regenerated
+tables and plots use clean formatting without revision highlights. `chapter5_theory.tex`
 points to the canonical full proof in the paper supplement.

@@ -6,6 +6,6 @@
   "filters": "terminal accepted step N=32 for each run",
   "semantic": "single-factor terminal comparison; categorical x axes",
   "command": "python scripts/generate_artifacts.py",
-  "output_sha256": "926ab302eaeaa1942713dfcbf34b49a73ddf9de4725ac714738965d362072760",
+  "output_sha256": "5091ac4ecac7d16e8b036d8a5ae81d2a4c2907e374d93b0ac574f3f9a3164944",
   "validation": "source-to-plot checks passed"
 }

@@ -22,6 +22,19 @@ python code/tools/rebuild_baseline_evidence.py
 python code/scripts/check_reproduction.py
 ```
 
+Artifact rebuilding produces clean tables and figures without revision
+highlights. With `latexmk` on PATH, add `--compile-paper` to the acceptance
+command to compile the manuscript using freshly rebuilt products.
+To adopt regenerated products into the package, use `--output-root code` for
+artifact mode, then run `python code/tools/rebuild_baseline_evidence.py` and
+compile `paper/sisc_cga/main.tex` from its own directory. After updating the
+build records, refresh and verify the public checksums:
+
+```bash
+python code/scripts/build_public_inventory.py
+python code/scripts/build_public_inventory.py --check
+```
+
 Each reproduction invocation builds an isolated temporary copy. It verifies
 all comparison model paths and hashes, recalculates metric-specific RFM
 summaries, and checks the recursively loaded manuscript inputs. Artifact mode

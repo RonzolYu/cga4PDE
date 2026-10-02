@@ -100,11 +100,9 @@ def configure_style() -> None:
         "axes.linewidth": 0.75,
         "pdf.fonttype": 42,
         "ps.fonttype": 42,
-        "figure.facecolor": "#fff8b5",
-        "savefig.facecolor": "#fff8b5",
-        # Revised plots are highlighted in the marked manuscript.  A clean
-        # rendering can override this setting after the revision is accepted.
-        "axes.facecolor": "#fff8b5",
+        "figure.facecolor": "white",
+        "savefig.facecolor": "white",
+        "axes.facecolor": "white",
     })
 
 
@@ -137,7 +135,8 @@ def save_figure(fig: plt.Figure, stem: str, directory: Path, inputs: list[Path],
     directory.mkdir(parents=True, exist_ok=True)
     pdf = directory / f"{stem}.pdf"
     png = directory / f"{stem}.png"
-    fig.savefig(pdf, bbox_inches="tight")
+    # Omit wall-clock metadata so identical rebuilds keep identical hashes.
+    fig.savefig(pdf, bbox_inches="tight", metadata={"CreationDate": None, "ModDate": None})
     fig.savefig(png, dpi=240, bbox_inches="tight")
     plt.close(fig)
     register_artifact(pdf, "figure", inputs, filters, semantic, "source-to-plot checks passed")
@@ -613,8 +612,8 @@ def make_cga_tables(config: dict, groups: dict[tuple[str, str], list[tuple[int, 
 
     all_lines = [r"\begin{longtable}{@{}crrrrrrr@{}}",
                  r"\caption{Complete dyadic CGA record for the eight representative cases. The relative metric is $H^1$ for linear/semilinear models, the gradient seminorm for pure/regularized models, and full $W^{1,p}$ for the reaction model.}\label{tab:all-dyadic-cga}\\",
-                 r"\toprule", r"Model & $N$ & Energy gap & \colorbox{yellow!25}{$e_{\rm rel}$} & $e_V$ & Energy order & Norm order & $V$ order \\ \midrule",
-                 r"\endfirsthead", r"\toprule", r"Model & $N$ & Energy gap & \colorbox{yellow!25}{$e_{\rm rel}$} & $e_V$ & Energy order & Norm order & $V$ order \\ \midrule", r"\endhead"]
+                 r"\toprule", r"Model & $N$ & Energy gap & $e_{\rm rel}$ & $e_V$ & Energy order & Norm order & $V$ order \\ \midrule",
+                 r"\endfirsthead", r"\toprule", r"Model & $N$ & Energy gap & $e_{\rm rel}$ & $e_V$ & Energy order & Norm order & $V$ order \\ \midrule", r"\endhead"]
     for case in ["01", "03", "06", "17", "08", "10", "12", "15"]:
         e = cga_lookup(groups, case, "energy_gap_raw")
         w = cga_lookup(groups, case, "natural_rel")
@@ -645,8 +644,8 @@ def make_baseline_tables(config: dict, actual_path: Path, common_path: Path) -> 
     actual = read_csv(actual_path)
     grid = read_csv(common_path)
     lines = [r"\begin{table}[!htbp]", r"\centering\scriptsize",
-             r"\caption{Relative $H^1$ error for C1--C3 and relative gradient $L^4$ seminorm for C4--C5 at the prescribed common coefficient counts. RFM statistics are median [Q1,Q3] over metric-valid realizations from ten prescribed seeds. Valid means a successful solve and an at-most-one-percent successive-quadrature difference for that metric; incomplete groups are conditional comparisons. Ratios larger than one favor CGA.}",
-             r"\label{tab:baseline-terminal}", r"\begin{revision}", r"\resizebox{\linewidth}{!}{%", r"\begin{tabular}{@{}crrrrrr@{}}", r"\toprule",
+             r"\caption{Relative $H^1$ error for C1--C3 and relative gradient $L^4$ seminorm for C4--C5 at the prescribed common coefficient counts. RFM statistics are median [Q1,Q3] over metric-valid realizations from ten prescribed seeds. Valid means a successful solve, a finite nonnegative metric, and an at-most-one-percent successive-quadrature difference for that metric; incomplete groups are conditional comparisons. Ratios larger than one favor CGA.}",
+             r"\label{tab:baseline-terminal}", r"\resizebox{\linewidth}{!}{%", r"\begin{tabular}{@{}crrrrrr@{}}", r"\toprule",
              r"Problem & DOF & CGA & RFM median [Q1,Q3] & Valid & RFM/CGA & FEM P3/CGA \\ \midrule"]
     endpoint_csv = []
     for case, dof in config["baseline_statistical_endpoints"].items():
@@ -666,7 +665,7 @@ def make_baseline_tables(config: dict, actual_path: Path, common_path: Path) -> 
                              "fem_p3": pv, "fem_p3_over_cga": pv/cv,
                              "fem_p3_is_interpolated": p3["is_interpolated"],
                              "fem_p3_left_dof": p3["left_dof"], "fem_p3_right_dof": p3["right_dof"]})
-    lines.extend([r"\bottomrule", r"\end{tabular}}", r"\end{revision}", r"\end{table}"])
+    lines.extend([r"\bottomrule", r"\end{tabular}}", r"\end{table}"])
     tex = GENERATED / "baseline_terminal.tex"
     tex.write_text("\n".join(lines) + "\n", encoding="utf-8")
     register_artifact(tex, "table", [actual_path, common_path], "configured ten-seed endpoints",
@@ -680,14 +679,14 @@ def make_baseline_tables(config: dict, actual_path: Path, common_path: Path) -> 
                  for r in read_csv(EXPERIMENTS / 'rfm_multiseed_summary.csv') }
     count_lines = [r'\begin{table}[!htbp]', r'\centering\small',
                    r'\caption{RFM counts at the common endpoints. Each width has ten prescribed seeds. The Sobolev median/IQR sample additionally passes the metric-specific signed-value and one-percent quadrature checks.}',
-                   r'\label{tab:rfm-fixed-denominators}', r'\begin{revision}',
+                   r'\label{tab:rfm-fixed-denominators}',
                    r'\begin{tabular}{@{}lrrrr@{}}', r'\toprule',
                    r'Case and width & Prescribed & Solved & Failed & Valid sample \\', r'\midrule']
     for row in endpoint_csv:
         case, dof = row['case_id'], int(row['dof'])
         summary = summaries[(case, dof)]
         count_lines.append(f'{case}, $N={dof}$ & 10 & {summary["success_count"]} & {summary["failure_count"]} & {summary["natural_error_sample_count"]} ' + r'\\')
-    count_lines.extend([r'\bottomrule', r'\end{tabular}', r'\end{revision}', r'\end{table}'])
+    count_lines.extend([r'\bottomrule', r'\end{tabular}', r'\end{table}'])
     counts_tex = GENERATED / 'rfm_fixed_denominators.tex'
     counts_tex.write_text('\n'.join(count_lines) + '\n', encoding='utf-8')
     register_artifact(counts_tex, 'table', [EXPERIMENTS / 'rfm_multiseed_summary.csv', endpoint_path],
@@ -998,33 +997,6 @@ def write_validation(config: dict, actual_path: Path, common_path: Path) -> tupl
     return json_path, report_path
 
 
-def mark_revised_tables() -> None:
-    """Mark amended captions and table contents, then refresh artifact hashes."""
-    for name in ('baseline_terminal.tex', 'fem_pdegree.tex', 'ch8_p4_tables.tex',
-                 'ch8_all_dyadic_supplement.tex', 'rfm_fixed_denominators.tex'):
-        path=GENERATED/name
-        text=path.read_text()
-        cursor=0
-        while True:
-            start=text.find(r'\caption{',cursor)
-            if start<0:
-                break
-            inner=start+len(r'\caption{'); end=inner; depth=1
-            while depth:
-                if text[end] in '{}' and text[end-1]!='\\':
-                    depth+=1 if text[end]=='{' else -1
-                end+=1
-            text=text[:inner]+r'\revtext{'+text[inner:end-1]+'}'+text[end-1:]
-            cursor=end+len(r'\revtext{')+1
-        if r'\begin{revision}' not in text:
-            text=text.replace(r'\begin{tabular}',r'\begin{revision}'+'\n'+r'\begin{tabular}')
-            text=text.replace(r'\end{tabular}',r'\end{tabular}'+'\n'+r'\end{revision}')
-        path.write_text(text)
-        for row in ARTIFACT_ROWS:
-            if row['artifact']==path.relative_to(ROOT).as_posix():
-                row['output_sha256']=digest(path)
-
-
 def main() -> None:
     for directory in [DERIVED, FIG_CGA, FIG_DIAG, FIG_BASE, FIG_SUPP, GENERATED, MANIFEST_DIR, REPORTS]:
         directory.mkdir(parents=True, exist_ok=True)
@@ -1041,7 +1013,6 @@ def main() -> None:
     common = build_common_grid(config, actual)
     make_cga_tables(config, cga)
     make_baseline_tables(config, actual, common)
-    mark_revised_tables()
     make_window_table()
     make_finite_trajectory_tables()
     fem_identity_audit()
