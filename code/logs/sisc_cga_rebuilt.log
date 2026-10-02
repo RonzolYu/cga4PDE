@@ -147,7 +147,7 @@ Package natbib Warning: Citation `XuXu2025' on page 2 undefined on input line 3
 1.
 
 
-Package natbib Warning: Citation `BernaFalco2025' on page 2 undefined on input 
+Package natbib Warning: Citation `BernaFalco2025' on page 2 undefined on input
 line 36.
 
 
@@ -191,7 +191,7 @@ Package natbib Warning: Citation `XuXu2025' on page 2 undefined on input line 5
 7.
 
 
-Package natbib Warning: Citation `BarrettLiu1993' on page 2 undefined on input 
+Package natbib Warning: Citation `BarrettLiu1993' on page 2 undefined on input
 line 68.
 
 
@@ -405,7 +405,7 @@ LaTeX Warning: Reference `thm:energy-v' on page 13 undefined on input line 183.
 
 
 
-LaTeX Warning: Reference `cor:metric-rates' on page 13 undefined on input line 
+LaTeX Warning: Reference `cor:metric-rates' on page 13 undefined on input line
 183.
 
 
@@ -421,7 +421,7 @@ LaTeX Warning: Reference `lem:c5-projection' on page 14 undefined on input line
 
 [14]
 
-Package natbib Warning: Citation `LiSiegelEntropy2024' on page 15 undefined on 
+Package natbib Warning: Citation `LiSiegelEntropy2024' on page 15 undefined on
 input line 302.
 
 
@@ -750,7 +750,7 @@ Package natbib Warning: Citation `XuXu2025' on page 2 undefined on input line 3
 1.
 
 
-Package natbib Warning: Citation `BernaFalco2025' on page 2 undefined on input 
+Package natbib Warning: Citation `BernaFalco2025' on page 2 undefined on input
 line 36.
 
 
@@ -790,7 +790,7 @@ Package natbib Warning: Citation `XuXu2025' on page 2 undefined on input line 5
 7.
 
 
-Package natbib Warning: Citation `BarrettLiu1993' on page 2 undefined on input 
+Package natbib Warning: Citation `BarrettLiu1993' on page 2 undefined on input
 line 68.
 
 
@@ -855,7 +855,7 @@ ne 73.
 [13]
 [14]
 
-Package natbib Warning: Citation `LiSiegelEntropy2024' on page 15 undefined on 
+Package natbib Warning: Citation `LiSiegelEntropy2024' on page 15 undefined on
 input line 302.
 
 
@@ -1121,4 +1121,3 @@ Latexmk: Found bibliography file(s):
   ./References/references.bib
 Latexmk: All targets (main.pdf) are up-to-date
 Latexmk: Undoing directory change
-

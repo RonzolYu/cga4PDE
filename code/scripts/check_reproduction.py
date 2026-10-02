@@ -92,7 +92,7 @@ def main(compile_paper=False):
                                    text=True, timeout=180)
             log = ROOT / 'logs/sisc_cga_rebuilt.log'
             log.parent.mkdir(parents=True, exist_ok=True)
-            log.write_text(build.stdout)
+            log.write_text('\n'.join(line.rstrip() for line in build.stdout.splitlines()).rstrip() + '\n')
             assert build.returncode == 0, build.stdout[-4000:]
             final_log = (manuscript / 'main.log').read_text()
             assert not any(token in final_log for token in
