@@ -12,11 +12,11 @@ bound on a finite index range. For standard \(p\)-Laplacian energies with \(p\ge
 exponent \(\alpha\) yields natural-distance and Sobolev exponents \(\alpha/2\) and
 \(\alpha/p\).
 Eight one- and two-dimensional problems illustrate the estimates.
-Five of them compare finite-pool CGA prefixes with finite elements and random
-features at prescribed retained coefficient counts, with FEM interpolation where necessary. The comparison batch
-archives every coefficient state and uses metric-specific quadrature checks.
+Five of them compare finite-pool CGA approximations with finite elements and random
+features at prescribed coefficient counts, with FEM interpolation where necessary.
+Computed coefficients are supplied, and all methods use the same quadrature checks for each metric.
 For the two quartic auxiliary models, conservative calibration-range bounds
-cover the computed errors on \(N=8\)--32. Continuing the same prefixes to
+cover the computed errors on \(N=8\)--32. Continuing the same selected sequences to
 \(N=64\) with fixed constants, the normalized-innovation sufficient condition
 holds on 27 and 28 of 32 transitions, respectively. These numerical checks do
 not establish the same theorem guarantee throughout the continuation range

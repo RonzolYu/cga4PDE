@@ -6,6 +6,6 @@
   "filters": "cases=10,12;metrics=energy_gap_raw,natural_rel,quasi_rel;full accepted trajectories",
   "semantic": "dyadic accepted states connected; conditional guide exponent fixed and vertical position set from the last three positive dyadic points; guide exponents=10:energy_gap_raw:3.5,10:natural_rel:0.875,10:quasi_rel:1.75,12:energy_gap_raw:3.5,12:natural_rel:0.875,12:quasi_rel:1.75",
   "command": "python scripts/generate_artifacts.py",
-  "output_sha256": "4518e9a155f54c977884f5b3d13c998633c760d9aef6f798bf080da012ab94d3",
+  "output_sha256": "dd3d2eece405e73d8630306541acf04775c0009c94493570889935ad28f79a99",
   "validation": "source-to-plot checks passed"
 }

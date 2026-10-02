@@ -1,13 +1,19 @@
 # S4. Reproduction
 
 The code and numerical records are at <https://github.com/RonzolYu/cga4PDE>.
-The comparison uses the explicit `review_replay_20261001` batch. All
-320 RFM, 32 refitted CGA-prefix, and 114 FEM comparison states have saved models
+The comparisons concern the linear, cubic, hyperbolic-sine, and one- and
+two-dimensional pure quartic problems named in the manuscript. All
+320 RFM solves, 32 CGA coefficient reoptimizations with fixed selected functions,
+and 114 FEM solves have saved coefficient models
 under `code/data/raw/review_replay_20261001/models/`, with SHA256 hashes in the
 raw CSVs. The frozen protocol, evaluator hashes, and archive verification are
 stored beside those models. Historical inputs are retained under
 `code/data/raw/historical_baseline_202609/`; their incomplete model archive is
 not claimed to reproduce the comparison results.
+
+The manuscript uses descriptive problem names. Directory names and case keys
+in the computational files identify the corresponding inputs for reproduction;
+they are not used as problem names in the manuscript or generated comparison tables.
 
 Install `code/config/environment.yml`, which includes scikit-fem and pypdf.
 From the repository root, rebuild figures/tables or recompute the separate
@@ -20,6 +26,19 @@ python code/scripts/reproduce.py --mode diagnostics \
   --package-root code --output-root reproduction_output
 python code/tools/rebuild_baseline_evidence.py
 python code/scripts/check_reproduction.py
+```
+
+Artifact rebuilding produces clean tables and figures without revision
+highlights. With `latexmk` on PATH, add `--compile-paper` to the acceptance
+command to compile the manuscript using freshly rebuilt products.
+To adopt regenerated products into the package, use `--output-root code` for
+artifact mode, then run `python code/tools/rebuild_baseline_evidence.py` and
+compile `paper/sisc_cga/main.tex` from its own directory. After updating the
+build records, refresh and verify the public checksums:
+
+```bash
+python code/scripts/build_public_inventory.py
+python code/scripts/build_public_inventory.py --check
 ```
 
 Each reproduction invocation builds an isolated temporary copy. It verifies

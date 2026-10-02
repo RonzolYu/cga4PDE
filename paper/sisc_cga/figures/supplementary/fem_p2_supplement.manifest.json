@@ -6,6 +6,6 @@
   "filters": "all cases;actual FEM P2 points",
   "semantic": "P2 is reported as a supplementary polynomial-degree reference",
   "command": "python scripts/generate_artifacts.py",
-  "output_sha256": "2d51c3faf394c89c9255bd2156e2d8ef6b2a83107905c240cdebb0cdf7d6a6a7",
+  "output_sha256": "779a478276ff26c4403519a6dfd812faef07993b1f24870696bec8b733d6220c",
   "validation": "source-to-plot checks passed"
 }

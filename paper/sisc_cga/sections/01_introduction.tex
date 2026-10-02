@@ -113,13 +113,14 @@ energies, and pure, regularized, and reaction \(p\)-energies. Five of them compa
 random-feature model (RFM), and finite elements (FEM) at equal numbers of independent coefficients.
 Random features are used in their fixed-feature sense \citep{RahimiRecht2007}; conditioning of
 linearized neural trial spaces is discussed by \cite{ChenChiEYang2022} and
-\cite{MaoXuXu2026}. The comparison concerns coefficient counts and uses a common evaluator. It does
+\cite{MaoXuXu2026}. The comparison concerns coefficient counts and uses the same error definitions
+and quadrature checks. It does
 not attribute an unproved convergence theorem to the compared methods and does not compare
 wall-clock efficiency. Across these representative cases, finite-pool CGA exhibits competitive approximation accuracy at equal numbers of independent coefficients and achieves lower errors than RFM and FEM over the higher-DOF regime in several test problems, highlighting the potential benefit of adaptive greedy atom selection.
 
 For the finite-trajectory estimates we use the one-dimensional pure and regularized $p=4$
-trajectories. The calibration range is $N=8$--$32$, and the subsequent range uses the same stored
-prefixes from $N=33$ to $64$ with the calibration constants fixed in advance. The reported
+trajectories. The calibration range is $N=8$--$32$, and the subsequent range continues the same
+selected sequences from $N=33$ to $64$ with the calibration constants fixed in advance. The reported
 fractions record the number of steps satisfying the stated sufficient condition on each finite
 range. They provide numerical evidence on the displayed trajectory; they do not verify continuous-
 dictionary coverage or an entropy estimate uniformly over increasing ranges. The approximate

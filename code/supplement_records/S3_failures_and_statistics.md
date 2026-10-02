@@ -1,6 +1,6 @@
-# S3. Samples, solve failures, and metric-specific statistics (2026-10-01)
+# S3. Samples, solve failures, and metric-specific statistics
 
-The revised comparison uses the fully archived `review_replay_20261001` batch,
+The comparison uses the fully archived `review_replay_20261001` batch,
 not the historical comparison inputs. CGA coefficients are refitted on fixed
 greedy prefixes; FEM and RFM coefficients are newly fitted under the frozen
 `code/config/review_replay.json` protocol. Original CGA training trajectories
@@ -71,4 +71,4 @@ are in `code/result/experiments/` and `code/result/baselines/`.
 twelve vector baseline figures. This is not an independent PDE solve.
 Fresh loading and reevaluation checks are described in S4. Historical
 inputs remain in `code/data/raw/historical_baseline_202609/` and do not
-supply these revised samples.
+supply these samples.

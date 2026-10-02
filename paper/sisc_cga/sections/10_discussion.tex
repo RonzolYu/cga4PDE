@@ -40,8 +40,9 @@ transitions in the pure model and 28 of 32 in the regularized model.
 Numerical coverage by a conservative expression on the continuation does not
 establish the same theorem guarantee throughout that range.
 
-The equal-coefficient comparisons use refitted CGA prefixes and fully
-archived FEM and RFM states with the same metric-specific quadrature policy.
+The equal-coefficient comparisons use CGA approximations with reoptimized
+coefficients and fixed selected functions, together with FEM and RFM
+approximations evaluated by the same quadrature criteria for each metric.
 Their computed CGA and RFM endpoints, together with interpolated FEM reference
 values where indicated, describe the approximation errors for the specified problems and valid samples. They do not establish uniform superiority over
 all widths, excluded realizations, or computational-work budgets. The
