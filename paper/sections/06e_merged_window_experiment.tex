@@ -1,0 +1,25 @@
+\subsection{Finite-trajectory error estimates for quartic energies}
+\label{sec:finite-trajectory-numerics}
+\label{sec:fractional-innovation-p4}
+
+We apply the projection estimates and quartic energy comparison of \Cref{sec:c5-source} to the one-dimensional pure and regularized \(p=4\) models. We take activation degree \(k=3\), exact solution \(u^*(x)=\cos(2\pi x)\), and \(\varepsilon=0\) and \(0.1\), respectively. The approximate source representation is constructed at \(N=8\) and then held fixed. The comparison constants are determined on the states \(N=8,\ldots,32\), while the decrease constant is determined from the corresponding transitions \(N\to N+1\), \(N=8,\ldots,31\). Each trajectory is then continued to \(N=64\), with the source representation and these constants unchanged.
+
+The approximate-source estimate bounds the squared projection error \(r_N^2\), and the quartic comparison transfers this estimate to the energy error of the computed states. Throughout the calibration range, the resulting energy bounds cover the computed energy errors for both models.
+
+To examine the power-type decrease condition, we prescribe the benchmark exponent \(\alpha_{\mathrm{bench}}=6\) and define
+\[
+U_j=
+\left(
+r_8^{-2/\alpha_{\mathrm{bench}}}
++\frac{c_0j}{\alpha_{\mathrm{bench}}}
+\right)^{-\alpha_{\mathrm{bench}}},
+\qquad 1\le j\le24.
+\]
+Under the stepwise decrease condition
+\[
+\gamma_N^2\ge
+c_0r_N^{\,2+2/\alpha_{\mathrm{bench}}},
+\]
+the finite-range estimate in \Cref{thm:c5-power} gives \(r_{8+j}^2\le U_j\). Applying \Cref{cor:c5-power-metrics} yields energy, natural-distance, and \(W^{1,4}\)-error bounds proportional to \(U_j\), \(U_j^{1/2}\), and \(U_j^{1/4}\), respectively.
+
+During continuation, the same decrease condition is tested with the calibrated value of \(c_0\). Among the 32 transitions \(N\to N+1\), \(N=32,\ldots,63\), the condition holds for 27 transitions in the pure model and 28 in the regularized model. The source quantities, comparison constants, and quadrature consistency checks are provided in the supplementary material.

@@ -13,7 +13,7 @@ python tools/rebuild_baseline_evidence.py
 `data/` contains raw and derived inputs; `result/` contains numerical outputs;
 `config/` records parameters; `scripts/` and `tools/` contain the programs;
 `logs/`, `reports/`, and `review/` contain execution and verification records.
-The `tex` link points to `../paper/sisc_cga`.
+The `tex` link points to `../paper`.
 
 Paths in computational CSV and JSON files are relative to this directory.
 The frozen raw records retain their original content and recorded hashes; a
@@ -43,6 +43,6 @@ regularized p-models, `natural_rel` is the relative componentwise gradient Lp
 seminorm, not a relative full W1p norm. See `config/metrics.json` and Supplement S3.
 
 Reevaluation and fresh-fit commands, including their scope, are documented in
-`../paper/sisc_cga/supplement/S4_reproduction.md`. The main PDF marks amended
-text, formulas, tables, and regenerated plots in yellow. `chapter5_theory.tex`
+`../paper/supplement/S4_reproduction.md`. The current manuscript PDF is
+`../paper/main.pdf`. `chapter5_theory.tex`
 points to the canonical full proof in the paper supplement.

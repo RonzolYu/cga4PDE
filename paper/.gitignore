@@ -1,0 +1,17 @@
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.synctex.gz
+*.xdv
+*.thm
+
+# Keep the compiled bibliography with the submission sources.
+!main.bbl
+
+# Local review records and macOS metadata.
+review/
+.DS_Store

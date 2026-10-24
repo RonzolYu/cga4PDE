@@ -52,7 +52,7 @@ def main():
         'inputs remain in `code/data/raw/historical_baseline_202609/` and do not',
         'supply these revised samples.']
     text='\n'.join(lines)+'\n'
-    for path in (ROOT.parent/'paper/sisc_cga/supplement/S3_failures_and_statistics.md',
+    for path in (ROOT.parent/'paper/supplement/S3_failures_and_statistics.md',
                  ROOT/'supplement_records/S3_failures_and_statistics.md'):
         path.write_text(text)
     print('Updated S3 from validated metric-specific sample counts.')

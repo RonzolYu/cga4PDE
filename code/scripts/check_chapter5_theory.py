@@ -16,7 +16,7 @@ ROOT = Path(__file__).resolve().parents[1]
 FULL_THEORY = ROOT / "chapter5_theory.tex"
 LOADED_THEORY_CANDIDATES = (
     ROOT / "tex" / "sections" / "05_theory.tex",
-    ROOT.parent / "paper" / "sisc_cga" / "sections" / "05_theory.tex",
+    ROOT.parent / "paper" / "sections" / "05_theory.tex",
 )
 LOADED_THEORY = next((path for path in LOADED_THEORY_CANDIDATES if path.is_file()), None)
 ATOL, RTOL = 2e-11, 2e-10

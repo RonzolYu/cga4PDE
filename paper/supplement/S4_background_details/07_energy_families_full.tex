@@ -1,0 +1,128 @@
+\subsection{Variational energies and feasible spaces}
+\label{sec:models}
+
+The three \(p\)-energies are defined in \cref{eq:pure-energy,eq:reg-energy,eq:reaction-energy}. The
+remaining models have the following energies, written for \(d\leq2\):
+\begin{align}
+ \E_{\rm lin}(u)&=\int_\Omega\left(\frac12\abs{\nabla u}^2+
+ \frac12u^2\right)\dd x-\ip fu,
+ \label{eq:linear-energy}\\
+ \E_{\rm cub}(u)&=\int_\Omega\left(\frac12\abs{\nabla u}^2+
+ \frac14u^4\right)\dd x-\ip fu,
+ \label{eq:cubic-energy}\\
+ \E_{\sinh}(u)&=\int_\Omega\left(\frac12\abs{\nabla u}^2+
+ \cosh u-1\right)\dd x-\ip fu.
+ \label{eq:sinh-energy}
+\end{align}
+The pairing is the energy-space duality; for a regular load it is the corresponding integral.
+The additive \(-1\) in \cref{eq:sinh-energy} normalizes the
+potential and does not change the Euler--Lagrange equation.
+
+\begin{assumption}[Data and feasible spaces for the six models]
+\label[assumption]{ass:model-data}
+The following model-specific conditions are imposed.
+\begin{enumerate}[label=\textup{(\roman*)}]
+ \item For the linear and cubic models, \(f\in (H^1(\Omega))^*\). The sinh energy has the same load space and is treated as an extended-real convex integral functional with nonempty effective domain. Its local derivative and Hessian estimates are formulated on an \(L^\infty\)-bounded neighborhood.
+ \item For the pure and regularized \(p\)-energies, \(f\in X_{p,\circ}^*\), or equivalently the Neumann
+ load annihilates constants before restriction to \(X_{p,\circ}\).
+ \item For the reaction \(p\)-energy, \(f\in(W^{1,p})^*\). In the regularized model, the parameter
+ \(\eps\) in \cref{eq:reg-energy} is fixed and positive.
+\end{enumerate}
+\end{assumption}
+
+\begin{proposition}[Well-posedness]
+\label{prop:wellposedness}
+Under \Cref{ass:model-data}, \cref{eq:linear-energy,eq:cubic-energy,eq:sinh-energy} have unique minimizers
+in \(H^1(\Omega)\); \cref{eq:pure-energy,eq:reg-energy} have unique minimizers in \(X_{p,\circ}\); and
+\cref{eq:reaction-energy} has a unique minimizer in \(W^{1,p}(\Omega)\).
+\end{proposition}
+
+\begin{proof}
+The positive zero-order term in \(\E_{\rm lin}\) controls the complete \(H^1\)-norm. For the cubic
+energy, the \(L^4\) term controls constants, while its combination with the gradient and Young's
+inequality gives coercivity. Strict convexity follows from the gradient term and \(t\mapsto t^4\). For
+the sinh energy, \(\cosh t-1\geq t^2/2\) gives coercivity. Along a weakly convergent \(H^1\) sequence,
+compactness in \(L^2\), almost-everywhere convergence of a subsequence, and Fatou's lemma give lower
+semicontinuity of the potential.
+
+For the pure and regularized \(p\)-energies, the zero-mean Poincar\'e inequality turns the gradient
+seminorm into a norm, and the diffusion densities are strictly convex. For the reaction model, the
+gradient and scalar \(p\)-terms control the full \(W^{1,p}\)-norm. The direct method gives existence in
+each case, and strict convexity gives uniqueness.
+\end{proof}
+
+The local Hessian structure of each model is needed for the transfer estimates of
+\Cref{sec:c5-hessian}. The bilinear forms at the exact solution are
+\begin{align*}
+ a_{\rm lin}(v,w)&=\int_\Omega(\nabla v\cdot\nabla w+vw)\dd x,\\
+ a_{\rm cub,*}(v,w)&=\int_\Omega(\nabla v\cdot\nabla w+3(u^*)^2vw)\dd x,\\
+ a_{\sinh,*}(v,w)&=\int_\Omega(\nabla v\cdot\nabla w+\cosh(u^*)vw)\dd x.
+\end{align*}
+For a \(p\)-diffusion density, the Hessian matrix in gradient variables is
+\[
+ \abs\xi^{p-2}I+(p-2)\abs\xi^{p-4}\xi\otimes\xi
+\]
+at nonzero \(\xi\) in the pure case, with \(\abs\xi^2\) replaced by
+\(\eps^2+\abs\xi^2\) in the regularized case. The local Hessian statements that follow concern
+\(p\geq2\).
+
+\begin{proposition}[Sufficient continuous local Hessian conditions]
+\label{prop:model-hessian}
+In dimensions \(d\leq2\), the cubic Hessian is locally Lipschitz as a bilinear form on \(H^1\) and is coercive at any solution \(u^*\not\equiv0\). The sinh Hessian is coercive and locally Lipschitz on an \(L^\infty\)-bounded neighborhood, with state perturbations measured in \(H^1\). For fixed \(\eps>0\), the regularized \(p\)-Hessian is uniformly elliptic with lower bound proportional to \(\eps^{p-2}\), and locally Lipschitz on bounded subsets of \(W^{1,\infty}\).
+\end{proposition}
+
+\begin{proof}
+For the cubic multiplier,
+\[
+ \left|\int_\Omega3(u^2-(u^*)^2)vw\dd x\right|
+ \leq C\norm{u-u^*}_{L^4}\norm{u+u^*}_{L^4}
+ \norm v_{L^4}\norm w_{L^4},
+\]
+and \(H^1\hookrightarrow L^4\) for \(d\leq2\). If \(u^*\not\equiv0\), coercivity follows by
+contradiction: a unit \(H^1\)-sequence with vanishing quadratic form has gradients tending to zero and,
+by compact embedding, converges in \(L^4\) to a constant; the weighted term then forces that constant
+to vanish. On \(\abs u,\abs{u^*}\leq R_\infty\), the mean
+value theorem gives
+\(\abs{\cosh u-\cosh u^*}\leq\sinh(R_\infty)\abs{u-u^*}\), after which the chosen local
+multiplication estimate applies. In the regularized model, the radial and tangential eigenvalues are
+comparable to \((\eps^2+\abs\xi^2)^{(p-2)/2}\); the lower bound is therefore proportional to
+\(\eps^{p-2}\). The matrix-valued mean value theorem gives Hessian stability on bounded-gradient neighborhoods in \(W^{1,\infty}\).
+\end{proof}
+
+\begin{proposition}[Restricted stability for the regularized \(p\)-energy]
+\label{prop:regularized-restricted}
+Let \(Y_M\subset X_{p,\circ}\cap W^{1,\infty}(\Omega)\) be finite dimensional, equipped with a norm \(\norm\cdot_{0,M}\), and let \(U_M\subset Y_M\) be a bounded convex set. For fixed \(p\ge2\) and \(\eps>0\), there are constants \(\mu_M>0\) and \(L_M<\infty\) such that, for \(u,z\in U_M\) and \(v,w\in Y_M\),
+\[
+ \begin{aligned}
+ \E''(u)[v,v]&\ge\mu_M\norm v_{0,M}^2,\\
+ |(\E''(u)-\E''(z))[v,w]|
+ &\le L_M\norm{u-z}_{0,M}\norm v_{0,M}\norm w_{0,M}.
+ \end{aligned}
+\]
+The constants depend on \(U_M\), \(Y_M\), the reference norm, \(p\), and \(\eps\).
+\end{proposition}
+
+\begin{proof}
+Finite-dimensional norm equivalence gives a Hessian-Lipschitz constant on the bounded set. Uniform ellipticity and the zero-mean condition give coercivity in the reference norm.
+\end{proof}
+
+\begin{table}[tbp]
+\centering
+\small
+\caption{Hessian structure and the conclusion available for each experimental energy.}
+\label{tab:model-classification}
+\begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash}p{0.16\textwidth}>{\raggedright\arraybackslash}p{0.31\textwidth}>{\raggedright\arraybackslash}X@{}}
+\toprule
+Model & Frozen Hessian & Analysis \\
+\midrule
+Linear & Constant \(H^1\) inner product & CGA and energy-inner-product OGA coincide under exact correction, the same dictionary, and the same selection rule. \\
+Cubic & Gradient form plus \(3(u^*)^2\) & Local Hessian transfer with the relative-score condition. \\
+Sinh & Gradient form plus \(\cosh(u^*)\) & Local Hessian estimates on an \(L^\infty\)-bounded neighborhood and finite-dimensional trajectory estimates. \\
+Regularized \(p\) & Uniformly elliptic for fixed \(\eps>0\) & Hessian stability on bounded-gradient sets and finite-dimensional estimates. \\
+Pure \(p\), \(p>2\) & Gradient-weighted bilinear form & Global \(p\)-geometry and finite-trajectory projection estimates. \\
+Reaction \(p\), \(p>2\) & Gradient and scalar weighted forms & Energy coercivity and global \(p\)-geometry. \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+The global energy geometry and the local Hessian estimates provide the model-specific error relations used in the convergence analysis.

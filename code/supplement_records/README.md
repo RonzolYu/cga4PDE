@@ -17,6 +17,6 @@ contribution.
   accounting for the baseline plots.
 
 The generated dyadic tables, protocol records, and epsilon-scan data remain in
-`paper/sisc_cga/generated/`, `code/result/`, and `code/review/`. They are
+`paper/generated/`, `code/result/`, and `code/review/`. They are
 not loaded by `main.tex` in the SISC main text. The public code/data
 repository is identified in the main-text code-availability section.

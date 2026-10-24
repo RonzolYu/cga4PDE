@@ -1,0 +1,16 @@
+\begin{table}[!htbp]
+\centering\scriptsize
+\caption{Endpoint relative \(H^1\) errors for C1--C3 and relative gradient \(L^4\) seminorm errors for C4--C5. RFM values are median [Q1,Q3] over metric-valid observations from ten prescribed seeds. Valid gives the Sobolev sample count; the inclusion rule is defined in the text. The P3 value for C3 is computed directly, and the other P3 endpoint values use log--log interpolation between bracketing metric-valid states. Ratios above one indicate smaller CGA errors.}
+\label{tab:baseline-terminal}
+\resizebox{\linewidth}{!}{%
+\begin{tabular}{@{}crrrrrr@{}}
+\toprule
+Problem & DOF & CGA & RFM median [Q1,Q3] & Valid & RFM/CGA & FEM P3/CGA \\ \midrule
+Linear, d=1 & 256 & $1.247\!\times\!10^{-4}$ & $1.853\!\times\!10^{-4}$ [$1.779\!\times\!10^{-4}$, $1.913\!\times\!10^{-4}$] & 10/10 & 1.49 & 4.24 \\
+Cubic, d=1 & 256 & $1.215\!\times\!10^{-4}$ & $1.853\!\times\!10^{-4}$ [$1.779\!\times\!10^{-4}$, $1.913\!\times\!10^{-4}$] & 10/10 & 1.52 & 4.35 \\
+Sinh, d=2 & 256 & $4.074\!\times\!10^{-3}$ & $7.196\!\times\!10^{-3}$ [$6.472\!\times\!10^{-3}$, $8.663\!\times\!10^{-3}$] & 10/10 & 1.77 & 5.63 \\
+Pure p=4, d=1 & 128 & $3.395\!\times\!10^{-5}$ & $7.818\!\times\!10^{-5}$ [$6.046\!\times\!10^{-5}$, $1.400\!\times\!10^{-4}$] & 10/10 & 2.30 & 0.88 \\
+Pure p=4, d=2 & 256 & $2.493\!\times\!10^{-3}$ & $1.147\!\times\!10^{-2}$ [$9.730\!\times\!10^{-3}$, $1.360\!\times\!10^{-2}$] & 6/10 & 4.60 & 14.54 \\
+\bottomrule
+\end{tabular}}
+\end{table}

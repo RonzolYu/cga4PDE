@@ -1,0 +1,105 @@
+\begin{thebibliography}{10}
+
+\bibitem{BarrettLiu1993}
+{\sc J.~W. Barrett and W.~B. Liu}, {\em Finite element approximation of the
+  $p$-{Laplacian}}, Mathematics of Computation, 61 (1993), pp.~523--537,
+  \url{https://doi.org/10.1090/S0025-5718-1993-1192966-4}.
+
+\bibitem{BernaFalco2025}
+{\sc P.~M. Bern{\'a} and A.~Falc{\'o}}, {\em Universality for non-linear convex
+  variational problems}, Journal of Nonlinear and Variational Analysis, 9
+  (2025), pp.~161--177, \url{https://doi.org/10.23952/jnva.9.2025.2.01}.
+
+\bibitem{BrennerScott2008}
+{\sc S.~C. Brenner and L.~R. Scott}, {\em The Mathematical Theory of Finite
+  Element Methods}, Springer, 3~ed., 2008,
+  \url{https://doi.org/10.1007/978-0-387-75934-0}.
+
+\bibitem{ChenChiEYang2022}
+{\sc J.~Chen, X.~Chi, W.~E, and Z.~Yang}, {\em Bridging traditional and machine
+  learning-based algorithms for solving {PDE}s: The random feature method},
+  Journal of Machine Learning, 1 (2022), pp.~268--298,
+  \url{https://doi.org/10.4208/jml.220726}.
+
+\bibitem{DereventsovTemlyakov2022}
+{\sc A.~V. Dereventsov and V.~N. Temlyakov}, {\em Biorthogonal greedy
+  algorithms in convex optimization}, Applied and Computational Harmonic
+  Analysis, 60 (2022), pp.~489--511,
+  \url{https://doi.org/10.1016/j.acha.2022.05.001}.
+
+\bibitem{DieningKreuzer2008}
+{\sc L.~Diening and C.~Kreuzer}, {\em Linear convergence of an adaptive finite
+  element method for the $p$-{Laplacian} equation}, SIAM Journal on Numerical
+  Analysis, 46 (2008), pp.~614--638, \url{https://doi.org/10.1137/070681508}.
+
+\bibitem{EYu2018}
+{\sc W.~E and B.~Yu}, {\em The deep {R}itz method: A deep learning-based
+  numerical algorithm for solving variational problems}, Communications in
+  Mathematics and Statistics, 6 (2018), pp.~1--12,
+  \url{https://doi.org/10.1007/s40304-018-0127-z}.
+
+\bibitem{LeePark2025}
+{\sc Y.-J. Lee and J.~Park}, {\em On the linear convergence of additive
+  {S}chwarz methods for the {$p$}-{L}aplacian}, IMA Journal of Numerical
+  Analysis, 45 (2025), pp.~2655--2684,
+  \url{https://doi.org/10.1093/imanum/drae068}.
+
+\bibitem{LiSiegelEntropy2024}
+{\sc Y.~Li and J.~W. Siegel}, {\em Entropy-based convergence rates of greedy
+  algorithms}, Mathematical Models and Methods in Applied Sciences, 34 (2024),
+  pp.~779--802, \url{https://doi.org/10.1142/S0218202524500143}.
+
+\bibitem{MaoSiegelXu2026}
+{\sc T.~Mao, J.~W. Siegel, and J.~Xu}, {\em Approximation rates for shallow
+  {ReLU}$^k$ neural networks on {Sobolev} spaces via the {Radon} transform},
+  SIAM Journal on Mathematical Analysis, 58 (2026), pp.~1171--1186,
+  \url{https://doi.org/10.1137/24M1686693}.
+
+\bibitem{MaoXuXu2026}
+{\sc T.~Mao, J.~Xu, and X.~Xu}, {\em Solving high-dimensional {PDE}s using
+  linearized neural networks}, 2026, \url{https://arxiv.org/abs/2601.11771}.
+\newblock arXiv:2601.11771v1.
+
+\bibitem{RahimiRecht2007}
+{\sc A.~Rahimi and B.~Recht}, {\em Random features for large-scale kernel
+  machines}, in Advances in Neural Information Processing Systems 20, 2007,
+  pp.~1177--1184.
+
+\bibitem{SiegelHongJinHaoXu2023}
+{\sc J.~W. Siegel, Q.~Hong, X.~Jin, W.~Hao, and J.~Xu}, {\em Greedy training
+  algorithms for neural networks and applications to {PDE}s}, Journal of
+  Computational Physics, 484 (2023), p.~112084,
+  \url{https://doi.org/10.1016/j.jcp.2023.112084}.
+
+\bibitem{SiegelXuOGA2022}
+{\sc J.~W. Siegel and J.~Xu}, {\em Optimal convergence rates for the orthogonal
+  greedy algorithm}, IEEE Transactions on Information Theory, 68 (2022),
+  pp.~3354--3361, \url{https://doi.org/10.1109/TIT.2022.3147984}.
+
+\bibitem{SiegelXuVariation2023}
+{\sc J.~W. Siegel and J.~Xu}, {\em Characterization of the variation spaces
+  corresponding to shallow neural networks}, Constructive Approximation, 57
+  (2023), pp.~1109--1132, \url{https://doi.org/10.1007/s00365-023-09626-4}.
+
+\bibitem{SiegelXuSharp2024}
+{\sc J.~W. Siegel and J.~Xu}, {\em Sharp bounds on the approximation rates,
+  metric entropy, and $n$-widths of shallow neural networks}, Foundations of
+  Computational Mathematics, 24 (2024), pp.~481--537,
+  \url{https://doi.org/10.1007/s10208-022-09595-3}.
+
+\bibitem{TemlyakovCGA2013}
+{\sc V.~N. Temlyakov}, {\em Chebyshev greedy algorithm in convex optimization},
+  arXiv preprint arXiv:1312.1244,  (2013).
+
+\bibitem{TemlyakovGreedy2014}
+{\sc V.~N. Temlyakov}, {\em Greedy expansions in convex optimization},
+  Proceedings of the Steklov Institute of Mathematics, 284 (2014),
+  pp.~244--262, \url{https://doi.org/10.1134/S0081543814010180}.
+
+\bibitem{XuXu2025}
+{\sc J.~Xu and X.~Xu}, {\em Randomized greedy algorithms for neural network
+  optimization in solving partial differential equations}, Journal of
+  Scientific Computing, 105 (2025), p.~26,
+  \url{https://doi.org/10.1007/s10915-025-03050-5}.
+
+\end{thebibliography}

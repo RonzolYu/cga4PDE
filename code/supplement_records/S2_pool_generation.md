@@ -68,7 +68,7 @@ S_N=\max_i|a_*(e_N,d_i)|,\qquad
 \ell_N=\|(I-P_N)d_{N+1}\|_*,
 \]
 and $W_j=\sum_{N=8}^{8+j-1}\theta_N^2/\ell_N^2$. Zero-score and zero-remainder
-branches are stated in `paper/sisc_cga/sections/05_theory.tex`.
+branches are stated in `paper/sections/05_theory.tex`.
 
 ## 4. Breakpoint quadrature and quartic identity
 
