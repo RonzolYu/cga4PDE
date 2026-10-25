@@ -1,5 +1,7 @@
 # Chebyshev Greedy Algorithm for Nonlinear PDEs
 
+Authors: Ye Lin, Jiabin Yu, Youngju Lee, and Jiwei Jia.
+
 This repository contains the SISC manuscript and the computational records for the
 Chebyshev greedy algorithm (CGA) study. The public tree has two top-level folders:
 
