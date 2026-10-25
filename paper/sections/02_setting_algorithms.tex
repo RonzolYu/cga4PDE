@@ -92,7 +92,21 @@ dictionary contains the normalized nonzero truncated powers \((x-t)_+^k/\|(\cdot
 where \(C_{k,p}\) depends on the exponent \(p\), the interval, and the normalization of the raw atoms.
 \end{proposition}
 
-The proof in Supplement~S4 uses the integral remainder formula. Multivariate source and entropy estimates follow from shallow-network variation-space and width results under their domain and norm hypotheses \citep{SiegelXuVariation2023,SiegelXuSharp2024,MaoSiegelXu2026}.
+\begin{proof}[Proof sketch]
+Taylor's formula with integral remainder gives
+\[
+ v(x)=\sum_{j=0}^k\frac{v^{(j)}(0)}{j!}x^j
+ +\frac1{k!}\int_0^1 v^{(k+1)}(t)(x-t)_+^k\dd t.
+\]
+The polynomial part has an atomic representation with coefficient sum bounded by
+\(C_{k,p}\sum_{j=0}^k\abs{v^{(j)}(0)}\).
+The truncated powers depend continuously on \(t\in[0,1]\) in \(X\) and have uniformly bounded
+\(X\)-norms. Partition sums with interval-integrated weights converge to the integral in
+\(X\). After normalizing their nonzero atoms, their coefficient sums are bounded by
+\(C_{k,p}\norm{v^{(k+1)}}_{L^1(I)}\). Taking the \(X\)-closure gives the stated estimate.
+\end{proof}
+
+Multivariate source and entropy estimates follow from shallow-network variation-space and width results under their domain and norm hypotheses \citep{SiegelXuVariation2023,SiegelXuSharp2024,MaoSiegelXu2026}.
 
 \begin{lemma}[Projection and renormalization]
 \label{lem:projection}
